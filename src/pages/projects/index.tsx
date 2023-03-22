@@ -1,13 +1,15 @@
 import { GetStaticProps } from "next";
 import { fetchProjectData } from "@/lib/google";
+import Image from "next/image";
+import { PB_LOGO } from "../../constants/image-paths";
+import Header from "@/components/Header";
 
-function AllProjectPage(props: { projectData: any }) {
+function Template(props: { projectData: any }) {
   const { projectData } = props;
-
-  console.log(projectData);
 
   return (
     <div>
+      <Header />
       <h1>Project Page</h1>
       <p>{projectData["project_name"]}</p>
       <table
@@ -44,6 +46,10 @@ function AllProjectPage(props: { projectData: any }) {
       </table>
     </div>
   );
+}
+
+function AllProjectPage(props: { projectData: any }) {
+  return <Template {...props} />;
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
