@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     colors: {
       "brand-primary": "#40D194",
+      white: "#FFFFFF",
     },
     extend: {
       // colors: {
@@ -14,5 +15,5 @@ module.exports = {
       // },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
