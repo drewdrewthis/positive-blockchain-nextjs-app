@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import { PB_LOGO } from "@/constants/image-paths";
 import styles from "./styles.module.scss";
 import cx from "classnames";
 import { Button, Stack } from "@mui/material";
@@ -12,7 +10,6 @@ import {
   Paper,
   Popper,
 } from "@mui/material";
-import Link from "next/link";
 
 interface Props {
   title: string;

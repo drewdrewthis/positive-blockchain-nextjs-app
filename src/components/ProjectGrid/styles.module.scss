@@ -1,3 +1,9 @@
 .grid-item {
-  // border: 1px solid black;
+  a {
+    text-decoration: none;
+
+    &:hover * {
+      color: theme("colors.brand-primary");
+    }
+  }
 }

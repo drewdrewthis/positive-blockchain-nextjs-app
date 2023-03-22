@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./styles.module.scss";
 import cx from "classnames";
 import { Divider } from "@mui/material";
+import Link from "next/link";
 
 interface Props {
   slug: string;
@@ -13,13 +14,7 @@ interface Props {
 }
 
 function ProjectGridItem(props: Props) {
-  const {
-    name,
-    description,
-    slug,
-    category,
-    thumbnailSrc = "https://positiveblockchain.io/wp-content/uploads/2019/01/12642539_740603619408591_4005717202573682653_n.png",
-  } = props;
+  const { name, description, slug, category, thumbnailSrc } = props;
 
   const formattedDescription = description
     ? description[0].toUpperCase() + description.slice(1)
@@ -33,16 +28,22 @@ function ProjectGridItem(props: Props) {
           styles["grid-item"]
         )}
       >
-        <div className="flex items-center gap-2 p-3">
-          {/* <Image
-            className="m-0"
-            src={thumbnailSrc}
-            alt={name}
-            width={75}
-            height={75}
-          /> */}
+        <div className="flex items-center gap-5 p-3">
+          {thumbnailSrc && (
+            <Link href={`/projects/${slug}`}>
+              <Image
+                className="m-0"
+                src={thumbnailSrc}
+                alt={name}
+                width={100}
+                height={100}
+              />
+            </Link>
+          )}
           <div>
-            <h4 className="font-bold mt-0">{name}</h4>
+            <Link href={`/projects/${slug}`}>
+              <h4 className="font-bold mt-0 text-lg">{name}</h4>
+            </Link>
             <div>{category}</div>
           </div>
         </div>

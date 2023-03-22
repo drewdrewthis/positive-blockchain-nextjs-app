@@ -9,7 +9,7 @@ import { NestedMenuItem } from "./NestedMenuItem";
 
 function Header() {
   return (
-    <div className="bg-brand-primary w-full p-5 flex justify-between">
+    <div className="bg-brand-primary w-full p-5 flex justify-between items-center">
       <Image
         className={cx(styles.logo)}
         src={PB_LOGO}
@@ -24,9 +24,11 @@ function Header() {
         <NestedMenuItem title="About">
           <Link href="/">Become a contributor</Link>
         </NestedMenuItem>
-        <Button href="/blog" className={cx(styles.button)}>
-          Blog
-        </Button>
+        <div>
+          <Button href="/blog" className={cx(styles.button)}>
+            Blog
+          </Button>
+        </div>
       </Stack>
     </div>
   );

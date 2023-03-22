@@ -21,7 +21,7 @@ function ProjectGrid(props: Props) {
             project["description_short_value_proposition_in_a_tweet"]
           }
           category={project["main_category"] || project["categories"]}
-          thumbnailSrc={project["thumbnail_src"]}
+          thumbnailSrc={project["logo_url"]}
         />
       ))}
     </Grid>

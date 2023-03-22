@@ -1,5 +1,5 @@
 export function withController<P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<any>,
   useController: (props: P) => any
 ) {
   // eslint-disable-next-line react/display-name
