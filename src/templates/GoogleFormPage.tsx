@@ -1,6 +1,8 @@
-import Header from "../../components/Header";
+import Header from "../components/Header";
 
-export default function ApiApplication() {
+export default function GoogleFormPageTemplate(props: { iframeSrc: string }) {
+  const { iframeSrc } = props;
+
   return (
     <div
       className="flex flex-col h-full"
@@ -22,7 +24,7 @@ export default function ApiApplication() {
             width: "100vw",
             height: "100%",
           }}
-          src="https://docs.google.com/forms/d/e/1FAIpQLSekFpZpdRC8mGFkDoJREahh9OTrwjwK0n2XU1uVkLwR7qQHsw/viewform?embedded=true"
+          src={iframeSrc}
           width="640"
         >
           Loading…
