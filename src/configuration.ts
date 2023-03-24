@@ -27,6 +27,9 @@ class Configuration {
         },
       },
     },
+    positiveBlockchain: {
+      HOST: "https://positiveblockchain.io",
+    },
   };
 }
 
