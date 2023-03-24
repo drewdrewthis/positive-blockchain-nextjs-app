@@ -2,7 +2,7 @@ import { Checkbox, Divider, FormControlLabel, FormGroup } from "@mui/material";
 import { range } from "lodash/fp";
 import { withController } from "../../lib/withContoller";
 import cx from "classnames";
-import { createRef } from "react";
+import { createRef, useEffect, useState } from "react";
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
 import kebabCase from "lodash/kebabCase";
 
@@ -19,6 +19,10 @@ function useController(props: Props) {
   };
 }
 function ProjectFilter(props: ReturnType<typeof useController>) {
+  const [blockchainUsesFilter, setBlockchainUsesFilters] = useState<string[]>(
+    []
+  );
+
   const {
     blockChainTechnologies,
     blockchainUses,
@@ -27,6 +31,46 @@ function ProjectFilter(props: ReturnType<typeof useController>) {
     onChange = () => {},
   } = props;
 
+  useEffect(() => {
+    onChange({
+      blockchainUses: blockchainUsesFilter,
+    });
+  });
+
+  return (
+    <div
+      className={"flex flex-col w-full border rounded p-2 text-sm" + className}
+    >
+      <h2 className="mt-0">Filters</h2>
+      <FilterGroup
+        title="Blockchain Technology"
+        labels={blockChainTechnologies}
+        onChange={(values) => {
+          onChange(values);
+        }}
+      />
+      <FilterGroup
+        title="Use of Blockchain"
+        labels={blockchainUses}
+        onChange={(values) => {
+          setBlockchainUsesFilters(values);
+        }}
+      />
+      <b>SDG#</b>
+      <Checkboxes className="h-64" labels={range(1, 17)} />
+      <Divider />
+      <b>Stage</b>
+      <Checkboxes className="h-10" labels={stages} />
+    </div>
+  );
+}
+
+function FilterGroup(props: {
+  title: string;
+  labels: (string | number)[];
+  onChange?: (values: any) => void;
+}) {
+  const { onChange = () => {}, title, labels } = props;
   const methods = useForm();
 
   methods.watch((values) => {
@@ -35,24 +79,9 @@ function ProjectFilter(props: ReturnType<typeof useController>) {
 
   return (
     <FormProvider {...methods}>
-      <div
-        className={
-          "flex flex-col w-full border rounded p-2 text-sm" + className
-        }
-      >
-        <h2 className="mt-0">Filters</h2>
-        <b>Blockchain Technology</b>
-        <Checkboxes className="h-10" labels={blockChainTechnologies} />
-        <Divider />
-        <b>Use of Blockchain</b>
-        <Checkboxes className="h-128 columns-1" labels={blockchainUses} />
-        <Divider />
-        <b>SDG#</b>
-        <Checkboxes className="h-64" labels={range(1, 17)} />
-        <Divider />
-        <b>Stage</b>
-        <Checkboxes className="h-10" labels={stages} />
-      </div>
+      <b>{title}</b>
+      <Checkboxes className="h-10" labels={labels} />
+      <Divider />
     </FormProvider>
   );
 }

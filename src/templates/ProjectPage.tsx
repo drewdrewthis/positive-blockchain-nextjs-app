@@ -9,6 +9,7 @@ import throttle from "lodash/throttle";
 import filter from "lodash/fp/filter";
 import Footer from "./partials/Footer/index";
 import ProjectFilter from "../components/ProjectFilter";
+import { intersection } from "lodash";
 
 interface Props {
   projectData: any;
@@ -39,10 +40,18 @@ function useController(props: Props) {
       blockchainUses,
       stages: ["Idea", "Prototype"],
     },
+    handleFilterUpdate(filters: { blockchainUsesFilter: string[] }) {
+      const { blockchainUsesFilter } = filters;
+      const filtered = filterDataByBlockchainUses(
+        projectData,
+        blockchainUsesFilter
+      );
+      setFilteredData(filtered);
+    },
   };
 }
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
-  const { projectData, handleSearch, filters } = props;
+  const { projectData, handleSearch, filters, handleFilterUpdate } = props;
 
   return (
     <div className="flex flex-col gap-10">
@@ -64,7 +73,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
         <p>{projectData["project_name"]}</p>
         <div className="flex gap-3">
           <div className="w-3/12">
-            <ProjectFilter {...filters} />
+            <ProjectFilter {...filters} onChange={handleFilterUpdate} />
           </div>
           <ProjectGrid className="flex-1" projectData={projectData} />
         </div>
@@ -88,4 +97,17 @@ function filterDataBySearch(projectData: any, search: string) {
 
     return text.includes(search);
   }, projectData);
+}
+
+function filterDataByBlockchainUses(
+  projectData: any,
+  // These are in kebab case
+  blockchainUses: string[]
+) {
+  if (!blockchainUses.length) return projectData;
+
+  return projectData.filter((item: any) => {
+    const arr = item["use_of_blockchain"]?.split(", ") || [];
+    return intersection(blockchainUses, arr).length > 0;
+  });
 }
