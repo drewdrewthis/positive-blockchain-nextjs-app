@@ -1,4 +1,5 @@
-import Header from "../components/Header";
+import Footer from "./partials/Footer";
+import Header from "./partials/Header";
 
 export default function GoogleFormPageTemplate(props: { iframeSrc: string }) {
   const { iframeSrc } = props;
@@ -30,6 +31,7 @@ export default function GoogleFormPageTemplate(props: { iframeSrc: string }) {
           Loading…
         </iframe>
       </div>
+      <Footer />
     </div>
   );
 }

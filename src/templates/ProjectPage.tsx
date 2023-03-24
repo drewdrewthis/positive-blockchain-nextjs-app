@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Header from "./partials/Header";
 import InputBase from "@mui/material/InputBase";
 import ProjectGrid from "../components/ProjectGrid";
 import React, { useEffect } from "react";
@@ -7,6 +7,7 @@ import { Search } from "@mui/icons-material";
 import { withController } from "../lib/withContoller";
 import throttle from "lodash/throttle";
 import filter from "lodash/fp/filter";
+import Footer from "./partials/Footer/index";
 
 interface Props {
   projectData: any;
@@ -56,6 +57,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
         <p>{projectData["project_name"]}</p>
         <ProjectGrid projectData={projectData} />
       </div>
+      <Footer />
     </div>
   );
 }

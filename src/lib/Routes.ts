@@ -12,6 +12,9 @@ export default class Routes {
   static NEWSLETTER = Routes.getExternalRoute("/newsletter");
   static RESOURCES = Routes.getExternalRoute("/resources");
   static UNIVERSITY_RESEARCH = Routes.getExternalRoute("/university-research");
+  static DONATE = Routes.getExternalRoute("/donations");
+  static CONTACT = Routes.getExternalRoute("/contact");
+  static PRIVACY_POLICY = Routes.getExternalRoute("/privacy-policy");
 
   static getExternalRoute(path: string) {
     return `${config.constants.positiveBlockchain.HOST}${path}`;
