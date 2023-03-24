@@ -8,13 +8,15 @@ import { withController } from "../lib/withContoller";
 import throttle from "lodash/throttle";
 import filter from "lodash/fp/filter";
 import Footer from "./partials/Footer/index";
+import ProjectFilter from "../components/ProjectFilter";
 
 interface Props {
   projectData: any;
+  blockchainUses: string[];
 }
 
 function useController(props: Props) {
-  const { projectData } = props;
+  const { projectData, blockchainUses = [] } = props;
   const [search, setSearch] = React.useState("");
   const [filteredData, setFilteredData] = React.useState<any>(projectData);
 
@@ -26,16 +28,21 @@ function useController(props: Props) {
     setFilteredData(filterDataBySearch(projectData, search));
   }, [search, projectData]);
 
+  console.log("blockchainUses", blockchainUses);
+
   return {
     ...props,
     handleSearch: throttle(handleSearch, 500),
     projectData: filteredData,
+    filters: {
+      blockChainTechnologies: ["Bitcoin", "Ethereum"],
+      blockchainUses,
+      stages: ["Idea", "Prototype"],
+    },
   };
 }
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
-  const { projectData, handleSearch } = props;
-
-  console.log(projectData);
+  const { projectData, handleSearch, filters } = props;
 
   return (
     <div className="flex flex-col gap-10">
@@ -55,7 +62,12 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
           </div>
         </div>
         <p>{projectData["project_name"]}</p>
-        <ProjectGrid projectData={projectData} />
+        <div className="flex gap-3">
+          <div className="w-3/12">
+            <ProjectFilter {...filters} />
+          </div>
+          <ProjectGrid className="flex-1" projectData={projectData} />
+        </div>
       </div>
       <Footer />
     </div>

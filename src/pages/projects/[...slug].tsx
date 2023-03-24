@@ -23,9 +23,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate");
 
-  console.log(slug);
-  console.log(projectData);
-
   return {
     props: {
       projectData,

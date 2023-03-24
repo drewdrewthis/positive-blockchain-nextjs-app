@@ -21,7 +21,7 @@ function ProjectGridItem(props: Props) {
     : description;
 
   return (
-    <Grid xs={12} sm={6} md={4} lg={3}>
+    <Grid xs={12} sm={6} md={6} lg={3}>
       <div
         className={cx(
           "flex flex-col h-full rounded border bg-white",

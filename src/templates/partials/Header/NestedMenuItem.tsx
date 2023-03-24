@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ComponentProps } from "react";
 import styles from "./styles.module.scss";
 import cx from "classnames";
 import { Button, Stack } from "@mui/material";
@@ -59,12 +59,12 @@ export function NestedMenuItem(props: Props) {
 
   const buttonProps = {
     ref: anchorRef,
-    ariaControls: open ? "composition-menu" : undefined,
-    ariaExpanded: open ? "true" : undefined,
-    ariaHaspopup: true,
+    "aria-controls": open ? "composition-menu" : undefined,
+    "aria-expanded": open ? "true" : undefined,
+    "aria-haspopup": true,
     onClick: handleToggle,
     className: cx(styles.button),
-  };
+  } as ComponentProps<typeof Button>;
 
   return (
     <div>
