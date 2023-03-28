@@ -1,7 +1,9 @@
+interface FilterGroupProps {
+  title: string;
+  labels: string[];
+}
 export interface Props {
-  blockchainTechnologies: string[];
-  blockchainUses: string[];
-  stages: string[];
+  filters: FilterGroupProps[];
   className?: string;
   onChange?: (values: any) => void;
 }

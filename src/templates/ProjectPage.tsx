@@ -17,7 +17,7 @@ interface Props {
 }
 
 function useController(props: Props) {
-  const { projectData, blockchainUses = [] } = props;
+  const { projectData } = props;
   const [search, setSearch] = React.useState("");
   const [filteredData, setFilteredData] = React.useState<any>(projectData);
 
@@ -29,27 +29,18 @@ function useController(props: Props) {
     setFilteredData(filterDataBySearch(projectData, search));
   }, [search, projectData]);
 
-  console.log("blockchainUses", blockchainUses);
-
-  blockchainUses.length = 17;
-
   return {
     ...props,
     handleSearch: throttle(handleSearch, 500),
     projectData: filteredData,
-    filters: {
-      blockchainTechnologies: ["Bitcoin", "Ethereum"],
-      blockchainUses,
-      stages: ["Idea", "Prototype"],
-    },
-    handleFilterUpdate(filters: { blockchainUsesFilter: string[] }) {
-      const { blockchainUsesFilter } = filters;
-      console.log("blockchainUsesFilter", blockchainUsesFilter);
-      const filtered = filterDataByBlockchainUses(
-        projectData,
-        blockchainUsesFilter
-      );
-      setFilteredData(filtered);
+    filters: [
+      {
+        title: "Blockchain Technology",
+        labels: ["Bitcoin", "Ethereum"],
+      },
+    ],
+    handleFilterUpdate: (filters: any) => {
+      console.log(filters);
     },
   };
 }
@@ -76,7 +67,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
         <p>{projectData["project_name"]}</p>
         <div className="flex gap-3">
           <div className="w-3/12">
-            <ProjectFilter {...filters} onChange={handleFilterUpdate} />
+            <ProjectFilter filters={filters} onChange={handleFilterUpdate} />
           </div>
           <ProjectGrid className="flex-1" projectData={projectData} />
         </div>

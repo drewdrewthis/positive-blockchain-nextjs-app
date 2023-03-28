@@ -5,48 +5,26 @@ import kebabCase from "lodash/kebabCase";
 import { useController } from "./useController";
 
 function ProjectFilter(props: ReturnType<typeof useController>) {
-  const {
-    blockchainTechnologies,
-    blockchainUses,
-    stages,
-    className = "",
-    handleFilterChange,
-  } = props;
+  const { filters, className = "", handleFilterChange } = props;
 
   return (
     <div
       className={"flex flex-col w-full border rounded p-2 text-sm" + className}
     >
       <h2 className="mt-0">Filters</h2>
-      <FilterGroup
-        title="Blockchain Technology"
-        labels={blockchainTechnologies}
-        onChange={(values) =>
-          handleFilterChange("blockchainTechnologyFilters", values)
-        }
-      />
-      <FilterGroup
-        title="Use of Blockchain"
-        labels={blockchainUses}
-        onChange={(values) =>
-          handleFilterChange("blockchainUsesFilters", values)
-        }
-      />
-      {/* <FilterGroup
-        title="SDG#"
-        labels={range(1, 17)}
-        onChange={(values) => handleFilterChange("sdg", values)}
-      /> */}
-      {/* <b>SDG#</b>
-      <Checkboxes className="h-64" labels={range(1, 17)} />
-      <Divider />
-      <b>Stage</b>
-      <Checkboxes className="h-10" labels={stages} /> */}
+      {filters.map((filter) => (
+        <FilterGroup
+          key={filter.title}
+          title={filter.title}
+          labels={filter.labels}
+          onChange={(values) => handleFilterChange(filter.title, values)}
+        />
+      ))}
     </div>
   );
 }
 
-function FilterGroup(props: {
+export function FilterGroup(props: {
   title: string;
   labels: (string | number)[];
   onChange: (values: any) => void;
