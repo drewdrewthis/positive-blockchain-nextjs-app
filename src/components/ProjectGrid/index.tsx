@@ -23,6 +23,9 @@ function ProjectGrid(props: Props) {
           }
           category={project["main_category"] || project["categories"]}
           thumbnailSrc={project["logo_url"]}
+          blockchainTechnology={project["blockchain_technology"]}
+          blockchainType={project["blockchain_type"]}
+          headquarters={project["primary_headquarter_country"]}
         />
       ))}
     </Grid>

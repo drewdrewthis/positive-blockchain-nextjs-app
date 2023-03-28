@@ -53,15 +53,15 @@ function useController(props: Props) {
         labels: filters.main_category,
       },
       {
+        title: "Blockchain Type",
+        key: "blockchain_type",
+        labels: filters.blockchain_type,
+      },
+      {
         type: "multi-select-search" as const,
         title: "Blockchain Technology",
         key: "blockchain_technology",
         labels: filters.blockchain_technology,
-      },
-      {
-        title: "Blockchain Type",
-        key: "blockchain_type",
-        labels: filters.blockchain_type,
       },
       {
         title: "HQ",
@@ -152,12 +152,7 @@ function filterDataByFilters(projectData: any, filters: any) {
       const arr = projectAttributeValues
         .flat()
         .map((value: string) => kebabCase(value?.trim()));
-      // console.log(
-      //   "intersection",
-      //   arr,
-      //   filters[attribute],
-      //   intersection(arr, filters[attribute])
-      // );
+
       const isMatch = intersection(arr, filters[attribute]).length > 0;
 
       if (isMatch) return true;

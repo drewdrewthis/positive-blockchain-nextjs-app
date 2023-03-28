@@ -16,7 +16,9 @@ function ProjectFilter(props: ReturnType<typeof useController>) {
 
   return (
     <div
-      className={"flex flex-col w-full border rounded p-2 text-sm" + className}
+      className={
+        "flex flex-col w-full border rounded p-2 text-sm bg-white" + className
+      }
     >
       <h2 className="mt-0">Filters</h2>
       {filters.map((filter) => (
@@ -38,30 +40,33 @@ export function FilterGroup(props: {
   labels: (string | number)[];
   onChange: (values: any) => void;
 }) {
-  const { onChange, title, labels } = props;
+  const { onChange, title, labels, type } = props;
   const methods = useForm();
 
   methods.watch((values) => {
     onChange(values);
   });
 
-  if (props.type === "multi-select-search") {
-    return (
-      <FormProvider {...methods}>
-        <b className="mb-3">{title}</b>
-        <MutliSelectSearch labels={labels} />
-        <Divider />
-      </FormProvider>
-    );
-  }
-
   return (
     <FormProvider {...methods}>
-      <b className="mb-3">{title}</b>
-      <Checkboxes className="h-auto" labels={labels} />
+      <b className="mb-3 text-teal-600">{title}</b>
+      <FilterComponent type={type} labels={labels} />
       <Divider />
     </FormProvider>
   );
+}
+
+function FilterComponent(props: {
+  type?: "checkbox" | "multi-select-search";
+  labels: (string | number)[];
+}) {
+  const { labels, type } = props;
+
+  if (type === "multi-select-search") {
+    return <MutliSelectSearch labels={labels} />;
+  }
+
+  return <Checkboxes className="h-auto" labels={labels} />;
 }
 
 function Checkboxes(props: {
@@ -113,10 +118,10 @@ function MutliSelectSearch(props: { labels: (string | number)[] }) {
       )}
       renderInput={(params) => (
         <TextField
-          className="w-full"
+          className="w-full text-xs"
           {...params}
           label=""
-          placeholder=""
+          placeholder="Type to search.."
           variant="standard"
         />
       )}

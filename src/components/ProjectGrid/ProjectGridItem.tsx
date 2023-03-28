@@ -11,6 +11,9 @@ interface Props {
   description: string;
   category: string;
   thumbnailSrc: string;
+  blockchainTechnology: string;
+  blockchainType: string;
+  headquarters: string;
 }
 
 function ProjectGridItem(props: Props) {
@@ -24,11 +27,11 @@ function ProjectGridItem(props: Props) {
     <Grid xs={12} sm={6} md={6} lg={3}>
       <div
         className={cx(
-          "flex flex-col h-full rounded border bg-white",
+          "flex flex-col h-full rounded border bg-white overflow-hidden",
           styles["grid-item"]
         )}
       >
-        <div className="flex items-center gap-5 p-3">
+        <div className="flex items-center gap-5 p-3 bg-teal-600">
           {thumbnailSrc && (
             <Link href={`/projects/${slug}`}>
               <Image
@@ -42,13 +45,25 @@ function ProjectGridItem(props: Props) {
           )}
           <div>
             <Link href={`/projects/${slug}`}>
-              <h4 className="font-bold mt-0 text-lg">{name}</h4>
+              <h4 className="font-bold mt-0 text-lg text-white">{name}</h4>
             </Link>
-            <div>{category}</div>
+            <div className="text-stone-50">{category}</div>
           </div>
         </div>
         <Divider className="m-0" />
-        <div className="p-3">{formattedDescription}</div>
+        <div className="p-3 text-xs mb-auto">{formattedDescription}</div>
+        <Divider className="m-0" />
+        <div className="p-3 bg-slate-100">
+          <div className="text-xs">
+            <b>Primary Headquarters:</b> {props.headquarters}
+          </div>
+          <div className="text-xs">
+            <b>Blockchain Type:</b> {props.blockchainType}
+          </div>
+          <div className="text-xs">
+            <b>Blockchain Technologies:</b> {props.blockchainTechnology}
+          </div>
+        </div>
       </div>
     </Grid>
   );
