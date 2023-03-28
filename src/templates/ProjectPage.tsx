@@ -41,6 +41,7 @@ function useController(props: Props) {
         labels: filters.main_category,
       },
       {
+        type: "multi-select-search",
         title: "Blockchain Technology",
         labels: filters.blockchain_technology,
       },
@@ -50,6 +51,7 @@ function useController(props: Props) {
       },
       {
         title: "HQ",
+        type: "multi-select-search",
         labels: filters.primary_headquarter_country,
       },
     ],
