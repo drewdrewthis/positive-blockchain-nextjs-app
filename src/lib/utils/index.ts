@@ -1,4 +1,5 @@
 import { parse } from "csv-parse";
+export * from "./extractFiltersFromProjectData";
 
 export async function parseCsvBuffer(arrayBuffer: ArrayBuffer): Promise<any> {
   const csvBuffer = Buffer.from(new Uint8Array(arrayBuffer));

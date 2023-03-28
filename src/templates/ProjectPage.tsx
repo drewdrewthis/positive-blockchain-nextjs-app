@@ -13,11 +13,11 @@ import { intersection } from "lodash";
 
 interface Props {
   projectData: any;
-  blockchainUses: string[];
+  filters: Record<string, string[]>;
 }
 
 function useController(props: Props) {
-  const { projectData } = props;
+  const { projectData, filters } = props;
   const [search, setSearch] = React.useState("");
   const [filteredData, setFilteredData] = React.useState<any>(projectData);
 
@@ -29,14 +29,28 @@ function useController(props: Props) {
     setFilteredData(filterDataBySearch(projectData, search));
   }, [search, projectData]);
 
+  console.log(filters);
+
   return {
     ...props,
     handleSearch: throttle(handleSearch, 500),
     projectData: filteredData,
     filters: [
       {
+        title: "Categories",
+        labels: filters.main_category,
+      },
+      {
         title: "Blockchain Technology",
-        labels: ["Bitcoin", "Ethereum"],
+        labels: filters.blockchain_technology,
+      },
+      {
+        title: "Blockchain Type",
+        labels: filters.blockchain_type,
+      },
+      {
+        title: "HQ",
+        labels: filters.primary_headquarter_country,
       },
     ],
     handleFilterUpdate: (filters: any) => {
@@ -91,17 +105,4 @@ function filterDataBySearch(projectData: any, search: string) {
 
     return text.includes(search);
   }, projectData);
-}
-
-function filterDataByBlockchainUses(
-  projectData: any,
-  // These are in kebab case
-  blockchainUses: string[]
-) {
-  if (!blockchainUses?.length) return projectData;
-
-  return projectData.filter((item: any) => {
-    const arr = item["use_of_blockchain"]?.split(", ") || [];
-    return intersection(blockchainUses, arr).length > 0;
-  });
 }
