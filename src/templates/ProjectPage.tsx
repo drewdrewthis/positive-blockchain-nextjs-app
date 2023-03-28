@@ -31,17 +31,20 @@ function useController(props: Props) {
 
   console.log("blockchainUses", blockchainUses);
 
+  blockchainUses.length = 17;
+
   return {
     ...props,
     handleSearch: throttle(handleSearch, 500),
     projectData: filteredData,
     filters: {
-      blockChainTechnologies: ["Bitcoin", "Ethereum"],
+      blockchainTechnologies: ["Bitcoin", "Ethereum"],
       blockchainUses,
       stages: ["Idea", "Prototype"],
     },
     handleFilterUpdate(filters: { blockchainUsesFilter: string[] }) {
       const { blockchainUsesFilter } = filters;
+      console.log("blockchainUsesFilter", blockchainUsesFilter);
       const filtered = filterDataByBlockchainUses(
         projectData,
         blockchainUsesFilter
@@ -104,7 +107,7 @@ function filterDataByBlockchainUses(
   // These are in kebab case
   blockchainUses: string[]
 ) {
-  if (!blockchainUses.length) return projectData;
+  if (!blockchainUses?.length) return projectData;
 
   return projectData.filter((item: any) => {
     const arr = item["use_of_blockchain"]?.split(", ") || [];
