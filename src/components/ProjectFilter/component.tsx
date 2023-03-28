@@ -25,7 +25,7 @@ function ProjectFilter(props: ReturnType<typeof useController>) {
           key={filter.title}
           title={filter.title}
           labels={filter.labels}
-          onChange={(values) => handleFilterChange(filter.title, values)}
+          onChange={(values) => handleFilterChange(filter.key, values)}
         />
       ))}
     </div>
@@ -108,7 +108,6 @@ function MutliSelectSearch(props: { labels: (string | number)[] }) {
       options={options}
       className={cx("w-full")}
       disableCloseOnSelect
-      // getOptionLabel={(option) => option.label}
       renderOption={(props, option, { selected }) => (
         <li {...props}>{option.title}</li>
       )}

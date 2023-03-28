@@ -12,13 +12,10 @@ export function useController(props: Props) {
 
   return {
     ...props,
-    handleFilterChange: (
-      groupName: string,
-      values: Record<string, boolean>
-    ) => {
+    handleFilterChange: (key: string, values: Record<string, boolean>) => {
       setFilterGroups({
         ...filterGroups,
-        [groupName]: covertBooleanMapToArray(values),
+        [key]: covertBooleanMapToArray(values),
       });
     },
   };

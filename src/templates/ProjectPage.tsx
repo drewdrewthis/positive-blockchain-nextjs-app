@@ -10,6 +10,7 @@ import filter from "lodash/fp/filter";
 import Footer from "./partials/Footer/index";
 import ProjectFilter from "../components/ProjectFilter";
 import { intersection } from "lodash";
+import { intersectionBy, isEmpty, kebabCase } from "lodash/fp";
 
 interface Props {
   projectData: any;
@@ -20,14 +21,24 @@ function useController(props: Props) {
   const { projectData, filters } = props;
   const [search, setSearch] = React.useState("");
   const [filteredData, setFilteredData] = React.useState<any>(projectData);
+  const [activeFilters, setActiveFilters] = React.useState<any>({});
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value.toLowerCase());
   };
 
+  // useEffect(() => {
+  //   setFilteredData(filterDataBySearch(projectData, search));
+  // }, [search, projectData]);
+
   useEffect(() => {
-    setFilteredData(filterDataBySearch(projectData, search));
-  }, [search, projectData]);
+    const filteredDataByFilters = filterDataByFilters(
+      projectData,
+      activeFilters
+    );
+    // console.log("filtering", filteredDataByFilters, activeFilters);
+    setFilteredData(filteredDataByFilters);
+  }, [projectData, activeFilters]);
 
   console.log(filters);
 
@@ -38,25 +49,29 @@ function useController(props: Props) {
     filters: [
       {
         title: "Categories",
+        key: "main_category",
         labels: filters.main_category,
       },
       {
-        type: "multi-select-search",
+        type: "multi-select-search" as const,
         title: "Blockchain Technology",
+        key: "blockchain_technology",
         labels: filters.blockchain_technology,
       },
       {
         title: "Blockchain Type",
+        key: "blockchain_type",
         labels: filters.blockchain_type,
       },
       {
         title: "HQ",
-        type: "multi-select-search",
+        type: "multi-select-search" as const,
+        key: "primary_headquarter_country",
         labels: filters.primary_headquarter_country,
       },
     ],
     handleFilterUpdate: (filters: any) => {
-      console.log(filters);
+      setActiveFilters(filters);
     },
   };
 }
@@ -107,4 +122,61 @@ function filterDataBySearch(projectData: any, search: string) {
 
     return text.includes(search);
   }, projectData);
+}
+
+function filterDataByFilters(projectData: any, filters: any) {
+  if (isEmpty(filters)) return projectData;
+
+  return projectData.filter((project: any) => {
+    const filterableAttributes = Object.keys(filters);
+
+    if (!filterableAttributes.length) return true;
+
+    const areAllFiltersEmpty = filterableAttributes.every((attribute) => {
+      return !filters[attribute].length;
+    });
+
+    if (areAllFiltersEmpty) return true;
+
+    if (!filterableAttributes.find((attribute) => filters[attribute].length))
+      return true;
+
+    for (const attribute of filterableAttributes) {
+      if (!filters[attribute].length) continue;
+
+      // Get project values for filter attribute
+      const projectAttributeValues = project[attribute]?.split(",");
+
+      if (!projectAttributeValues) continue;
+
+      const arr = projectAttributeValues
+        .flat()
+        .map((value: string) => kebabCase(value?.trim()));
+      // console.log(
+      //   "intersection",
+      //   arr,
+      //   filters[attribute],
+      //   intersection(arr, filters[attribute])
+      // );
+      const isMatch = intersection(arr, filters[attribute]).length > 0;
+
+      if (isMatch) return true;
+    }
+
+    return false;
+  });
+}
+
+function standardizePropertyValues(projectData: any) {
+  return projectData.map((data: any) => {
+    const keys = Object.keys(data);
+
+    for (const key of keys) {
+      if (Array.isArray(data[key])) {
+        data[key] = data[key].join(",");
+      }
+    }
+
+    return data;
+  });
 }

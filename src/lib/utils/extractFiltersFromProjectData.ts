@@ -46,3 +46,10 @@ function extractPossibleValuesFromListKey(
     .compact()
     .value();
 }
+
+export function formatItemsForSelect(items: string[]) {
+  return items.map((item) => ({
+    label: item,
+    value: item,
+  }));
+}

@@ -1,5 +1,6 @@
 interface FilterGroupProps {
   title: string;
+  key: string;
   labels: string[];
   type?: "checkbox" | "multi-select-search";
 }
