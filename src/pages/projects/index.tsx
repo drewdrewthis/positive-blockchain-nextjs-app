@@ -13,9 +13,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       projectData,
-      filters: {
-        ...extractFiltersFromProjectData(projectData as any),
-      },
+      filters: extractFiltersFromProjectData(projectData as any),
     },
   };
 };

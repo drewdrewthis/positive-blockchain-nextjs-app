@@ -13,7 +13,7 @@ export function parseGoogleSheetsData(
 ): {
   slug: string;
 }[] {
-  const { headerRow = 0 } = options;
+  const { headerRow = 1 } = options;
   const headerRowIndex = headerRow - 1;
   const headers = data[headerRowIndex];
   const rows = data.slice(headerRow);

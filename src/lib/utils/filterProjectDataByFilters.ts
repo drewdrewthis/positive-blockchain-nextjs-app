@@ -1,43 +1,37 @@
-import { intersection, isEmpty, kebabCase } from "lodash/fp";
+import intersection from "lodash/fp/intersection";
+import isEmpty from "lodash/fp/isEmpty";
+import kebabCase from "lodash/fp/kebabCase";
+import memoize from "lodash/fp/memoize";
 import { Project } from "@/types";
+
+const memoizedKebabCase = memoize(kebabCase);
+
+function standardizeStringArray(arr: string[]) {
+  if (!arr) return [];
+  return arr.flat().map((str) => memoizedKebabCase(str));
+}
+
+const memoizedStandardizeStringArray = memoize(standardizeStringArray);
 
 export function filterProjectDataByFilters(
   projectData: Project[],
   filters: Record<string, string[]>
 ) {
+  let result = [...projectData];
   if (isEmpty(filters)) return projectData;
 
-  return projectData.filter((project: any) => {
-    const filterableAttributes = Object.keys(filters);
-
-    if (!filterableAttributes.length) return true;
-
-    const areAllFiltersEmpty = filterableAttributes.every((attribute) => {
-      return !filters[attribute].length;
+  Object.keys(filters).forEach((filter) => {
+    result = result.filter((project: any) => {
+      const filterValues = memoizedStandardizeStringArray(filters[filter]);
+      if (isEmpty(filterValues)) return true;
+      const projectAttributeValues = project[filter]?.split(",");
+      const projectValues = memoizedStandardizeStringArray(
+        projectAttributeValues
+      );
+      const isMatch = intersection(projectValues, filterValues).length > 0;
+      return isMatch;
     });
-
-    if (areAllFiltersEmpty) return true;
-
-    if (!filterableAttributes.find((attribute) => filters[attribute].length))
-      return true;
-
-    for (const attribute of filterableAttributes) {
-      if (!filters[attribute].length) continue;
-
-      // Get project values for filter attribute
-      const projectAttributeValues = project[attribute]?.split(",");
-
-      if (!projectAttributeValues) continue;
-
-      const arr = projectAttributeValues
-        .flat()
-        .map((value: string) => kebabCase(value?.trim()));
-
-      const isMatch = intersection(arr, filters[attribute]).length > 0;
-
-      if (isMatch) return true;
-    }
-
-    return false;
   });
+
+  return result;
 }

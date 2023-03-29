@@ -27,7 +27,7 @@ function ProjectGridItem(props: Props) {
     <Grid xs={12} sm={6} md={6} lg={3}>
       <div
         className={cx(
-          "flex flex-col h-full rounded border bg-white overflow-hidden",
+          "flex flex-col h-full rounded border bg-white overflow-hidden max-h-96",
           styles["grid-item"]
         )}
       >
