@@ -5,13 +5,14 @@ import styles from "./styles.module.scss";
 
 interface Props {
   projectData: Project[];
+  className?: string;
 }
 
 function ProjectGrid(props: Props) {
-  const { projectData } = props;
+  const { projectData, className = "" } = props;
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} className={className}>
       {projectData.map((project: any, idx: number) => (
         <ProjectGridItem
           key={project.slug + idx}
@@ -22,6 +23,9 @@ function ProjectGrid(props: Props) {
           }
           category={project["main_category"] || project["categories"]}
           thumbnailSrc={project["logo_url"]}
+          blockchainTechnology={project["blockchain_technology"]}
+          blockchainType={project["blockchain_type"]}
+          headquarters={project["primary_headquarter_country"]}
         />
       ))}
     </Grid>

@@ -17,7 +17,8 @@ class Configuration {
           SPREADSHEET_NAME: "Positive Blockchain Core Database (Working Copy)",
           sheets: {
             mainDatabase: {
-              name: "MAIN DATABASE",
+              // name: "MAIN DATABASE",
+              name: "Copy of CSV Template",
               headerRow: 4,
             },
             pendingProjects: {
@@ -26,6 +27,9 @@ class Configuration {
           },
         },
       },
+    },
+    positiveBlockchain: {
+      HOST: "https://positiveblockchain.io",
     },
   };
 }
