@@ -2,18 +2,10 @@ import { GetServerSideProps } from "next";
 import { fetchSingleProjectData } from "@/lib/google";
 import Header from "@/templates/partials/Header";
 import Footer from "@/templates/partials/Footer";
+import IndividualProjectPage from "../../templates/IndividualProjectPage";
 
 function ProjectPage(props: { projectData: any }) {
-  const { projectData } = props;
-
-  return (
-    <div>
-      <Header />
-      <h1>Project Page</h1>
-      <p>{projectData["project_name"]}</p>
-      <Footer />
-    </div>
-  );
+  return <IndividualProjectPage {...props} />;
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {

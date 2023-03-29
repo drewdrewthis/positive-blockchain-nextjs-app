@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { fetchProjectData } from "@/lib/google";
-import ProjectPageTemplate from "@/templates/ProjectPage";
+import ProjectPageTemplate from "@/templates/ProjectsPage";
 import { extractFiltersFromProjectData } from "../../lib/utils";
 
 function AllProjectPage(props: any) {
