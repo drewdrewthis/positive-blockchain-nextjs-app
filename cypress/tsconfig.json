@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "target": "es5",
     "lib": [
       "es5",
@@ -7,7 +12,8 @@
     ],
     "types": [
       "cypress",
-      "node"
+      "node",
+      "../cypress.d.ts"
     ]
   },
   "include": [

@@ -8,9 +8,8 @@ import { withController } from "../lib/withContoller";
 import throttle from "lodash/throttle";
 import filter from "lodash/fp/filter";
 import Footer from "./partials/Footer/index";
-import ProjectFilter from "../components/ProjectFilter";
-import { intersection } from "lodash";
-import { intersectionBy, isEmpty, kebabCase } from "lodash/fp";
+import ProjectFilter from "@/components/ProjectFilter";
+import { filterProjectDataByFilters } from "@/lib/utils";
 
 interface Props {
   projectData: any;
@@ -32,7 +31,7 @@ function useController(props: Props) {
   // }, [search, projectData]);
 
   useEffect(() => {
-    const filteredDataByFilters = filterDataByFilters(
+    const filteredDataByFilters = filterProjectDataByFilters(
       projectData,
       activeFilters
     );
@@ -122,44 +121,6 @@ function filterDataBySearch(projectData: any, search: string) {
 
     return text.includes(search);
   }, projectData);
-}
-
-function filterDataByFilters(projectData: any, filters: any) {
-  if (isEmpty(filters)) return projectData;
-
-  return projectData.filter((project: any) => {
-    const filterableAttributes = Object.keys(filters);
-
-    if (!filterableAttributes.length) return true;
-
-    const areAllFiltersEmpty = filterableAttributes.every((attribute) => {
-      return !filters[attribute].length;
-    });
-
-    if (areAllFiltersEmpty) return true;
-
-    if (!filterableAttributes.find((attribute) => filters[attribute].length))
-      return true;
-
-    for (const attribute of filterableAttributes) {
-      if (!filters[attribute].length) continue;
-
-      // Get project values for filter attribute
-      const projectAttributeValues = project[attribute]?.split(",");
-
-      if (!projectAttributeValues) continue;
-
-      const arr = projectAttributeValues
-        .flat()
-        .map((value: string) => kebabCase(value?.trim()));
-
-      const isMatch = intersection(arr, filters[attribute]).length > 0;
-
-      if (isMatch) return true;
-    }
-
-    return false;
-  });
 }
 
 function standardizePropertyValues(projectData: any) {

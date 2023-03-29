@@ -1,4 +1,4 @@
-interface FilterGroupProps {
+export interface FilterGroupProps {
   title: string;
   key: string;
   labels: string[];

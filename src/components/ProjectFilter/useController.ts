@@ -13,19 +13,11 @@ export function useController(props: Props) {
   return {
     ...props,
     handleFilterChange: (key: string, values: Record<string, boolean>) => {
+      console.log(values);
       setFilterGroups({
         ...filterGroups,
-        [key]: covertBooleanMapToArray(values),
+        [key]: values,
       });
     },
   };
-}
-
-function covertBooleanMapToArray(map: Record<string, boolean>) {
-  return Object.values(map).reduce((acc, value, index) => {
-    if (value) {
-      acc.push(Object.keys(map)[index]);
-    }
-    return acc;
-  }, [] as string[]);
 }
