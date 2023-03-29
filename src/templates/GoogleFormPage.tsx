@@ -1,8 +1,19 @@
+import { useRef, useEffect, useState } from "react";
 import Footer from "./partials/Footer";
 import Header from "./partials/Header";
 
-export default function GoogleFormPageTemplate(props: { iframeSrc: string }) {
-  const { iframeSrc } = props;
+export default function GoogleFormPageTemplate(props: {
+  iframeSrc: string;
+  onSubmit?: () => void;
+}) {
+  const [loadCount, setLoadCount] = useState(0);
+  const { iframeSrc, onSubmit } = props;
+
+  useEffect(() => {
+    if (loadCount === 2) {
+      onSubmit && onSubmit();
+    }
+  }, [loadCount, onSubmit]);
 
   return (
     <div
@@ -27,6 +38,7 @@ export default function GoogleFormPageTemplate(props: { iframeSrc: string }) {
           }}
           src={iframeSrc}
           width="640"
+          onLoad={() => setLoadCount(loadCount + 1)}
         >
           Loading…
         </iframe>
