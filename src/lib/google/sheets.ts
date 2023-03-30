@@ -22,8 +22,10 @@ export async function fetchSingleProjectData(slug: string) {
 }
 
 export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
-  const cachedData = cache.get("projectData");
+  const PROJECT_DATA_CACHE_KEY = "projectData";
+  const cachedData = cache.get(PROJECT_DATA_CACHE_KEY);
   if (cachedData) {
+    console.log("Returning cached data", PROJECT_DATA_CACHE_KEY);
     return cachedData as {
       slug: string;
     }[];
@@ -42,12 +44,15 @@ export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
     headerRow: mainDatabase.headerRow,
   });
 
-  cache.put("projectData", parsedData, 1000 * 60 * 60);
+  cache.put(PROJECT_DATA_CACHE_KEY, parsedData, 1000 * 60 * 60);
 
   return parsedData;
 }
 
-async function fetchSheetData(args: { spreadsheetId: string; range?: string }) {
+export async function fetchSheetData(args: {
+  spreadsheetId: string;
+  range?: string;
+}) {
   const { spreadsheetId = SPREADSHEET_ID, range } = args;
   const auth = getAuth();
 
