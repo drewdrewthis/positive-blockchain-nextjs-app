@@ -55,6 +55,15 @@ export async function fetchSheetData(args: {
   spreadsheetId: string;
   range?: string;
 }) {
+  const SHEET_DATA_CACHE_KEY = "sheet_cache_key";
+
+  const cachedData = cache.get(SHEET_DATA_CACHE_KEY);
+
+  if (cachedData) {
+    console.log("Returning cached data", SHEET_DATA_CACHE_KEY);
+    return cachedData as string[][];
+  }
+
   const { spreadsheetId = SPREADSHEET_ID, range } = args;
   const auth = getAuth();
 
@@ -68,9 +77,11 @@ export async function fetchSheetData(args: {
     range,
   });
 
-  sheets.spreadsheets.context;
+  const values = projectData.data.values;
 
-  return projectData.data.values;
+  cache.put(SHEET_DATA_CACHE_KEY, values, 1000 * 60 * 60);
+
+  return values;
 }
 
 export async function uploadProjectData(data: string[][]) {
