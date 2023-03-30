@@ -10,7 +10,8 @@ export default function GoogleFormIframe(props: {
   const { iframeSrc, onSubmit } = props;
 
   useEffect(() => {
-    console.log("loaded", loadCount);
+    console.log("Google form load count:", loadCount);
+
     if (loadCount === 1) {
       onSubmit && onSubmit();
     }
@@ -24,7 +25,6 @@ export default function GoogleFormIframe(props: {
   useEffect(() => {
     const interval = setInterval(() => {
       if (ref.current && loadCount < 0) {
-        console.log("loaded", loadCount);
         setLoadCount(0);
         clearInterval(interval);
       }

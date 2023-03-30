@@ -20,7 +20,6 @@ export default function TestCSVDownloadPage() {
           <GoogleFormIframe
             iframeSrc="https://docs.google.com/forms/d/e/1FAIpQLSfvtpox9rUMEaodUGVzBYUxu--un-1JF_HuH-mVnC8PkLhIzQ/viewform?embedded=true"
             onSubmit={() => {
-              console.log("loaded");
               setIsSubmitted(true);
             }}
           />
