@@ -43,7 +43,7 @@ const handler = async (req: any, res: any) => {
       return null;
     }
 
-    csvContent = arr2csv(sheetData);
+    let csvContent = arr2csv(sheetData);
 
     cache.put(CACHED_CSV_STRING_KEY, csvContent, 1000 * 60 * 60);
   }
@@ -58,8 +58,42 @@ const handler = async (req: any, res: any) => {
 
 export default handler;
 
+const BLANK_CELL = "{{DELETE ME}}";
 function arr2csv(arr: string[][]) {
+  const preparedArray = prepareArrayForConversion(arr);
   const csvWriter = createArrayCsvStringifier({});
+  const csvString = csvWriter.stringifyRecords(preparedArray);
 
-  return csvWriter.stringifyRecords(arr);
+  // Remove blank cells
+  return csvString.replace(new RegExp(BLANK_CELL, "g"), "");
+}
+
+/**
+ * Because we only have values, we need to determine the number of columns
+ * there should be and create "blank cells" that we can strip from the final output
+ **/
+function prepareArrayForConversion(arr: string[][]) {
+  const longestRowLength = findLongestRowLength(arr);
+
+  return arr.map((row) => {
+    const newRow = new Array(longestRowLength).fill(BLANK_CELL);
+
+    row.forEach((cell, i) => {
+      newRow[i] = cell;
+    });
+
+    return newRow;
+  });
+}
+
+function findLongestRowLength(arr: string[][]) {
+  let longestRowLength = 0;
+
+  arr.forEach((row) => {
+    if (row.length > longestRowLength) {
+      longestRowLength = row.length;
+    }
+  });
+
+  return longestRowLength;
 }

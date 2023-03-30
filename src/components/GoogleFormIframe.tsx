@@ -17,7 +17,7 @@ export default function GoogleFormIframe(props: {
 
   return (
     <div
-      className={cx("flex-1 overflow-y-auto", props.className)}
+      className={cx("overflow-y-auto", props.className)}
       style={{
         width: "100vw",
         height: "100%",

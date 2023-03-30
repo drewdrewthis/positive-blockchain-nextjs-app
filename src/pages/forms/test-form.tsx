@@ -21,7 +21,7 @@ export default function TestCSVDownloadPage() {
       }}
     >
       <Header />
-      <div className="flex flex-col h-full">
+      <div className="h-full">
         {!isSubmitted && (
           <GoogleFormIframe
             iframeSrc="https://docs.google.com/forms/d/e/1FAIpQLSfvtpox9rUMEaodUGVzBYUxu--un-1JF_HuH-mVnC8PkLhIzQ/viewform?embedded=true"
@@ -31,7 +31,7 @@ export default function TestCSVDownloadPage() {
           />
         )}
         {isSubmitted && (
-          <div className="container mx-auto text-center my-10">
+          <div className="container mx-auto text-center my-10 ">
             <div className="mb-5">
               <p className="text-2xl font-bold">
                 Thank you for your submission!
