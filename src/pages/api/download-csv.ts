@@ -25,15 +25,16 @@ const {
 } = sheets;
 
 const handler = async (req: any, res: any) => {
-  const CACHED_CSV_STRING_KEY = "cached_csv_string_key";
+  try {
+    const CACHED_CSV_STRING_KEY = "cached_csv_string_key";
 
-  let csvContent = cache.get(CACHED_CSV_STRING_KEY) as string;
+    // let csvContent = cache.get(CACHED_CSV_STRING_KEY) as string;
 
-  if (csvContent) {
-    console.log("Returning cached data", CACHED_CSV_STRING_KEY);
-  }
+    // if (csvContent) {
+    //   console.log("Returning cached data", CACHED_CSV_STRING_KEY);
+    // }
 
-  if (!csvContent) {
+    // if (!csvContent) {
     const sheetData = await fetchSheetData({
       spreadsheetId: SPREADSHEET_ID,
       range: name,
@@ -45,15 +46,24 @@ const handler = async (req: any, res: any) => {
 
     let csvContent = arr2csv(sheetData);
 
-    cache.put(CACHED_CSV_STRING_KEY, csvContent, 1000 * 60 * 60);
-  }
+    //   cache.put(CACHED_CSV_STRING_KEY, csvContent, 1000 * 60 * 60);
+    // }
 
-  res.setHeader("Content-Type", "text/csv");
-  res.setHeader(
-    "Content-Disposition",
-    "attachment; filename=positive-blockchain-database.csv"
-  );
-  await pipeline(csvContent, res);
+    res.setHeader("Content-Type", "text/csv");
+    res.setHeader(
+      "Content-Disposition",
+      "attachment; filename=positive-blockchain-database.csv"
+    );
+
+    await pipeline(csvContent, res);
+  } catch (error: any) {
+    console.error(error);
+
+    res.status(500).send({
+      error: "Something went wrong",
+      message: error.message,
+    });
+  }
 };
 
 export default handler;

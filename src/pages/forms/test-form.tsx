@@ -26,6 +26,7 @@ export default function TestCSVDownloadPage() {
           <GoogleFormIframe
             iframeSrc="https://docs.google.com/forms/d/e/1FAIpQLSfvtpox9rUMEaodUGVzBYUxu--un-1JF_HuH-mVnC8PkLhIzQ/viewform?embedded=true"
             onSubmit={() => {
+              console.log("loaded");
               setIsSubmitted(true);
             }}
           />
@@ -40,12 +41,13 @@ export default function TestCSVDownloadPage() {
                 Please click the button below to download the CSV file.
               </p>
             </div>
-            <Button
-              className="btn btn-blue bg-blue-500"
-              variant="contained"
-              onClick={handleClick}
-            >
-              Download CSV
+            <Button className="btn btn-blue bg-blue-500" variant="contained">
+              <a
+                download="positive-blockchain-database.csv"
+                href="/nextjs-app/api/download-csv"
+              >
+                Download CSV
+              </a>
             </Button>
           </div>
         )}
