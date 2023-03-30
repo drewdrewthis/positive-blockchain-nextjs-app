@@ -26,6 +26,7 @@ export default function GoogleFormIframe(props: {
       if (ref.current && loadCount < 0) {
         console.log("loaded", loadCount);
         setLoadCount(0);
+        clearInterval(interval);
       }
     }, 1000);
 
@@ -60,29 +61,3 @@ export default function GoogleFormIframe(props: {
     </div>
   );
 }
-
-// function observeDom() {
-//   if (typeof window === "undefined") return;
-
-//   var MutationObserver =
-//     window.MutationObserver || window.WebKitMutationObserver;
-
-//   return function (obj, callback) {
-//     if (!obj || obj.nodeType !== 1) return;
-
-//     if (MutationObserver) {
-//       // define a new observer
-//       var mutationObserver = new MutationObserver(callback);
-
-//       // have the observer observe for changes in children
-//       mutationObserver.observe(obj, { childList: true, subtree: true });
-//       return mutationObserver;
-//     }
-
-//     // browser support fallback
-//     else if (window.addEventListener) {
-//       obj.addEventListener("DOMNodeInserted", callback, false);
-//       obj.addEventListener("DOMNodeRemoved", callback, false);
-//     }
-//   };
-// })();

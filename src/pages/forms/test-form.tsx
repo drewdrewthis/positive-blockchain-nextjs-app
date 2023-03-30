@@ -7,12 +7,6 @@ import { Button } from "@mui/material";
 export default function TestCSVDownloadPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleClick = () => {
-    if (typeof window === "undefined") return;
-    if (!isSubmitted) return;
-    window.location.href = "/nextjs-app/api/download-csv";
-  };
-
   return (
     <div
       className="flex flex-col h-full"
