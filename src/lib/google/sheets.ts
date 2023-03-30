@@ -23,7 +23,9 @@ export async function fetchSingleProjectData(slug: string) {
 
 export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
   const PROJECT_DATA_CACHE_KEY = "projectData";
+
   const cachedData = cache.get(PROJECT_DATA_CACHE_KEY);
+
   if (cachedData) {
     console.log("Returning cached data", PROJECT_DATA_CACHE_KEY);
     return cachedData as {

@@ -26,28 +26,7 @@ const {
 
 const handler = async (req: any, res: any) => {
   try {
-    const CACHED_CSV_STRING_KEY = "cached_csv_string_key";
-
-    let csvContent = cache.get(CACHED_CSV_STRING_KEY) as string;
-
-    if (csvContent) {
-      console.log("Returning cached data", CACHED_CSV_STRING_KEY);
-    }
-
-    if (!csvContent) {
-      const sheetData = await fetchSheetData({
-        spreadsheetId: SPREADSHEET_ID,
-        range: name,
-      });
-
-      if (!sheetData) {
-        return null;
-      }
-
-      let csvContent = arr2csv(sheetData);
-
-      cache.put(CACHED_CSV_STRING_KEY, csvContent, 1000 * 60 * 60);
-    }
+    const csvString = await getCsv();
 
     res.setHeader("Content-Type", "text/csv");
     res.setHeader(
@@ -55,7 +34,7 @@ const handler = async (req: any, res: any) => {
       "attachment; filename=positive-blockchain-database.csv"
     );
 
-    await pipeline(csvContent, res);
+    await pipeline(csvString, res);
   } catch (error: any) {
     console.error(error);
 
@@ -68,7 +47,35 @@ const handler = async (req: any, res: any) => {
 
 export default handler;
 
-const BLANK_CELL = "{{DELETE ME}}";
+async function getCsv() {
+  const CACHED_CSV_STRING_KEY = "cached_csv_string_key";
+
+  const cachedData = cache.get(CACHED_CSV_STRING_KEY) as string;
+
+  if (cachedData) {
+    return cachedData;
+  } else {
+    // Get google sheet data
+    const sheetData = await fetchSheetData({
+      spreadsheetId: SPREADSHEET_ID,
+      range: name,
+    });
+
+    if (!sheetData) {
+      throw new Error("Failed to fetch sheet data");
+    }
+
+    // Convert to CSV string
+    const csvContent = arr2csv(sheetData);
+
+    // Cache CSV string
+    cache.put(CACHED_CSV_STRING_KEY, csvContent, 1000 * 60 * 60);
+
+    return csvContent;
+  }
+}
+
+const BLANK_CELL = "{{BLANK_CELL}}";
 function arr2csv(arr: string[][]) {
   const preparedArray = prepareArrayForConversion(arr);
   const csvWriter = createArrayCsvStringifier({});
