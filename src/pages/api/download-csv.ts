@@ -25,24 +25,27 @@ const {
 } = sheets;
 
 const handler = async (req: any, res: any) => {
-  try {
-    const csvString = await getCsv();
+  // We aren't exposing this endpoint to the public
+  res.redirect("/whoops");
 
-    res.setHeader("Content-Type", "text/csv");
-    res.setHeader(
-      "Content-Disposition",
-      "attachment; filename=positive-blockchain-database.csv"
-    );
+  // try {
+  //   const csvString = await getCsv();
 
-    await pipeline(csvString, res);
-  } catch (error: any) {
-    console.error(error);
+  //   res.setHeader("Content-Type", "text/csv");
+  //   res.setHeader(
+  //     "Content-Disposition",
+  //     "attachment; filename=positive-blockchain-database.csv"
+  //   );
 
-    res.status(500).send({
-      error: "Something went wrong",
-      message: error.message,
-    });
-  }
+  //   await pipeline(csvString, res);
+  // } catch (error: any) {
+  //   console.error(error);
+
+  //   res.status(500).send({
+  //     error: "Something went wrong",
+  //     message: error.message,
+  //   });
+  // }
 };
 
 export default handler;

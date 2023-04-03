@@ -507,6 +507,13 @@
     open "^7.0.3"
     server-destroy "^1.0.1"
 
+"@googleapis/drive@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@googleapis/drive/-/drive-5.0.2.tgz#0cbba4780916ada28538fac06cfe5a8a4d11d87c"
+  integrity sha512-7FhWlP26dkaUyO7kkRlEe27iPmNZUKM5130+9jOVA2IkJUqnsb4v9K2sI1f2F3LC8hZO0axjkUmkgAcNDstpCw==
+  dependencies:
+    googleapis-common "^6.0.3"
+
 "@googleapis/sheets@^4.0.2":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@googleapis/sheets/-/sheets-4.0.2.tgz#8b6218cab8a6a242a45df1d5581e38c46adfdaf2"

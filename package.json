@@ -15,6 +15,7 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.6",
     "@google-cloud/local-auth": "^2.1.1",
+    "@googleapis/drive": "^5.0.2",
     "@googleapis/sheets": "^4.0.2",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.14",
