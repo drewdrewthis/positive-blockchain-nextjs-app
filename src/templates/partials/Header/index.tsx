@@ -23,6 +23,7 @@ function Header() {
       </Link>
       <Stack direction="row" spacing={2}>
         <MenuItem href="/nextjs-app/projects">Projects</MenuItem>
+        <MenuItem href="/nextjs-app/projects-api">API</MenuItem>
         <NestedMenuItem title="Join us">
           <Link href={Routes.BECOME_A_CONTRIBUTOR}>Become a contributor</Link>
           <Link href={Routes.UNIVERSITY_RESEARCH}>University & Research</Link>
