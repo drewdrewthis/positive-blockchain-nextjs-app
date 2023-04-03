@@ -11,6 +11,10 @@ const {
   sheets: { mainDatabase, pendingProjects },
 } = config.constants.google.sheets.databaseSheet;
 
+/**
+ * WARNING: This Will fetch all of the project data in the process,
+ * so it is as slower than just fetching all of the data.
+ */
 export async function fetchSingleProjectData(slug: string) {
   const projectData = await fetchProjectData();
 
