@@ -11,6 +11,9 @@ const {
   sheets: { mainDatabase, pendingProjects },
 } = config.constants.google.sheets.databaseSheet;
 
+/**
+ * Use API route /api/project-data/[slug] to fetch cached single project
+ */
 export async function fetchSingleProjectData(slug: string) {
   const projectData = await fetchProjectData();
 

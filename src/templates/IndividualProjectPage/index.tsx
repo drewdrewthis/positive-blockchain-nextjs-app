@@ -5,6 +5,7 @@ import { withController } from "@/lib/withContoller";
 import { Project } from "@/types";
 import omit from "lodash/fp/omit";
 import ReactPlayer from "react-player";
+import NonSSRWrapper from "../../components/NonSSRWrapper";
 
 function useController(props: { projectData: Project }) {
   return props;
@@ -13,11 +14,14 @@ function IndividualProjectPageTemplate(
   props: ReturnType<typeof useController>
 ) {
   const { projectData } = props;
-  console.log(projectData);
+
   let shortDescription =
     projectData["description_short_value_proposition_in_a_tweet"];
-  shortDescription =
-    shortDescription[0].toUpperCase() + shortDescription.slice(1);
+
+  if (shortDescription) {
+    shortDescription =
+      shortDescription[0].toUpperCase() + shortDescription.slice(1);
+  }
 
   const additionalInfo = omit(
     [
@@ -53,7 +57,7 @@ function IndividualProjectPageTemplate(
               <span>{projectData["organization_type"]}</span>
             </div>
             <b>Subcategories: </b>
-            <span>{projectData["sub_categories"].join(", ")}</span>
+            <span>{projectData["sub_categories"]?.join(", ")}</span>
             <p>{shortDescription}</p>
           </div>
         </div>
@@ -65,7 +69,12 @@ function IndividualProjectPageTemplate(
             </div>
             <div className="flex-1">
               {projectData["video_url"] && (
-                <ReactPlayer className="mb-4" url={projectData["video_url"]} />
+                <NonSSRWrapper>
+                  <ReactPlayer
+                    className="mb-4"
+                    url={projectData["video_url"]}
+                  />
+                </NonSSRWrapper>
               )}
               <div className="rounded border p-5">
                 <h3 className="font-bold mb-2 mt-0">Additional Information</h3>
