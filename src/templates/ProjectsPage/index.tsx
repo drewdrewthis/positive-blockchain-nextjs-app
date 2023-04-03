@@ -8,6 +8,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Search } from "@mui/icons-material";
 import { useController } from "./useController";
 import { withController } from "@/lib/withContoller";
+import { Button, Typography } from "@mui/material";
+import Link from "next/link";
 
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
   const { projectData, handleSearch, filters, handleFilterUpdate } = props;
@@ -16,7 +18,21 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     <div className="flex flex-col gap-10 h-full min-h-screen">
       <Header />
       <div className="prose max-w-none max-w-7xl mx-auto p-10 w-full h-full">
-        <h1>Project Directory</h1>
+        <div className="flex justify-between items-center content-center mb-10">
+          <Typography variant="h1" className="mb-0">
+            Project Directory
+          </Typography>
+          <Link href="/forms/csv-download-test" className="no-underline">
+            <Button
+              variant="contained"
+              size="medium"
+              className="bg-brand-primary"
+              color="success"
+            >
+              Request CSV Download
+            </Button>
+          </Link>
+        </div>
         <div className="flex justify-center w-full">
           <div className="m-auto border rounded p-2">
             <Search>
