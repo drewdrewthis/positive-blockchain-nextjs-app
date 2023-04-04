@@ -1,6 +1,21 @@
 import * as google from "@googleapis/drive";
 import { getAuth } from "./auth";
 
+export async function fetchLatestCsvInfoEnhanced(): Promise<{
+  id: string;
+  name: string;
+  parents: string[];
+  downloadLink: string;
+}> {
+  const info = await getLatestCsvInfo();
+  return parseFileContents(info);
+}
+
+export async function getLatestCsvId() {
+  const info = await getLatestCsvInfo();
+  return info?.id;
+}
+
 export async function getLatestCsvInfo(): Promise<{
   id: string;
   name: string;
@@ -8,7 +23,6 @@ export async function getLatestCsvInfo(): Promise<{
 } | void> {
   const auth = getAuth();
   const drive = google.drive({ version: "v3", auth });
-
   const query = "name contains 'pb_database_download'";
 
   const response = await drive.files.list({
@@ -27,7 +41,26 @@ export async function getLatestCsvInfo(): Promise<{
   }
 }
 
-export async function getLatestCsvId() {
-  const info = await getLatestCsvInfo();
-  return info?.id;
+function parseFileContents(
+  fileInfo: {
+    id: string;
+    name: string;
+    parents: string[];
+  } | void
+) {
+  if (!fileInfo) throw new Error("fileInfo cannot be undefined");
+
+  const timestamp = fileInfo?.name
+    ?.split("pb_database_download-")[1]
+    .split(".csv")[0];
+
+  return {
+    ...fileInfo,
+    timestamp,
+    downloadLink: createDownloadLink(fileInfo?.id),
+  };
+}
+
+export function createDownloadLink(id: string) {
+  return `https://drive.google.com/uc?id=${id}&export=`;
 }

@@ -1,7 +1,10 @@
 import Footer from "@/templates/partials/Footer";
 import Header from "@/templates/partials/Header";
 import { Button } from "@mui/material";
-import { getLatestCsvInfo } from "../lib/google/drive";
+import {
+  fetchLatestCsvInfoEnhanced,
+  getLatestCsvInfo,
+} from "../lib/google/drive";
 import { GetServerSideProps } from "next";
 
 export default function DownloadCsvPage(props: {
@@ -43,36 +46,11 @@ export default function DownloadCsvPage(props: {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const info = await getLatestCsvInfo();
-  const parsedInfo = parseFileContents(info);
+  const info = await fetchLatestCsvInfoEnhanced();
 
   return {
     props: {
-      ...parsedInfo,
+      ...info,
     },
   };
 };
-
-function parseFileContents(
-  fileInfo: {
-    id: string;
-    name: string;
-    parents: string[];
-  } | void
-) {
-  if (!fileInfo) return {};
-
-  const timestamp = fileInfo?.name
-    ?.split("pb_database_download-")[1]
-    .split(".csv")[0];
-
-  return {
-    ...fileInfo,
-    timestamp,
-    downloadLink: createDownloadLink(fileInfo?.id),
-  };
-}
-
-function createDownloadLink(id: string) {
-  return `https://drive.google.com/uc?id=${id}&export=`;
-}
