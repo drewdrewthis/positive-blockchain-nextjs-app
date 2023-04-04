@@ -18,6 +18,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
         projectData?.slice(0, projects.INITIAL_DATA_LOAD_COUNT) || [],
       filters: extractFiltersFromProjectData(projectData as any),
     },
+    revalidate: projects.CACHE_TTL,
   };
 };
 
