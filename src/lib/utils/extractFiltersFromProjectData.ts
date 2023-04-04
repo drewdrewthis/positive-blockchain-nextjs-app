@@ -44,6 +44,7 @@ function extractPossibleValuesFromListKey(
   return chain(arr)
     .uniqBy((value) => value?.toLocaleLowerCase())
     .compact()
+    .sort()
     .value();
 }
 
