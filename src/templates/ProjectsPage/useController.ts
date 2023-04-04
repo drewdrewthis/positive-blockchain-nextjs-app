@@ -1,14 +1,21 @@
 import React, { useEffect } from "react";
 import throttle from "lodash/throttle";
 import { filterProjectDataByFilters } from "@/lib/utils";
+import { Project } from "@/types";
 
 interface Props {
-  projectData: any;
+  /**
+   * Performance optimization:
+   * Returns a subset of the project data for initial render.
+   * Subsequent searches return all data.
+   */
+  initialData: Project[];
   filters: Record<string, string[]>;
 }
 
 export function useController(props: Props) {
-  const { projectData, filters } = props;
+  const { initialData, filters } = props;
+  const [projectData, setProjectData] = React.useState<any>(initialData);
   const [search, setSearch] = React.useState("");
   const [filteredData, setFilteredData] = React.useState<any>(projectData);
   const [activeFilters, setActiveFilters] = React.useState<any>({});
@@ -16,6 +23,15 @@ export function useController(props: Props) {
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value.toLowerCase());
   };
+
+  // Fetch all of the data after initial render
+  useEffect(() => {
+    fetch("/nextjs-app/api/project-data")
+      .then((response) => response.json())
+      .then((data) => {
+        setProjectData(data.data);
+      });
+  }, []);
 
   // useEffect(() => {
   //   setFilteredData(filterDataBySearch(projectData, search));

@@ -31,6 +31,9 @@ class Configuration {
     positiveBlockchain: {
       HOST: "https://positiveblockchain.io",
     },
+    projects: {
+      INITIAL_DATA_LOAD_COUNT: 50,
+    },
   };
 }
 
