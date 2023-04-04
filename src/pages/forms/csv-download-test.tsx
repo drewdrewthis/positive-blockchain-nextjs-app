@@ -4,7 +4,7 @@ import Header from "@/templates/partials/Header";
 import { useRouter } from "next/router";
 
 export default function TestCSVDownloadPage() {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <div
@@ -18,9 +18,9 @@ export default function TestCSVDownloadPage() {
         <GoogleFormIframe
           iframeSrc="https://docs.google.com/forms/d/e/1FAIpQLSfvtpox9rUMEaodUGVzBYUxu--un-1JF_HuH-mVnC8PkLhIzQ/viewform?embedded=true"
           onSubmit={() => {
-            setTimeout(() => {
-              // router.push("/download-csv");
-            }, 1000);
+            // setTimeout(() => {
+            // router.push("/download-csv");
+            // }, 1000);
           }}
         />
       </div>
