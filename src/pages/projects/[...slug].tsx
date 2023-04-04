@@ -5,6 +5,7 @@ import {
 } from "next";
 import IndividualProjectPage from "../../templates/IndividualProjectPage";
 import { ParsedUrlQuery } from "querystring";
+import { config } from "../../configuration";
 
 function ProjectPage(props: { projectData: any }) {
   return <IndividualProjectPage {...props} />;
@@ -14,8 +15,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { res } = context;
   const url = getProjectDataUrl(context);
   const projectData = await fetch(url).then((res) => res.json());
+  const { projects } = config.constants;
 
-  res.setHeader("Cache-Control", "public, s-maxage=10, stale-while-revalidate");
+  res.setHeader(
+    "Cache-Control",
+    `public, s-maxage=${projects.CACHE_TTL}, stale-while-revalidate`
+  );
 
   return {
     props: {

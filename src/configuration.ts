@@ -33,6 +33,7 @@ class Configuration {
     },
     projects: {
       INITIAL_DATA_LOAD_COUNT: 50,
+      CACHE_TTL: 60 * 5,
     },
   };
 }
