@@ -1,7 +1,8 @@
-import { Project } from "../../../types";
+import { Project } from "@/types";
 
 export * from "./parseGoogleSheetsValuesByHeaderRow";
 export * from "./parseGoogleSheetsValuesByKeyRow";
+export * from "./extractProjectDataHeaders";
 
 // Remove all fields that start with PUBLIC_
 export const stripNonPublicFields = (data: Project): Partial<Project> => {

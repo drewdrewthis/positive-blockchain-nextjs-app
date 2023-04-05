@@ -2,7 +2,10 @@ import * as google from "@googleapis/sheets";
 import MemCache from "memory-cache";
 import { getAuth } from "./auth";
 import { config } from "@/configuration";
-import { parseGoogleSheetValuesByKeyRow } from "./utils";
+import {
+  extractProjectDataHeaders,
+  parseGoogleSheetValuesByKeyRow,
+} from "./utils";
 
 const cache = new MemCache.Cache();
 
@@ -30,6 +33,19 @@ export async function findProjectBySlug(
   slug: string
 ) {
   return projectData.find((project) => project.slug === slug);
+}
+
+export async function fetchProjectDataHeaders() {
+  const sheetData = await fetchSheetData({
+    spreadsheetId: SPREADSHEET_ID,
+    range: mainDatabase.name,
+  });
+
+  if (!sheetData) {
+    return null;
+  }
+
+  return extractProjectDataHeaders(sheetData);
 }
 
 export async function fetchProjectData(): Promise<{ slug: string }[] | null> {

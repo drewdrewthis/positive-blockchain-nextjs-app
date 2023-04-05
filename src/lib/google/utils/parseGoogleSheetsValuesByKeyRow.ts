@@ -1,6 +1,6 @@
 import snakeCase from "lodash/snakeCase";
 import kebabCase from "lodash/kebabCase";
-import { config } from "../../../configuration";
+import { config } from "@/configuration";
 
 type Project = {
   slug: string;
