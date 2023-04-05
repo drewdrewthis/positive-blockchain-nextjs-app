@@ -1,11 +1,29 @@
 import { GetServerSideProps } from "next";
 import IndividualProjectPage from "@/templates/IndividualProjectPage";
 import { fetchProjectDataSchema } from "@/lib/google";
+import ProjectSubmissionForm from "../../templates/ProjectSubmissionForm";
+import Header from "../../templates/partials/Header";
+import Footer from "../../templates/partials/Footer";
 
 function ProjectPage(props: any) {
   console.log(props);
   // return <div>TEST</div>;
-  return <IndividualProjectPage {...props} />;
+  return (
+    <div
+      className="flex flex-col h-full"
+      style={{
+        height: "100vh",
+      }}
+    >
+      <Header />
+      <div className="container mx-auto mt-10 max-w-lg">
+        <ProjectSubmissionForm
+          inputs={Object.entries(props.projectDataHeaders)}
+        />
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
