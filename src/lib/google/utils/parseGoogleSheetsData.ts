@@ -8,6 +8,11 @@ type Project = {
 
 const { mainDatabase } = config.constants.google.sheets.databaseSheet.sheets;
 
+/**
+ * Parses Google Sheets values into an array of objects
+ * headerRow is the row number of the header row
+ * and it is used to determine the keys of the objects
+ */
 export function parseGoogleSheetsData(
   data: string[][],
   options: {

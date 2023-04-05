@@ -28,7 +28,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/scripts/createKeysFromHeaders.ts"  ],
   "exclude": [
     "node_modules",
     "./cypress.config.ts",
