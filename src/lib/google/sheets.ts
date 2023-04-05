@@ -123,6 +123,7 @@ export async function uploadProjectData(data: string[][]) {
     spreadsheetId: SPREADSHEET_ID,
     range: pendingProjects.name,
     valueInputOption: "USER_ENTERED",
+    // insertDataOption: "INSERT_ROWS",
     requestBody: createResource(data),
   });
 
@@ -131,7 +132,7 @@ export async function uploadProjectData(data: string[][]) {
 
 function createResource(data: string[][]) {
   const resource = {
-    majorDimension: "ROWS",
+    // majorDimension: "ROWS",
     values: data,
   };
 

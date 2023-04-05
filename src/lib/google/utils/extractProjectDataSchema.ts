@@ -1,5 +1,6 @@
 import snakeCase from "lodash/snakeCase";
 import { config } from "@/configuration";
+import { ProjectDataSchema } from "@/types";
 
 type Project = {
   slug: string;
@@ -19,27 +20,20 @@ export function extractProjectDataSchema(
     keyRow?: number;
     headerRow?: number;
   } = {}
-): {
-  [data_key: string]: {
-    headerTitle: string;
-    columnIdx: number;
-    type: "text" | "list";
-    // TODO: Add options for list
-    // options
-  };
-} {
+): ProjectDataSchema {
   const { keyRow = mainDatabase.keyRow, headerRow = mainDatabase.headerRow } =
     options;
 
   const keys = data[keyRow - 1];
   const headers = data[headerRow - 1];
 
+  console.log("keys", keys);
   return keys.reduce((acc, key, i) => {
     if (key?.startsWith("PUBLIC_")) {
       const formattedKey = snakeCase(key.replace("PUBLIC_", ""));
       acc[formattedKey] = {
         headerTitle: headers[i],
-        columnIdx: i + 1,
+        columnIdx: i,
         type: pickType(formattedKey),
       };
     }

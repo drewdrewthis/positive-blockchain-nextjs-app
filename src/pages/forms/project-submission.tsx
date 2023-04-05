@@ -3,20 +3,22 @@ import { fetchProjectDataSchema } from "@/lib/google";
 import ProjectSubmissionForm from "../../templates/ProjectSubmissionForm";
 import Header from "../../templates/partials/Header";
 import Footer from "../../templates/partials/Footer";
+import { ProjectDataSchema } from "../../types";
 
 function ProjectPage(props: any) {
-  const handleSubmit = (values: Record<string, any>) => {
-    fetch("/nextjs-app/api/submit-project-data", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+  console.log(props.projectDataHeaders);
+  const handleSubmit = async (values: Record<string, any>) => {
+    const valuesArr = convertValuesToStringArray(
+      {
+        ...values,
+        submitted_at: Date.now(),
       },
-      body: JSON.stringify([values]),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      });
+      props.projectDataHeaders
+    );
+
+    // console.log(JSON.stringify(valuesArr));
+
+    await submitProjectData([valuesArr]);
   };
 
   return (
@@ -27,7 +29,7 @@ function ProjectPage(props: any) {
       }}
     >
       <Header />
-      <div className="container mx-auto mt-10 max-w-lg">
+      <div className="container mx-auto mt-10 max-w-3xl py-10">
         <ProjectSubmissionForm
           inputs={Object.entries(props.projectDataHeaders)}
           initialValues={props.projectData}
@@ -75,4 +77,36 @@ async function getProjectData(context: any) {
 function getBaseUrl(req: any) {
   const protocol = req.headers["x-forwarded-proto"] || "http";
   return req ? `${protocol}://${req.headers.host}` : "";
+}
+
+// TODO: Move this serverside and allow the submitting of an object
+function convertValuesToStringArray(
+  values: Record<string, any>,
+  projectDataHeaders: ProjectDataSchema
+) {
+  const arr = new Array();
+  Object.entries(projectDataHeaders).forEach((entry) => {
+    const [key, value] = entry;
+    const index = value.columnIdx;
+    console.log("build", key, value, index);
+    arr[index] = values[key].toString();
+  });
+
+  return arr.map((value) => (value === null ? " " : value));
+}
+
+async function submitProjectData(values: string[][]) {
+  const body = JSON.stringify(values);
+  console.log("submitting", body);
+  fetch("/nextjs-app/api/submit-project-data", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body,
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    });
 }

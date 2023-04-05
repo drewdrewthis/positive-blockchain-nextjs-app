@@ -65,3 +65,11 @@ export type Project = {
   email_2?: string;
   partner_tag?: string;
 };
+
+export type ProjectDataSchema = {
+  [data_key: string]: {
+    headerTitle: string;
+    columnIdx: number;
+    type: "text" | "list" | "boolean";
+  };
+};

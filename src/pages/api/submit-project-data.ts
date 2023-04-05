@@ -19,12 +19,7 @@ export default async function handler(
     },
   });
 
-  apiRoute.post<ExtendedRequest, ExtendedResponse>(async (req, res) => {
-    console.log("Uploading data");
-    console.log("Received request to import csv");
-    console.log(req.files); // Your files here
-    console.log(req.body); // Your form data here
-
+  apiRoute.post(async (req, res) => {
     // Any logic with your data here
     try {
       const { body } = req;
