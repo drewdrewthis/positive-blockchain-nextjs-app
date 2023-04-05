@@ -3,7 +3,7 @@ import MemCache from "memory-cache";
 import { getAuth } from "./auth";
 import { config } from "@/configuration";
 import {
-  extractProjectDataHeaders,
+  extractProjectDataSchema,
   parseGoogleSheetValuesByKeyRow,
 } from "./utils";
 
@@ -35,7 +35,7 @@ export async function findProjectBySlug(
   return projectData.find((project) => project.slug === slug);
 }
 
-export async function fetchProjectDataHeaders() {
+export async function fetchProjectDataSchema() {
   const sheetData = await fetchSheetData({
     spreadsheetId: SPREADSHEET_ID,
     range: mainDatabase.name,
@@ -45,7 +45,7 @@ export async function fetchProjectDataHeaders() {
     return null;
   }
 
-  return extractProjectDataHeaders(sheetData);
+  return extractProjectDataSchema(sheetData);
 }
 
 export async function fetchProjectData(): Promise<{ slug: string }[] | null> {

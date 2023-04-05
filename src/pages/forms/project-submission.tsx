@@ -1,8 +1,9 @@
 import { GetServerSideProps } from "next";
 import IndividualProjectPage from "@/templates/IndividualProjectPage";
-import { fetchProjectDataHeaders } from "@/lib/google";
+import { fetchProjectDataSchema } from "@/lib/google";
 
-function ProjectPage(props: { projectData: any }) {
+function ProjectPage(props: any) {
+  console.log(props);
   // return <div>TEST</div>;
   return <IndividualProjectPage {...props} />;
 }
@@ -18,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props["projectData"] = projectData.data;
   }
 
-  const projectDataHeaders = await fetchProjectDataHeaders();
+  const projectDataHeaders = await fetchProjectDataSchema();
 
   return {
     props: {
