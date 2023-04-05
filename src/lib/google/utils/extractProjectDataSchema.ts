@@ -40,9 +40,21 @@ export function extractProjectDataSchema(
       acc[formattedKey] = {
         headerTitle: headers[i],
         columnIdx: i + 1,
-        type: key.endsWith("_list") ? "list" : "text",
+        type: pickType(formattedKey),
       };
     }
     return acc;
   }, {} as any);
+}
+
+function pickType(key: string) {
+  if (key.endsWith("_list")) {
+    return "list";
+  }
+
+  if (key === "active") {
+    return "boolean";
+  }
+
+  return "text";
 }

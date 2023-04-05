@@ -1,13 +1,24 @@
 import { GetServerSideProps } from "next";
-import IndividualProjectPage from "@/templates/IndividualProjectPage";
 import { fetchProjectDataSchema } from "@/lib/google";
 import ProjectSubmissionForm from "../../templates/ProjectSubmissionForm";
 import Header from "../../templates/partials/Header";
 import Footer from "../../templates/partials/Footer";
 
 function ProjectPage(props: any) {
-  console.log(props);
-  // return <div>TEST</div>;
+  const handleSubmit = (values: Record<string, any>) => {
+    fetch("/nextjs-app/api/submit-project-data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify([values]),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+
   return (
     <div
       className="flex flex-col h-full"
@@ -19,6 +30,8 @@ function ProjectPage(props: any) {
       <div className="container mx-auto mt-10 max-w-lg">
         <ProjectSubmissionForm
           inputs={Object.entries(props.projectDataHeaders)}
+          initialValues={props.projectData}
+          onSubmit={(values) => handleSubmit(values)}
         />
       </div>
       <Footer />

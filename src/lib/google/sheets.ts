@@ -110,6 +110,8 @@ export async function fetchSheetData(args: {
 }
 
 export async function uploadProjectData(data: string[][]) {
+  console.log("Uploading project data", data);
+
   const auth = getAuth();
 
   const sheets = google.sheets({
