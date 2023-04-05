@@ -1,5 +1,5 @@
-import { parseGoogleSheetsValuesByHeaderRow } from "../parseGoogleSheetsData";
-import { SAMPLE_DATA } from "./sample-data";
+import { parseGoogleSheetsValuesByHeaderRow } from "../parseGoogleSheetsValuesByHeaderRow";
+import { SAMPLE_DATA } from "./sampleData/sample-data";
 
 describe("parseGoogleSheets", () => {
   it("should parse a google sheet", () => {

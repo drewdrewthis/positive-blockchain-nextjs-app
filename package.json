@@ -9,7 +9,8 @@
     "lint": "next lint",
     "cypress": "cypress open",
     "open:vercel": "open https://vercel.com/drewdrewthispositiveblockchain-gmailcom/positive-blockchain-nextjs-app",
-    "generate:header-keys": "npx tsx ./src/scripts/createKeysFromHeaders.ts"
+    "generate:header-keys": "tsx ./src/scripts/createKeysFromHeaders.ts",
+    "generate:raw-sheet-values": "tsx ./src/scripts/getRawSheetsValues.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",

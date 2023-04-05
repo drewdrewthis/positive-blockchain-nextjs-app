@@ -1,9 +1,8 @@
 import * as google from "@googleapis/sheets";
-import { parseGoogleSheetsValuesByHeaderRow } from "./utils/parseGoogleSheetsData";
 import MemCache from "memory-cache";
 import { getAuth } from "./auth";
 import { config } from "@/configuration";
-import { Project } from "../../types";
+import { parseGoogleSheetValuesByKeyRow } from "./utils";
 
 const cache = new MemCache.Cache();
 
@@ -54,9 +53,7 @@ export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
     return null;
   }
 
-  const parsedData = parseGoogleSheetsValuesByHeaderRow(sheetData, {
-    headerRow: mainDatabase.headerRow,
-  });
+  const parsedData = parseGoogleSheetValuesByKeyRow(sheetData);
 
   cache.put(PROJECT_DATA_CACHE_KEY, parsedData, 1000 * 60 * 60);
 
