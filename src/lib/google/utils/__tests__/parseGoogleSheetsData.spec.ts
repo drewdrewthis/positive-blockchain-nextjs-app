@@ -1,9 +1,9 @@
-import { parseGoogleSheetsData } from "../parseGoogleSheetsData";
+import { parseGoogleSheetsValuesByHeaderRow } from "../parseGoogleSheetsData";
 import { SAMPLE_DATA } from "./sample-data";
 
 describe("parseGoogleSheets", () => {
   it("should parse a google sheet", () => {
-    const data = parseGoogleSheetsData(SAMPLE_DATA);
+    const data = parseGoogleSheetsValuesByHeaderRow(SAMPLE_DATA);
 
     expect(data[0]).toMatchObject(
       expect.objectContaining({

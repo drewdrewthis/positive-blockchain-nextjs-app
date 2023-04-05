@@ -13,7 +13,7 @@ const { mainDatabase } = config.constants.google.sheets.databaseSheet.sheets;
  * headerRow is the row number of the header row
  * and it is used to determine the keys of the objects
  */
-export function parseGoogleSheetsData(
+export function parseGoogleSheetsValuesByHeaderRow(
   data: string[][],
   options: {
     headerRow?: number;

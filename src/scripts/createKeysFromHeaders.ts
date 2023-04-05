@@ -15,7 +15,7 @@ import dotenv from "dotenv";
 // @ts-expect-error - No types
 import isPlural from "is-plural";
 import { config } from "../configuration";
-import { parseGoogleSheetsData } from "../lib/google/utils/parseGoogleSheetsData";
+import { parseGoogleSheetsValuesByHeaderRow } from "../lib/google/utils/parseGoogleSheetsData";
 
 const {
   SPREADSHEET_ID,
@@ -39,7 +39,7 @@ dotenv.config({
     return;
   }
 
-  const parsedData = parseGoogleSheetsData(sheetData, {
+  const parsedData = parseGoogleSheetsValuesByHeaderRow(sheetData, {
     headerRow: 5,
   });
 

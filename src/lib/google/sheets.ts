@@ -1,5 +1,5 @@
 import * as google from "@googleapis/sheets";
-import { parseGoogleSheetsData } from "./utils/parseGoogleSheetsData";
+import { parseGoogleSheetsValuesByHeaderRow } from "./utils/parseGoogleSheetsData";
 import MemCache from "memory-cache";
 import { getAuth } from "./auth";
 import { config } from "@/configuration";
@@ -54,7 +54,7 @@ export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
     return null;
   }
 
-  const parsedData = parseGoogleSheetsData(sheetData, {
+  const parsedData = parseGoogleSheetsValuesByHeaderRow(sheetData, {
     headerRow: mainDatabase.headerRow,
   });
 
