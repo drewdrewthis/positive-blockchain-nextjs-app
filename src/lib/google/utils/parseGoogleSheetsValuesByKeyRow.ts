@@ -16,7 +16,7 @@ export function parseGoogleSheetValuesByKeyRow(
     keyRow?: number;
     headerRow?: number;
   } = {}
-) {
+): Project[] {
   const { keyRow = mainDatabase.keyRow, headerRow = mainDatabase.headerRow } =
     options;
 
@@ -27,7 +27,12 @@ export function parseGoogleSheetValuesByKeyRow(
     const projectObj = row.reduce(
       (acc, cell, i) => {
         const key = keys[i];
-        acc[key] = formatCell(key, cell);
+
+        // Skip private fields
+        if (key?.startsWith("PUBLIC_")) {
+          const formattedKey = snakeCase(key.replace("PUBLIC_", ""));
+          acc[formattedKey] = formatCell(key, cell);
+        }
 
         return acc;
       },
