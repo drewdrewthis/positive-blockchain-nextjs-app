@@ -6,14 +6,18 @@ import { Project } from "@/types";
 import omit from "lodash/fp/omit";
 import ReactPlayer from "react-player";
 import NonSSRWrapper from "../../components/NonSSRWrapper";
+import { Button } from "@mui/material";
 
-function useController(props: { projectData: Project }) {
+function useController(props: {
+  projectData: Project;
+  submitEditLink: string;
+}) {
   return props;
 }
 function IndividualProjectPageTemplate(
   props: ReturnType<typeof useController>
 ) {
-  const { projectData } = props;
+  const { projectData, submitEditLink } = props;
 
   let shortDescription =
     projectData["description_short_value_proposition_in_a_tweet"];
@@ -68,6 +72,9 @@ function IndividualProjectPageTemplate(
               <p>{projectData["long_description"]}</p>
             </div>
             <div className="flex-1">
+              <Button href={submitEditLink} target="_blank">
+                EDIT
+              </Button>
               {projectData["video_url"] && (
                 <NonSSRWrapper>
                   <ReactPlayer
