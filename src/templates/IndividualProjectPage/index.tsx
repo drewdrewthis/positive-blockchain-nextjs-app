@@ -8,6 +8,8 @@ import ReactPlayer from "react-player";
 import NonSSRWrapper from "../../components/NonSSRWrapper";
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import AttributeToInfoBlock from "./AdditionalInfoBlock";
+import LinksBlock, { VALID_FIELDS } from "./LinksBlock";
 
 function useController(props: { projectData: Project }) {
   return props;
@@ -35,18 +37,19 @@ function IndividualProjectPageTemplate(
       <div className="flex flex-col h-full flex-1">
         <div className="prose max-w-none max-w-7xl mx-auto p-10 w-full h-full">
           <div className="container mx-auto">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               {projectData["logo_url"] && (
                 <div>
                   <Image
                     src={projectData["logo_url"]}
+                    className="mr-3"
                     alt="project logo"
                     width={100}
                     height={100}
                   />
                 </div>
               )}
-              <div className="flex flex-col gap-2 ml-4">
+              <div className="flex flex-col gap-2">
                 <Typography variant="h1" className="m-0">
                   {projectData["project_name"]}
                 </Typography>
@@ -81,7 +84,7 @@ function IndividualProjectPageTemplate(
                   />
                 </NonSSRWrapper>
               )}
-              <div className="rounded border p-5">
+              <div className="rounded border p-5 mb-3">
                 <h3 className="font-bold mb-2 mt-0">Additional Information</h3>
                 {Object.keys(additionalInfo).map((key) => {
                   return (
@@ -94,6 +97,7 @@ function IndividualProjectPageTemplate(
                   );
                 })}
               </div>
+              <LinksBlock links={pick(VALID_FIELDS, projectData)} />
             </div>
           </div>
         </div>
@@ -101,54 +105,6 @@ function IndividualProjectPageTemplate(
       <Footer />
     </div>
   );
-}
-
-function AttributeToInfoBlock(props: { attribute: string; projectData: any }) {
-  const { attribute, projectData } = props;
-  const title = snakeCaseToSentenceCase(attribute);
-  const content = projectData[attribute];
-
-  return <InfoBlock title={title} content={content} />;
-}
-
-function InfoBlock(props: { title: string; content: string | string[] }) {
-  const { title, content } = props;
-
-  if (!content) {
-    return null;
-  }
-
-  if (Array.isArray(content)) {
-    return (
-      <div>
-        <b>{title}: </b>
-        {content.map((item, index) => {
-          return (
-            <span key={index}>
-              {item}
-              {index !== content.length - 1 ? ", " : ""}
-            </span>
-          );
-        })}
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <b>{title}: </b>
-      <span>{content}</span>
-    </div>
-  );
-}
-
-function snakeCaseToSentenceCase(str: string) {
-  if (!str) return str;
-
-  return str
-    .split("_")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
 }
 
 export default withController(IndividualProjectPageTemplate, useController);
