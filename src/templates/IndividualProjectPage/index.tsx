@@ -10,14 +10,25 @@ import { Typography } from "@mui/material";
 import Image from "next/image";
 import AttributeToInfoBlock from "./AdditionalInfoBlock";
 import LinksBlock, { VALID_FIELDS } from "./LinksBlock";
+import SDGBlock from "./SDGBlock";
+import { extractSdgsFromProject } from "../../lib/utils";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 
 function useController(props: { projectData: Project }) {
-  return props;
+  const { projectData } = props;
+  const sdgs = extractSdgsFromProject(projectData);
+  const additionalInfo = pick([], projectData);
+
+  return {
+    ...props,
+    additionalInfo,
+    sdgs,
+  };
 }
 function IndividualProjectPageTemplate(
   props: ReturnType<typeof useController>
 ) {
-  const { projectData } = props;
+  const { projectData, sdgs, additionalInfo } = props;
 
   let shortDescription =
     projectData["description_short_value_proposition_in_a_tweet"];
@@ -28,8 +39,6 @@ function IndividualProjectPageTemplate(
   }
 
   console.log("Project data", projectData);
-
-  const additionalInfo = pick([], projectData);
 
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">
@@ -72,6 +81,18 @@ function IndividualProjectPageTemplate(
         <div className="prose max-w-none max-w-7xl mx-auto mb-auto p-10 w-full h-full bg-white flex-1">
           <div className="container mx-auto flex justify-between gap-10">
             <div className="flex-2 w-2/3">
+              <div>
+                <a href="https://sdgs.un.org/goals" target="_blank">
+                  <Typography
+                    variant="h3"
+                    className="inline inline-flex items-center gap-2"
+                  >
+                    Sustainable Development Goals (SDGs)
+                    <InfoOutlinedIcon />
+                  </Typography>
+                </a>
+              </div>
+              <SDGBlock sdgs={sdgs} />
               <h3>Description</h3>
               <p>{projectData["long_description"]}</p>
             </div>

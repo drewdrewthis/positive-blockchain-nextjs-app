@@ -1,4 +1,6 @@
 import { parse } from "csv-parse";
+import { Project } from "../../types";
+import { isUndefined, uniq } from "lodash/fp";
 export * from "./extractFiltersFromProjectData";
 export * from "./filterProjectDataByFilters";
 export * from "./convertBooleanMapToArray";
@@ -33,4 +35,13 @@ export function snakeCaseToSentenceCase(str: string) {
     .split("_")
     .map((word) => word[0].toUpperCase() + word.slice(1))
     .join(" ");
+}
+
+export function extractSdgsFromProject(project: Project) {
+  return uniq(
+    project["sdg_occurences"]
+      .split(",")
+      .filter((x) => x !== "" && !isUndefined(x))
+      .sort()
+  );
 }
