@@ -14,7 +14,6 @@ import Link from "next/link";
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
   const { projectData, handleSearch, filters, handleFilterUpdate } = props;
 
-
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">
       <Header />

@@ -3,8 +3,14 @@ import { fetchProjectData } from "@/lib/google";
 import ProjectPageTemplate from "@/templates/ProjectsPage";
 import { extractFiltersFromProjectData } from "../../lib/utils";
 import { config } from "../../configuration";
+import { Project } from "../../types";
 
-function AllProjectPage(props: any) {
+interface Props {
+  initialData: Project[];
+  filters: Record<string, string[]>;
+}
+
+function AllProjectPage(props: Props) {
   return <ProjectPageTemplate {...props} />;
 }
 
@@ -17,7 +23,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       initialData:
         projectData?.slice(0, projects.INITIAL_DATA_LOAD_COUNT) || [],
       filters: extractFiltersFromProjectData(projectData as any),
-    },
+    } as Props,
     revalidate: projects.CACHE_TTL,
   };
 };

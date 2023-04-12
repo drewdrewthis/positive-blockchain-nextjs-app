@@ -1,9 +1,12 @@
 import snakeCase from "lodash/snakeCase";
 import kebabCase from "lodash/kebabCase";
+import { config } from "@/configuration";
 
 type Project = {
   slug: string;
 } & Record<string, string | number | string[]>;
+
+const { mainDatabase } = config.constants.google.sheets.databaseSheet.sheets;
 
 export function parseGoogleSheetsData(
   data: string[][],
@@ -13,7 +16,7 @@ export function parseGoogleSheetsData(
 ): {
   slug: string;
 }[] {
-  const { headerRow = 1 } = options;
+  const { headerRow = mainDatabase.headerRow } = options;
   const headerRowIndex = headerRow - 1;
   const headers = data[headerRowIndex];
   const rows = data.slice(headerRow);

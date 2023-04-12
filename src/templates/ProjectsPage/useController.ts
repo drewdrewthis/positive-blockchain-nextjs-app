@@ -29,7 +29,11 @@ export function useController(props: Props) {
     fetch("/nextjs-app/api/project-data")
       .then((response) => response.json())
       .then((data) => {
-        setProjectData(data.data);
+        if (data?.data) {
+          setProjectData(data.data);
+        } else {
+          console.error("Error fetching project data", data);
+        }
       });
   }, []);
 

@@ -13,13 +13,17 @@ class Configuration {
     google: {
       sheets: {
         databaseSheet: {
-          SPREADSHEET_ID: "1r8Nts5qtXau_-17mF1PE6HvyFrs8in98_1VVKg8QLAs",
-          SPREADSHEET_NAME: "Positive Blockchain Core Database (Working Copy)",
+          SPREADSHEET_ID: "1-Imie1YgTv4cRGmDTSQWoFgDxiUqmgFfnDLEfFcbCGg",
+          // SPREADSHEET_ID: "1r8Nts5qtXau_-17mF1PE6HvyFrs8in98_1VVKg8QLAs",
+          SPREADSHEET_NAME: "Template CSV DB",
+          // SPREADSHEET_NAME: "Positive Blockchain Core Database (Working Copy)",
           sheets: {
             mainDatabase: {
               // name: "MAIN DATABASE",
-              name: "Copy of CSV Template",
-              headerRow: 4,
+              // name: "Copy of CSV Template",
+              name: "CSV Template",
+              headerRow: 6,
+              keyRow: 2,
             },
             pendingProjects: {
               name: "Projects Pending Review",

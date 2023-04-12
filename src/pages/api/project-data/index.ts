@@ -6,7 +6,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  
   const projectData = await fetchProjectData();
   res.status(200).json({ data: projectData });
 }

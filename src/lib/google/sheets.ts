@@ -3,6 +3,7 @@ import { parseGoogleSheetsData } from "./utils/parseGoogleSheetsData";
 import MemCache from "memory-cache";
 import { getAuth } from "./auth";
 import { config } from "@/configuration";
+import { Project } from "../../types";
 
 const cache = new MemCache.Cache();
 
@@ -28,9 +29,9 @@ export async function fetchSingleProjectData(slug: string) {
 export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
   const PROJECT_DATA_CACHE_KEY = "projectData";
 
-  const cachedData = cache.get(PROJECT_DATA_CACHE_KEY);
+  const cachedData = cache.get(PROJECT_DATA_CACHE_KEY) as Project[] | null;
 
-  if (cachedData) {
+  if (cachedData && cachedData?.length > 0) {
     console.log("Returning cached data", PROJECT_DATA_CACHE_KEY);
     return cachedData as {
       slug: string;

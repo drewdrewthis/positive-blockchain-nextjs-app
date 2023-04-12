@@ -13,7 +13,7 @@ function ProjectGrid(props: Props) {
 
   return (
     <Grid container spacing={2} className={className}>
-      {projectData.map((project: any, idx: number) => (
+      {projectData.map((project: Project, idx: number) => (
         <ProjectGridItem
           key={project.slug + idx}
           slug={project.slug}
