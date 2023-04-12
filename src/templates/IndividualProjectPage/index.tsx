@@ -3,9 +3,11 @@ import Header from "../partials/Header";
 import React from "react";
 import { withController } from "@/lib/withContoller";
 import { Project } from "@/types";
-import omit from "lodash/fp/omit";
+import pick from "lodash/fp/pick";
 import ReactPlayer from "react-player";
 import NonSSRWrapper from "../../components/NonSSRWrapper";
+import { Typography } from "@mui/material";
+import Image from "next/image";
 
 function useController(props: { projectData: Project }) {
   return props;
@@ -23,26 +25,9 @@ function IndividualProjectPageTemplate(
       shortDescription[0].toUpperCase() + shortDescription.slice(1);
   }
 
-  const additionalInfo = omit(
-    [
-      "slug",
-      "project_name",
-      "description_short_value_proposition_in_a_tweet",
-      "organization_type",
-      "original_source_name",
-      "original_source_organization",
-      "comment",
-      "ref",
-      "first_sdg",
-      "second_sdg",
-      "third_sdg",
-      "fourth_sdg",
-      "long_description",
-      "number_of_sd_gs",
-      "verified_on",
-    ],
-    projectData
-  );
+  console.log("Project data", projectData);
+
+  const additionalInfo = pick([], projectData);
 
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">
@@ -50,10 +35,30 @@ function IndividualProjectPageTemplate(
       <div className="flex flex-col h-full flex-1">
         <div className="prose max-w-none max-w-7xl mx-auto p-10 w-full h-full">
           <div className="container mx-auto">
-            <h1>{projectData["project_name"]}</h1>
-            <h2>{projectData["main_category"]}</h2>
+            <div className="flex items-center gap-3">
+              {projectData["logo_url"] && (
+                <div>
+                  <Image
+                    src={projectData["logo_url"]}
+                    alt="project logo"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+              )}
+              <div className="flex flex-col gap-2 ml-4">
+                <Typography variant="h1" className="m-0">
+                  {projectData["project_name"]}
+                </Typography>
+                <Typography variant="subtitle1">
+                  {projectData["business_tagline"]}
+                </Typography>
+              </div>
+            </div>
+            <Typography variant="h2">{projectData["main_category"]}</Typography>
             <div>
               <b>Organization type: </b>
+              <span>{projectData["organization_type"]}</span>
               <span>{projectData["organization_type"]}</span>
             </div>
             <b>Subcategories: </b>
