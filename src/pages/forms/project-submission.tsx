@@ -9,10 +9,7 @@ function ProjectPage(props: any) {
   console.log(props.projectDataHeaders);
   const handleSubmit = async (values: Record<string, any>) => {
     const valuesArr = convertValuesToStringArray(
-      {
-        ...values,
-        submitted_at: Date.now(),
-      },
+      values,
       props.projectDataHeaders
     );
 
@@ -92,6 +89,7 @@ function convertValuesToStringArray(
     arr[index] = values[key].toString();
   });
 
+  arr[0] = Date.now();
   return arr.map((value) => (value === null ? " " : value));
 }
 

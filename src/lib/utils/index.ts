@@ -40,7 +40,7 @@ export function snakeCaseToSentenceCase(str: string) {
 export function extractSdgsFromProject(project: Project) {
   return uniq(
     project["sdg_occurences"]
-      .split(",")
+      ?.split(",")
       .filter((x) => x !== "" && !isUndefined(x))
       .sort((a, b) => Number(a) - Number(b))
   );
