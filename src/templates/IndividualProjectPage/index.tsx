@@ -8,16 +8,28 @@ import ReactPlayer from "react-player";
 import NonSSRWrapper from "../../components/NonSSRWrapper";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import AttributeToInfoBlock from "./AdditionalInfoBlock";
+import AttributeToInfoBlock from "./AttributeInfoBlock";
 import LinksBlock, { VALID_FIELDS } from "./LinksBlock";
 import SDGBlock from "./SDGBlock";
 import { extractSdgsFromProject } from "../../lib/utils";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import InfoBlock from "./InfoBlock";
+import HeadquartersBlock from "./HeadquartersBlock";
 
 function useController(props: { projectData: Project }) {
   const { projectData } = props;
   const sdgs = extractSdgsFromProject(projectData);
-  const additionalInfo = pick([], projectData);
+  const additionalInfo = pick(
+    [
+      "project_official_email",
+      "founder_names",
+      "organization_type",
+      "white_paper_url",
+      "tag_keywords",
+      "year_creation",
+    ],
+    projectData
+  );
 
   return {
     ...props,
@@ -62,12 +74,16 @@ function IndividualProjectPageTemplate(
                 <Typography variant="h1" className="m-0">
                   {projectData["project_name"]}
                 </Typography>
-                <Typography variant="subtitle1">
-                  {projectData["business_tagline"]}
-                </Typography>
+                {projectData["business_tagline"] && (
+                  <Typography variant="subtitle1">
+                    {projectData["business_tagline"]}
+                  </Typography>
+                )}
               </div>
             </div>
-            <Typography variant="h2">{projectData["main_category"]}</Typography>
+            <Typography variant="h2" className="my-2">
+              {projectData["main_category"]}
+            </Typography>
             <div>
               <b>Organization type: </b>
               <span>{projectData["organization_type"]}</span>
@@ -93,8 +109,12 @@ function IndividualProjectPageTemplate(
                 </a>
               </div>
               <SDGBlock sdgs={sdgs} />
-              <h3>Description</h3>
-              <p>{projectData["long_description"]}</p>
+              {projectData["long_description"] && (
+                <>
+                  <h3>Description</h3>
+                  <p>{projectData["long_description"]}</p>
+                </>
+              )}
             </div>
             <div className="flex-1">
               {projectData["video_url"] && (
@@ -117,6 +137,7 @@ function IndividualProjectPageTemplate(
                     </div>
                   );
                 })}
+                <HeadquartersBlock projectData={projectData} />
               </div>
               <LinksBlock links={pick(VALID_FIELDS, projectData)} />
             </div>

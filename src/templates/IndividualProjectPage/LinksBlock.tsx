@@ -2,14 +2,13 @@ import { Project } from "../../types";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GithubIcon from "@mui/icons-material/Github";
 import LanguageIcon from "@mui/icons-material/Language";
 
 export const VALID_FIELDS = [
   "facebook_url",
   "twitter_url",
   "linkedin_url",
-  "github_url",
+  // "github_url",
   "website",
 ] as const;
 
@@ -40,15 +39,6 @@ export default function LinksBlock(props: { links: Links }) {
   );
 }
 
-const icons = {
-  "facebook.com": "facebook",
-  "twitter.com": "twitter",
-  "instagram.com": "instagram",
-  "linkedin.com": "linkedin",
-  "youtube.com": "youtube",
-  "github.com": "github",
-};
-
 function getIcon(linkKey: LINK_KEYS) {
   const source = linkKey.replace("_url", "");
 
@@ -62,10 +52,6 @@ function getIcon(linkKey: LINK_KEYS) {
 
   if (source === "linkedin") {
     return <LinkedInIcon />;
-  }
-
-  if (source === "github") {
-    return <GithubIcon />;
   }
 
   if (source === "website") {

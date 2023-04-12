@@ -10,9 +10,9 @@ interface Props {
   name: string;
   description: string;
   category: string;
-  thumbnailSrc: string;
-  blockchainTechnology: string;
-  blockchainType: string;
+  thumbnailSrc?: string;
+  blockchainTechnology?: string;
+  blockchainType?: string;
   headquarters: string;
 }
 
@@ -31,7 +31,7 @@ function ProjectGridItem(props: Props) {
           styles["grid-item"]
         )}
       >
-        <div className="flex items-center gap-5 p-3 bg-teal-600">
+        <div className="flex items-center gap-5 p-3 bg-brand-secondary">
           {thumbnailSrc && (
             <Link href={`/projects/${slug}`}>
               <Image
