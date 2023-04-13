@@ -3,17 +3,44 @@ import Header from "../partials/Header";
 import React from "react";
 import { withController } from "@/lib/withContoller";
 import { Project } from "@/types";
-import omit from "lodash/fp/omit";
+import pick from "lodash/fp/pick";
 import ReactPlayer from "react-player";
 import NonSSRWrapper from "../../components/NonSSRWrapper";
+import { Typography } from "@mui/material";
+import Image from "next/image";
+import AttributeToInfoBlock from "./AttributeInfoBlock";
+import LinksBlock, { VALID_FIELDS } from "./LinksBlock";
+import SDGBlock from "./SDGBlock";
+import { extractSdgsFromProject } from "../../lib/utils";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import InfoBlock from "./InfoBlock";
+import HeadquartersBlock from "./HeadquartersBlock";
 
 function useController(props: { projectData: Project }) {
-  return props;
+  const { projectData } = props;
+  const sdgs = extractSdgsFromProject(projectData);
+  const additionalInfo = pick(
+    [
+      "project_official_email",
+      "founder_names",
+      "organization_type",
+      "white_paper_url",
+      "tag_keywords",
+      "year_creation",
+    ],
+    projectData
+  );
+
+  return {
+    ...props,
+    additionalInfo,
+    sdgs,
+  };
 }
 function IndividualProjectPageTemplate(
   props: ReturnType<typeof useController>
 ) {
-  const { projectData } = props;
+  const { projectData, sdgs, additionalInfo } = props;
 
   let shortDescription =
     projectData["description_short_value_proposition_in_a_tweet"];
@@ -23,26 +50,7 @@ function IndividualProjectPageTemplate(
       shortDescription[0].toUpperCase() + shortDescription.slice(1);
   }
 
-  const additionalInfo = omit(
-    [
-      "slug",
-      "project_name",
-      "description_short_value_proposition_in_a_tweet",
-      "organization_type",
-      "original_source_name",
-      "original_source_organization",
-      "comment",
-      "ref",
-      "first_sdg",
-      "second_sdg",
-      "third_sdg",
-      "fourth_sdg",
-      "long_description",
-      "number_of_sd_gs",
-      "verified_on",
-    ],
-    projectData
-  );
+  console.log("Project data", projectData);
 
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">
@@ -50,10 +58,35 @@ function IndividualProjectPageTemplate(
       <div className="flex flex-col h-full flex-1">
         <div className="prose max-w-none max-w-7xl mx-auto p-10 w-full h-full">
           <div className="container mx-auto">
-            <h1>{projectData["project_name"]}</h1>
-            <h2>{projectData["main_category"]}</h2>
+            <div className="flex items-center">
+              {projectData["logo_url"] && (
+                <div>
+                  <Image
+                    src={projectData["logo_url"]}
+                    className="mr-3"
+                    alt="project logo"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+              )}
+              <div className="flex flex-col gap-2">
+                <Typography variant="h1" className="m-0">
+                  {projectData["project_name"]}
+                </Typography>
+                {projectData["business_tagline"] && (
+                  <Typography variant="subtitle1">
+                    {projectData["business_tagline"]}
+                  </Typography>
+                )}
+              </div>
+            </div>
+            <Typography variant="h2" className="my-2">
+              {projectData["main_category"]}
+            </Typography>
             <div>
               <b>Organization type: </b>
+              <span>{projectData["organization_type"]}</span>
               <span>{projectData["organization_type"]}</span>
             </div>
             <b>Subcategories: </b>
@@ -64,8 +97,24 @@ function IndividualProjectPageTemplate(
         <div className="prose max-w-none max-w-7xl mx-auto mb-auto p-10 w-full h-full bg-white flex-1">
           <div className="container mx-auto flex justify-between gap-10">
             <div className="flex-2 w-2/3">
-              <h3>Description</h3>
-              <p>{projectData["long_description"]}</p>
+              <div>
+                <a href="https://sdgs.un.org/goals" target="_blank">
+                  <Typography
+                    variant="h3"
+                    className="inline inline-flex items-center gap-2"
+                  >
+                    Sustainable Development Goals (SDGs)
+                    <InfoOutlinedIcon />
+                  </Typography>
+                </a>
+              </div>
+              <SDGBlock sdgs={sdgs} />
+              {projectData["long_description"] && (
+                <>
+                  <h3>Description</h3>
+                  <p>{projectData["long_description"]}</p>
+                </>
+              )}
             </div>
             <div className="flex-1">
               {projectData["video_url"] && (
@@ -76,7 +125,7 @@ function IndividualProjectPageTemplate(
                   />
                 </NonSSRWrapper>
               )}
-              <div className="rounded border p-5">
+              <div className="rounded border p-5 mb-3">
                 <h3 className="font-bold mb-2 mt-0">Additional Information</h3>
                 {Object.keys(additionalInfo).map((key) => {
                   return (
@@ -88,7 +137,9 @@ function IndividualProjectPageTemplate(
                     </div>
                   );
                 })}
+                <HeadquartersBlock projectData={projectData} />
               </div>
+              <LinksBlock links={pick(VALID_FIELDS, projectData)} />
             </div>
           </div>
         </div>
@@ -96,54 +147,6 @@ function IndividualProjectPageTemplate(
       <Footer />
     </div>
   );
-}
-
-function AttributeToInfoBlock(props: { attribute: string; projectData: any }) {
-  const { attribute, projectData } = props;
-  const title = snakeCaseToSentenceCase(attribute);
-  const content = projectData[attribute];
-
-  return <InfoBlock title={title} content={content} />;
-}
-
-function InfoBlock(props: { title: string; content: string | string[] }) {
-  const { title, content } = props;
-
-  if (!content) {
-    return null;
-  }
-
-  if (Array.isArray(content)) {
-    return (
-      <div>
-        <b>{title}: </b>
-        {content.map((item, index) => {
-          return (
-            <span key={index}>
-              {item}
-              {index !== content.length - 1 ? ", " : ""}
-            </span>
-          );
-        })}
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <b>{title}: </b>
-      <span>{content}</span>
-    </div>
-  );
-}
-
-function snakeCaseToSentenceCase(str: string) {
-  if (!str) return str;
-
-  return str
-    .split("_")
-    .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
 }
 
 export default withController(IndividualProjectPageTemplate, useController);

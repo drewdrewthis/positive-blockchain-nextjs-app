@@ -26,7 +26,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
             <Button
               variant="contained"
               size="medium"
-              className="bg-brand-primary"
+              className="bg-brand-secondary"
               color="success"
             >
               Request CSV Download

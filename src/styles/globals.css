@@ -97,6 +97,22 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+  background-image: linear-gradient(
+    to right bottom,
+    #cdf5ef,
+    #d6f7f8,
+    #e1f8fe,
+    #edf9ff,
+    #f7fbff,
+    #f8fcff,
+    #f9fdff,
+    #fbfeff,
+    #f5feff,
+    #f0fefd,
+    #ecfef9,
+    #eafef3
+  );
 }
 
 a {
