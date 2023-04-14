@@ -3,6 +3,7 @@ import debounce from "lodash/debounce";
 import { filterProjectDataByFilters } from "@/lib/utils";
 import { Project } from "@/types";
 import { getSearchResults } from "../../lib/utils/getSearchResults";
+import { FilterGroupProps } from "../../components/ProjectFilter/types";
 
 interface Props {
   /**
@@ -81,7 +82,12 @@ async function fetchAllData() {
 function useFilters(props: {
   projectData: Project[];
   filters: Record<string, string[]>;
-}) {
+}): {
+  setFilteredData: React.Dispatch<React.SetStateAction<Project[]>>;
+  filteredData: Project[];
+  handleFilterUpdate: (filters: any) => void;
+  filters: FilterGroupProps[];
+} {
   const { projectData, filters } = props;
   const [filteredData, setFilteredData] = React.useState<any>(projectData);
   const [activeFilters, setActiveFilters] = React.useState<any>({});
@@ -100,6 +106,11 @@ function useFilters(props: {
   return {
     setFilteredData,
     filters: [
+      {
+        title: "Status",
+        key: "active",
+        labels: filters.active,
+      },
       {
         title: "Categories",
         key: "main_category",

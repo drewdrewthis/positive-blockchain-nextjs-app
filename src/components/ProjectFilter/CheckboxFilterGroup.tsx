@@ -35,7 +35,7 @@ function Checkboxes(props: {
 
   return (
     <FormGroup className={cx(className)}>
-      {props.labels.map((label) => {
+      {props.labels?.map((label) => {
         return (
           <FormControlLabel
             className="p-0"

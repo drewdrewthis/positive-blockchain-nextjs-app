@@ -6,6 +6,8 @@ import CheckboxFilterGroup from "./CheckboxFilterGroup";
 function ProjectFilter(props: ReturnType<typeof useController>) {
   const { filters, className = "", handleFilterChange } = props;
 
+  console.log("filters", filters);
+
   return (
     <div
       className={
