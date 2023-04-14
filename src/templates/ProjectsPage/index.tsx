@@ -40,13 +40,13 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
             </Search>
             <InputBase
               className="w-52"
-              placeholder="Type to filter (ex. logistics)"
+              placeholder="Type to search (ex. logistics)"
               onChange={handleSearch}
             />
           </div>
         </div>
         <p>{projectData["project_name"]}</p>
-        <div className="flex gap-3 w-full">
+        <div className="flex gap-3 w-full items-start">
           <div className="min-w-3/12">
             <ProjectFilter filters={filters} onChange={handleFilterUpdate} />
           </div>
