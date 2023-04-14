@@ -42,6 +42,6 @@ export function extractSdgsFromProject(project: Project) {
     project["sdg_occurences"]
       .split(",")
       .filter((x) => x !== "" && !isUndefined(x))
-      .sort()
+      .sort((a, b) => Number(a) - Number(b))
   );
 }
