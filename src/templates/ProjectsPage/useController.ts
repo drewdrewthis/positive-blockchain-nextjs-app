@@ -147,9 +147,10 @@ function useSortBySearch(props: { projectData: Project[] }) {
     }
 
     getSearchResults(projectData, search).then((results) => {
-      const dataSortedBySearchRelevance = results.map(
-        (result: any) => result.item
-      );
+      const dataSortedBySearchRelevance = results.map((result: any) => ({
+        ...result.item,
+        searchRelevance: (1 - result.score) * 100,
+      }));
 
       if (search && dataSortedBySearchRelevance.length > 0) {
         setSearchResults(dataSortedBySearchRelevance);

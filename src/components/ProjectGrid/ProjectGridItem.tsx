@@ -14,6 +14,7 @@ interface Props {
   blockchainTechnology?: string;
   blockchainType?: string;
   headquarters: string;
+  searchRelevance?: number;
 }
 
 function ProjectGridItem(props: Props) {
@@ -63,6 +64,11 @@ function ProjectGridItem(props: Props) {
           <div className="text-xs">
             <b>Blockchain Technologies:</b> {props.blockchainTechnology}
           </div>
+          {props.searchRelevance && (
+            <div className="text-xs mt-2 text-blue-500">
+              <b>Search relevance:</b> {props.searchRelevance.toFixed(2)} %
+            </div>
+          )}
         </div>
       </div>
     </Grid>

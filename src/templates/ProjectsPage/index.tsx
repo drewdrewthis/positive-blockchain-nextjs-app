@@ -14,6 +14,8 @@ import Link from "next/link";
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
   const { projectData, handleSearch, filters, handleFilterUpdate } = props;
 
+  console.log(projectData);
+
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">
       <Header />
@@ -39,8 +41,8 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               <SearchIcon />
             </Search>
             <InputBase
-              className="w-52"
-              placeholder="Type to search (ex. logistics)"
+              className="w-72"
+              placeholder="Type to sort by relevance (ex. logistics)"
               onChange={handleSearch}
             />
           </div>
