@@ -10,6 +10,8 @@ import { useController } from "./useController";
 import { withController } from "@/lib/withContoller";
 import { Button, Typography } from "@mui/material";
 import Link from "next/link";
+import cx from "classnames";
+import styles from "./styles.module.scss";
 
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
   const { projectData, handleSearch, filters, handleFilterUpdate } = props;
@@ -47,13 +49,10 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
         </div>
         <p>{projectData["project_name"]}</p>
         <div className="flex gap-3 w-full items-start">
-          <div className="min-w-3/12">
+          <div className={cx("w-3/12", styles.filters)}>
             <ProjectFilter filters={filters} onChange={handleFilterUpdate} />
           </div>
-          <ProjectGrid
-            className="flex-1 min-w-9/12"
-            projectData={projectData}
-          />
+          <ProjectGrid className="flex-1 w-9/12" projectData={projectData} />
         </div>
       </div>
       <Footer />

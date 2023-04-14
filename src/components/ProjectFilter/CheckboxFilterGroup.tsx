@@ -1,8 +1,16 @@
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
 import { covertBooleanMapToArray } from "../../lib/utils";
-import { Checkbox, Divider, FormControlLabel, FormGroup } from "@mui/material";
+import {
+  Checkbox,
+  Collapse,
+  Divider,
+  FormControlLabel,
+  FormGroup,
+} from "@mui/material";
 import { kebabCase } from "lodash/fp";
 import cx from "classnames";
+import { ExpandLess, ExpandMore } from "@mui/icons-material";
+import { useState } from "react";
 
 export default function CheckboxFilterGroup(props: {
   title: string;
@@ -10,6 +18,7 @@ export default function CheckboxFilterGroup(props: {
   onChange: (values: any) => void;
 }) {
   const { onChange, title, labels } = props;
+  const [isOpen, setIsOpen] = useState(title === "Categories");
   const methods = useForm();
 
   methods.watch((values) => {
@@ -19,9 +28,15 @@ export default function CheckboxFilterGroup(props: {
 
   return (
     <FormProvider {...methods}>
-      <b className="mb-3 text-teal-600">{title}</b>
-      <Checkboxes className="h-auto" labels={labels} />
-      <Divider />
+      <button
+        className="flex justify-between"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <b className="mb-3 text-teal-600">{title}</b>
+        {isOpen ? <ExpandLess /> : <ExpandMore />}
+      </button>
+      <Checkboxes className="h-auto" labels={labels} expanded={isOpen} />
+      <Divider className="my-3" />
     </FormProvider>
   );
 }
@@ -29,27 +44,32 @@ export default function CheckboxFilterGroup(props: {
 function Checkboxes(props: {
   labels: (string | number)[];
   className?: string;
+  expanded: boolean;
 }) {
-  const { className = "" } = props;
+  const { expanded, className = "" } = props;
   const { register } = useFormContext();
 
   return (
     <FormGroup className={cx(className)}>
-      {props.labels?.map((label) => {
-        return (
-          <FormControlLabel
-            className="p-0"
-            control={
-              <Checkbox
-                className="py-0"
-                {...register(kebabCase(label.toString()))}
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <div className="flex flex-col">
+          {props.labels?.map((label) => {
+            return (
+              <FormControlLabel
+                className="p-0"
+                control={
+                  <Checkbox
+                    className="py-0"
+                    {...register(kebabCase(label.toString()))}
+                  />
+                }
+                label={<span className="text-xs">{label}</span>}
+                key={label}
               />
-            }
-            label={<span className="text-xs">{label}</span>}
-            key={label}
-          />
-        );
-      })}
+            );
+          })}
+        </div>
+      </Collapse>
     </FormGroup>
   );
 }
