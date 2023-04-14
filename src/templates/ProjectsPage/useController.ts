@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import throttle from "lodash/throttle";
+import debounce from "lodash/debounce";
 import { filterProjectDataByFilters } from "@/lib/utils";
 import { Project } from "@/types";
+import { getSearchResults } from "../../lib/utils/getSearchResults";
 
 interface Props {
   /**
@@ -24,7 +25,9 @@ export function useController(props: Props) {
     setSearch(event.target.value.toLowerCase());
   };
 
-  // Fetch all of the data after initial render
+  // Optimization:
+  // We start with a subset of data.
+  // Here we fetch all of the data after initial render
   useEffect(() => {
     fetch("/nextjs-app/api/project-data")
       .then((response) => response.json())
@@ -37,22 +40,32 @@ export function useController(props: Props) {
       });
   }, []);
 
-  // useEffect(() => {
-  //   setFilteredData(filterDataBySearch(projectData, search));
-  // }, [search, projectData]);
-
+  // Handles filtering and search sorting
   useEffect(() => {
+    // 1. Filter data by active filters
     const filteredDataByFilters = filterProjectDataByFilters(
       projectData,
       activeFilters
     );
-    console.log("filtering", filteredDataByFilters, activeFilters);
-    setFilteredData(filteredDataByFilters);
-  }, [projectData, activeFilters]);
+
+    // 2a. Handle search if term is present
+    // We handle the search async so that the UI updates don't reflect the search
+    if (search) {
+      getSearchResults(filteredDataByFilters, search).then((results) => {
+        const finalData = results.map((result: any) => result.item);
+        setFilteredData(finalData);
+      });
+      // 2b. Return filtered data if no search term is present
+    } else {
+      setFilteredData(filteredDataByFilters);
+    }
+  }, [projectData, activeFilters, search]);
+
+  useEffect(() => {}, [search, projectData]);
 
   return {
     ...props,
-    handleSearch: throttle(handleSearch, 500),
+    handleSearch: debounce(handleSearch, 500, { trailing: true }),
     projectData: filteredData,
     filters: [
       {
