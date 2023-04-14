@@ -3,7 +3,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LanguageIcon from "@mui/icons-material/Language";
-import GithubIcon from "@mui/icons-material/Github";
+// @ts-ignore - No types available
+import GithubIcon from "@mui/icons-material/GitHub";
 
 export const VALID_FIELDS = [
   "website",

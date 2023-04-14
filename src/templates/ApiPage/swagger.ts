@@ -30,8 +30,6 @@ const swaggerSpec = {
               items: { $ref: "#/definitions/Project" },
             },
           },
-          "400": { description: "Invalid ID supplied" },
-          "404": { description: "Pet not found" },
         },
         security: [{ api_key: [] }],
       },
