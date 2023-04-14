@@ -1,5 +1,5 @@
 import Fuse from "fuse.js";
-import type { Project } from "../../types";
+import type { Project } from "@/types";
 
 const options: Fuse.IFuseOptions<Project> = {
   includeScore: true,
@@ -39,10 +39,6 @@ export async function getSearchResults(
 ): Promise<Fuse.FuseResult<Project>[]> {
   const fuse = new Fuse(projectData, options);
   const results = fuse.search(searchTerm);
-  // const filteredResults = results.filter(
-  //   (result) => !!result.score && result.score < 0.1
-  // );
-  // console.log("fuse results", filteredResults);
   return new Promise((resolve) => {
     resolve(results);
   });
