@@ -18,7 +18,9 @@ export default function CheckboxFilterGroup(props: {
   onChange: (values: any) => void;
 }) {
   const { onChange, title, labels } = props;
-  const [isOpen, setIsOpen] = useState(title === "Categories");
+  const [isOpen, setIsOpen] = useState(
+    ["Categories", "Sustainable Development Goals"].includes(title)
+  );
   const methods = useForm();
 
   methods.watch((values) => {

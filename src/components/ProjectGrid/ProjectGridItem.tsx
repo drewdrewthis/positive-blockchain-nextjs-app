@@ -15,6 +15,7 @@ interface Props {
   blockchainType?: string;
   headquarters: string;
   searchRelevance?: number;
+  sdgOccurences: number[];
 }
 
 function ProjectGridItem(props: Props) {
@@ -28,7 +29,7 @@ function ProjectGridItem(props: Props) {
     <Grid xs={12} sm={6} md={6} lg={3}>
       <div
         className={cx(
-          "flex flex-col h-full rounded border bg-white overflow-hidden max-h-96",
+          "flex flex-col h-full rounded border bg-white overflow-hidden",
           styles["grid-item"]
         )}
       >
@@ -63,6 +64,9 @@ function ProjectGridItem(props: Props) {
           </div>
           <div className="text-xs">
             <b>Blockchain Technologies:</b> {props.blockchainTechnology}
+          </div>
+          <div className="text-xs">
+            <b>SDGs:</b> {props.sdgOccurences.join(", ")}
           </div>
           {props.searchRelevance && (
             <div className="text-xs mt-2 text-blue-500">
