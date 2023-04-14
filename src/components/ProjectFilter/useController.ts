@@ -13,7 +13,6 @@ export function useController(props: Props) {
   return {
     ...props,
     handleFilterChange: (key: string, values: Record<string, boolean>) => {
-      console.log(values);
       setFilterGroups({
         ...filterGroups,
         [key]: values,

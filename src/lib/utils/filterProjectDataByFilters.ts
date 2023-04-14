@@ -20,7 +20,20 @@ export function filterProjectDataByFilters(
   let result = [...projectData];
   if (isEmpty(filters)) return projectData;
 
-  Object.keys(filters).forEach((filter) => {
+  const { sdg_occurences, ...rest } = filters;
+
+  // Handle SDGs separately
+  if (sdg_occurences?.length) {
+    const sdgs = getSdgs({ sdg_occurences });
+
+    result = result.filter((project: Project) => {
+      const projectSdgs = project.sdg_occurences?.split(",");
+      const isMatch = intersection(projectSdgs, sdgs).length === sdgs.length;
+      return isMatch;
+    });
+  }
+
+  Object.keys(rest).forEach((filter) => {
     result = result.filter((project: any) => {
       const filterValues = memoizedStandardizeStringArray(filters[filter]);
       if (isEmpty(filterValues)) return true;
@@ -34,4 +47,9 @@ export function filterProjectDataByFilters(
   });
 
   return result;
+}
+
+function getSdgs(props: { sdg_occurences: string[] }) {
+  const { sdg_occurences } = props;
+  return sdg_occurences.map((sdg: string) => sdg.match(/\d+/)?.[0]);
 }

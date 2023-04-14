@@ -1,7 +1,8 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import { Project } from "@/types";
 import ProjectGridItem from "./ProjectGridItem";
-import styles from "./styles.module.scss";
+import compact from "lodash/fp/compact";
+import uniq from "lodash/fp/uniq";
 
 interface Props {
   projectData: (Project & { searchRelevance?: number })[];
@@ -27,6 +28,7 @@ function ProjectGrid(props: Props) {
           blockchainType={project["blockchain_type"]}
           headquarters={project["primary_headquarter_country"]}
           searchRelevance={project.searchRelevance}
+          sdgOccurences={parseSdgOccurences(project["sdg_occurences"])}
         />
       ))}
     </Grid>
@@ -34,3 +36,9 @@ function ProjectGrid(props: Props) {
 }
 
 export default ProjectGrid;
+
+function parseSdgOccurences(sdgOccurences: string) {
+  return uniq(compact(sdgOccurences.split(",")))
+    .map(Number)
+    .sort((a, b) => a - b);
+}

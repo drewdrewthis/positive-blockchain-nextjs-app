@@ -17,9 +17,7 @@ import InfoBlock from "./InfoBlock";
 import HeadquartersBlock from "./HeadquartersBlock";
 
 function useController(props: { projectData: Project }) {
-  const { projectData } = props;
-  const sdgs = extractSdgsFromProject(projectData);
-  const additionalInfo = pick(
+  const { projectData } = props; const sdgs = extractSdgsFromProject(projectData); const additionalInfo = pick(
     [
       "project_official_email",
       "founder_names",
@@ -49,8 +47,6 @@ function IndividualProjectPageTemplate(
     shortDescription =
       shortDescription[0].toUpperCase() + shortDescription.slice(1);
   }
-
-  console.log("Project data", projectData);
 
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">

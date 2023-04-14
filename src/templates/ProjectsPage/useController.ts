@@ -3,6 +3,7 @@ import debounce from "lodash/debounce";
 import { filterProjectDataByFilters } from "@/lib/utils";
 import { Project } from "@/types";
 import { getSearchResults } from "../../lib/utils/getSearchResults";
+import { FilterGroupProps } from "../../components/ProjectFilter/types";
 
 interface Props {
   /**
@@ -81,7 +82,12 @@ async function fetchAllData() {
 function useFilters(props: {
   projectData: Project[];
   filters: Record<string, string[]>;
-}) {
+}): {
+  setFilteredData: React.Dispatch<React.SetStateAction<Project[]>>;
+  filteredData: Project[];
+  handleFilterUpdate: (filters: any) => void;
+  filters: FilterGroupProps[];
+} {
   const { projectData, filters } = props;
   const [filteredData, setFilteredData] = React.useState<any>(projectData);
   const [activeFilters, setActiveFilters] = React.useState<any>({});
@@ -101,9 +107,37 @@ function useFilters(props: {
     setFilteredData,
     filters: [
       {
+        title: "Status",
+        key: "active",
+        labels: filters.active,
+      },
+      {
         title: "Categories",
         key: "main_category",
         labels: filters.main_category,
+      },
+      {
+        title: "Sustainable Development Goals",
+        key: "sdg_occurences",
+        labels: [
+          "1: No Poverty",
+          "2: Zero Hunger",
+          "3: Good Health and Well-Being",
+          "4: Quality Education",
+          "5: Gender Equality",
+          "6: Clean Water and Sanitation",
+          "7: Affordable and Clean Energy",
+          "8: Decent Work and Economic Growth",
+          "9: Industry, Innovation and Infrastructure",
+          "10: Reduced Inequalities",
+          "11: Sustainable Cities and Communities",
+          "12: Responsible Consumption and Production",
+          "13: Climate Action",
+          "14: Life Below Water",
+          "15: Life on Land",
+          "16: Peace, Justice and Strong Institutions",
+          "17: Partnerships for the Goals",
+        ],
       },
       {
         title: "Blockchain Type",

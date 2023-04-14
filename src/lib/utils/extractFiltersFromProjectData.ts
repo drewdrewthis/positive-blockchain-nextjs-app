@@ -8,6 +8,7 @@ export function extractFiltersFromProjectData(
 
   return {
     ...extactPossibleValuesFromKeys(projectData, [
+      "active",
       "main_category",
       "blockchain_type",
       "primary_headquarter_country",
