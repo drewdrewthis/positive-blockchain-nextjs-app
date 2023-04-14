@@ -17,14 +17,17 @@ import InfoBlock from "./InfoBlock";
 import HeadquartersBlock from "./HeadquartersBlock";
 
 function useController(props: { projectData: Project }) {
-  const { projectData } = props; const sdgs = extractSdgsFromProject(projectData); const additionalInfo = pick(
+  const { projectData } = props;
+  const sdgs = extractSdgsFromProject(projectData);
+  const additionalInfo = pick(
     [
+      "year_creation",
+      "token_ticker",
       "project_official_email",
       "founder_names",
       "organization_type",
       "white_paper_url",
       "tag_keywords",
-      "year_creation",
     ],
     projectData
   );
@@ -40,6 +43,8 @@ function IndividualProjectPageTemplate(
 ) {
   const { projectData, sdgs, additionalInfo } = props;
 
+  console.log("projectData", projectData);
+
   let shortDescription =
     projectData["description_short_value_proposition_in_a_tweet"];
 
@@ -52,7 +57,7 @@ function IndividualProjectPageTemplate(
     <div className="flex flex-col gap-10 h-full min-h-screen">
       <Header />
       <div className="flex flex-col h-full flex-1">
-        <div className="prose max-w-none max-w-7xl mx-auto p-10 w-full h-full">
+        <div className="prose max-w-none max-w-7xl mx-auto pb-10 w-full h-full">
           <div className="container mx-auto">
             <div className="flex items-center">
               {projectData["logo_url"] && (
@@ -67,8 +72,11 @@ function IndividualProjectPageTemplate(
                 </div>
               )}
               <div className="flex flex-col gap-2">
-                <Typography variant="h1" className="m-0">
+                <Typography variant="h1" className="m-0 text-brand-secondary">
                   {projectData["project_name"]}
+                </Typography>
+                <Typography variant="h2" className="my-2">
+                  {projectData["main_category"]}
                 </Typography>
                 {projectData["business_tagline"] && (
                   <Typography variant="subtitle1">
@@ -77,17 +85,11 @@ function IndividualProjectPageTemplate(
                 )}
               </div>
             </div>
-            <Typography variant="h2" className="my-2">
-              {projectData["main_category"]}
-            </Typography>
-            <div>
-              <b>Organization type: </b>
-              <span>{projectData["organization_type"]}</span>
-              <span>{projectData["organization_type"]}</span>
-            </div>
-            <b>Subcategories: </b>
-            <span>{projectData["sub_categories"]?.join(", ")}</span>
             <p>{shortDescription}</p>
+            <div>
+              <b>Subcategories: </b>
+              <span>{projectData["sub_categories"]?.join(", ")}</span>
+            </div>
           </div>
         </div>
         <div className="prose max-w-none max-w-7xl mx-auto mb-auto p-10 w-full h-full bg-white flex-1">
@@ -123,6 +125,11 @@ function IndividualProjectPageTemplate(
               )}
               <div className="rounded border p-5 mb-3">
                 <h3 className="font-bold mb-2 mt-0">Additional Information</h3>
+                {projectData["active"] && (
+                  <div className="mb-2">
+                    <InfoBlock title="Status" content={projectData["active"]} />
+                  </div>
+                )}
                 {Object.keys(additionalInfo).map((key) => {
                   return (
                     <div key={key} className="mb-2">

@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "brand-primary": "#40D194",
         "brand-secondary": "#0095AA",
+        "brand-link": "#0095AA",
         white: "#FFFFFF",
       },
     },
