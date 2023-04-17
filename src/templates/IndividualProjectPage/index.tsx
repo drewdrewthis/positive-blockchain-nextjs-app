@@ -63,10 +63,10 @@ function IndividualProjectPageTemplate(
                 <div>
                   <Image
                     src={projectData["logo_url"]}
-                    className="mr-3"
+                    className="mr-8"
                     alt="project logo"
-                    width={100}
-                    height={100}
+                    width={150}
+                    height={150}
                   />
                 </div>
               )}
@@ -89,6 +89,11 @@ function IndividualProjectPageTemplate(
               <b>Subcategories: </b>
               <span>{projectData["sub_categories"]?.join(", ")}</span>
             </div>
+            {projectData["active"] && (
+              <div className="mb-2">
+                <InfoBlock title="Status" content={projectData["active"]} />
+              </div>
+            )}
           </div>
         </div>
         <div className="prose max-w-none max-w-7xl mx-auto mb-auto p-10 w-full h-full bg-white flex-1">
@@ -124,11 +129,6 @@ function IndividualProjectPageTemplate(
               )}
               <div className="rounded border p-5 mb-3">
                 <h3 className="font-bold mb-2 mt-0">Additional Information</h3>
-                {projectData["active"] && (
-                  <div className="mb-2">
-                    <InfoBlock title="Status" content={projectData["active"]} />
-                  </div>
-                )}
                 {Object.keys(additionalInfo).map((key) => {
                   return (
                     <div key={key} className="mb-2">
