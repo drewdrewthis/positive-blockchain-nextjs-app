@@ -1,3 +1,4 @@
+import { compact } from "lodash/fp";
 import { Project } from "../../types";
 import InfoBlock from "./InfoBlock";
 
@@ -9,10 +10,10 @@ export default function HeadquartersBlock(props: { projectData: Project }) {
     <div className="mb-2">
       <InfoBlock
         title="Headquarters"
-        content={[
+        content={compact([
           projectData["primary_headquarter_city"],
           projectData["primary_headquarter_country"],
-        ].join(", ")}
+        ]).join(", ")}
       />
     </div>
   ) : null;
