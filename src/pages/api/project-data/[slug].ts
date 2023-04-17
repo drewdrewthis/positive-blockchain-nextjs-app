@@ -2,6 +2,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { fetchSingleProjectData } from "@/lib/google";
 
+export const config = {
+  runtime: "edge",
+};
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
