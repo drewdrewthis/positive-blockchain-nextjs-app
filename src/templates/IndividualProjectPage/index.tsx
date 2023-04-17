@@ -23,7 +23,6 @@ function useController(props: { projectData: Project }) {
     [
       "year_creation",
       "token_ticker",
-      "project_official_email",
       "founder_names",
       "organization_type",
       "white_paper_url",
