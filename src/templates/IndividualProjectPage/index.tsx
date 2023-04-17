@@ -97,8 +97,8 @@ function IndividualProjectPageTemplate(
           </div>
         </div>
         <div className="prose max-w-none max-w-7xl mx-auto mb-auto p-10 w-full h-full bg-white flex-1">
-          <div className="container mx-auto flex justify-between gap-10">
-            <div className="flex-2 w-2/3">
+          <div className="container mx-auto lg:flex justify-between gap-10">
+            <div className="flex-2 lg:w-7/12">
               <div>
                 <a href="https://sdgs.un.org/goals" target="_blank">
                   <Typography
@@ -122,7 +122,7 @@ function IndividualProjectPageTemplate(
               {projectData["video_url"] && (
                 <NonSSRWrapper>
                   <ReactPlayer
-                    className="mb-4"
+                    className="mb-4 !w-full"
                     url={projectData["video_url"]}
                   />
                 </NonSSRWrapper>
