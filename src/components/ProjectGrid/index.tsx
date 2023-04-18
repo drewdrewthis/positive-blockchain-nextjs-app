@@ -38,7 +38,7 @@ function ProjectGrid(props: Props) {
 export default ProjectGrid;
 
 function parseSdgOccurences(sdgOccurences: string) {
-  return uniq(compact(sdgOccurences.split(",")))
+  return uniq(compact(sdgOccurences?.split(",")))
     .map(Number)
     .sort((a, b) => a - b);
 }

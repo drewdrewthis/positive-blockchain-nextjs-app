@@ -15,6 +15,7 @@ import { extractSdgsFromProject } from "../../lib/utils";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import InfoBlock from "./InfoBlock";
 import HeadquartersBlock from "./HeadquartersBlock";
+import Link from "next/link";
 
 function useController(props: { projectData: Project }) {
   const { projectData } = props;
@@ -41,6 +42,7 @@ function IndividualProjectPageTemplate(
   props: ReturnType<typeof useController>
 ) {
   const { projectData, sdgs, additionalInfo } = props;
+  const { slug } = projectData;
 
   console.log("projectData", projectData);
 
@@ -141,7 +143,23 @@ function IndividualProjectPageTemplate(
                 })}
                 <HeadquartersBlock projectData={projectData} />
               </div>
-              <LinksBlock links={pick(VALID_FIELDS, projectData)} />
+              <LinksBlock
+                className="mb-3"
+                links={pick(VALID_FIELDS, projectData)}
+              />
+              <div className="border rounded p-3 bg-slate-200">
+                <div>
+                  Are you the owner of this project? See something wrong? Want
+                  to add more information?
+                </div>
+                <Link
+                  className="text-brand-link"
+                  href={`/forms/project-submission?prefill_slug=${slug}`}
+                  target="_blank"
+                >
+                  Claim/Propose Edit to Project
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -54,7 +54,7 @@ export function parseGoogleSheetValuesByKeyRow(
 
 function formatCell(key: string, cell: string) {
   if (key?.endsWith("_list")) {
-    return cell.split(",").map((item) => item.trim());
+    return cell?.split(",").map((item) => item.trim());
   }
 
   return cell;

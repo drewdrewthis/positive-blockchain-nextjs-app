@@ -15,9 +15,6 @@ export default function ProjectSubmissionForm(props: {
 
   return (
     <form className="w-full" onSubmit={handleSubmit(onSubmit)}>
-      <Typography variant="h2" className="mb-10">
-        Project Submission
-      </Typography>
       <FormControl className="w-full flex flex-col gap-4">
         {inputs.map(([key, value], idx) => {
           const { type, headerTitle } = value;

@@ -6,6 +6,7 @@ import {
   extractProjectDataSchema,
   parseGoogleSheetValuesByKeyRow,
 } from "./utils";
+import { Project } from "../../types";
 
 const cache = new MemCache.Cache();
 

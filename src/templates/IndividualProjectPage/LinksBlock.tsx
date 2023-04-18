@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import LanguageIcon from "@mui/icons-material/Language";
 // @ts-ignore - No types available
 import GithubIcon from "@mui/icons-material/GitHub";
+import cx from "classnames";
 
 export const VALID_FIELDS = [
   "website",
@@ -22,10 +23,15 @@ export const VALID_FIELDS = [
 type LINK_KEYS = typeof VALID_FIELDS[number];
 type Links = Pick<Project, LINK_KEYS>;
 
-export default function LinksBlock(props: { links: Links }) {
+export default function LinksBlock(props: {
+  links: Links;
+  className?: string;
+}) {
+  const { links, className } = props;
+
   return (
-    <div className="rounded border p-2">
-      {Object.entries(props.links).map(([key, value]) => {
+    <div className={cx("rounded border p-2", className)}>
+      {Object.entries(links).map(([key, value]) => {
         if (!value) return null;
 
         return (

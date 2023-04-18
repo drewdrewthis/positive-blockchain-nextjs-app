@@ -12,7 +12,6 @@
 
 import { fetchSheetData } from "@/lib/google";
 import dotenv from "dotenv";
-// @ts-expect-error - No types
 import { config } from "../configuration";
 
 const {

@@ -50,10 +50,10 @@ export function parseGoogleSheetsValuesByHeaderRow(
 function formatCell(key: string, cell: string) {
   switch (key) {
     case "sub_categories": {
-      return cell.split(",").map((item) => item.trim());
+      return cell?.split(",").map((item) => item.trim());
     }
     case "founders": {
-      return cell.split(";").map((item) => item.trim());
+      return cell?.split(";").map((item) => item.trim());
     }
     default:
       return cell;

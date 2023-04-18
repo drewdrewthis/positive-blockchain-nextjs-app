@@ -4,9 +4,11 @@ import ProjectSubmissionForm from "../../templates/ProjectSubmissionForm";
 import Header from "../../templates/partials/Header";
 import Footer from "../../templates/partials/Footer";
 import { ProjectDataSchema } from "../../types";
+import { Typography } from "@mui/material";
 
 function ProjectPage(props: any) {
-  console.log(props.projectDataHeaders);
+  const { projectData } = props;
+
   const handleSubmit = async (values: Record<string, any>) => {
     const valuesArr = convertValuesToStringArray(
       values,
@@ -27,6 +29,15 @@ function ProjectPage(props: any) {
     >
       <Header />
       <div className="container mx-auto mt-10 max-w-3xl py-10">
+        <Typography variant="h2" className="mb-10">
+          {!!projectData
+            ? "Project Update/Claim Form"
+            : "New Project Submission"}
+        </Typography>
+        <p className="mb-10">
+          {`Submitting the form below will create an update request for this
+          project. If you'd like to claim ownership of this project, click here.`}
+        </p>
         <ProjectSubmissionForm
           inputs={Object.entries(props.projectDataHeaders)}
           initialValues={props.projectData}
