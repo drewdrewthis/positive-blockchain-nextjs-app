@@ -58,21 +58,23 @@ const CategoriesFormWrapper = (props: CategoriesFormWrapperProps) => {
 
   return (
     <div className="flex w-full flex-col gap-3">
-      {categoryBlocks.map((block) => (
-        <div className="w-full flex" key={block.id}>
-          <SingleCategoryBlock {...block} />
-          <IconButton
-            aria-label="delete"
-            // color="error"
-            onClick={() => removeForm(block.id)}
-          >
-            <Delete />
-          </IconButton>
+      {categoryBlocks.map((block, idx) => (
+        <div className="w-full" key={block.id}>
+          <div className="w-full flex">
+            <SingleCategoryBlock {...block} />
+            {idx > 0 && (
+              <IconButton
+                aria-label="delete"
+                onClick={() => removeForm(block.id)}
+              >
+                <Delete />
+              </IconButton>
+            )}
+          </div>
         </div>
       ))}
       <Button
         variant="contained"
-        color="error"
         className="bg-green-500"
         onClick={() => addForm()}
       >
