@@ -23,6 +23,13 @@ export async function fetchSingleProjectData(slug: string) {
     return null;
   }
 
+  return findProjectBySlug(projectData, slug);
+}
+
+export async function findProjectBySlug(
+  projectData: { slug: string }[],
+  slug: string
+) {
   return projectData.find((project) => project.slug === slug);
 }
 

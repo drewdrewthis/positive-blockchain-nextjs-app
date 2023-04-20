@@ -38,7 +38,7 @@ function getProjectDataUrl(context: Context) {
   const baseUrl = getBaseUrl(req);
 
   // We hit this route because it returns only the individual project data
-  return `${baseUrl}/nextjs-app/api/project-data/${slug}`;
+  return `${baseUrl}/nextjs-app/api/edge/project-data/${slug}`;
 }
 
 function getBaseUrl(req: any) {
