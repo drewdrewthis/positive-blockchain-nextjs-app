@@ -1,11 +1,15 @@
-import {
+import type {
   GetServerSideProps,
   GetServerSidePropsContext,
   PreviewData,
 } from "next";
 import IndividualProjectPage from "../../templates/IndividualProjectPage";
 import { ParsedUrlQuery } from "querystring";
-import { config } from "../../configuration";
+import { config as configuration } from "../../configuration";
+
+export const config = {
+  runtime: "experimental-edge",
+};
 
 function ProjectPage(props: { projectData: any }) {
   return <IndividualProjectPage {...props} />;
@@ -15,12 +19,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { res } = context;
   const url = getProjectDataUrl(context);
   const projectData = await fetch(url).then((res) => res.json());
-  const { projects } = config.constants;
+  const { projects } = configuration.constants;
 
-  res.setHeader(
-    "Cache-Control",
-    `public, s-maxage=${projects.CACHE_TTL}, stale-while-revalidate`
-  );
+  // res.setHeader(
+  //   "Cache-Control",
+  //   `public, s-maxage=${projects.CACHE_TTL}, stale-while-revalidate`
+  // );
 
   return {
     props: {
@@ -33,7 +37,7 @@ export default ProjectPage;
 
 type Context = GetServerSidePropsContext<ParsedUrlQuery, PreviewData>;
 function getProjectDataUrl(context: Context) {
-  const { params, res, req } = context;
+  const { params, req } = context;
   const { slug } = params as { slug: string[] };
   const baseUrl = getBaseUrl(req);
 
