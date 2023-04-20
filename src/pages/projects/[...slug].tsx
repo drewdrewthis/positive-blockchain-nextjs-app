@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { ParsedUrlQuery } from "querystring";
 import { config as configuration } from "../../configuration";
 
-function ProjectPage(props: { projectData: any }) {
+async function ProjectPage(props: { projectData: any }) {
   const IndividualProjectPage = dynamic(
     () => import("../../templates/IndividualProjectPage")
   );

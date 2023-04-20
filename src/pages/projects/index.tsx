@@ -1,8 +1,5 @@
 import type { GetStaticProps } from "next";
 import type { Project } from "../../types";
-import { fetchProjectData } from "@/lib/google";
-import { extractFiltersFromProjectData } from "../../lib/utils";
-import { config } from "../../configuration";
 import dynamic from "next/dynamic";
 
 interface Props {
@@ -19,6 +16,10 @@ function AllProjectPage(props: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const { extractFiltersFromProjectData } = await import("@/lib/utils");
+  const { fetchProjectData } = await import("@/lib/google");
+  const { config } = await import("@/configuration");
+
   const projectData = await fetchProjectData();
   const { projects } = config.constants;
 
