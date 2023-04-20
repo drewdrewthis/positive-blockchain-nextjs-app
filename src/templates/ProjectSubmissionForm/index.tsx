@@ -50,9 +50,9 @@ export default function ProjectSubmissionForm(props: {
                 />
               );
             }
-            if (type === "list") {
-              return <div key={key}>list</div>;
-            }
+            // if (type === "list") {
+            //   return <div key={key}>list</div>;
+            // }
             if (type === "boolean") {
               return renderBooleanInputWithRadioButtons();
             }

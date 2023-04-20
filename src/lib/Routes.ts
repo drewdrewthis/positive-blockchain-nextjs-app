@@ -23,4 +23,8 @@ export default class Routes {
   static getPath(path: string) {
     return path;
   }
+
+  static getApiRoute(path: string) {
+    return Routes.getPath(`/nextjs-app/api/${path}`);
+  }
 }

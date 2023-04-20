@@ -18,7 +18,7 @@ const SingleCategoryBlock = (props: Props) => {
   // Handle updating subcategories when a category is selected
   React.useEffect(() => {
     setValue(subcategoryId, []);
-  }, [selectedCategory, setValue]);
+  }, [selectedCategory, setValue, subcategoryId]);
 
   const subcategories = props.categories[selectedCategory];
 
@@ -26,7 +26,12 @@ const SingleCategoryBlock = (props: Props) => {
     <div className="w-full gap-3 flex">
       <FormControl className="w-full mb-3">
         <InputLabel id="category-label">Category</InputLabel>
-        <Select labelId="category-label" {...register(id)} defaultValue="">
+        <Select
+          label="Category"
+          labelId="category-label"
+          {...register(id)}
+          defaultValue=""
+        >
           <MenuItem value="" disabled>
             Select a category
           </MenuItem>
@@ -40,10 +45,9 @@ const SingleCategoryBlock = (props: Props) => {
 
       {selectedCategory && (
         <FormControl className="w-full">
-          <InputLabel id="subcategory-label">
-            Subcategories (Optional)
-          </InputLabel>
+          <InputLabel id="subcategory-label">Subcategories (max 3)</InputLabel>
           <Select
+            label="Subcategories"
             labelId="subcategory-label"
             {...register(subcategoryId)}
             multiple
@@ -52,7 +56,7 @@ const SingleCategoryBlock = (props: Props) => {
             //   setValue(subcategoryId, event.target.value);
             // }}
           >
-            {subcategories.map((subcategory) => (
+            {subcategories?.map((subcategory) => (
               <MenuItem key={subcategory} value={subcategory}>
                 {subcategory}
               </MenuItem>

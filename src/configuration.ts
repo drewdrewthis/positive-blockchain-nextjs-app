@@ -25,6 +25,10 @@ class Configuration {
               headerRow: 6,
               keyRow: 2,
             },
+            dataTables: {
+              name: "DB frame",
+              headerRow: 2,
+            },
             pendingProjects: {
               name: "Projects Pending Review",
             },
@@ -39,6 +43,7 @@ class Configuration {
       INITIAL_DATA_LOAD_COUNT: 30,
       CACHE_TTL: 60 * 5,
     },
+    maxCategories: 4,
     warmableEndpoints: [
       "https://positiveblockchain.io/nextjs-app/projects",
       "https://positiveblockchain.io/nextjs-app/projects/modum",
