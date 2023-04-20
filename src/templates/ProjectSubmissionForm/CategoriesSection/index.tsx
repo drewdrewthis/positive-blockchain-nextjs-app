@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { Button, IconButton } from "@mui/material";
+import { Button, IconButton, Typography } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 import omit from "lodash/fp/omit";
 import SingleCategoryBlock from "./SingleCategoryBlock";
@@ -55,10 +55,20 @@ function useController(props: CategoriesFormWrapperProps) {
 
 const CategoriesFormWrapper = (props: CategoriesFormWrapperProps) => {
   const { categoryBlocks, addForm, removeForm } = useController(props);
+  const firstBlock = categoryBlocks[0];
 
   return (
     <div className="flex w-full flex-col gap-3">
-      {categoryBlocks.map((block, idx) => (
+      <div className="w-full" key={firstBlock.id}>
+        <Typography variant="overline">Primary Category *</Typography>
+        <div className="w-full flex">
+          <SingleCategoryBlock {...firstBlock} />
+        </div>
+      </div>
+      <Typography variant="overline">
+        Additional categories (optional)
+      </Typography>
+      {categoryBlocks.slice(1).map((block, idx) => (
         <div className="w-full" key={block.id}>
           <div className="w-full flex">
             <SingleCategoryBlock {...block} />
