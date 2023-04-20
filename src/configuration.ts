@@ -39,6 +39,11 @@ class Configuration {
       INITIAL_DATA_LOAD_COUNT: 50,
       CACHE_TTL: 60 * 5,
     },
+    warmableEndpoints: [
+      "https://positiveblockchain.io/nextjs-app/projects",
+      "https://positiveblockchain.io/nextjs-app/projects/modum",
+      "https://positiveblockchain.io/nextjs-app/api/project-data",
+    ],
   };
 }
 
