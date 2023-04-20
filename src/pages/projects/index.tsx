@@ -1,9 +1,9 @@
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next";
+import type { Project } from "../../types";
 import { fetchProjectData } from "@/lib/google";
-import ProjectPageTemplate from "@/templates/ProjectsPage";
 import { extractFiltersFromProjectData } from "../../lib/utils";
 import { config } from "../../configuration";
-import { Project } from "../../types";
+import dynamic from "next/dynamic";
 
 interface Props {
   initialData: Project[];
@@ -11,6 +11,10 @@ interface Props {
 }
 
 function AllProjectPage(props: Props) {
+  const ProjectPageTemplate = dynamic(
+    () => import("../../templates/ProjectsPage")
+  );
+
   return <ProjectPageTemplate {...props} />;
 }
 
