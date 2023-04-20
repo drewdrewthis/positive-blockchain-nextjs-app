@@ -3,15 +3,15 @@ import type {
   GetServerSidePropsContext,
   PreviewData,
 } from "next";
-import IndividualProjectPage from "../../templates/IndividualProjectPage";
+import dynamic from "next/dynamic";
 import { ParsedUrlQuery } from "querystring";
 import { config as configuration } from "../../configuration";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 function ProjectPage(props: { projectData: any }) {
+  const IndividualProjectPage = dynamic(
+    () => import("../../templates/IndividualProjectPage")
+  );
+
   return <IndividualProjectPage {...props} />;
 }
 
@@ -21,10 +21,10 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const projectData = await fetch(url).then((res) => res.json());
   const { projects } = configuration.constants;
 
-  // res.setHeader(
-  //   "Cache-Control",
-  //   `public, s-maxage=${projects.CACHE_TTL}, stale-while-revalidate`
-  // );
+  res.setHeader(
+    "Cache-Control",
+    `public, s-maxage=${projects.CACHE_TTL}, stale-while-revalidate`
+  );
 
   return {
     props: {
