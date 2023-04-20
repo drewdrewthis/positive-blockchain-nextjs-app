@@ -70,7 +70,7 @@ function useProjectData(props: { initialData: Project[] }) {
 }
 
 async function fetchAllData() {
-  const response = await fetch("/nextjs-app/api/project-data");
+  const response = await fetch("/nextjs-app/api/edge/project-data");
   const data = await response.json();
   if (data?.data) {
     return data.data;

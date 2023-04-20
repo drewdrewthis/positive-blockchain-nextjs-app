@@ -36,7 +36,7 @@ class Configuration {
       HOST: "https://positiveblockchain.io",
     },
     projects: {
-      INITIAL_DATA_LOAD_COUNT: 50,
+      INITIAL_DATA_LOAD_COUNT: 30,
       CACHE_TTL: 60 * 5,
     },
     warmableEndpoints: [

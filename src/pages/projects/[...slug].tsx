@@ -1,13 +1,17 @@
-import {
+import type {
   GetServerSideProps,
   GetServerSidePropsContext,
   PreviewData,
 } from "next";
-import IndividualProjectPage from "../../templates/IndividualProjectPage";
+import dynamic from "next/dynamic";
 import { ParsedUrlQuery } from "querystring";
-import { config } from "../../configuration";
+import { config as configuration } from "../../configuration";
 
 function ProjectPage(props: { projectData: any }) {
+  const IndividualProjectPage = dynamic(
+    () => import("../../templates/IndividualProjectPage")
+  );
+
   return <IndividualProjectPage {...props} />;
 }
 
@@ -15,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const { res } = context;
   const url = getProjectDataUrl(context);
   const projectData = await fetch(url).then((res) => res.json());
-  const { projects } = config.constants;
+  const { projects } = configuration.constants;
 
   res.setHeader(
     "Cache-Control",
@@ -33,12 +37,12 @@ export default ProjectPage;
 
 type Context = GetServerSidePropsContext<ParsedUrlQuery, PreviewData>;
 function getProjectDataUrl(context: Context) {
-  const { params, res, req } = context;
+  const { params, req } = context;
   const { slug } = params as { slug: string[] };
   const baseUrl = getBaseUrl(req);
 
   // We hit this route because it returns only the individual project data
-  return `${baseUrl}/nextjs-app/api/project-data/${slug}`;
+  return `${baseUrl}/nextjs-app/api/edge/project-data/${slug}`;
 }
 
 function getBaseUrl(req: any) {
