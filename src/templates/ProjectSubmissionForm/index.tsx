@@ -3,6 +3,41 @@ import { titleCase } from "../../lib/utils";
 import { useForm, FormProvider } from "react-hook-form";
 import CategoriesSection from "./CategoriesSection/SingleCategoryBlock";
 import CategoriesFormWrapper from "./CategoriesSection";
+import { CountryData } from "../../types";
+import NestedSelect from "../../components/NestedSelect";
+
+const countries: CountryData[] = [
+  {
+    country: "Canada",
+    hemisphere: "Northern",
+    region: "Americas",
+    subregion: "North America",
+  },
+  {
+    country: "Brazil",
+    hemisphere: "Southern",
+    region: "Americas",
+    subregion: "South America",
+  },
+  {
+    country: "China",
+    hemisphere: "Northern",
+    region: "Asia",
+    subregion: "Eastern Asia",
+  },
+  {
+    country: "Nigeria",
+    hemisphere: "Northern",
+    region: "Africa",
+    subregion: "Western Africa",
+  },
+  {
+    country: "Australia",
+    hemisphere: "Southern",
+    region: "Oceania",
+    subregion: "Australia and New Zealand",
+  },
+];
 
 export default function ProjectSubmissionForm(props: {
   inputs: [
@@ -57,6 +92,7 @@ export default function ProjectSubmissionForm(props: {
               return renderBooleanInputWithRadioButtons();
             }
           })}
+          <NestedSelect id="sdfs" countries={countries} />
           <Button
             className="bg-blue-500"
             type="submit"

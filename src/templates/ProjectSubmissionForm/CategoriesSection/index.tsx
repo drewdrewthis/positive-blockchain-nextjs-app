@@ -6,8 +6,41 @@ import omit from "lodash/fp/omit";
 import SingleCategoryBlock from "./SingleCategoryBlock";
 import { useCategories } from "./useCategories";
 import { config } from "../../../configuration";
+import NestedSelect from "../../../components/NestedSelect";
 
 const { maxCategories } = config.constants;
+const countries: CountryData[] = [
+  {
+    country: "Canada",
+    hemisphere: "Northern",
+    region: "Americas",
+    subregion: "North America",
+  },
+  {
+    country: "Brazil",
+    hemisphere: "Southern",
+    region: "Americas",
+    subregion: "South America",
+  },
+  {
+    country: "China",
+    hemisphere: "Northern",
+    region: "Asia",
+    subregion: "Eastern Asia",
+  },
+  {
+    country: "Nigeria",
+    hemisphere: "Northern",
+    region: "Africa",
+    subregion: "Western Africa",
+  },
+  {
+    country: "Australia",
+    hemisphere: "Southern",
+    region: "Oceania",
+    subregion: "Australia and New Zealand",
+  },
+];
 
 interface CategoriesFormWrapperProps {
   categories: Record<string, string[]>;
