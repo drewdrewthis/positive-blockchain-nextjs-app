@@ -14,7 +14,7 @@ interface Props {
   countries: CountryData[];
 }
 
-const NestedSelect = (props: Props) => {
+const RegionAndCountrySelect = (props: Props) => {
   const { countries, id } = props;
   const { register, watch, setValue, getValues } = useFormContext();
   const values = getValues()[id] || [];
@@ -33,7 +33,7 @@ const NestedSelect = (props: Props) => {
           value={watch(id) || []}
           input={<OutlinedInput label="Name" />}
         >
-          {createNestedSelects(
+          {createRegionAndCountrySelects(
             groupCountriesByHemisphereRegionSubregion(countries),
             values || []
           )}
@@ -50,7 +50,7 @@ const NestedSelect = (props: Props) => {
   );
 };
 
-export default NestedSelect;
+export default RegionAndCountrySelect;
 
 // Function group countries by hemisphere, region, and subregion
 function groupCountriesByHemisphereRegionSubregion(countries: CountryData[]): {
@@ -86,7 +86,7 @@ function groupCountriesByHemisphereRegionSubregion(countries: CountryData[]): {
 }
 
 // For each hemisphere, region, and subregion, create a nested select
-function createNestedSelects(
+function createRegionAndCountrySelects(
   hemisphereGroups: ReturnType<
     typeof groupCountriesByHemisphereRegionSubregion
   >,

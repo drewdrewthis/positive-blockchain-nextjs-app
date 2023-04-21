@@ -6,7 +6,7 @@ import omit from "lodash/fp/omit";
 import SingleCategoryBlock from "./SingleCategoryBlock";
 import { useCategories } from "./useCategories";
 import { config } from "../../../configuration";
-import NestedSelect from "../../../components/NestedSelect";
+import RegionAndCountrySelect from "../../../components/RegionAndCountrySelect";
 
 const { maxCategories } = config.constants;
 const countries: CountryData[] = [

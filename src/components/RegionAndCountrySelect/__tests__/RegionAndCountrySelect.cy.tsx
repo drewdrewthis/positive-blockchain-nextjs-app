@@ -2,7 +2,7 @@ import React from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { CountryData } from "../../../types";
 import "@/styles/globals.css";
-import NestedSelect from "..";
+import RegionAndCountrySelect from "..";
 
 const countries: CountryData[] = [
   {
@@ -62,7 +62,7 @@ function FormWrapper() {
           width: "100vw",
         }}
       >
-        <NestedSelect id="test-select" countries={countries} />
+        <RegionAndCountrySelect id="test-select" countries={countries} />
       </div>
     </FormProvider>
   );

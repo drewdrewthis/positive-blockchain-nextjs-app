@@ -1,45 +1,12 @@
 import { Button, FormControl, TextField, Typography } from "@mui/material";
 import { titleCase } from "../../lib/utils";
 import { useForm, FormProvider } from "react-hook-form";
-import CategoriesSection from "./CategoriesSection/SingleCategoryBlock";
 import CategoriesFormWrapper from "./CategoriesSection";
 import { CountryData } from "../../types";
-import NestedSelect from "../../components/NestedSelect";
-
-const countries: CountryData[] = [
-  {
-    country: "Canada",
-    hemisphere: "Northern",
-    region: "Americas",
-    subregion: "North America",
-  },
-  {
-    country: "Brazil",
-    hemisphere: "Southern",
-    region: "Americas",
-    subregion: "South America",
-  },
-  {
-    country: "China",
-    hemisphere: "Northern",
-    region: "Asia",
-    subregion: "Eastern Asia",
-  },
-  {
-    country: "Nigeria",
-    hemisphere: "Northern",
-    region: "Africa",
-    subregion: "Western Africa",
-  },
-  {
-    country: "Australia",
-    hemisphere: "Southern",
-    region: "Oceania",
-    subregion: "Australia and New Zealand",
-  },
-];
+import RegionAndCountrySelect from "../../components/RegionAndCountrySelect";
 
 export default function ProjectSubmissionForm(props: {
+  countries: CountryData[];
   inputs: [
     string,
     {
@@ -51,7 +18,7 @@ export default function ProjectSubmissionForm(props: {
   initialValues: Record<string, any>;
   onSubmit?: (values: Record<string, any>) => void;
 }) {
-  const { inputs, initialValues, onSubmit = () => {} } = props;
+  const { inputs, countries, initialValues, onSubmit = () => {} } = props;
 
   const methods = useForm({
     defaultValues: initialValues,
@@ -85,14 +52,11 @@ export default function ProjectSubmissionForm(props: {
                 />
               );
             }
-            // if (type === "list") {
-            //   return <div key={key}>list</div>;
-            // }
             if (type === "boolean") {
               return renderBooleanInputWithRadioButtons();
             }
           })}
-          <NestedSelect id="sdfs" countries={countries} />
+          <RegionAndCountrySelect id="region" countries={countries} />;
           <Button
             className="bg-blue-500"
             type="submit"

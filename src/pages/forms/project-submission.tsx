@@ -5,9 +5,10 @@ import Header from "../../templates/partials/Header";
 import Footer from "../../templates/partials/Footer";
 import { ProjectDataSchema } from "../../types";
 import { Typography } from "@mui/material";
+import { fetchCountriesData } from "../../lib/google/fetchCountriesData";
 
 function ProjectPage(props: any) {
-  const { projectData } = props;
+  const { projectData, countriesData } = props;
 
   const handleSubmit = async (values: Record<string, any>) => {
     const valuesArr = convertValuesToStringArray(
@@ -39,6 +40,7 @@ function ProjectPage(props: any) {
           project. If you'd like to claim ownership of this project, click here.`}
         </p>
         <ProjectSubmissionForm
+          countries={countriesData}
           inputs={Object.entries(props.projectDataHeaders)}
           initialValues={props.projectData}
           onSubmit={(values) => handleSubmit(values)}
@@ -61,10 +63,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   const projectDataHeaders = await fetchProjectDataSchema();
+  const countriesData = await fetchCountriesData();
 
   return {
     props: {
       ...props,
+      countriesData,
       projectDataHeaders,
     },
   };
