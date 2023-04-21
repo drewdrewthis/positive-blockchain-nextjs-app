@@ -73,3 +73,10 @@ export type ProjectDataSchema = {
     type: "text" | "list" | "boolean";
   };
 };
+
+export interface CountryData {
+  country: string;
+  subregion: string;
+  region: string;
+  hemisphere: string;
+}

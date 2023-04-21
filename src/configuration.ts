@@ -29,6 +29,10 @@ class Configuration {
               name: "DB frame",
               headerRow: 2,
             },
+            regions: {
+              name: "regions",
+              headerRow: 2,
+            },
             pendingProjects: {
               name: "Projects Pending Review",
             },
