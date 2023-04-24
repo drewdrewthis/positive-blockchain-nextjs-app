@@ -1,5 +1,7 @@
 import { projectProperties } from "./definitions";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const swaggerSpec = {
   swagger: "2.0",
   info: {
@@ -8,10 +10,10 @@ const swaggerSpec = {
     version: "1.0.0",
     title: "PositiveBlockchain API",
   },
-  host: "positiveblockchain.io",
+  host: isProd ? "positiveblockchain.io" : "localhost:3000",
   basePath: "/nextjs-app/api",
   tags: [],
-  schemes: ["https"],
+  schemes: ["http", "https"],
   externalDocs: {
     description: "Find out more about PositiveBlockchain",
     url: "https://positiveblockchain.io/about",

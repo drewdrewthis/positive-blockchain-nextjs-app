@@ -17,13 +17,6 @@ if (!apiKey) {
 }
 
 export default async function handler(req: NextRequest, res: NextResponse) {
-  if (!fromValidReferer(req)) {
-    return NextResponse.json(
-      { error: "Unauthorized: Invalid Referrer" },
-      { status: 401 }
-    );
-  }
-
   try {
     // Fetch projects
     const allProjects = await fetchProjects(req);
@@ -72,41 +65,4 @@ const NoDataResponse = NextResponse.json(
 // Handle error
 async function handleError(error: Error) {
   return NextResponse.json({ error: error.message }, { status: 500 });
-}
-
-/**
- * Since this route is accessing a protected API route, we need to make sure
- * with a protected key, we need to make sure that the request is coming from
- * a valid source.
- *
- * - From the project page
- * - From a catch-all request for the individual project pages
- */
-function fromValidReferer(req: NextRequest) {
-  const referer = req.headers.get("referer");
-
-  console.log(
-    "headers",
-    req.headers,
-    "get referer",
-    req.headers.get("referer"),
-    "referer",
-    req.referrer,
-    'includes "/nextjs-app/projects"',
-    referer?.includes("/nextjs-app/projects")
-  );
-
-  console.log("headers middle", req.headers.get("x-middleware-subrequest"));
-
-  if (referer?.includes("/nextjs-app/projects")) {
-    return true;
-  }
-
-  const subrequest = req.headers.get("x-middleware-subrequest");
-
-  if (subrequest === "pages/api/edge/project-data/[slug]") {
-    return true;
-  }
-
-  return false;
 }
