@@ -26,6 +26,13 @@ const nextConfig = {
       {
         // Apply these headers to all routes in your application.
         source: "/:path*",
+        has: [
+          {
+            type: "cookie",
+            key: "authorized",
+            value: process.env.API_KEY,
+          },
+        ],
         headers: [
           {
             key: "X-Frame-Options",
@@ -42,17 +49,6 @@ const nextConfig = {
           {
             key: "Referrer-Policy",
             value: "same-origin",
-          },
-        ],
-      },
-      {
-        // Apply these headers to all routes in your application.
-        source: "/api/project-data",
-        headers: [
-          {
-            key: "Referrer-Policy",
-            // Allow all access
-            value: "no-referrer",
           },
         ],
       },

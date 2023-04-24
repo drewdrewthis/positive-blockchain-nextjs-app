@@ -36,7 +36,7 @@ const swaggerSpec = {
     },
   },
   securityDefinitions: {
-    api_key: { type: "apiKey", name: "api_key", in: "header" },
+    api_key: { type: "apiKey", name: "x-api_key", in: "header" },
   },
   definitions: {
     Project: {

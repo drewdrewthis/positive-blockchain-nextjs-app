@@ -16,14 +16,10 @@ if (!apiKey) {
   throw new Error("API_KEY is not defined");
 }
 
-export default async function handler(req: NextRequest) {
-  // Check that the request comes from a url that contains nextjs-app
-  // if (!isSameOrigin(req)) {
-  //   return NextResponse.json(
-  //     { error: "Direct access is not allowed" },
-  //     { status: 401 }
-  //   );
-  // }
+export default async function handler(req: NextRequest, res: NextResponse) {
+  if (!fromValidReferer(req)) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
 
   try {
     // Fetch projects
@@ -75,8 +71,26 @@ async function handleError(error: Error) {
   return NextResponse.json({ error: error.message }, { status: 500 });
 }
 
-const isSameOrigin = (req: NextRequest) => {
-  const origin = req.nextUrl.origin;
-  const host = req.nextUrl.host;
-  return origin && origin.includes(host);
-};
+/**
+ * Since this route is accessing a protected API route, we need to make sure
+ * with a protected key, we need to make sure that the request is coming from
+ * a valid source.
+ *
+ * - From the project page
+ * - From a catch-all request for the individual project pages
+ */
+function fromValidReferer(req: NextRequest) {
+  const referer = req.headers.get("referer");
+
+  if (referer?.includes("/nextjs-app/projects")) {
+    return true;
+  }
+
+  const subrequest = req.headers.get("x-middleware-subrequest");
+
+  if (subrequest === "pages/api/edge/project-data/[slug]") {
+    return true;
+  }
+
+  return false;
+}
