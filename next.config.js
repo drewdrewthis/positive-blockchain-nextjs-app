@@ -26,13 +26,6 @@ const nextConfig = {
       {
         // Apply these headers to all routes in your application.
         source: "/:path*",
-        has: [
-          {
-            type: "cookie",
-            key: "authorized",
-            value: process.env.API_KEY,
-          },
-        ],
         headers: [
           {
             key: "X-Frame-Options",
