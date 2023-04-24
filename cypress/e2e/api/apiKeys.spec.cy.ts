@@ -10,7 +10,6 @@ describe("Project data endpoint", () => {
   });
 
   it("should return data with correct x-api-key header", () => {
-    console.log("key", Cypress.env("API_KEY"));
     cy.request({
       method: "GET",
       url: "http://localhost:3000/nextjs-app/api/project-data",

@@ -1,4 +1,4 @@
-import type { NextRequest } from "next/server";
+import { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { config as configuration } from "@/configuration";
 
@@ -10,7 +10,21 @@ const {
   projects: { CACHE_TTL },
 } = configuration.constants;
 
+const apiKey = process.env.API_KEY as string;
+
+if (!apiKey) {
+  throw new Error("API_KEY is not defined");
+}
+
 export default async function handler(req: NextRequest) {
+  // Check that the request comes from a url that contains nextjs-app
+  // if (!isSameOrigin(req)) {
+  //   return NextResponse.json(
+  //     { error: "Direct access is not allowed" },
+  //     { status: 401 }
+  //   );
+  // }
+
   try {
     // Fetch projects
     const allProjects = await fetchProjects(req);
@@ -43,9 +57,11 @@ export default async function handler(req: NextRequest) {
 
 // Fetch projects
 async function fetchProjects(req: NextRequest) {
-  return await fetch(req.nextUrl.origin + "/nextjs-app/api/project-data").then(
-    (res) => res.json()
-  );
+  return await fetch(req.nextUrl.origin + "/nextjs-app/api/project-data", {
+    headers: {
+      "x-api-key": apiKey,
+    },
+  }).then((res) => res.json());
 }
 
 // Handle no data
@@ -58,3 +74,9 @@ const NoDataResponse = NextResponse.json(
 async function handleError(error: Error) {
   return NextResponse.json({ error: error.message }, { status: 500 });
 }
+
+const isSameOrigin = (req: NextRequest) => {
+  const origin = req.nextUrl.origin;
+  const host = req.nextUrl.host;
+  return origin && origin.includes(host);
+};

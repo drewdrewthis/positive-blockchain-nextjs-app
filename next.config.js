@@ -1,13 +1,3 @@
-const ContentSecurityPolicy = `
-  default-src 'self'  
-  'unsafe-inline'
-  'unsafe-eval'
-  *.positiveblockchain.io
-  *.google-analytics.com
-  *.googletagmanager.com
-  *.googleapis
-`;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -53,9 +43,16 @@ const nextConfig = {
             key: "Referrer-Policy",
             value: "same-origin",
           },
+        ],
+      },
+      {
+        // Apply these headers to all routes in your application.
+        source: "/api/project-data",
+        headers: [
           {
-            key: "Content-Security-Policy",
-            value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+            key: "Referrer-Policy",
+            // Allow all access
+            value: "no-referrer",
           },
         ],
       },
