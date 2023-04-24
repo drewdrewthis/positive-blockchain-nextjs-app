@@ -67,7 +67,9 @@ export async function fetchSheetData(args: {
   spreadsheetId: string;
   range?: string;
 }) {
-  const SHEET_DATA_CACHE_KEY = "sheet_cache_key";
+  const { spreadsheetId = SPREADSHEET_ID, range } = args;
+
+  const SHEET_DATA_CACHE_KEY = "sheet_cache_key" + spreadsheetId + range;
 
   const cachedData = cache.get(SHEET_DATA_CACHE_KEY);
 
@@ -76,7 +78,6 @@ export async function fetchSheetData(args: {
     return cachedData as string[][];
   }
 
-  const { spreadsheetId = SPREADSHEET_ID, range } = args;
   const auth = getAuth();
 
   const sheets = google.sheets({
