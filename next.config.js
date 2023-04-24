@@ -1,3 +1,13 @@
+const ContentSecurityPolicy = `
+  default-src 'self'  
+  'unsafe-inline'
+  'unsafe-eval'
+  *.positiveblockchain.io
+  *.google-analytics.com
+  *.googletagmanager.com
+  *.googleapis
+`;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -18,6 +28,36 @@ const nextConfig = {
         basePath: false,
         destination: "/nextjs-app/projects",
         permanent: true,
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        // Apply these headers to all routes in your application.
+        source: "/:path*",
+        headers: [
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN",
+          },
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "same-origin",
+          },
+          {
+            key: "Content-Security-Policy",
+            value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+          },
+        ],
       },
     ];
   },

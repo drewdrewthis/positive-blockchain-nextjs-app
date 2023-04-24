@@ -12,6 +12,15 @@ class Configuration {
   constants = {
     google: {
       sheets: {
+        apiSheet: {
+          SPREADSHEET_ID: "1bxGiGdXQwj4Fw0LWBUqsseihZl63_mmuy60-xZafO2Y",
+          SPREADSHEET_NAME: "API Keys",
+          sheets: {
+            apiKeys: {
+              name: "Keys",
+            },
+          },
+        },
         databaseSheet: {
           SPREADSHEET_ID: "1-Imie1YgTv4cRGmDTSQWoFgDxiUqmgFfnDLEfFcbCGg",
           // SPREADSHEET_ID: "1r8Nts5qtXau_-17mF1PE6HvyFrs8in98_1VVKg8QLAs",

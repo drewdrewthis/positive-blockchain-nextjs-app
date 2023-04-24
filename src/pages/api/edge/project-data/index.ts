@@ -11,19 +11,50 @@ const {
 } = configuration.constants;
 
 export default async function handler(req: NextRequest) {
-  const allProjects = await fetch(
-    req.nextUrl.origin + "/nextjs-app/api/project-data"
-  ).then((res) => res.json());
+  try {
+    // Fetch projects
+    const allProjects = await fetchProjects(req);
 
-  return NextResponse.json(
-    {
-      data: allProjects.data,
-    },
-    {
-      status: 200,
-      headers: {
-        "Cache-Control": `public, s-maxage=${CACHE_TTL}, stale-while-revalidate`,
-      },
+    // Handle error
+    if (allProjects?.error) {
+      throw new Error(allProjects.error);
     }
+
+    // Handle no data
+    if (allProjects?.data?.length < 1) {
+      return NoDataResponse;
+    }
+
+    // Return data
+    return NextResponse.json(
+      { data: allProjects.data },
+      {
+        status: 200,
+        headers: {
+          "Cache-Control": `public, s-maxage=${CACHE_TTL}, stale-while-revalidate`,
+        },
+      }
+    );
+  } catch (error) {
+    // Handle error
+    return handleError(error as Error);
+  }
+}
+
+// Fetch projects
+async function fetchProjects(req: NextRequest) {
+  return await fetch(req.nextUrl.origin + "/nextjs-app/api/project-data").then(
+    (res) => res.json()
   );
+}
+
+// Handle no data
+const NoDataResponse = NextResponse.json(
+  { error: "No projects found" },
+  { status: 404 }
+);
+
+// Handle error
+async function handleError(error: Error) {
+  return NextResponse.json({ error: error.message }, { status: 500 });
 }
