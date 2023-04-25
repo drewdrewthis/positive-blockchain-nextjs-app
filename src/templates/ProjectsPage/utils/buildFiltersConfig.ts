@@ -1,4 +1,19 @@
-export function buildFiltersConfig(filters: Record<string, string[]>) {
+/**
+Builds the configuration for the filters that will be displayed on the UI.
+The filters configuration is returned as an array of filter objects.
+*/
+export function buildFiltersConfig(filters: Record<string, string[]>): {
+  // Display title of the filter
+  title: string;
+  // Key that corresponds to the property in the project object
+  key: string;
+  // Labels for the select options
+  labels: string[];
+  // Type of the filter UI element
+  type?: "multi-select-search";
+  // Helper text to be displayed for the filter
+  helperText?: string;
+}[] {
   return [
     {
       title: "Status",
