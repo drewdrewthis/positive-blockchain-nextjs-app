@@ -13,12 +13,13 @@ function ProjectFilter(props: ReturnType<typeof useController>) {
       }
     >
       <h2 className="mt-0">Filters</h2>
-      {filters.map((filter) =>
+      {filters.map((filter) => [
         renderFilterGroup({
           ...filter,
           onChange: (values: any) => handleFilterChange(filter.key, values),
-        })
-      )}
+        }),
+        <div key={filter.key + filter.helperText}>{filter.helperText}</div>,
+      ])}
     </div>
   );
 }

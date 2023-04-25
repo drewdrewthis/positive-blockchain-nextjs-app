@@ -3,6 +3,7 @@ export interface FilterGroupProps {
   key: string;
   labels: string[];
   type?: "checkbox" | "multi-select-search";
+  helperText?: string;
 }
 export interface Props {
   filters: FilterGroupProps[];

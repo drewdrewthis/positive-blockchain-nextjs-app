@@ -2,7 +2,7 @@ import intersection from "lodash/fp/intersection";
 import isEmpty from "lodash/fp/isEmpty";
 import kebabCase from "lodash/fp/kebabCase";
 import memoize from "lodash/fp/memoize";
-import { Project } from "@/types";
+import type { Project } from "@/types";
 
 const memoizedKebabCase = memoize(kebabCase);
 
@@ -55,6 +55,7 @@ function getSdgs(props: { sdg_occurences: string[] }) {
 }
 
 function getProjectAttributeValue(attributes: any) {
+  if (!attributes) return attributes;
   if (Array.isArray(attributes)) return attributes;
   return attributes.split(",");
 }

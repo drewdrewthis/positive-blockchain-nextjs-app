@@ -55,6 +55,24 @@ export function buildFiltersConfig(filters: Record<string, string[]>) {
       type: "multi-select-search" as const,
       key: "primary_headquarter_country",
       labels: filters.primary_headquarter_country,
+      helperText:
+        "If the country is not listed, there are no projects in that country.",
+    },
+    {
+      title: "Servicing Country",
+      type: "multi-select-search" as const,
+      key: "servicing_area",
+      labels: filters.servicing_area,
+      helperText:
+        "If the country is not listed, there are no projects in that country.",
+    },
+    {
+      title: "Servicing Region",
+      type: "multi-select-search" as const,
+      key: "servicing_region",
+      labels: filters.servicing_region,
+      helperText:
+        "If the region is not listed, there are no projects in that region.",
     },
   ];
 }

@@ -17,6 +17,14 @@ export function extractFiltersFromProjectData(
       projectData,
       "sub_categories"
     ),
+    servicing_area: extractPossibleValuesFromArrayKey(
+      projectData,
+      "servicing_area"
+    ),
+    servicing_region: extractPossibleValuesFromArrayKey(
+      projectData,
+      "servicing_region"
+    ),
     blockchain_technology: extractPossibleValuesFromListKey(
       projectData,
       "blockchain_technology"
