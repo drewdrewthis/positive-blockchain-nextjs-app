@@ -1,8 +1,8 @@
 import { parse } from "csv-parse";
 import { Project } from "../../types";
 import { isUndefined, uniq } from "lodash/fp";
-export * from "./extractFiltersFromProjectData";
-export * from "./filterProjectDataByFilters";
+export * from "./filters/extractFiltersFromProjectData";
+export * from "./filters/filterProjectDataByFilters";
 export * from "./convertBooleanMapToArray";
 
 export async function parseCsvBuffer(arrayBuffer: ArrayBuffer): Promise<any> {

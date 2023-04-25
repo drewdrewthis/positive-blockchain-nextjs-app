@@ -1,12 +1,10 @@
 import { chain } from "lodash";
-import { Project } from "../../types";
+import { Project } from "../../../types";
 
 export function extractFiltersFromProjectData(
   projectData: Partial<Project>[]
 ): Record<string, string[]> {
   if (!projectData?.length) return {};
-
-  console.log("projectData", projectData);
 
   return {
     ...extactPossibleValuesFromKeys(projectData, [
