@@ -10,9 +10,10 @@ import {
 export function AutocompleteFilterGroup(props: {
   title: string;
   labels: (string | number)[];
+  id: string;
   onChange: (values: any) => void;
 }) {
-  const { onChange, title, labels } = props;
+  const { onChange, title, labels, id } = props;
   const methods = useForm();
 
   methods.watch((values) => {
@@ -23,14 +24,14 @@ export function AutocompleteFilterGroup(props: {
   return (
     <FormProvider {...methods}>
       <b className="mb-3 text-teal-600">{title}</b>
-      <MutliSelectSearch labels={labels} />
+      <MutliSelectSearch labels={labels} id={id} />
       <Divider />
     </FormProvider>
   );
 }
 
-function MutliSelectSearch(props: { labels: (string | number)[] }) {
-  const { labels } = props;
+function MutliSelectSearch(props: { id: string; labels: (string | number)[] }) {
+  const { labels, id } = props;
   const { control } = useFormContext();
 
   const options = labels.map((label) => ({
@@ -45,7 +46,7 @@ function MutliSelectSearch(props: { labels: (string | number)[] }) {
       render={({ field: { onChange } }) => (
         <Autocomplete
           multiple
-          id="checkboxes-tags-demo"
+          id={id}
           options={options}
           className={cx("w-full")}
           disableCloseOnSelect

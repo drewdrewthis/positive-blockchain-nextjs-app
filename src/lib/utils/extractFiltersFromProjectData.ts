@@ -6,6 +6,8 @@ export function extractFiltersFromProjectData(
 ): Record<string, string[]> {
   if (!projectData?.length) return {};
 
+  console.log("projectData", projectData);
+
   return {
     ...extactPossibleValuesFromKeys(projectData, [
       "active",
@@ -13,6 +15,10 @@ export function extractFiltersFromProjectData(
       "blockchain_type",
       "primary_headquarter_country",
     ]),
+    sub_categories: extractPossibleValuesFromArrayKey(
+      projectData,
+      "sub_categories"
+    ),
     blockchain_technology: extractPossibleValuesFromListKey(
       projectData,
       "blockchain_technology"
@@ -54,4 +60,18 @@ export function formatItemsForSelect(items: string[]) {
     label: item,
     value: item,
   }));
+}
+
+function extractPossibleValuesFromArrayKey(
+  data: Record<string, any>[],
+  key: string
+) {
+  if (!data?.length) return [];
+  const items = data.map((item) => item[key]);
+  const arr = items.flat().map((item) => item?.trim());
+  return chain(arr)
+    .uniqBy((value) => value?.toLocaleLowerCase())
+    .compact()
+    .sort()
+    .value();
 }
