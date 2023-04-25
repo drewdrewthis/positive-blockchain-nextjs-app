@@ -23,9 +23,8 @@ export function AutocompleteFilterGroup(props: {
 
   return (
     <FormProvider {...methods}>
-      <b className="mb-3 text-teal-600">{title}</b>
+      <b className="mb-3 text-teal-600 mt-3">{title}</b>
       <MutliSelectSearch labels={labels} id={id} />
-      <Divider />
     </FormProvider>
   );
 }
@@ -42,13 +41,13 @@ function MutliSelectSearch(props: { id: string; labels: (string | number)[] }) {
   return (
     <Controller
       control={control}
-      name="multi-select-search"
+      name={id}
       render={({ field: { onChange } }) => (
         <Autocomplete
           multiple
           id={id}
           options={options}
-          className={cx("w-full")}
+          className={cx("w-full mb-3")}
           disableCloseOnSelect
           renderOption={(props, option, { selected }) => (
             <li {...props}>{option.title}</li>

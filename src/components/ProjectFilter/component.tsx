@@ -2,6 +2,7 @@ import { useController } from "./useController";
 import { FilterGroupProps } from "./types";
 import { AutocompleteFilterGroup } from "./AutocompleteFilterGroup";
 import CheckboxFilterGroup from "./CheckboxFilterGroup";
+import { Divider } from "@mui/material";
 
 function ProjectFilter(props: ReturnType<typeof useController>) {
   const { filters, className = "", handleFilterChange } = props;
@@ -13,13 +14,23 @@ function ProjectFilter(props: ReturnType<typeof useController>) {
       }
     >
       <h2 className="mt-0">Filters</h2>
-      {filters.map((filter) => [
-        renderFilterGroup({
-          ...filter,
-          onChange: (values: any) => handleFilterChange(filter.key, values),
-        }),
-        <div key={filter.key + filter.helperText}>{filter.helperText}</div>,
-      ])}
+      {filters.map((filter) => (
+        <>
+          {renderFilterGroup({
+            ...filter,
+            onChange: (values: any) => handleFilterChange(filter.key, values),
+          })}
+          {filter.helperText && (
+            <div
+              key={filter.key + filter.helperText}
+              className="text-xs italic mt-2"
+            >
+              {filter.helperText}
+            </div>
+          )}
+          <Divider className="my-5" />
+        </>
+      ))}
     </div>
   );
 }

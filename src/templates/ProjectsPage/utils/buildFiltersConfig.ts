@@ -56,7 +56,7 @@ export function buildFiltersConfig(filters: Record<string, string[]>) {
       key: "primary_headquarter_country",
       labels: filters.primary_headquarter_country,
       helperText:
-        "If the country is not listed, there are no projects in that country.",
+        "NB: If the country is not listed in the search, there are no projects matching that country.",
     },
     {
       title: "Servicing Country",
@@ -64,7 +64,7 @@ export function buildFiltersConfig(filters: Record<string, string[]>) {
       key: "servicing_area",
       labels: filters.servicing_area,
       helperText:
-        "If the country is not listed, there are no projects in that country.",
+        "NB: If the country is not listed in the search, there are no projects matching that country.",
     },
     {
       title: "Servicing Region",
@@ -72,7 +72,7 @@ export function buildFiltersConfig(filters: Record<string, string[]>) {
       key: "servicing_region",
       labels: filters.servicing_region,
       helperText:
-        "If the region is not listed, there are no projects in that region.",
+        "NB: If the region is not listed in the search, there are no projects matching that region.",
     },
   ];
 }
