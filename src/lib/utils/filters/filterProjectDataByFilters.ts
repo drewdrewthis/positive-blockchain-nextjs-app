@@ -28,8 +28,9 @@ export function filterProjectDataByFilters(
 
     result = result.filter((project: Project) => {
       const projectSdgs = project.sdg_occurences?.split(",");
-      const isMatch = intersection(projectSdgs, sdgs).length === sdgs.length;
-      return isMatch;
+      const hasMatch =
+        projectSdgs && sdgs.some((sdg) => sdg && projectSdgs.includes(sdg));
+      return hasMatch;
     });
   }
 
