@@ -17,6 +17,7 @@ function ProjectGrid(props: Props) {
       {projectData.map((project, idx: number) => (
         <ProjectGridItem
           key={project.slug + idx}
+          status={project.active}
           slug={project.slug}
           name={project["project_name"]}
           description={

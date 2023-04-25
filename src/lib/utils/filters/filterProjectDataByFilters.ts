@@ -2,7 +2,7 @@ import intersection from "lodash/fp/intersection";
 import isEmpty from "lodash/fp/isEmpty";
 import kebabCase from "lodash/fp/kebabCase";
 import memoize from "lodash/fp/memoize";
-import { Project } from "@/types";
+import type { Project } from "@/types";
 
 const memoizedKebabCase = memoize(kebabCase);
 
@@ -28,8 +28,9 @@ export function filterProjectDataByFilters(
 
     result = result.filter((project: Project) => {
       const projectSdgs = project.sdg_occurences?.split(",");
-      const isMatch = intersection(projectSdgs, sdgs).length === sdgs.length;
-      return isMatch;
+      const hasMatch =
+        projectSdgs && sdgs.some((sdg) => sdg && projectSdgs.includes(sdg));
+      return hasMatch;
     });
   }
 
@@ -55,6 +56,7 @@ function getSdgs(props: { sdg_occurences: string[] }) {
 }
 
 function getProjectAttributeValue(attributes: any) {
+  if (!attributes) return attributes;
   if (Array.isArray(attributes)) return attributes;
   return attributes.split(",");
 }

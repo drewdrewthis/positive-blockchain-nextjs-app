@@ -1,12 +1,10 @@
 import { chain } from "lodash";
-import { Project } from "../../types";
+import { Project } from "../../../types";
 
 export function extractFiltersFromProjectData(
   projectData: Partial<Project>[]
 ): Record<string, string[]> {
   if (!projectData?.length) return {};
-
-  console.log("projectData", projectData);
 
   return {
     ...extactPossibleValuesFromKeys(projectData, [
@@ -18,6 +16,14 @@ export function extractFiltersFromProjectData(
     sub_categories: extractPossibleValuesFromArrayKey(
       projectData,
       "sub_categories"
+    ),
+    servicing_area: extractPossibleValuesFromListKey(
+      projectData,
+      "servicing_area"
+    ),
+    servicing_region: extractPossibleValuesFromListKey(
+      projectData,
+      "servicing_region"
     ),
     blockchain_technology: extractPossibleValuesFromListKey(
       projectData,
