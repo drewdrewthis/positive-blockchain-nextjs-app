@@ -28,7 +28,7 @@ function renderFilterGroup(
 ) {
   switch (props.type) {
     case "multi-select-search":
-      return <AutocompleteFilterGroup {...props} />;
+      return <AutocompleteFilterGroup {...props} id={props.key} />;
     case "checkbox":
     default:
       return <CheckboxFilterGroup {...props} />;

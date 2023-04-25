@@ -37,7 +37,7 @@ export function filterProjectDataByFilters(
     result = result.filter((project: any) => {
       const filterValues = memoizedStandardizeStringArray(filters[filter]);
       if (isEmpty(filterValues)) return true;
-      const projectAttributeValues = project[filter]?.split(",");
+      const projectAttributeValues = getProjectAttributeValue(project[filter]);
       const projectValues = memoizedStandardizeStringArray(
         projectAttributeValues
       );
@@ -52,4 +52,9 @@ export function filterProjectDataByFilters(
 function getSdgs(props: { sdg_occurences: string[] }) {
   const { sdg_occurences } = props;
   return sdg_occurences.map((sdg: string) => sdg.match(/\d+/)?.[0]);
+}
+
+function getProjectAttributeValue(attributes: any) {
+  if (Array.isArray(attributes)) return attributes;
+  return attributes.split(",");
 }

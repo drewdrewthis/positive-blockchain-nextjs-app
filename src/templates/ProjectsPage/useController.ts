@@ -117,6 +117,12 @@ function useFilters(props: {
         labels: filters.main_category,
       },
       {
+        title: "Sub-Categories",
+        key: "sub_categories",
+        labels: filters.sub_categories,
+        type: "multi-select-search" as const,
+      },
+      {
         title: "Sustainable Development Goals",
         key: "sdg_occurences",
         labels: [
