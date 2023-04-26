@@ -14,7 +14,6 @@ export const VALID_FIELDS = [
   "github_url",
   "github_link",
   "coinmarketcap_url",
-  "other_links",
   "facebook_url",
   "twitter_url",
   "linkedin_url",

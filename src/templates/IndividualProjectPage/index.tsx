@@ -89,7 +89,7 @@ function IndividualProjectPageTemplate(
             <p>{shortDescription}</p>
             <div>
               <b>Subcategories: </b>
-              <span>{projectData["sub_categories"]?.join(", ")}</span>
+              <span>{projectData["sub_categories_list"]?.join(", ")}</span>
             </div>
             {projectData["active"] && (
               <div className="mb-2">
