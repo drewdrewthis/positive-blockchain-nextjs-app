@@ -40,6 +40,11 @@ class Configuration {
           },
         },
       },
+      forms: {
+        api_request_key: {
+          id: "1FAIpQLSfnm4IR-AkEFvfRl5YixhQMk2FbA-463cosJYmE4mb6Cr-iuQ",
+        },
+      },
     },
     positiveBlockchain: {
       HOST: "https://positiveblockchain.io",
