@@ -23,13 +23,13 @@ function ProjectGrid(props: Props) {
           description={
             project["description_short_value_proposition_in_a_tweet"]
           }
-          category={project["main_category"] || project["categories"]}
+          category={project["main_category"] || project["categories_list"][0]}
           thumbnailSrc={project["logo_url"]}
           blockchainTechnology={project["blockchain_technology"]}
           blockchainType={project["blockchain_type"]}
           headquarters={project["primary_headquarter_country"]}
           searchRelevance={project.searchRelevance}
-          sdgOccurences={parseSdgOccurences(project["sdg_occurences"])}
+          sdgOccurences={parseSdgOccurences(project["sdg_occurrences_list"])}
         />
       ))}
     </Grid>
@@ -38,8 +38,8 @@ function ProjectGrid(props: Props) {
 
 export default ProjectGrid;
 
-function parseSdgOccurences(sdgOccurences: string) {
-  return uniq(compact(sdgOccurences.split(",")))
+function parseSdgOccurences(sdgOccurences: string[]) {
+  return uniq(compact(sdgOccurences))
     .map(Number)
     .sort((a, b) => a - b);
 }

@@ -27,7 +27,7 @@ export function filterProjectDataByFilters(
     const sdgs = getSdgs({ sdg_occurences });
 
     result = result.filter((project: Project) => {
-      const projectSdgs = project.sdg_occurences?.split(",");
+      const projectSdgs = project.sdg_occurrences_list;
       const hasMatch =
         projectSdgs && sdgs.some((sdg) => sdg && projectSdgs.includes(sdg));
       return hasMatch;

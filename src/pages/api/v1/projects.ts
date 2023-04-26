@@ -11,8 +11,6 @@ import isUndefined from "lodash/fp/isUndefined";
 async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   const key = req.headers["x-api-key"] as string;
 
-  console.log('headers', req.headers);
-
   try {
     if (isUndefined(key)) {
       res.status(401).json({ error: "Unauthorized: Missing API Key" });

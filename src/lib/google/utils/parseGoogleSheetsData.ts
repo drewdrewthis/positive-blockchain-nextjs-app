@@ -1,30 +1,34 @@
-import snakeCase from "lodash/snakeCase";
 import kebabCase from "lodash/kebabCase";
-import { config } from "@/configuration";
+import compact from "lodash/fp/compact";
+import uniq from "lodash/fp/uniq";
 
 type Project = {
   slug: string;
 } & Record<string, string | number | string[]>;
 
-const { mainDatabase } = config.constants.google.sheets.databaseSheet.sheets;
-
 export function parseGoogleSheetsData(
   data: string[][],
   options: {
-    headerRow?: number;
-  } = {}
+    headerRow: number;
+    keyRow: number;
+  }
 ): {
   slug: string;
 }[] {
-  const { headerRow = mainDatabase.headerRow } = options;
+  const { headerRow, keyRow } = options;
   const headerRowIndex = headerRow - 1;
+  const keyRowIndex = keyRow - 1;
   const headers = data[headerRowIndex];
+  const keys = data[keyRowIndex];
   const rows = data.slice(headerRow);
   return rows.map((row) => {
     const projectObj = row.reduce(
       (acc, cell, i) => {
-        const key = snakeCase(headers[i]);
-        acc[key] = formatCell(key, cell);
+        const rawKey = keys[i];
+        if (rawKey && isPublic(rawKey)) {
+          const key = stripPublicPrefix(rawKey);
+          acc[key] = formatCell(key, cell);
+        }
         return acc;
       },
       {
@@ -43,14 +47,16 @@ export function parseGoogleSheetsData(
 }
 
 function formatCell(key: string, cell: string) {
-  switch (key) {
-    case "sub_categories": {
-      return cell.split(",").map((item) => item.trim());
-    }
-    case "founders": {
-      return cell.split(";").map((item) => item.trim());
-    }
-    default:
-      return cell;
+  if (key.includes("_list")) {
+    return uniq(compact(cell.split(",").map((item) => item.trim())));
   }
+
+  return cell;
+}
+
+function isPublic(str: string) {
+  return str.startsWith("PUBLIC_");
+}
+function stripPublicPrefix(str: string) {
+  return str.replace("PUBLIC_", "");
 }
