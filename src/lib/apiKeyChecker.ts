@@ -6,6 +6,7 @@ const { apiKeys } = sheets;
 
 export async function isValidApiKeyAsync(key: string) {
   const keys = (await fetchApiKeys()) as string[];
+  console.log("DEGUG: keys", key);
   return keys.includes(key);
 }
 

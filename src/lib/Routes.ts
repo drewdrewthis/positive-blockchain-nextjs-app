@@ -23,4 +23,12 @@ export default class Routes {
   static getPath(path: string) {
     return path;
   }
+
+  static getBaseUrl() {
+    const isProd = process.env.NODE_ENV === "production";
+
+    return isProd
+      ? `https://${process.env.VERCEL_URL}/nextjs-app`
+      : `http://localhost:3000/nextjs-app`;
+  }
 }

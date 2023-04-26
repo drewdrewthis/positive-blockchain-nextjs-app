@@ -73,7 +73,7 @@ export async function fetchSheetData(args: {
 
   const cachedData = cache.get(SHEET_DATA_CACHE_KEY);
 
-  if (cachedData) {
+  if (!!cachedData) {
     console.log("Returning cached data", SHEET_DATA_CACHE_KEY);
     return cachedData as string[][];
   }

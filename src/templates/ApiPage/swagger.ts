@@ -10,16 +10,16 @@ const swaggerSpec = {
     version: "1.0.0",
     title: "PositiveBlockchain API",
   },
-  host: isProd ? "positiveblockchain.io" : "localhost:3000",
-  basePath: "/nextjs-app/api",
+  host: isProd ? process.env.VERCEL_URL : "localhost:3000",
+  basePath: "/nextjs-app/api/v1",
   tags: [],
-  schemes: ["http", "https"],
+  schemes: isProd ? ["https"] : ["http", "https"],
   externalDocs: {
     description: "Find out more about PositiveBlockchain",
     url: "https://positiveblockchain.io/about",
   },
   paths: {
-    "/project-data": {
+    "/projects": {
       get: {
         summary: "Returns all projects",
         description: "Returns all projects",
@@ -34,11 +34,30 @@ const swaggerSpec = {
           },
         },
         security: [{ api_key: [] }],
+        parameters: [
+          {
+            name: "limit",
+            in: "query",
+            description:
+              "Number of projects to return (NB: large integers will create a large payload that could timeout)",
+            required: false,
+            type: "integer",
+            default: 10,
+          },
+          {
+            name: "offset",
+            in: "query",
+            description: "Number of projects to skip",
+            required: false,
+            type: "integer",
+            default: 0,
+          },
+        ],
       },
     },
   },
   securityDefinitions: {
-    api_key: { type: "apiKey", name: "x-api_key", in: "header" },
+    api_key: { type: "apiKey", name: "x-api-key", in: "header" },
   },
   definitions: {
     Project: {
