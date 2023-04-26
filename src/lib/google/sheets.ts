@@ -56,6 +56,7 @@ export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
 
   const parsedData = parseGoogleSheetsData(sheetData, {
     headerRow: mainDatabase.headerRow,
+    keyRow: mainDatabase.keyRow,
   });
 
   cache.put(PROJECT_DATA_CACHE_KEY, parsedData, 1000 * 60 * 60);

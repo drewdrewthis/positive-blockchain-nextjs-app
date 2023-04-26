@@ -15,6 +15,7 @@ import { extractSdgsFromProject } from "../../lib/utils";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import InfoBlock from "./InfoBlock";
 import HeadquartersBlock from "./HeadquartersBlock";
+import Link from "next/link";
 
 function useController(props: { projectData: Project }) {
   const { projectData } = props;
@@ -41,6 +42,7 @@ function IndividualProjectPageTemplate(
   props: ReturnType<typeof useController>
 ) {
   const { projectData, sdgs, additionalInfo } = props;
+  const { slug } = projectData;
 
   console.log("projectData", projectData);
 
@@ -118,7 +120,18 @@ function IndividualProjectPageTemplate(
                 </>
               )}
             </div>
-            <div className="flex-1">
+            <div className="flex-1 flex flex-col gap-3">
+              <div className="border rounded p-3 bg-slate-200">
+                <div>Do you work here? </div>
+                <Link
+                  aria-label="Claim/Propose Edit to Project"
+                  className="text-brand-link inline"
+                  href={`/forms/project-submission?prefill_slug=${slug}`}
+                  target="_blank"
+                >
+                  Claim/Propose Edit to Project
+                </Link>
+              </div>
               {projectData["video_url"] && (
                 <NonSSRWrapper>
                   <ReactPlayer
@@ -127,7 +140,7 @@ function IndividualProjectPageTemplate(
                   />
                 </NonSSRWrapper>
               )}
-              <div className="rounded border p-5 mb-3">
+              <div className="rounded border p-5">
                 <h3 className="font-bold mb-2 mt-0">Additional Information</h3>
                 {Object.keys(additionalInfo).map((key) => {
                   return (
@@ -141,7 +154,10 @@ function IndividualProjectPageTemplate(
                 })}
                 <HeadquartersBlock projectData={projectData} />
               </div>
-              <LinksBlock links={pick(VALID_FIELDS, projectData)} />
+              <LinksBlock
+                className="mb-3"
+                links={pick(VALID_FIELDS, projectData)}
+              />
             </div>
           </div>
         </div>
