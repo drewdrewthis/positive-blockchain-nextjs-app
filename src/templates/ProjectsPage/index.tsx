@@ -24,11 +24,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
           <Typography variant="h1" className="mb-0">
             Project Directory
           </Typography>
-          <Link
-            target="_blank"
-            href="https://forms.gle/4LX26CrdkPj88G6X9"
-            className="no-underline"
-          >
+          <Link href="/forms/request-data-snapshot" className="no-underline">
             <Button
               variant="contained"
               size="medium"
