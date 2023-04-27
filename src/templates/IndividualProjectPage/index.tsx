@@ -126,7 +126,9 @@ function IndividualProjectPageTemplate(
                 <Link
                   aria-label="Claim/Propose Edit to Project"
                   className="text-brand-link inline"
-                  href={`/forms/project-submission?prefill_slug=${slug}`}
+                  // This is a the base google form.
+                  href="https://forms.gle/Xp4xTYAnn3Z99t316"
+                  // href={`/forms/project-submission?prefill_slug=${slug}`}
                   target="_blank"
                 >
                   Claim/Propose Edit to Project
