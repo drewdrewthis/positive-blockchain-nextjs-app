@@ -29,7 +29,10 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               variant="contained"
               size="medium"
               className="bg-brand-secondary"
-              color="success"
+              color="primary"
+              sx={{
+                boxShadow: "none",
+              }}
             >
               Request Data Snapshot
             </Button>
