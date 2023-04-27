@@ -24,14 +24,18 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
           <Typography variant="h1" className="mb-0">
             Project Directory
           </Typography>
-          <Link href="/forms/csv-download-test" className="no-underline">
+          <Link
+            target="_blank"
+            href="https://forms.gle/4LX26CrdkPj88G6X9"
+            className="no-underline"
+          >
             <Button
               variant="contained"
               size="medium"
               className="bg-brand-secondary"
               color="success"
             >
-              Request CSV Download
+              Request Data Snapshot
             </Button>
           </Link>
         </div>
