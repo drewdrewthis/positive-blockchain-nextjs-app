@@ -7,7 +7,16 @@ const nextConfig = {
     "react-syntax-highlighter",
     "swagger-client",
     "swagger-ui-react",
+    "lodash",
+    "lodash/fp",
+    "react",
+    "@emotion/react",
+    "@emotion/styled",
+    "@mui/icons-material",
+    "@mui/material",
+    "@mui",
   ],
+
   images: {
     domains: ["positiveblockchain.io", "images.squarespace-cdn.com"],
   },
