@@ -11,9 +11,6 @@ import { Close } from "@mui/icons-material";
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const container =
-    window !== undefined ? () => window.document.body : undefined;
-
   return (
     <>
       {/* Mobile */}
