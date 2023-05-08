@@ -1,7 +1,7 @@
 import React, { ComponentProps } from "react";
 import styles from "./styles.module.scss";
 import cx from "classnames";
-import { Button, Stack } from "@mui/material";
+import { Button, Stack, useMediaQuery } from "@mui/material";
 import {
   ClickAwayListener,
   Grow,
@@ -66,7 +66,33 @@ export function NestedMenuItem(props: Props) {
     className: cx(styles.button),
   } as ComponentProps<typeof Button>;
 
-  return (
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
+  const list = (
+    <MenuList
+      autoFocusItem={open}
+      id="composition-menu"
+      aria-labelledby="composition-button"
+      onKeyDown={handleListKeyDown}
+    >
+      {arrayChildren.map((child, idx) => (
+        <MenuItem
+          key={idx}
+          onClick={handleClose}
+          className={cx(styles["nested-menu-item"])}
+        >
+          {child}
+        </MenuItem>
+      ))}
+    </MenuList>
+  );
+
+  return isMobile ? (
+    <div className="w-full">
+      <Button {...buttonProps}>{title}</Button>
+      {list}
+    </div>
+  ) : (
     <div>
       <Button {...buttonProps}>{title}</Button>
       <Popper
@@ -76,6 +102,7 @@ export function NestedMenuItem(props: Props) {
         placement="bottom-start"
         transition
         disablePortal
+        keepMounted
       >
         {({ TransitionProps, placement }) => (
           <Grow
@@ -87,18 +114,7 @@ export function NestedMenuItem(props: Props) {
           >
             <Paper>
               <ClickAwayListener onClickAway={handleClose}>
-                <MenuList
-                  autoFocusItem={open}
-                  id="composition-menu"
-                  aria-labelledby="composition-button"
-                  onKeyDown={handleListKeyDown}
-                >
-                  {arrayChildren.map((child, idx) => (
-                    <MenuItem key={idx} onClick={handleClose}>
-                      {child}
-                    </MenuItem>
-                  ))}
-                </MenuList>
+                {list}
               </ClickAwayListener>
             </Paper>
           </Grow>

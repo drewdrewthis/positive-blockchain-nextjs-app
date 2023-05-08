@@ -1,9 +1,21 @@
 .logo {
   width: 16.67%;
   min-width: 220px;
+  max-width: 300px;
   object-fit: contain;
 }
 
 .button {
   color: white;
+}
+
+.nested-menu-item {
+  display: block;
+  width: 100%;
+  font-size: smaller;
+
+  > a {
+    width: 100%;
+    color: white;
+  }
 }
