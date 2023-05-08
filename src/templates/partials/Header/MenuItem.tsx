@@ -10,7 +10,7 @@ export default function MenuItem(props: {
   const { href, children, className } = props;
   return (
     <div className={className}>
-      <Button href={href} className={cx(styles.button)}>
+      <Button href={href} className={cx(styles.button, "justify-start")}>
         {children}
       </Button>
     </div>

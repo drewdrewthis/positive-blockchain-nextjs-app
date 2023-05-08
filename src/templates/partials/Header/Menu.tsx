@@ -29,20 +29,27 @@ export default function Menu() {
           <MenuIcon />
         </IconButton>
       </Box>
+      <Dialog
+        fullScreen
+        open={menuOpen}
+        PaperComponent={({ children }) => children as any}
+      >
+        <div className="bg-brand-primary w-full h-full p-5 flex flex-col overflow-auto">
+          <div className="w-full text-right text-white mb-5">
+            <Close color="inherit" onClick={() => setMenuOpen(false)} />
+          </div>
+          <div className="flex flex-col gap-4 w-full text-left">
+            <Items />
+          </div>
+        </div>
+      </Dialog>
+
       {/* Desktop */}
       <Box sx={{ display: { xs: "none", md: "block" } }}>
         <Stack direction="row" spacing={2}>
           <Items />
         </Stack>
       </Box>
-      <Dialog fullScreen open={menuOpen}>
-        <div className="bg-brand-primary h-full p-5 flex flex-col justify-between items-center">
-          <div className="w-full text-right text-white">
-            <Close color="inherit" onClick={() => setMenuOpen(false)} />
-          </div>
-          <Items />
-        </div>
-      </Dialog>
     </>
   );
 }
