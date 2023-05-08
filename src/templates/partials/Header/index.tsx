@@ -8,6 +8,7 @@ import styles from "./styles.module.scss";
 import { NestedMenuItem } from "./NestedMenuItem";
 import { PB_LOGO } from "@/constants/image-paths";
 import { Stack } from "@mui/material";
+import AddProjectButton from "./AddProjectButton";
 
 function Header() {
   return (
@@ -22,6 +23,7 @@ function Header() {
         />
       </Link>
       <Stack direction="row" spacing={2}>
+        <AddProjectButton />
         <MenuItem href="/nextjs-app/projects">Projects</MenuItem>
         <MenuItem href="/nextjs-app/projects-api">API</MenuItem>
         <NestedMenuItem title="Join us">

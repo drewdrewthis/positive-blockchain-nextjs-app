@@ -2,13 +2,14 @@ import { Button } from "@mui/material";
 import styles from "./styles.module.scss";
 import cx from "classnames";
 
-export default function Menuitem(props: {
+export default function MenuItem(props: {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }) {
-  const { href, children } = props;
+  const { href, children, className } = props;
   return (
-    <div>
+    <div className={className}>
       <Button href={href} className={cx(styles.button)}>
         {children}
       </Button>
