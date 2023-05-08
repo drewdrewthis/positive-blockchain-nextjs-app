@@ -32,8 +32,13 @@ export default function Menu() {
         PaperComponent={({ children }) => children as any}
       >
         <div className="bg-brand-primary w-full h-full p-5 flex flex-col overflow-auto">
-          <div className="w-full text-right text-white mb-5">
-            <Close color="inherit" onClick={() => setMenuOpen(false)} />
+          <div className="w-full text-right mb-5">
+            <IconButton
+              className="text-white"
+              onClick={() => setMenuOpen(false)}
+            >
+              <Close color="inherit" />
+            </IconButton>
           </div>
           <div className="flex flex-col gap-4 w-full text-left">
             <Items />

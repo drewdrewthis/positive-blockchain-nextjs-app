@@ -4,6 +4,7 @@ export default class Routes {
   // Forms
   static PARTNER_FORM = "https://bit.ly/PBpartner-form";
   static BECOME_A_CONTRIBUTOR = "https://bit.ly/applyPB";
+  static ADD_NEW_PROJECT = "https://forms.gle/jZKsv7sbxJjRu7jFA";
 
   // WordPress pages
   static HOME = Routes.getExternalRoute("/");

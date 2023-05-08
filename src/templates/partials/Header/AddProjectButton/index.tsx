@@ -2,18 +2,14 @@ import React from "react";
 import MenuItem from "../MenuItem";
 import styles from "./styles.module.scss";
 import cx from "classnames";
-
-const ADD_PROJECT_URL = "https://example.com/add-project";
+import Routes from "@/lib/Routes";
 
 function AddProjectButton() {
-  const handleClick = () => {
-    window.open(ADD_PROJECT_URL, "_blank");
-  };
-
   return (
     <MenuItem
       className={cx("border-2 py-0 px-2 flex align-items", styles.item)}
-      href={ADD_PROJECT_URL}
+      href={Routes.ADD_NEW_PROJECT}
+      target="_blank"
     >
       <span
         className="bold mr-2"

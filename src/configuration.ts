@@ -53,6 +53,9 @@ class Configuration {
       INITIAL_DATA_LOAD_COUNT: 30,
       CACHE_TTL: 60 * 5,
     },
+    /**
+     * This is for the serverless functions, which could need cold start
+     */
     warmableEndpoints: [
       "https://positiveblockchain.io/nextjs-app/projects",
       "https://positiveblockchain.io/nextjs-app/projects/modum",
