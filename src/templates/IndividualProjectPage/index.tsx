@@ -4,7 +4,7 @@ import React from "react";
 import { withController } from "@/lib/withContoller";
 import { Project } from "@/types";
 import pick from "lodash/fp/pick";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 import NonSSRWrapper from "../../components/NonSSRWrapper";
 import { Typography } from "@mui/material";
 import Image from "next/image";
