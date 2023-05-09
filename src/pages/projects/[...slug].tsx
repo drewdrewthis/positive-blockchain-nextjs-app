@@ -6,13 +6,29 @@ import type {
 import dynamic from "next/dynamic";
 import { ParsedUrlQuery } from "querystring";
 import { config as configuration } from "../../configuration";
+import Head from "next/head";
+import { Project } from "../../types";
+import upperFirst from "lodash/fp/upperFirst";
 
-function ProjectPage(props: { projectData: any }) {
+function ProjectPage(props: { projectData: Project }) {
   const IndividualProjectPage = dynamic(
     () => import("../../templates/IndividualProjectPage")
   );
 
-  return <IndividualProjectPage {...props} />;
+  return (
+    <>
+      <Head>
+        <title>{props.projectData.project_name}</title>
+        <meta
+          name="description"
+          content={upperFirst(
+            props.projectData.description_short_value_proposition_in_a_tweet
+          )}
+        />
+      </Head>
+      <IndividualProjectPage {...props} />
+    </>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
