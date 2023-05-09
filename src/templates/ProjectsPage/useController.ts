@@ -74,7 +74,11 @@ function useProjectData(props: { initialData: Project[] }) {
 }
 
 async function fetchAllData() {
-  const response = await fetch("/nextjs-app/api/edge/project-data");
+  const response = await fetch("/nextjs-app/api/edge/project-data", {
+    headers: {
+      "Accept-Encoding": "br, gzip, compress",
+    },
+  });
   const data = await response.json();
   if (data?.data) {
     return data.data;

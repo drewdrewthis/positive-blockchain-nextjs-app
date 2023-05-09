@@ -38,6 +38,7 @@ export default async function handler(req: NextRequest, res: NextResponse) {
         status: 200,
         headers: {
           "Cache-Control": `public, s-maxage=${CACHE_TTL}, stale-while-revalidate`,
+          Encoding: "br, gzip, deflate, compress",
         },
       }
     );

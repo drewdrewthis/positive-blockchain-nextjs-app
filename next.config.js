@@ -1,3 +1,6 @@
+const zlib = require("zlib");
+const iltorb = require("iltorb");
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,

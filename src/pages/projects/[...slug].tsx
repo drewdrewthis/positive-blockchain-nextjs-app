@@ -42,6 +42,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     `public, s-maxage=${projects.CACHE_TTL}, stale-while-revalidate`
   );
 
+  res.setHeader("Accept-Encoding", "br, gzip, deflate, compress");
+
   return {
     props: {
       projectData: projectData.data,
