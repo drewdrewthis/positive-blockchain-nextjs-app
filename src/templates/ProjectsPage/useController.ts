@@ -20,6 +20,7 @@ export function useController(props: Props) {
   const { initialData, filters } = props;
   const { projectData } = useProjectData({ initialData });
   const [finalData, setFinalData] = React.useState<any>(initialData);
+  const [showFilters, setShowFilters] = React.useState(false);
 
   // Use filters
   const {
@@ -51,6 +52,8 @@ export function useController(props: Props) {
     projectData: finalData,
     filters: filterProps,
     handleFilterUpdate,
+    toggleFilters: (show: boolean) => setShowFilters(show),
+    showFilters,
   };
 }
 
