@@ -34,6 +34,8 @@ export default function Menu() {
         <div className="bg-brand-primary w-full h-full p-5 flex flex-col overflow-auto">
           <div className="w-full text-right mb-5">
             <IconButton
+              aria-label="close"
+              aria-controls="menu-appbar"
               className="text-white"
               onClick={() => setMenuOpen(false)}
             >
