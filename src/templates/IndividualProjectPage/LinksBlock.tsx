@@ -42,6 +42,9 @@ export default function LinksBlock(props: {
               target="_blank"
               rel="noreferrer"
               className="text-sm text-brand-link"
+              style={{
+                overflowWrap: "anywhere",
+              }}
             >
               {value}
             </a>
