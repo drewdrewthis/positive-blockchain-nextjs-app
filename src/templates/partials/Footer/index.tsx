@@ -23,7 +23,7 @@ function Footer() {
             />
           </Link>
         </div>
-        <ul className="flex flex-row gap-4 text-white justify-center md:justify-start font-bold">
+        <ul className="flex flex-row flex-col sm:flex-row text-sm text-center gap-4 text-white justify-center md:justify-start font-bold">
           <li>
             <Link href={Routes.DONATE}>Donate</Link>
           </li>
