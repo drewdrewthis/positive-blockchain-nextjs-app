@@ -4,6 +4,7 @@ import { fetchProjectData } from "@/lib/google";
 import { extractFiltersFromProjectData } from "../../lib/utils";
 import { config } from "../../configuration";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 
 interface Props {
   initialData: Project[];
@@ -15,7 +16,21 @@ function AllProjectPage(props: Props) {
     () => import("../../templates/ProjectsPage")
   );
 
-  return <ProjectPageTemplate {...props} />;
+  return (
+    <>
+      <Head>
+        <title>
+          Explore the open database directoy of blockchain for good projects |
+          PositiveBlockchain.io
+        </title>
+        <meta
+          name="description"
+          content="If you are aware of a project not yet in our database directory, please add below or send us an email&nbsp;University, business school, institute.. focusing on the impact."
+        />
+      </Head>
+      <ProjectPageTemplate {...props} />
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
