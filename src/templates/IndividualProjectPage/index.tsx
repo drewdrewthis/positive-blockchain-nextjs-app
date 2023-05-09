@@ -58,8 +58,8 @@ function IndividualProjectPageTemplate(
     <div className="flex flex-col gap-10 h-full min-h-screen">
       <Header />
       <div className="flex flex-col h-full flex-1">
-        <div className="prose max-w-none max-w-7xl mx-auto pb-10 w-full h-full">
-          <div className="container mx-auto px-10">
+        <div className="prose max-w-none max-w-7xl mx-auto pb-10 px-10 w-full h-full">
+          <div className="container mx-auto">
             <div className="flex items-center">
               {projectData["logo_url"] && (
                 <div>
