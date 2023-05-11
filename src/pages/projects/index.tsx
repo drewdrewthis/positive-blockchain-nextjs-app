@@ -5,6 +5,7 @@ import { extractFiltersFromProjectData } from "../../lib/utils";
 import { config } from "../../configuration";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { filtersSchema } from "../../zod/schemas";
 
 interface Props {
   initialData: Project[];
@@ -36,12 +37,13 @@ function AllProjectPage(props: Props) {
 export const getStaticProps: GetStaticProps = async (context) => {
   const projectData = await fetchProjectData();
   const { projects } = config.constants;
+  const filters = extractFiltersFromProjectData(projectData as any);
 
   return {
     props: {
       initialData:
         projectData?.slice(0, projects.INITIAL_DATA_LOAD_COUNT) || [],
-      filters: extractFiltersFromProjectData(projectData as any),
+      filters,
     } as Props,
     revalidate: projects.CACHE_TTL,
   };

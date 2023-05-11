@@ -1,6 +1,7 @@
 import kebabCase from "lodash/kebabCase";
 import compact from "lodash/fp/compact";
 import uniq from "lodash/fp/uniq";
+import { projectSchema } from "../../../zod/schemas";
 
 type Project = {
   slug: string;
@@ -16,9 +17,7 @@ export function parseGoogleSheetsData(
   slug: string;
 }[] {
   const { headerRow, keyRow } = options;
-  const headerRowIndex = headerRow - 1;
   const keyRowIndex = keyRow - 1;
-  const headers = data[headerRowIndex];
   const keys = data[keyRowIndex];
   const rows = data.slice(headerRow);
   return rows.map((row) => {
@@ -41,6 +40,11 @@ export function parseGoogleSheetsData(
     if (projectName) {
       projectObj.slug = kebabCase(projectName);
     }
+
+    // Emit warning if project doesn't match schema
+    projectSchema.safeParseAsync(projectObj).catch((err) => {
+      console.warn("Project doesn't match schema", projectObj, err);
+    });
 
     return projectObj;
   });

@@ -15,7 +15,7 @@ export function extractFiltersFromProjectData(
     ]),
     sub_categories: extractPossibleValuesFromArrayKey(
       projectData,
-      "sub_categories"
+      "sub_categories_list"
     ),
     servicing_area: extractPossibleValuesFromListKey(
       projectData,

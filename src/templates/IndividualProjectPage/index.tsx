@@ -32,20 +32,6 @@ function useController(props: { projectData: Project }) {
     projectData
   );
 
-  return {
-    ...props,
-    additionalInfo,
-    sdgs,
-  };
-}
-function IndividualProjectPageTemplate(
-  props: ReturnType<typeof useController>
-) {
-  const { projectData, sdgs, additionalInfo } = props;
-  const { slug } = projectData;
-
-  console.log("projectData", projectData);
-
   let shortDescription =
     projectData["description_short_value_proposition_in_a_tweet"];
 
@@ -53,6 +39,18 @@ function IndividualProjectPageTemplate(
     shortDescription =
       shortDescription[0].toUpperCase() + shortDescription.slice(1);
   }
+
+  return {
+    ...props,
+    additionalInfo,
+    shortDescription,
+    sdgs,
+  };
+}
+function IndividualProjectPageTemplate(
+  props: ReturnType<typeof useController>
+) {
+  const { projectData, sdgs, additionalInfo, shortDescription } = props;
 
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">
