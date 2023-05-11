@@ -30,7 +30,7 @@ class Configuration {
             mainDatabase: {
               // name: "MAIN DATABASE",
               // name: "Copy of CSV Template",
-              name: "CSV Template",
+              name: "CSV Template v2",
               headerRow: 6,
               keyRow: 2,
             },

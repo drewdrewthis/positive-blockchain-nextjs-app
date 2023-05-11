@@ -23,8 +23,6 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     showFilters,
   } = props;
 
-  console.log(showFilters);
-
   return (
     <div className="flex flex-col gap-10 h-full min-h-screen">
       <Header />
