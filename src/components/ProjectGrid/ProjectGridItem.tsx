@@ -57,9 +57,7 @@ function ProjectGridItem(props: Props) {
         <div className="p-3 text-xs mb-auto">{formattedDescription}</div>
         <Divider className="m-0" />
         <div className="p-3 bg-slate-100">
-          <div className="text-xs">
-            <b>Status:</b> {props.status}
-          </div>
+          <div className="text-xs">{props.status}</div>
           <div className="text-xs">
             <b>Primary Headquarters:</b> {props.headquarters}
           </div>
