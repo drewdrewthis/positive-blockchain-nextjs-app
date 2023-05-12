@@ -34,7 +34,7 @@ function ProjectGridItem(props: Props) {
           styles["grid-item"]
         )}
       >
-        <div className="flex items-center gap-5 p-3 bg-brand-secondary">
+        <div className="flex items-center gap-5 p-3 bg-brand-primary">
           {thumbnailSrc && (
             <Link href={`/projects/${slug}`}>
               <Image
