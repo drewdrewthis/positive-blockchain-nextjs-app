@@ -41,7 +41,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
                 boxShadow: "none",
               }}
             >
-              Request Data Snapshot
+              Get Database
             </Button>
           </Link>
         </div>
@@ -51,8 +51,8 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               <SearchIcon />
             </Search>
             <InputBase
-              className="w-72"
-              placeholder="Type to sort by relevance (ex. logistics)"
+              className="w-72 text-sm"
+              placeholder="Search for projects"
               onChange={handleSearch}
             />
           </div>

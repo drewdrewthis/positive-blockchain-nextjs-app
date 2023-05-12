@@ -10,7 +10,7 @@ interface Props {
   slug: string;
   name: string;
   description: string;
-  category: string;
+  categories: string[];
   thumbnailSrc?: string;
   blockchainTechnology?: string;
   blockchainType?: string;
@@ -20,7 +20,7 @@ interface Props {
 }
 
 function ProjectGridItem(props: Props) {
-  const { name, description, slug, category, thumbnailSrc } = props;
+  const { name, description, slug, categories, thumbnailSrc } = props;
 
   const formattedDescription = description
     ? description[0].toUpperCase() + description.slice(1)
@@ -34,44 +34,40 @@ function ProjectGridItem(props: Props) {
           styles["grid-item"]
         )}
       >
-        <div className="flex items-center gap-5 p-3 bg-brand-secondary">
-          {thumbnailSrc && (
-            <Link href={`/projects/${slug}`}>
-              <Image
-                className="m-0"
-                src={thumbnailSrc}
-                alt={name}
-                width={100}
-                height={100}
-              />
-            </Link>
-          )}
-          <div>
-            <Link href={`/projects/${slug}`}>
+        <Link href={`/projects/${slug}`}>
+          <div className="flex items-center gap-5 p-3 bg-brand-primary">
+            {thumbnailSrc && (
+              <Link href={`/projects/${slug}`}>
+                <Image
+                  className="m-0"
+                  src={thumbnailSrc}
+                  alt={name}
+                  width={100}
+                  height={100}
+                />
+              </Link>
+            )}
+            <div>
               <h4 className="font-bold mt-0 text-lg text-white">{name}</h4>
-            </Link>
-            <div className="text-stone-50">{category}</div>
+              <div className="text-stone-50">{categories.join(", ")}</div>
+            </div>
           </div>
-        </div>
+        </Link>
         <Divider className="m-0" />
         <div className="p-3 text-xs mb-auto">{formattedDescription}</div>
         <Divider className="m-0" />
         <div className="p-3 bg-slate-100">
+          <div className="text-xs">{props.status}</div>
           <div className="text-xs">
-            <b>Status:</b> {props.status}
+            <b>HQ:</b> {props.headquarters}
           </div>
-          <div className="text-xs">
-            <b>Primary Headquarters:</b> {props.headquarters}
-          </div>
-          <div className="text-xs">
+          {/* <div className="text-xs">
             <b>Blockchain Type:</b> {props.blockchainType}
-          </div>
-          <div className="text-xs">
-            <b>Blockchain Technologies:</b> {props.blockchainTechnology}
-          </div>
+          </div> */}
           <div className="text-xs">
             <b>SDGs:</b> {props.sdgOccurences.join(", ")}
           </div>
+          <div className="text-xs">{props.blockchainTechnology}</div>
           {props.searchRelevance && (
             <div className="text-xs mt-2 text-blue-500">
               <b>Search relevance:</b> {props.searchRelevance.toFixed(2)} %

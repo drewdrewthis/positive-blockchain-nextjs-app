@@ -23,11 +23,11 @@ function ProjectGrid(props: Props) {
           description={
             project["description_short_value_proposition_in_a_tweet"]
           }
-          category={project["main_category"] || project["categories_list"][0]}
+          categories={project["categories_list"]}
           thumbnailSrc={project["logo_url"]}
           blockchainTechnology={project["blockchain_technology"]}
           blockchainType={project["blockchain_type"]}
-          headquarters={project["primary_headquarter_country"]}
+          headquarters={formatHq(project)}
           searchRelevance={project.searchRelevance}
           sdgOccurences={parseSdgOccurences(project["sdg_occurrences_list"])}
         />
@@ -42,4 +42,11 @@ function parseSdgOccurences(sdgOccurences: string[]) {
   return uniq(compact(sdgOccurences))
     .map(Number)
     .sort((a, b) => a - b);
+}
+
+function formatHq(project: Project) {
+  return compact([
+    project["primary_headquarter_city"],
+    project["primary_headquarter_country"],
+  ]).join(", ");
 }

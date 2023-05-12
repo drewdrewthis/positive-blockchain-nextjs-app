@@ -5,7 +5,6 @@ import { extractFiltersFromProjectData } from "../../lib/utils";
 import { config } from "../../configuration";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import { filtersSchema } from "../../zod/schemas";
 
 interface Props {
   initialData: Project[];
@@ -21,8 +20,8 @@ function AllProjectPage(props: Props) {
     <>
       <Head>
         <title>
-          Explore the open database directoy of blockchain for good projects |
-          PositiveBlockchain.io
+          PositiveBlockchain.io | Explore the open database directoy of
+          blockchain for good projects
         </title>
         <meta
           name="description"
