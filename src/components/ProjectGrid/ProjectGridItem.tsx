@@ -10,7 +10,7 @@ interface Props {
   slug: string;
   name: string;
   description: string;
-  category: string;
+  categories: string[];
   thumbnailSrc?: string;
   blockchainTechnology?: string;
   blockchainType?: string;
@@ -20,7 +20,7 @@ interface Props {
 }
 
 function ProjectGridItem(props: Props) {
-  const { name, description, slug, category, thumbnailSrc } = props;
+  const { name, description, slug, categories, thumbnailSrc } = props;
 
   const formattedDescription = description
     ? description[0].toUpperCase() + description.slice(1)
@@ -50,7 +50,7 @@ function ProjectGridItem(props: Props) {
             <Link href={`/projects/${slug}`}>
               <h4 className="font-bold mt-0 text-lg text-white">{name}</h4>
             </Link>
-            <div className="text-stone-50">{category}</div>
+            <div className="text-stone-50">{categories.join(", ")}</div>
           </div>
         </div>
         <Divider className="m-0" />

@@ -23,7 +23,7 @@ function ProjectGrid(props: Props) {
           description={
             project["description_short_value_proposition_in_a_tweet"]
           }
-          category={project["main_category"] || project["categories_list"][0]}
+          categories={project["categories_list"]}
           thumbnailSrc={project["logo_url"]}
           blockchainTechnology={project["blockchain_technology"]}
           blockchainType={project["blockchain_type"]}
