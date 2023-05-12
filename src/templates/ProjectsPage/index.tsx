@@ -52,7 +52,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
             </Search>
             <InputBase
               className="w-72"
-              placeholder="Type to sort by relevance (ex. logistics)"
+              placeholder="Search for projects"
               onChange={handleSearch}
             />
           </div>
