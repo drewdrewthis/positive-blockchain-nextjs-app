@@ -34,25 +34,25 @@ function ProjectGridItem(props: Props) {
           styles["grid-item"]
         )}
       >
-        <div className="flex items-center gap-5 p-3 bg-brand-primary">
-          {thumbnailSrc && (
-            <Link href={`/projects/${slug}`}>
-              <Image
-                className="m-0"
-                src={thumbnailSrc}
-                alt={name}
-                width={100}
-                height={100}
-              />
-            </Link>
-          )}
-          <div>
-            <Link href={`/projects/${slug}`}>
+        <Link href={`/projects/${slug}`}>
+          <div className="flex items-center gap-5 p-3 bg-brand-primary">
+            {thumbnailSrc && (
+              <Link href={`/projects/${slug}`}>
+                <Image
+                  className="m-0"
+                  src={thumbnailSrc}
+                  alt={name}
+                  width={100}
+                  height={100}
+                />
+              </Link>
+            )}
+            <div>
               <h4 className="font-bold mt-0 text-lg text-white">{name}</h4>
-            </Link>
-            <div className="text-stone-50">{categories.join(", ")}</div>
+              <div className="text-stone-50">{categories.join(", ")}</div>
+            </div>
           </div>
-        </div>
+        </Link>
         <Divider className="m-0" />
         <div className="p-3 text-xs mb-auto">{formattedDescription}</div>
         <Divider className="m-0" />

@@ -1,9 +1,5 @@
 .grid-item {
   a {
     text-decoration: none;
-
-    &:hover * {
-      color: theme("colors.brand-primary");
-    }
   }
 }
