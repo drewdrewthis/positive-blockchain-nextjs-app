@@ -65,11 +65,9 @@ function ProjectGridItem(props: Props) {
             <b>Blockchain Type:</b> {props.blockchainType}
           </div> */}
           <div className="text-xs">
-            <b>Blockchain Technologies:</b> {props.blockchainTechnology}
-          </div>
-          <div className="text-xs">
             <b>SDGs:</b> {props.sdgOccurences.join(", ")}
           </div>
+          <div className="text-xs">{props.blockchainTechnology}</div>
           {props.searchRelevance && (
             <div className="text-xs mt-2 text-blue-500">
               <b>Search relevance:</b> {props.searchRelevance.toFixed(2)} %
