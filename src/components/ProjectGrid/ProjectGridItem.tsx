@@ -61,9 +61,9 @@ function ProjectGridItem(props: Props) {
           <div className="text-xs">
             <b>HQ:</b> {props.headquarters}
           </div>
-          <div className="text-xs">
+          {/* <div className="text-xs">
             <b>Blockchain Type:</b> {props.blockchainType}
-          </div>
+          </div> */}
           <div className="text-xs">
             <b>Blockchain Technologies:</b> {props.blockchainTechnology}
           </div>
