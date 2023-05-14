@@ -54,6 +54,11 @@ function ProjectGrid(props: Props) {
         ))}
       </Grid>
       <Pagination
+        sx={{
+          ul: {
+            listStyle: "none",
+          },
+        }}
         aria-label="Project pagination"
         className="w-full flex justify-center"
         count={totalPages}
