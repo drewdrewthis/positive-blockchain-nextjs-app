@@ -61,7 +61,6 @@ export default function Menu() {
 function Items() {
   return (
     <>
-      <AddProjectButton />
       <MenuItem href="/nextjs-app/projects">Projects</MenuItem>
       <MenuItem href="/nextjs-app/projects-api">API</MenuItem>
       <NestedMenuItem title="Join us">
@@ -75,6 +74,7 @@ function Items() {
         <Link href={Routes.RESOURCES}>Resources</Link>
       </NestedMenuItem>
       <MenuItem href={Routes.BLOG}>Blog</MenuItem>
+      <AddProjectButton />
     </>
   );
 }
