@@ -4,7 +4,7 @@ const muiInterOperability = {
   corePlugins: {
     // preflight: false,
   },
-  important: "#__next",
+  // important: "#__next",
 };
 
 /** @type {import('tailwindcss').Config} */
