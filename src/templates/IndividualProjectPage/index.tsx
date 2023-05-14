@@ -135,6 +135,7 @@ function IndividualProjectPageTemplate(
               {projectData["video_url"] && (
                 <NonSSRWrapper>
                   <ReactPlayer
+                    light
                     className="mb-4 !w-full"
                     url={projectData["video_url"]}
                   />
