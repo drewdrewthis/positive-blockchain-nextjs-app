@@ -6,26 +6,58 @@ import type {
 import dynamic from "next/dynamic";
 import { ParsedUrlQuery } from "querystring";
 import { config as configuration } from "../../configuration";
-import Head from "next/head";
 import { Project } from "../../types";
 import upperFirst from "lodash/fp/upperFirst";
+import { DatasetJsonLd, NextSeo } from "next-seo";
+import defaultConfig from "../../next-seo.config";
 
 function ProjectPage(props: { projectData: Project }) {
   const IndividualProjectPage = dynamic(
     () => import("../../templates/IndividualProjectPage")
   );
 
+  const { projectData } = props;
+
   return (
     <>
-      <Head>
-        <title>{props.projectData.project_name}</title>
-        <meta
-          name="description"
-          content={upperFirst(
-            props.projectData.description_short_value_proposition_in_a_tweet
-          )}
-        />
-      </Head>
+      <NextSeo
+        title={projectData.project_name}
+        description={upperFirst(
+          projectData.description_short_value_proposition_in_a_tweet
+        )}
+        openGraph={{
+          ...defaultConfig.openGraph,
+          type: "website",
+          locale: "en_US",
+          url: `https://positiveblockchain.io/projects/${projectData.slug}`,
+          siteName:
+            "PositiveBlockchain.io | Explore the Positive Blockchain Database",
+          description: upperFirst(
+            projectData.description_short_value_proposition_in_a_tweet
+          ),
+          images: [
+            ...defaultConfig.openGraph.images,
+            {
+              url: projectData.logo_url,
+              alt: "blockchain",
+              type: "image/png",
+            },
+          ],
+          videos: [
+            {
+              url: projectData.video_url,
+            },
+          ],
+        }}
+      />
+      <DatasetJsonLd
+        name={projectData.project_name}
+        description={
+          projectData.long_description ||
+          projectData.description_short_value_proposition_in_a_tweet
+        }
+        dataArray={[new Date().toISOString()]}
+      />
       <IndividualProjectPage {...props} />
     </>
   );
