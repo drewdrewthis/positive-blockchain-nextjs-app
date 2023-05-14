@@ -8,6 +8,8 @@ import {
   ThemeProvider,
   createTheme,
 } from "@mui/material";
+import { DefaultSeo } from "next-seo";
+import defaultConfig from "../next-seo.config";
 
 // If loading a variable font, you don't need to specify the font weight
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -31,6 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         `}</style>
         <ThemeProvider theme={theme}>
+          <DefaultSeo {...defaultConfig} />
           <Component {...pageProps} />
         </ThemeProvider>
       </CacheProvider>
