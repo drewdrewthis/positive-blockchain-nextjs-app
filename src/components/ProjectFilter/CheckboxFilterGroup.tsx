@@ -1,12 +1,6 @@
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
 import { covertBooleanMapToArray } from "../../lib/utils";
-import {
-  Checkbox,
-  Collapse,
-  Divider,
-  FormControlLabel,
-  FormGroup,
-} from "@mui/material";
+import { Checkbox, Collapse, FormControlLabel, FormGroup } from "@mui/material";
 import { kebabCase } from "lodash/fp";
 import cx from "classnames";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
@@ -18,9 +12,7 @@ export default function CheckboxFilterGroup(props: {
   onChange: (values: any) => void;
 }) {
   const { onChange, title, labels } = props;
-  const [isOpen, setIsOpen] = useState(
-    ["Categories", "Sustainable Development Goals"].includes(title)
-  );
+  const [isOpen, setIsOpen] = useState(false);
   const methods = useForm();
 
   methods.watch((values) => {
