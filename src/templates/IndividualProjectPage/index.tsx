@@ -58,9 +58,9 @@ function IndividualProjectPageTemplate(
       <div className="flex flex-col h-full flex-1">
         <div className="prose max-w-none max-w-7xl mx-auto pb-10 px-10 w-full h-full">
           <div className="container mx-auto">
-            <div className="flex items-center">
+            <div className="flex flex-col sm:flex-row sm:items-center">
               {projectData["logo_url"] && (
-                <div>
+                <div className="w-1/4 sm:w-auto">
                   <Image
                     src={projectData["logo_url"]}
                     className="mr-8"
