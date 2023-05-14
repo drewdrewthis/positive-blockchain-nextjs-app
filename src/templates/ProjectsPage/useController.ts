@@ -61,13 +61,26 @@ function useProjectData(props: { initialData: Project[] }) {
   const { initialData } = props;
   const [projectData, setProjectData] = React.useState<any>(initialData);
 
-  const handleLoad = () => fetchAllData().then(setProjectData);
+  const handleLoad = () => {
+    console.log("handleLoad");
+    fetchAllData().then(setProjectData);
+  };
 
   // Optimization:
   // We start with a subset of data, and then load the rest in the background
   // after the page has loaded.
   useEffect(() => {
-    window.addEventListener("load", handleLoad);
+    // Setting listener
+    console.log("setting listener");
+
+    // Check if the page has already loaded
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      // Remove the event listener when component unmounts
+      return () => window.removeEventListener("load", handleLoad);
+    }
 
     return () => {
       window.removeEventListener("load", handleLoad);
