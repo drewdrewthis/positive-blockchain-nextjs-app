@@ -77,6 +77,15 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   res.setHeader("Accept-Encoding", "br, gzip, deflate, compress");
 
+  if (!projectData?.data.slug) {
+    return {
+      redirect: {
+        permanent: true,
+        destination: "/database",
+      },
+    };
+  }
+
   return {
     props: {
       projectData: projectData.data,
