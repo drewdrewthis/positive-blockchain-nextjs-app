@@ -57,8 +57,8 @@ class Configuration {
      * This is for the serverless functions, which could need cold start
      */
     warmableEndpoints: [
-      "https://positiveblockchain.io/nextjs-app/projects",
-      "https://positiveblockchain.io/nextjs-app/projects/modum",
+      "https://positiveblockchain.io/database",
+      "https://positiveblockchain.io/database/modum",
       "https://positiveblockchain.io/nextjs-app/api/project-data",
     ],
   };

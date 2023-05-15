@@ -25,6 +25,7 @@ function ProjectPage(props: { projectData: Project }) {
         description={upperFirst(
           projectData.description_short_value_proposition_in_a_tweet
         )}
+        canonical={`https://positiveblockchain.io/projects/${projectData.slug}`}
         openGraph={{
           ...defaultConfig.openGraph,
           type: "website",

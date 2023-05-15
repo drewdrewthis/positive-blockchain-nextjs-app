@@ -28,7 +28,7 @@ const nextConfig = {
       {
         source: "/",
         basePath: false,
-        destination: "/nextjs-app/projects",
+        destination: "/database",
         permanent: true,
       },
     ];
