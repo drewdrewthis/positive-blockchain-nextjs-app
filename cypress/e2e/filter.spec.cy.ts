@@ -3,7 +3,7 @@ const UNFILTERED_COUNT = 31;
 describe("Filters", () => {
   describe("Sub-categories", () => {
     it("tests the sidebar filter", () => {
-      cy.visit("http://localhost:3000/nextjs-app/projects");
+      cy.visit("http://localhost:3000/database");
 
       // Unfiltered count
       cy.get(".MuiGrid2-root").should("have.length", UNFILTERED_COUNT);
@@ -29,7 +29,7 @@ describe("Filters", () => {
 
   describe("Service Country", () => {
     it("tests the sidebar filter", () => {
-      cy.visit("http://localhost:3000/nextjs-app/projects");
+      cy.visit("http://localhost:3000/database");
 
       // Unfiltered count
       cy.get(".MuiGrid2-root").should("have.length", UNFILTERED_COUNT);
@@ -55,7 +55,7 @@ describe("Filters", () => {
 
   describe("Service Country", () => {
     it("tests the sidebar filter", () => {
-      cy.visit("http://localhost:3000/nextjs-app/projects");
+      cy.visit("http://localhost:3000/database");
 
       // Unfiltered count
       cy.get(".MuiGrid2-root").should("have.length", UNFILTERED_COUNT);

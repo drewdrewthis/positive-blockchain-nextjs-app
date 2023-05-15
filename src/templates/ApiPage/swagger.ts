@@ -1,3 +1,4 @@
+import Routes from "../../lib/Routes";
 import { projectProperties } from "./definitions";
 
 const isProd = process.env.NODE_ENV === "production";
@@ -11,7 +12,7 @@ const swaggerSpec = {
     title: "PositiveBlockchain API",
   },
   host: isProd ? process.env.VERCEL_URL : "localhost:3000",
-  basePath: "/nextjs-app/api/v1",
+  basePath: `${Routes.API.BASE_PATH}/v1`,
   tags: [],
   schemes: isProd ? ["https"] : ["http", "https"],
   externalDocs: {
@@ -19,7 +20,7 @@ const swaggerSpec = {
     url: "https://positiveblockchain.io/about",
   },
   paths: {
-    "/projects": {
+    [`/projects`]: {
       get: {
         summary: "Returns all projects",
         description: "Returns all projects",

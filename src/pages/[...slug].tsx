@@ -5,18 +5,19 @@ import type {
 } from "next";
 import dynamic from "next/dynamic";
 import { ParsedUrlQuery } from "querystring";
-import { config as configuration } from "../../configuration";
-import { Project } from "../../types";
+import { config as configuration } from "@/configuration";
+import { Project } from "@/types";
 import upperFirst from "lodash/fp/upperFirst";
 import { DatasetJsonLd, NextSeo } from "next-seo";
-import defaultConfig from "../../next-seo.config";
-
+import defaultConfig from "../next-seo.config";
+import Routes from "@/lib/Routes";
 function ProjectPage(props: { projectData: Project }) {
   const IndividualProjectPage = dynamic(
-    () => import("../../templates/IndividualProjectPage")
+    () => import("../templates/IndividualProjectPage")
   );
 
   const { projectData } = props;
+  const projectUrl = `${Routes.getBaseUrl()}/${projectData.slug}}`;
 
   return (
     <>
@@ -25,11 +26,12 @@ function ProjectPage(props: { projectData: Project }) {
         description={upperFirst(
           projectData.description_short_value_proposition_in_a_tweet
         )}
+        canonical={projectUrl}
         openGraph={{
           ...defaultConfig.openGraph,
           type: "website",
           locale: "en_US",
-          url: `https://positiveblockchain.io/projects/${projectData.slug}`,
+          url: projectUrl,
           siteName:
             "PositiveBlockchain.io | Explore the Positive Blockchain Database",
           description: upperFirst(
@@ -76,6 +78,15 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   res.setHeader("Accept-Encoding", "br, gzip, deflate, compress");
 
+  if (!projectData?.data?.slug) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/",
+      },
+    };
+  }
+
   return {
     props: {
       projectData: projectData.data,
@@ -92,7 +103,7 @@ function getProjectDataUrl(context: Context) {
   const baseUrl = getBaseUrl(req);
 
   // We hit this route because it returns only the individual project data
-  return `${baseUrl}/nextjs-app/api/edge/project-data/${slug}`;
+  return `${baseUrl}/${Routes.BASE_PATH}/${Routes.API_PATH}/edge/project-data/${slug}`;
 }
 
 function getBaseUrl(req: any) {

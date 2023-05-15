@@ -2,7 +2,7 @@ const defaultConfig = {
   title: "PositiveBlockchain.io | Explore the Positive Blockchain Database",
   description:
     "PositiveBlockchain projects use blockchain technologies to generate positive social impact and solve some of our world's burning problems.",
-  canonical: "https://positiveblockchain.io/",
+  canonical: "https://positiveblockchain.io/database/",
   openGraph: {
     type: "website",
     locale: "en_US",
