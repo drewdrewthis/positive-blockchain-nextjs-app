@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { config as configuration } from "@/configuration";
+import Routes from "../../../../lib/Routes";
 
 export const config = {
   runtime: "edge",
@@ -15,12 +16,15 @@ export default async function handler(req: NextRequest) {
   // like is done by Next locally, so we need to manually extract
   // the slug from the url
   const slug = getSlug(req.nextUrl.pathname);
+  const url =
+    req.nextUrl.origin +
+    Routes.BASE_PATH +
+    Routes.API_PATH +
+    "/edge/project-data";
 
   try {
     // Fetch projects
-    const allProjects = await fetch(
-      req.nextUrl.origin + "/nextjs-app/api/edge/project-data"
-    ).then((res) => res.json());
+    const allProjects = await fetch(url).then((res) => res.json());
 
     // Handle error
     if (allProjects?.error) {

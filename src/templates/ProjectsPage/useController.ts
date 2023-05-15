@@ -5,6 +5,7 @@ import { Project } from "@/types";
 import { getSearchResults } from "../../lib/utils/getSearchResults";
 import { FilterGroupProps } from "../../components/ProjectFilter/types";
 import { buildFiltersConfig } from "./utils/buildFiltersConfig";
+import Routes from "../../lib/Routes";
 
 interface Props {
   /**
@@ -93,7 +94,8 @@ function useProjectData(props: { initialData: Project[] }) {
 }
 
 async function fetchAllData() {
-  const response = await fetch("/nextjs-app/api/edge/project-data", {
+  const url = `${Routes.API.EDGE.PROJECT_DATA}`;
+  const response = await fetch(url, {
     headers: {
       "Accept-Encoding": "br, gzip, compress",
     },

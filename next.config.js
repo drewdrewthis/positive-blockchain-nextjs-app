@@ -1,10 +1,7 @@
-const zlib = require("zlib");
-const iltorb = require("iltorb");
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: "/nextjs-app",
+  basePath: "/database",
   // Transpile Swagger UI React. https://github.com/swagger-api/swagger-ui/issues/8245
   transpilePackages: [
     "react-syntax-highlighter",
@@ -22,16 +19,6 @@ const nextConfig = {
 
   images: {
     domains: ["positiveblockchain.io", "images.squarespace-cdn.com"],
-  },
-  redirects: async () => {
-    return [
-      {
-        source: "/",
-        basePath: false,
-        destination: "/database",
-        permanent: true,
-      },
-    ];
   },
   async headers() {
     return [

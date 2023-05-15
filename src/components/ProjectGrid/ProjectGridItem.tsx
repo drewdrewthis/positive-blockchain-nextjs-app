@@ -1,30 +1,32 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import Image from "next/image";
-import styles from "./styles.module.scss";
-import cx from "classnames";
-import { Divider } from "@mui/material";
 import Link from "next/link";
+import cx from "classnames";
+import styles from "./styles.module.scss";
+import upperFirst from "lodash/fp/upperFirst";
+import { Divider } from "@mui/material";
 
 interface Props {
-  status: string;
-  slug: string;
-  name: string;
-  description: string;
-  categories: string[];
-  thumbnailSrc?: string;
-  blockchainTechnology?: string;
-  blockchainType?: string;
-  headquarters: string;
-  searchRelevance?: number;
-  sdgOccurences: number[];
+  status: string; // The status of the project
+  slug: string; // The slug of the project used for generating the project path
+  name: string; // The name of the project
+  description: string; // The description of the project
+  categories: string[]; // An array of categories the project belongs to
+  thumbnailSrc?: string; // The URL of the project thumbnail image
+  blockchainTechnology?: string; // The blockchain technology used in the project
+  blockchainType?: string; // The type of blockchain used in the project
+  headquarters: string; // The headquarters location of the project
+  searchRelevance?: number; // The relevance of the project in search results
+  sdgOccurences: number[]; // An array of Sustainable Development Goals (SDGs) associated with the project
 }
 
+/**
+ * A grid item for displaying a project in the project grid
+ */
 function ProjectGridItem(props: Props) {
-  const { name, description, slug, categories, thumbnailSrc } = props;
-
-  const formattedDescription = description
-    ? description[0].toUpperCase() + description.slice(1)
-    : description;
+  const { description, slug, thumbnailSrc } = props;
+  const formattedDescription = upperFirst(description || "");
+  const projectPath = `/${slug}`;
 
   return (
     <Grid xs={12} sm={6} md={6} lg={3}>
@@ -34,22 +36,20 @@ function ProjectGridItem(props: Props) {
           styles["grid-item"]
         )}
       >
-        <Link href={`/projects/${slug}`}>
+        <Link href={projectPath}>
           <div className="flex items-center gap-5 p-3 bg-brand-primary">
             {thumbnailSrc && (
-              <Link href={`/projects/${slug}`}>
-                <Image
-                  className="m-0"
-                  src={thumbnailSrc}
-                  alt={name}
-                  width={100}
-                  height={100}
-                />
-              </Link>
+              <Image
+                className="m-0"
+                src={thumbnailSrc}
+                alt={props.name}
+                width={100}
+                height={100}
+              />
             )}
             <div>
-              <h4 className="font-bold mt-0 text-lg text-white">{name}</h4>
-              <div className="text-stone-50">{categories.join(", ")}</div>
+              <h4 className="font-bold mt-0 text-white">{props.name}</h4>
+              <div className="text-stone-50">{props.categories.join(", ")}</div>
             </div>
           </div>
         </Link>
@@ -61,9 +61,6 @@ function ProjectGridItem(props: Props) {
           <div className="text-xs">
             <b>HQ:</b> {props.headquarters}
           </div>
-          {/* <div className="text-xs">
-            <b>Blockchain Type:</b> {props.blockchainType}
-          </div> */}
           <div className="text-xs">
             <b>SDGs:</b> {props.sdgOccurences.join(", ")}
           </div>

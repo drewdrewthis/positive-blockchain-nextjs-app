@@ -2,7 +2,7 @@ describe("Project data endpoint", () => {
   it("should be blocked without x-api-key header", () => {
     cy.request({
       method: "GET",
-      url: "http://localhost:3000/nextjs-app/api/project-data",
+      url: "http://localhost:3000/database/api/project-data",
       failOnStatusCode: false,
     }).then((response) => {
       expect(response.status).to.eq(401);
@@ -12,7 +12,7 @@ describe("Project data endpoint", () => {
   it("should return data with correct x-api-key header", () => {
     cy.request({
       method: "GET",
-      url: "http://localhost:3000/nextjs-app/api/project-data",
+      url: "http://localhost:3000/database/api/project-data",
       headers: {
         "x-api-key": Cypress.env("API_KEY"),
       },

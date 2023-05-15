@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { config as configuration } from "@/configuration";
+import Routes from "../../../../lib/Routes";
 
 export const config = {
   runtime: "edge",
@@ -50,7 +51,10 @@ export default async function handler(req: NextRequest, res: NextResponse) {
 
 // Fetch projects
 async function fetchProjects(req: NextRequest) {
-  return await fetch(req.nextUrl.origin + "/nextjs-app/api/project-data", {
+  const url =
+    req.nextUrl.origin + Routes.BASE_PATH + Routes.API_PATH + "/project-data";
+
+  return await fetch(url, {
     headers: {
       "x-api-key": apiKey,
     },
