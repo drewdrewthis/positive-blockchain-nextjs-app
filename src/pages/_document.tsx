@@ -10,7 +10,10 @@ export default class MyDocument extends Document<Props> {
   render() {
     return (
       <Html lang="en">
-        <Head>{this.props.emotionStyleTags}</Head>
+        <Head>
+          <link rel="shortcut icon" href="/database/images/favicon.ico" />
+          {this.props.emotionStyleTags}
+        </Head>
         <body>
           <Main />
           <NextScript />
