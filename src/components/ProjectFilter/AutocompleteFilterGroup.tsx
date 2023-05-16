@@ -23,7 +23,7 @@ export function AutocompleteFilterGroup(props: {
 
   return (
     <FormProvider {...methods}>
-      <b className="mb-3 text-teal-600 mt-3">{title}</b>
+      <b className="mb-3 text-brand-primary mt-3">{title}</b>
       <MutliSelectSearch labels={labels} id={id} />
     </FormProvider>
   );

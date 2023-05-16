@@ -26,7 +26,7 @@ export default function CheckboxFilterGroup(props: {
         className="flex justify-between"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <b className="mb-3 text-teal-600 text-left">{title}</b>
+        <b className="mb-3 text-brand-primary text-left">{title}</b>
         {isOpen ? <ExpandLess /> : <ExpandMore />}
       </button>
       <Checkboxes className="h-auto" labels={labels} expanded={isOpen} />
