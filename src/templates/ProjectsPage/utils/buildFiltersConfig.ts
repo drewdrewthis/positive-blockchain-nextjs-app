@@ -22,12 +22,12 @@ export function buildFiltersConfig(filters: Record<string, string[]>): {
     },
     {
       title: "Categories",
-      key: "main_category",
-      labels: filters.main_category,
+      key: "categories_list",
+      labels: filters.categories,
     },
     {
       title: "Sub-Categories",
-      key: "sub_categories",
+      key: "sub_categories_list",
       labels: filters.sub_categories,
       type: "multi-select-search" as const,
     },

@@ -6,13 +6,18 @@ export function extractFiltersFromProjectData(
 ): Record<string, string[]> {
   if (!projectData?.length) return {};
 
+  console.log(projectData[0].categories_list);
+
   return {
     ...extactPossibleValuesFromKeys(projectData, [
       "active",
-      "main_category",
       "blockchain_type",
       "primary_headquarter_country",
     ]),
+    categories: extractPossibleValuesFromArrayKey(
+      projectData,
+      "categories_list"
+    ),
     sub_categories: extractPossibleValuesFromArrayKey(
       projectData,
       "sub_categories_list"
