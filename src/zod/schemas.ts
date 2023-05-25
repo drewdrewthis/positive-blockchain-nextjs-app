@@ -1,5 +1,17 @@
+/**
+ * projectSchema
+ *
+ * This file defines the Zod schema for validating project data.
+ * Zod is a TypeScript-first schema validation library that provides a simple and expressive API for defining schemas.
+ *
+ * For more information, visit: https://github.com/colinhacks/zod
+ */
+
 import { z } from "zod";
 
+/**
+ * projectSchema defines the schema for validating project data.
+ */
 export const projectSchema = z.object({
   slug: z.string(),
   project_name: z.string(),
@@ -44,6 +56,9 @@ export const projectSchema = z.object({
   pb_partner_tag: z.string().optional(),
 });
 
+/**
+ * filtersSchema defines the schema for validating filters data.
+ */
 export const filtersSchema = z.object({
   active: z.array(z.string()),
   main_category: z.array(z.string()),
