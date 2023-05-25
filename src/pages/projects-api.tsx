@@ -1,3 +1,3 @@
-import ApiPageTemplate from "../templates/ApiPage";
+import ApiPageTemplate from "../templates/ApiPageTemplate";
 
 export default ApiPageTemplate;
