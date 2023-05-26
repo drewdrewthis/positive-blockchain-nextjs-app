@@ -1,4 +1,4 @@
-import { compact } from "lodash/fp";
+import compact from "lodash/fp/compact";
 import { Project } from "../../types";
 import InfoBlock from "./InfoBlock";
 

@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { PhotoCamera } from "@mui/icons-material";
+import PhotoCamera from "@mui/icons-material/PhotoCamera";
 import { Box, Button, IconButton, Stack } from "@mui/material";
 
 interface Props {

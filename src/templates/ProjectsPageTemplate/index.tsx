@@ -5,7 +5,7 @@ import ProjectFilter from "@/components/ProjectFilter";
 import ProjectGrid from "@/components/ProjectGrid";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { Search } from "@mui/icons-material";
+import Search from "@mui/icons-material/Search";
 import { useController } from "./useController";
 import { withController } from "@/lib/withContoller";
 import { Button, Dialog, Typography } from "@mui/material";

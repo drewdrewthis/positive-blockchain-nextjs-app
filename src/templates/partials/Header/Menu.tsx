@@ -6,7 +6,7 @@ import { NestedMenuItem } from "./NestedMenuItem";
 import { Box, Dialog, IconButton, Stack } from "@mui/material";
 import AddProjectButton from "./AddProjectButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Close } from "@mui/icons-material";
+import Close from "@mui/icons-material/Close";
 
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,4 +1,6 @@
-import { chain } from "lodash";
+import flow from "lodash/fp/flow";
+import compact from "lodash/fp/compact";
+import uniqBy from "lodash/fp/uniqBy";
 import { Project } from "../../../types";
 
 /**
@@ -75,11 +77,10 @@ function extractPossibleValuesFromArrayKey(
   if (!data?.length) return [];
   const items = data.map((item) => item[key]);
   const arr = items.flat().map((item) => item?.trim());
-  return chain(arr)
-    .uniqBy((value) => value?.toLocaleLowerCase())
-    .compact()
-    .sort()
-    .value();
+  return flow(
+    uniqBy((value: any) => value?.toLocaleLowerCase()),
+    compact
+  )(arr).sort();
 }
 
 /**
@@ -107,9 +108,8 @@ function extractPossibleValuesFromListKey(
   if (!data?.length) return [];
   const items = data.map((item) => item[key]?.split(","));
   const arr = items.flat().map((item) => item?.trim());
-  return chain(arr)
-    .uniqBy((value) => value?.toLocaleLowerCase())
-    .compact()
-    .sort()
-    .value();
+  return flow(
+    uniqBy((value: any) => value?.toLocaleLowerCase()),
+    compact
+  )(arr).sort();
 }
