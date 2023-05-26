@@ -8,20 +8,23 @@ import projectData from "../../../sampleData/projectData.json";
 describe("extractFiltersFromProjectData", () => {
   const filters = extractFiltersFromProjectData(projectData.data);
   it("should return categories", () => {
-    const arr = filters["main_category"];
-    expect(arr).toHaveLength(17);
+    const arr = filters["categories"];
+    expect(arr).toHaveLength(14);
     expect(arr).toEqual(
       expect.arrayContaining([
-        "Finance & insurance",
-        "Climate & Environment",
         "Agriculture & Food",
+        "Aid & Philanthropy",
+        "Climate & Environment",
+        "Digital content & Arts",
+        "Education & Employment",
+        "Energy",
       ])
     );
   });
 
   it("should return blockchainType", () => {
     const arr = filters["blockchain_type"];
-    expect(arr).toHaveLength(11);
+    expect(arr).toHaveLength(4);
     expect(arr).toEqual(expect.arrayContaining(["Public", "Private"]));
   });
 

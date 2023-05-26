@@ -11,8 +11,6 @@ export function extractFiltersFromProjectData(
 ): Record<string, string[]> {
   if (!projectData?.length) return {};
 
-  console.log(projectData[0].categories_list);
-
   return {
     ...extractPossibleValuesFromKeys(projectData, [
       "active",
@@ -106,7 +104,7 @@ function extractPossibleValuesFromListKey(
   key: string
 ) {
   if (!data?.length) return [];
-  const items = data.map((item) => item[key]);
+  const items = data.map((item) => item[key]?.split(","));
   const arr = items.flat().map((item) => item?.trim());
   return chain(arr)
     .uniqBy((value) => value?.toLocaleLowerCase())

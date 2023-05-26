@@ -18,7 +18,7 @@ export type Project = {
   hq_region: string;
   hq_subregion: string;
   year_creation: string;
-  founder_names_list: string;
+  // founder_names_list: string;
   organization_type: string;
   twitter_url: string;
   facebook_url: string;
@@ -28,7 +28,7 @@ export type Project = {
   white_paper_url: string;
   coin_market_cap_url: string;
   github_url: string;
-  other_links_list: string;
+  // other_links_list: string;
   logo_url: string;
   token_ticker: string;
   blockchain_type: string;
@@ -38,6 +38,6 @@ export type Project = {
   sponsors_partners_list?: string[];
   servicing_area?: string;
   servicing_region?: string;
-  subregions_list?: string;
+  // subregions_list?: string;
   pb_partner_tag?: string;
 };
