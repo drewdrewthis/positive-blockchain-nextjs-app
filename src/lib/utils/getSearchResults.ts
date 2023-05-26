@@ -1,6 +1,7 @@
 import Fuse from "fuse.js";
 import type { Project } from "@/types";
 
+// Configuration options for Fuse.js
 const options: Fuse.IFuseOptions<Project> = {
   includeScore: true,
   ignoreLocation: true,
@@ -33,12 +34,23 @@ const options: Fuse.IFuseOptions<Project> = {
   ],
 };
 
+/**
+ * Performs a search for project data based on a search term using Fuse.js.
+ * @param projectData - The project data array to search within.
+ * @param searchTerm - The search term to match against.
+ * @returns A Promise that resolves to an array of search results with scores.
+ */
 export async function getSearchResults(
   projectData: Project[],
   searchTerm: string
 ): Promise<Fuse.FuseResult<Project>[]> {
+  // Create a new Fuse instance with the project data and options
   const fuse = new Fuse(projectData, options);
+
+  // Perform the search using Fuse.js
   const results = fuse.search(searchTerm);
+
+  // Wrap the results in a Promise and resolve
   return new Promise((resolve) => {
     resolve(results);
   });

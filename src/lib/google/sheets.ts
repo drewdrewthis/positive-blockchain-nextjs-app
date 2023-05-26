@@ -5,6 +5,7 @@ import { getAuth } from "./auth";
 import { config } from "@/configuration";
 import { Project } from "../../types";
 
+// Create a memory cache instance
 const cache = new MemCache.Cache();
 
 const {
@@ -13,8 +14,10 @@ const {
 } = config.constants.google.sheets.databaseSheet;
 
 /**
- * WARNING: This Will fetch all of the project data in the process,
- * so it is as slower than just fetching all of the data.
+ * Fetches the data of a single project based on its slug.
+ * WARNING: This will fetch all project data in the process, so it is slower than fetching all data.
+ * @param slug - The slug of the project to fetch.
+ * @returns The project data matching the provided slug, or null if not found.
  */
 export async function fetchSingleProjectData(slug: string) {
   const projectData = await fetchProjectData();
@@ -26,6 +29,12 @@ export async function fetchSingleProjectData(slug: string) {
   return findProjectBySlug(projectData, slug);
 }
 
+/**
+ * Finds a project in the project data array based on its slug.
+ * @param projectData - The project data array.
+ * @param slug - The slug of the project to find.
+ * @returns The project object matching the provided slug, or undefined if not found.
+ */
 export async function findProjectBySlug(
   projectData: { slug: string }[],
   slug: string
@@ -33,6 +42,10 @@ export async function findProjectBySlug(
   return projectData.find((project) => project.slug === slug);
 }
 
+/**
+ * Fetches the project data from Google Sheets.
+ * @returns A Promise that resolves to the project data array, or null if the data couldn't be fetched.
+ */
 export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
   const PROJECT_DATA_CACHE_KEY = "projectData";
 
@@ -64,6 +77,11 @@ export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
   return parsedData;
 }
 
+/**
+ * Fetches the sheet data from Google Sheets.
+ * @param args - The arguments including the spreadsheetId and range.
+ * @returns A Promise that resolves to the sheet data array, or null if the data couldn't be fetched.
+ */
 export async function fetchSheetData(args: {
   spreadsheetId: string;
   range?: string;
@@ -98,6 +116,11 @@ export async function fetchSheetData(args: {
   return values;
 }
 
+/**
+ * Uploads project data to Google Sheets.
+ * @param data - The project data to upload.
+ * @returns A Promise that resolves to the response from uploading the project data to Google Sheets.
+ */
 export async function uploadProjectData(data: string[][]) {
   const auth = getAuth();
 
@@ -116,6 +139,11 @@ export async function uploadProjectData(data: string[][]) {
   return projectData;
 }
 
+/**
+ * Creates a resource object for the project data to be uploaded to Google Sheets.
+ * @param data - The project data to be uploaded.
+ * @returns The resource object for the project data.
+ */
 function createResource(data: string[][]) {
   const resource = {
     majorDimension: "ROWS",
