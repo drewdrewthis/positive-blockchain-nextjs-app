@@ -108,6 +108,11 @@ async function fetchAllData() {
   }
 }
 
+/**
+ * Hook for managing filters and filtering project data.
+ * @param props - The props for the hook.
+ * @returns An object with filter-related state and functions.
+ */
 function useFilters(props: {
   projectData: Project[];
   filters: Record<string, string[]>;
@@ -142,12 +147,21 @@ function useFilters(props: {
   };
 }
 
+/**
+ * Hook for managing search functionality and sorting by search relevance.
+ * @param props - The props for the hook.
+ * @returns An object with search-related state and functions.
+ */
 function useSortBySearch(props: { projectData: Project[] }) {
   const { projectData } = props;
   const [search, setSearch] = React.useState("");
   const [searchResults, setSearchResults] =
     React.useState<Project[]>(projectData);
 
+  /**
+   * Handles the search input change event.
+   * @param event - The change event object.
+   */
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(event.target.value.toLowerCase());
   };
@@ -158,6 +172,9 @@ function useSortBySearch(props: { projectData: Project[] }) {
       return;
     }
 
+    /**
+     * Retrieves search results and sorts them by search relevance.
+     */
     getSearchResults(projectData, search).then((results) => {
       const dataSortedBySearchRelevance = results.map((result: any) => ({
         ...result.item,
