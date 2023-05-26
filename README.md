@@ -100,6 +100,6 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## [Testing](./DOCS/TESTING.md)
 
-## [Contributing](./DOCS/CONTRUBUTING.md)
+## [Contributing](./DOCS/CONTRIBUTING.md)
 
 ## [Deploying](./DOCS/DEPLOYING.md)
