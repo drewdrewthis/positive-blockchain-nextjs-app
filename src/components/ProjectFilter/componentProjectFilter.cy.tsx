@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 import React from "react";
 import ProjectFilter from "./";
 import sampleData from "@/sampleData/projectData.json";
