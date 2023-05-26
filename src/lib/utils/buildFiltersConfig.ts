@@ -89,5 +89,10 @@ export function buildFiltersConfig(filters: Record<string, string[]>): {
       helperText:
         "NB: If the region is not listed in the search, there are no projects matching that region.",
     },
+    {
+      title: "PB Partner Tag",
+      key: "pb_partner_tag",
+      labels: filters.pb_partner_tag,
+    },
   ];
 }

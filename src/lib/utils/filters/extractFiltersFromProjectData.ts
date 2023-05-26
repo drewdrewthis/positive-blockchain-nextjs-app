@@ -16,6 +16,7 @@ export function extractFiltersFromProjectData(
       "active",
       "blockchain_type",
       "primary_headquarter_country",
+      "pb_partner_tag",
     ]),
     categories: extractPossibleValuesFromArrayKey(
       projectData,
