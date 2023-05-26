@@ -4,7 +4,7 @@ import Link from "next/link";
 import cx from "classnames";
 import styles from "./styles.module.scss";
 import upperFirst from "lodash/fp/upperFirst";
-import { Divider } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
 
 interface Props {
   status: string; // The status of the project
@@ -48,8 +48,20 @@ function ProjectGridItem(props: Props) {
               />
             )}
             <div>
-              <h4 className="font-bold mt-0 text-white">{props.name}</h4>
-              <div className="text-stone-50">{props.categories.join(", ")}</div>
+              <Typography
+                className="font-bold mt-0 text-white"
+                variant="subtitle2"
+                component="div"
+              >
+                {props.name}
+              </Typography>
+              <Typography
+                className="text-stone-50"
+                variant="subtitle2"
+                component="div"
+              >
+                {props.categories.join(", ")}
+              </Typography>
             </div>
           </div>
         </Link>
