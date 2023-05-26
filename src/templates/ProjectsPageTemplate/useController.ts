@@ -4,7 +4,7 @@ import { filterProjectDataByFilters } from "@/lib/utils";
 import { Project } from "@/types";
 import { getSearchResults } from "../../lib/utils/getSearchResults";
 import { FilterGroupProps } from "../../components/ProjectFilter/types";
-import { buildFiltersConfig } from "./utils/buildFiltersConfig";
+import { buildFiltersConfig } from "../../lib/utils/buildFiltersConfig";
 import Routes from "../../lib/Routes";
 
 interface Props {
