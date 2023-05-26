@@ -1,5 +1,5 @@
 import { FormProvider, useForm, useFormContext } from "react-hook-form";
-import { covertBooleanMapToArray } from "../../lib/utils";
+import { convertBooleanMapToArray } from "@/lib/utils";
 import { Checkbox, Collapse, FormControlLabel, FormGroup } from "@mui/material";
 import { kebabCase } from "lodash/fp";
 import cx from "classnames";
@@ -16,7 +16,7 @@ export default function CheckboxFilterGroup(props: {
   const methods = useForm();
 
   methods.watch((values) => {
-    const valuesArray = covertBooleanMapToArray(values);
+    const valuesArray = convertBooleanMapToArray(values);
     onChange(valuesArray);
   });
 
