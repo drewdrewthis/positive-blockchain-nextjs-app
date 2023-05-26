@@ -18,8 +18,6 @@ export default function Menu() {
         <IconButton
           size="large"
           aria-label="menu"
-          aria-controls="menu-appbar"
-          aria-haspopup="true"
           color="inherit"
           onClick={() => setMenuOpen(true)}
         >
@@ -35,7 +33,6 @@ export default function Menu() {
           <div className="w-full text-right mb-5">
             <IconButton
               aria-label="close"
-              aria-controls="menu-appbar"
               className="text-white"
               onClick={() => setMenuOpen(false)}
             >
