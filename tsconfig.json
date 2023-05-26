@@ -1,34 +1,130 @@
 {
+  /**
+   * tsconfig.json
+   *
+   * This file configures TypeScript for your Next.js project.
+   * TypeScript is a statically typed superset of JavaScript that provides enhanced tooling and type-checking capabilities.
+   *
+   * For more information, visit: https://www.typescriptlang.org/
+   */
   "compilerOptions": {
+    /**
+     * Specify the target ECMAScript version for the generated JavaScript code.
+     * In this example, we target ECMAScript 5 (ES5).
+     * Modify this value based on your project's requirements.
+     */
     "target": "es5",
+    /**
+     * Specify the library files to include for compilation.
+     * In this example, we include the "dom", "dom.iterable", and "esnext" libraries.
+     * Modify this list based on your project's requirements.
+     */
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    /**
+     * Allow JavaScript files to be included in the TypeScript project.
+     * Set this value to "true" if you have JavaScript files in your project that need to be compiled.
+     * Otherwise, set it to "false".
+     */
     "allowJs": true,
+    /**
+     * Skip type checking of declaration files (".d.ts" files).
+     * Setting this value to "true" can improve compilation speed if you have many declaration files.
+     * However, it also means that the compiler won't perform type checking on declaration files.
+     * Modify this value based on your project's requirements.
+     */
     "skipLibCheck": true,
+    /**
+     * Enable strict type checking.
+     * When set to "true", TypeScript performs more thorough type checking to catch potential errors.
+     * Set this value to "true" for stricter type checking, or "false" for more lenient type checking.
+     */
     "strict": true,
+    /**
+     * Enforce consistent casing of file names.
+     * When set to "true", TypeScript treats file names with different casing as distinct files.
+     * Set this value to "true" to enforce consistent casing, or "false" to allow different casing.
+     */
     "forceConsistentCasingInFileNames": true,
+    /**
+     * Disable emitting compiled JavaScript files.
+     * Setting this value to "true" prevents the TypeScript compiler from generating JavaScript files.
+     * Modify this value based on your project's requirements.
+     */
     "noEmit": true,
+    /**
+     * Enable ECMAScript module interoperability.
+     * Setting this value to "true" allows modules that use different module systems to be used together.
+     * This is useful when using libraries or frameworks that use different module systems (e.g., CommonJS and ECMAScript modules).
+     */
     "esModuleInterop": true,
+    /**
+     * Specify the module system for generated JavaScript code.
+     * In this example, we use ECMAScript modules (ES modules).
+     * Modify this value based on your project's requirements.
+     */
     "module": "esnext",
+    /**
+     * Specify how TypeScript resolves module imports.
+     * In this example, we use the "node" module resolution strategy.
+     * Modify this value based on your project's requirements.
+     */
     "moduleResolution": "node",
+    /**
+     * Enable importing JSON files as modules.
+     * When set to "true", TypeScript allows importing JSON files using the "import" statement.
+     * Set this value to "true" to enable importing JSON files, or "false" to disable it.
+     */
     "resolveJsonModule": true,
+    /**
+     * Enable isolated modules.
+     * When set to "true", each file is treated as a separate module.
+     * This can improve compilation times when working on individual files.
+     * Set this value to "true" for isolated modules, or "false" for combined modules.
+     */
     "isolatedModules": true,
+    /**
+     * Specify the JSX compiler option.
+     * In this example, we preserve JSX syntax without transforming it.
+     * Modify this value based on your project's requirements.
+     */
     "jsx": "preserve",
+    /**
+     * Enable incremental compilation.
+     * When set to "true", TypeScript caches information about the project's structure between compilations.
+     * This can improve compilation speed for larger projects.
+     * Set this value to "true" for incremental compilation, or "false" to disable it.
+     */
     "incremental": true,
+    /**
+     * Define custom paths for module resolution.
+     * In this example, we define a path alias for the "./src" directory using the "@" symbol.
+     * Modify or remove this section based on your project's requirements.
+     */
     "paths": {
       "@/*": [
         "./src/*"
       ]
     }
   },
+  /**
+   * Specify which files to include in the TypeScript compilation.
+   * In this example, we include the "next-env.d.ts" file and all ".ts" and ".tsx" files.
+   * Modify this list based on your project's file structure and requirements.
+   */
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],
+  /**
+   * Specify which files to exclude from the TypeScript compilation.
+   * In this example, we exclude the "node_modules" directory, "./cypress.config.ts" file, "cypress" directory, and all ".cy.tsx" files.
+   * Modify this list based on your project's file structure and requirements.
+   */
   "exclude": [
     "node_modules",
     "./cypress.config.ts",

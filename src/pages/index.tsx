@@ -12,7 +12,7 @@ interface Props {
 
 function AllProjectPage(props: Props) {
   const ProjectPageTemplate = dynamic(
-    () => import("../templates/ProjectsPage")
+    () => import("../templates/ProjectsPageTemplate")
   );
 
   return <ProjectPageTemplate {...props} />;

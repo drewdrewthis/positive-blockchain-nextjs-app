@@ -1,4 +1,4 @@
-import GoogleFormPageTemplate from "../../templates/GoogleFormPage";
+import GoogleFormPageTemplate from "../../templates/GoogleFormPageTemplate";
 
 export default function TestCSVDownloadPage() {
   return (

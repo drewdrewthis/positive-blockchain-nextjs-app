@@ -1,5 +1,5 @@
 import { config } from "../../configuration";
-import GoogleFormPageTemplate from "../../templates/GoogleFormPage";
+import GoogleFormPageTemplate from "../../templates/GoogleFormPageTemplate";
 
 const { api_request_key } = config.constants.google.forms;
 

@@ -13,7 +13,7 @@ import defaultConfig from "../next-seo.config";
 import Routes from "@/lib/Routes";
 function ProjectPage(props: { projectData: Project }) {
   const IndividualProjectPage = dynamic(
-    () => import("../templates/IndividualProjectPage")
+    () => import("../templates/IndividualProjectPageTemplate")
   );
 
   const { projectData } = props;

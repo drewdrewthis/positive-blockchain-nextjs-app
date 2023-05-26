@@ -1,4 +1,4 @@
-const UNFILTERED_COUNT = 31;
+const UNFILTERED_COUNT = 17;
 
 describe("Filters", () => {
   describe("Sub-categories", () => {
@@ -9,10 +9,10 @@ describe("Filters", () => {
       cy.get(".MuiGrid2-root").should("have.length", UNFILTERED_COUNT);
 
       // Ensure autocomplete is loaded and visible
-      cy.get('input[id="sub_categories"]').should("be.visible");
+      cy.get('input[id="sub_categories_list"]').should("be.visible");
 
       // Select first sub-category starting with "Certification"
-      cy.get('input[id="sub_categories"]').type("Certification");
+      cy.get('input[id="sub_categories_list"]').type("Certification");
       cy.contains(".MuiAutocomplete-popper li", /^Certification/).click();
 
       // Verify that "Certification & Notarization" is written in a chip on the filter area
@@ -53,7 +53,7 @@ describe("Filters", () => {
     });
   });
 
-  describe("Service Country", () => {
+  describe("Service Region", () => {
     it("tests the sidebar filter", () => {
       cy.visit("http://localhost:3000/database");
 

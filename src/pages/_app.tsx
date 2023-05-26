@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import "@/styles/globals.css";
-import createEmotionCache from "../utils/createEmotionCache";
+import createEmotionCache from "../lib/createEmotionCache";
 import { CacheProvider } from "@emotion/react";
 import { Open_Sans } from "next/font/google";
 import {
