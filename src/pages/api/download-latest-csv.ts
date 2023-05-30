@@ -5,5 +5,5 @@ export default async function handler(
   res: NextApiResponse
 ) {
   // Redirect to the download page
-  res.redirect("/nextjs-app/download-csv");
+  res.redirect("/database/download-csv");
 }

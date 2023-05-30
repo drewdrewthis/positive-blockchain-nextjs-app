@@ -59,7 +59,7 @@ class Configuration {
     warmableEndpoints: [
       "https://positiveblockchain.io/database",
       "https://positiveblockchain.io/database/modum",
-      "https://positiveblockchain.io/nextjs-app/api/project-data",
+      "https://positiveblockchain.io/database/api/project-data",
     ],
   };
 }
