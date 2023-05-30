@@ -26,6 +26,8 @@ export default class Routes {
   static HOME = Routes.getExternalRoute("/");
   static ABOUT = Routes.getExternalRoute("/about");
   static BLOG = Routes.getExternalRoute("/blog");
+  static WIKI =
+    "https://www.notion.so/PB-Database-wiki-4eea2421bca64fa48f49dbf4e0752b5c";
   static NEWSLETTER = Routes.getExternalRoute("/newsletter");
   static RESOURCES = Routes.getExternalRoute("/resources");
   static UNIVERSITY_RESEARCH = Routes.getExternalRoute("/university-research");

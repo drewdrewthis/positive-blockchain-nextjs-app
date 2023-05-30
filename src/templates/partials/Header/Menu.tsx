@@ -71,6 +71,7 @@ function Items() {
         <Link href={Routes.RESOURCES}>Resources</Link>
       </NestedMenuItem>
       <MenuItem href={Routes.BLOG}>Blog</MenuItem>
+      <MenuItem href={Routes.WIKI}>Wiki</MenuItem>
       <AddProjectButton />
     </>
   );
