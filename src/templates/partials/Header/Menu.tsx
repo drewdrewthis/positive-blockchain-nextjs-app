@@ -47,7 +47,7 @@ export default function Menu() {
 
       {/* Desktop */}
       <Box sx={{ display: { xs: "none", md: "block" } }}>
-        <Stack direction="row" spacing={2}>
+        <Stack direction="row" spacing={1}>
           <Items />
         </Stack>
       </Box>

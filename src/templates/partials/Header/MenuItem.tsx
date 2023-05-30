@@ -13,7 +13,7 @@ export default function MenuItem(props: {
     <div className={className}>
       <Button
         href={href}
-        className={cx(styles.button, "justify-start")}
+        className={cx(styles.button, "justify-center")}
         target={props.target}
       >
         {children}

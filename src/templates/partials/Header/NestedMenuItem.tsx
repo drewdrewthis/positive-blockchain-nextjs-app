@@ -112,7 +112,7 @@ export function NestedMenuItem(props: Props) {
                 placement === "bottom-start" ? "left top" : "left bottom",
             }}
           >
-            <Paper>
+            <Paper className="bg-brand-secondary">
               <ClickAwayListener onClickAway={handleClose}>
                 {list}
               </ClickAwayListener>
