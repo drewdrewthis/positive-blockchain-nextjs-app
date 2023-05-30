@@ -70,9 +70,11 @@ function ProjectGridItem(props: Props) {
         <Divider className="m-0" />
         <div className="p-3 bg-slate-100">
           <div className="text-xs">{props.status}</div>
-          <div className="text-xs">
-            <b>HQ:</b> {props.headquarters}
-          </div>
+          {props.headquarters && (
+            <div className="text-xs">
+              <b>HQ:</b> {props.headquarters}
+            </div>
+          )}
           <div className="text-xs">
             <b>SDGs:</b> {props.sdgOccurences.join(", ")}
           </div>
