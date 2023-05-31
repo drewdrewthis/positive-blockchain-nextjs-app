@@ -71,12 +71,24 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               ["hidden"]: !showFilters,
             })}
           >
+            {/*
+              NB: The two ProjectFilters maintain their own state independently, as they
+              use internal forms that are not managed by React.
+
+              If the user changes the filters on the mobile view, the desktop data will reflect
+              those filters, but the filter UI will not update.
+            */}
+
+            {/* Desktop filters */}
             <ProjectFilter filters={filters} onChange={handleFilterUpdate} />
+
+            {/* Mobile filters */}
             <Dialog
               className="sm:hidden"
               open={showFilters}
               onClose={() => toggleFilters(false)}
               fullScreen
+              keepMounted
             >
               <Button
                 aria-label="Hide Filters"
