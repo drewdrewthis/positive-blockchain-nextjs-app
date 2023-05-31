@@ -103,3 +103,5 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ## [Contributing](./DOCS/CONTRIBUTING.md)
 
 ## [Deploying](./DOCS/DEPLOYING.md)
+
+## [Caching](./DOCS/CACHING.md)
