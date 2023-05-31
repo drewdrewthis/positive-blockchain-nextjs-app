@@ -4,6 +4,11 @@ import MemCache from "memory-cache";
 import { getAuth } from "./auth";
 import { config } from "@/configuration";
 import { Project } from "../../types";
+import { config as configuration } from "@/configuration";
+
+const {
+  serverlessFunctions: { CACHE_TTL },
+} = configuration.constants;
 
 // Create a memory cache instance
 const cache = new MemCache.Cache();
@@ -72,7 +77,7 @@ export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
     keyRow: mainDatabase.keyRow,
   });
 
-  cache.put(PROJECT_DATA_CACHE_KEY, parsedData, 1000 * 60 * 60);
+  cache.put(PROJECT_DATA_CACHE_KEY, parsedData, 1000 * CACHE_TTL);
 
   return parsedData;
 }
@@ -111,7 +116,7 @@ export async function fetchSheetData(args: {
 
   const values = projectData.data.values;
 
-  cache.put(SHEET_DATA_CACHE_KEY, values, 1000 * 60 * 60);
+  cache.put(SHEET_DATA_CACHE_KEY, values, 1000 * CACHE_TTL);
 
   return values;
 }

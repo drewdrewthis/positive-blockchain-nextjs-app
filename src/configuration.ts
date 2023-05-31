@@ -50,7 +50,19 @@ class Configuration {
       HOST: "https://positiveblockchain.io",
     },
     projects: {
+      // How many projects to load initially
       INITIAL_DATA_LOAD_COUNT: 16,
+      /** How long to cache in seconds */
+      CACHE_TTL: 60 * 1,
+    },
+    /**
+     * These are the functions that run out of the api folder
+     * and are deployed as serverless functions on Vercel
+     * https://vercel.com/docs/concepts/functions/serverless-functions
+     *
+     */
+    serverlessFunctions: {
+      /** How long to cache in seconds */
       CACHE_TTL: 60 * 5,
     },
     /**
