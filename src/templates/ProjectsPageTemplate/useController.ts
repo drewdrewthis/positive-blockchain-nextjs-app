@@ -63,7 +63,6 @@ function useProjectData(props: { initialData: Project[] }) {
   const [projectData, setProjectData] = React.useState<any>(initialData);
 
   const handleLoad = () => {
-    console.log("handleLoad");
     fetchAllData().then(setProjectData);
   };
 
@@ -72,8 +71,6 @@ function useProjectData(props: { initialData: Project[] }) {
   // after the page has loaded.
   useEffect(() => {
     // Setting listener
-    console.log("setting listener");
-
     // Check if the page has already loaded
     if (document.readyState === "complete") {
       handleLoad();
@@ -142,7 +139,6 @@ function useFilters(props: {
     filters: buildFiltersConfig(filters),
     filteredData,
     handleFilterUpdate: (updatedFilters: any) => {
-      console.log("handleFilterUpdate", updatedFilters);
       setActiveFilters(updatedFilters);
     },
   };
