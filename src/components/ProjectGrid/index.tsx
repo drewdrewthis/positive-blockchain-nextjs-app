@@ -4,10 +4,15 @@ import cx from "classnames";
 import compact from "lodash/fp/compact";
 import uniq from "lodash/fp/uniq";
 import { useState } from "react";
+<<<<<<< HEAD
 
 import { Project } from "@/types";
 
 import { config } from "../../configuration";
+=======
+import cx from "classnames";
+import { config } from "@/configuration";
+>>>>>>> 0caf539 (Finalize custom submission form for submitting)
 
 import ProjectGridItem from "./ProjectGridItem";
 

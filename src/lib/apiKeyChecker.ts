@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { config } from "../configuration";
 
+=======
+import { config } from "../configuration/config";
+>>>>>>> 0caf539 (Finalize custom submission form for submitting)
 import { fetchSheetData } from "./google";
 
 const { SPREADSHEET_ID, sheets } = config.constants.google.sheets.apiSheet;

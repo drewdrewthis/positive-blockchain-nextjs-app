@@ -1,0 +1,35 @@
+Here's the converted CSV data that you can use to import to Google Sheets:
+
+```
+key,headerTitle,prompt,required,type,options
+is_positive_blockchain_project,Is your project a PositiveBlockchain project?,This means you have a strong aim at creating a positive social or environmental impact and solve some of our world’s burning problems (SDGs) through the use of blockchain and DLTs. We don't intend to list the entire blockchain ecosystem, but rather have a focus on projects committed to the SDGs. Note: your project should be focusing on developing or implementing a concrete blockchain solution.,false,select,Yes|No
+PUBLIC_project_name,Project name,,true,text,
+PUBLIC_active,Is your project Active?,The database also includes relevant projects which may be aborted or don’t use blockchain any longer.,true,multi-select,
+PUBLIC_website,Your website,true,url,
+PUBLIC_categories_list,Categories,Select up to three categories and the associated subcategory.ies. Start by the most relevant to your project. More about our database schema.,true,multi-select,
+PUBLIC_description_short_value_proposition_in_a_tweet,Short description,Please write a short description in 1-2 sentences telling precisely what you do.,true,text,
+PUBLIC_long_description,Long description,Feel free to use this to detail your activity and mention figures, KPIs, partners, notable facts about your project and its impact.,false,text,
+PUBLIC_business_tagline,Business Tagline,This will be displayed below your project title.,false,text,
+PUBLIC_tags_keywords_list,Tags,Select tags and keywords to help the indexing and searchability of your project in the database.,false,multi-select,
+PUBLIC_year_creation,Year of creation of your project/company,false,number,
+PUBLIC_founder_names_list,Name of Founders,false,text,
+PUBLIC_primary_headquarter_city,Primary headquarter city,false,text,
+PUBLIC_primary_headquarter_country,Primary headquarter country,false,select,
+PUBLIC_secondary_headquarter_city,Secondary headquarter city,false,text,
+PUBLIC_secondary_headquarter_country,Secondary headquarter country,false,select,
+PUBLIC_hq_subregion,Servicing areas,false,multi-select,
+PUBLIC_organization_type,Organization type,false,multi-select,
+PUBLIC_sponsors_partners_list,Sponsor & partners,false,text,
+PUBLIC_blockchain_type,Blockchain Type,false,select,Public|Private|Hybrid|NA
+PUBLIC_blockchain_technology,Blockchain platform(s),false,select,
+PUBLIC_token_ticker,Token Ticker,false,text,
+PUBLIC_logo_url,Logo URL,false,url,
+PUBLIC_pb_partner_tag,PB Partner Tag,false,text,
+is_project_owner,Are you the project owner or working for this project?,false,select,Yes|No
+subbmitter_name,Your name,true,text,
+subbmitter_email,Your email,true,email,
+should_receive_newsletter,Newsletter,Do you want to receive our newsletter (project updates, new projects listed, interviews of blockchain for good entrepreneurs, etc..)?,false,select,Yes|No
+agrees_to_data_privacy_agreement,Data privacy,I understand that the information above can be used by PositiveBlockchain and also published on http://positiveblockchain.io. You can request to correct, remove or block incorrect data by sending an email to hello@positiveblockchain.io,true,select,Yes|No
+```
+
+You can simply copy the text above and paste it into a text file, save the file with a `.csv` extension, and then upload it to Google Sheets.

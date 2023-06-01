@@ -5,7 +5,12 @@ import type {
 } from "next";
 
 import { ParsedUrlQuery } from "querystring";
+<<<<<<< HEAD
 
+=======
+import { config as configuration } from "@/configuration/config";
+import { Project } from "@/types";
+>>>>>>> 0caf539 (Finalize custom submission form for submitting)
 import upperFirst from "lodash/fp/upperFirst";
 import dynamic from "next/dynamic";
 import { DatasetJsonLd, NextSeo } from "next-seo";

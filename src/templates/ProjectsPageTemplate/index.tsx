@@ -3,6 +3,7 @@ import Search from "@mui/icons-material/Search";
 import { Button, Dialog, Typography, useMediaQuery } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import cx from "classnames";
+<<<<<<< HEAD
 import Link from "next/link";
 import React from "react";
 
@@ -16,6 +17,10 @@ import Header from "../partials/Header";
 
 import styles from "./styles.module.scss";
 import { useController } from "./useController";
+=======
+import styles from "./styles.module.scss";
+import { config } from "@/configuration/config";
+>>>>>>> 0caf539 (Finalize custom submission form for submitting)
 
 const { breakpoints } = config.constants;
 

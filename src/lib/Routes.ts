@@ -1,4 +1,4 @@
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 
 export default class Routes {
   // NextJS app routes
@@ -21,6 +21,7 @@ export default class Routes {
   static PARTNER_FORM = "https://bit.ly/PBpartner-form";
   static BECOME_A_CONTRIBUTOR = "https://bit.ly/applyPB";
   static ADD_NEW_PROJECT = "https://forms.gle/jZKsv7sbxJjRu7jFA";
+  static BULK_UPLOAD = Routes.BASE_PATH + "/bulk-upload";
 
   // WordPress pages
   static HOME = Routes.getExternalRoute("/");
@@ -42,6 +43,10 @@ export default class Routes {
    */
   static getExternalRoute(path: string): string {
     return `${config.constants.positiveBlockchain.HOST}${path}`;
+  }
+
+  static getApiRoute(path: string): string {
+    return `${Routes.API.BASE_PATH}${path}`;
   }
 
   /**

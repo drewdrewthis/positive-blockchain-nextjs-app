@@ -1,4 +1,5 @@
 import * as google from "@googleapis/sheets";
+<<<<<<< HEAD
 import MemCache from "memory-cache";
 
 import { config , config as configuration } from "@/configuration";
@@ -7,10 +8,21 @@ import { Project } from "../../types";
 
 import { getAuth } from "./auth";
 import { parseGoogleSheetsData } from "./utils/parseGoogleSheetsData";
+=======
+import {
+  parseGoogleSheetsData,
+  removePrivateFields,
+  stripPublicPrefixFromKeys,
+} from "./utils/parseGoogleSheetsData";
+import MemCache from "memory-cache";
+import { getAuth } from "./auth";
+import { config } from "@/configuration";
+import { Project } from "@/types";
+>>>>>>> 0caf539 (Finalize custom submission form for submitting)
 
 const {
   serverlessFunctions: { CACHE_TTL },
-} = configuration.constants;
+} = config.constants;
 
 // Create a memory cache instance
 const cache = new MemCache.Cache();
@@ -27,7 +39,7 @@ const {
  * @returns The project data matching the provided slug, or null if not found.
  */
 export async function fetchSingleProjectData(slug: string) {
-  const projectData = await fetchProjectData();
+  const projectData = await fetchPublicProjectData();
 
   if (!projectData) {
     return null;
@@ -53,8 +65,50 @@ export async function findProjectBySlug(
  * Fetches the project data from Google Sheets.
  * @returns A Promise that resolves to the project data array, or null if the data couldn't be fetched.
  */
-export async function fetchProjectData(): Promise<{ slug: string }[] | null> {
+export async function fetchPublicProjectData(): Promise<
+  { slug: string }[] | null
+> {
   const PROJECT_DATA_CACHE_KEY = "projectData";
+
+  const cachedData = cache.get(PROJECT_DATA_CACHE_KEY) as Project[] | null;
+
+  if (cachedData && cachedData?.length > 0) {
+    console.log("Returning cached data", PROJECT_DATA_CACHE_KEY);
+
+    return cachedData as {
+      slug: string;
+    }[];
+  }
+
+  const sheetData = await fetchSheetData({
+    spreadsheetId: SPREADSHEET_ID,
+    range: mainDatabase.name,
+  });
+
+  if (!sheetData) {
+    return null;
+  }
+
+  const parsedData = parseGoogleSheetsData(sheetData, {
+    headerRow: mainDatabase.headerRow,
+    keyRow: mainDatabase.keyRow,
+  })
+    .map(removePrivateFields)
+    .map(stripPublicPrefixFromKeys) as Project[];
+
+  cache.put(PROJECT_DATA_CACHE_KEY, parsedData, 1000 * CACHE_TTL);
+
+  return parsedData;
+}
+
+/**
+ * Fetches the project data from Google Sheets. Includes prefixes and private fields.
+ * @returns A Promise that resolves to the project data array, or null if the data couldn't be fetched.
+ */
+export async function fetchAllProjectData(): Promise<
+  { slug: string }[] | null
+> {
+  const PROJECT_DATA_CACHE_KEY = "projectData-all";
 
   const cachedData = cache.get(PROJECT_DATA_CACHE_KEY) as Project[] | null;
 
@@ -138,7 +192,7 @@ export async function uploadProjectData(data: string[][]) {
 
   const projectData = await sheets.spreadsheets.values.append({
     spreadsheetId: SPREADSHEET_ID,
-    range: pendingProjects.name,
+    range: pendingProjects.name + "!A:A",
     valueInputOption: "USER_ENTERED",
     requestBody: createResource(data),
   });

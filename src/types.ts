@@ -41,3 +41,19 @@ export type Project = {
   subregions_list?: string[];
   pb_partner_tag?: string;
 };
+
+export type ProjectDataSchema = {
+  [data_key: string]: {
+    headerTitle: string;
+    columnIdx: number;
+    type: "text" | "list" | "boolean" | "select";
+    options?: string[];
+  };
+};
+
+export interface CountryData {
+  country: string;
+  subregion: string;
+  region: string;
+  hemisphere: string;
+}

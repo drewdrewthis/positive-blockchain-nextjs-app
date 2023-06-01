@@ -11,8 +11,12 @@
     "open:vercel": "open https://vercel.com/positive-blockchain/positive-blockchain-nextjs-app",
     "source_env": "set -o allexport && source .env.local && set +o allexport",
     "test_with_env": "set -o allexport && source .env.local && set +o allexport && yarn jest",
+<<<<<<< HEAD
     "test": "yarn jest",
     "test:e2e": "yarn playwright test"
+=======
+    "test": "yarn jest"
+>>>>>>> 0caf539 (Finalize custom submission form for submitting)
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -50,7 +54,11 @@
     "sass": "^1.62.0",
     "sharp": "^0.32.0",
     "swagger-ui-react": "^4.18.2",
+<<<<<<< HEAD
     "tailwind-merge": "^2.0.0",
+=======
+    "tailwind-merge": "^1.14.0",
+>>>>>>> 0caf539 (Finalize custom submission form for submitting)
     "typescript": "^5.0.4",
     "vercel": "^28.19.0",
     "zlib": "^1.0.5",
