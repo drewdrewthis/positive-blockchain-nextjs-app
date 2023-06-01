@@ -8,6 +8,8 @@
  * For MUI (Material-UI) interoperability with Tailwind CSS, visit: https://mui.com/material-ui/guides/interoperability/#tailwind-css
  */
 
+const config = require("./src/configuration.ts");
+
 // MUI (Material-UI) interoperability configuration
 const muiInterOperability = {
   /**
@@ -53,6 +55,9 @@ module.exports = {
         "brand-secondary": "#19486A",
         "brand-link": "#19486A",
         white: "#FFFFFF",
+      },
+      screens: {
+        ...config.breakpoints,
       },
     },
   },

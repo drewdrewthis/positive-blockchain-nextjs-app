@@ -8,12 +8,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import Search from "@mui/icons-material/Search";
 import { useController } from "./useController";
 import { withController } from "@/lib/withContoller";
-import { Button, Dialog, Typography } from "@mui/material";
+import { Button, Dialog, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import cx from "classnames";
 import styles from "./styles.module.scss";
+import { config } from "@/configuration";
+
+const { breakpoints } = config.constants;
 
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
+  const isMobile = useMediaQuery(`(max-width: ${breakpoints.sm})`);
+
   const {
     projectData,
     handleSearch,
@@ -80,7 +85,9 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
             */}
 
             {/* Desktop filters */}
-            <ProjectFilter filters={filters} onChange={handleFilterUpdate} />
+            {!isMobile && (
+              <ProjectFilter filters={filters} onChange={handleFilterUpdate} />
+            )}
 
             {/* Mobile filters */}
             <Dialog
@@ -88,7 +95,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               open={showFilters}
               onClose={() => toggleFilters(false)}
               fullScreen
-              keepMounted
+              keepMounted={isMobile}
             >
               <Button
                 aria-label="Hide Filters"

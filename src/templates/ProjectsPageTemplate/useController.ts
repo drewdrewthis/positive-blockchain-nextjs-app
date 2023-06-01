@@ -141,8 +141,9 @@ function useFilters(props: {
     setFilteredData,
     filters: buildFiltersConfig(filters),
     filteredData,
-    handleFilterUpdate: (filters: any) => {
-      setActiveFilters(filters);
+    handleFilterUpdate: (updatedFilters: any) => {
+      console.log("handleFilterUpdate", updatedFilters);
+      setActiveFilters(updatedFilters);
     },
   };
 }

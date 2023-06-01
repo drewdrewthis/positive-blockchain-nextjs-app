@@ -73,6 +73,10 @@ class Configuration {
       "https://positiveblockchain.io/database/modum",
       "https://positiveblockchain.io/database/api/project-data",
     ],
+    breakpoints: {
+      sm: "640px",
+      md: "768px",
+    },
   };
 }
 
