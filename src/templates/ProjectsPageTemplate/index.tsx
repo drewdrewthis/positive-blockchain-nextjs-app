@@ -33,7 +33,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
       <Header />
       <div className="prose max-w-none max-w-7xl mx-auto sm:p-10 px-5 w-full h-full">
         <div className="flex flex-col sm:flex-row gap-5 justify-between items-center content-center mb-10">
-          <Typography variant="h1" className="mb-0">
+          <Typography variant="h1" className="mb-0 font-semibold">
             Project Directory
           </Typography>
           <Link href="/forms/request-data-snapshot" className="no-underline">
