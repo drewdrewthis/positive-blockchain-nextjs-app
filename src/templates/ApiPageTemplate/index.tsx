@@ -15,7 +15,7 @@ export default function ApiPageTemplate() {
       }}
     >
       <Header />
-      <div className="-z-10">
+      <div className="z-10">
         <div className="container mx-auto text-center my-10">
           <div className="font-bold">
             Note: You will need to have a valid api key to access the api.
