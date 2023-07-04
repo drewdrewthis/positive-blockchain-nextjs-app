@@ -9,13 +9,13 @@ import { PB_LOGO } from "@/constants/image-paths";
 function Footer() {
   return (
     <div className="w-full flex-col justify-center">
-      <div className="flex flex-col md:flex-row justify-center items-center">
-        <span>with the support of</span>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-3 mb-3">
+        <span className="text-xs">with the support of</span>
         <Image
-          src="/database/images/bfg_logo_insert.jpeg"
+          src="/database/images/BFG-black.png"
           alt="bfg_logo"
-          width={1000 / 5}
-          height={333 / 5}
+          width={1061 / 8}
+          height={269 / 8}
           style={{
             filter: "grayscale(100)",
           }}
