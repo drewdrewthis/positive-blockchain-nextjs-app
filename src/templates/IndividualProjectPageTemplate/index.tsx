@@ -71,7 +71,10 @@ function IndividualProjectPageTemplate(
                 </div>
               )}
               <div className="flex flex-col gap-2">
-                <Typography variant="h1" className="m-0 text-brand-secondary">
+                <Typography
+                  variant="h1"
+                  className="m-0 text-brand-secondary font-semibold"
+                >
                   {projectData["project_name"]}
                 </Typography>
                 <Typography variant="h2" className="my-2">
