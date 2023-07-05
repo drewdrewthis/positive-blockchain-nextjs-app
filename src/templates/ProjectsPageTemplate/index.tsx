@@ -29,9 +29,9 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
   } = props;
 
   return (
-    <div className="flex flex-col gap-10 h-full min-h-screen">
+    <div className="flex flex-col gap-5 h-full min-h-screen">
       <Header />
-      <div className="prose max-w-none max-w-7xl mx-auto sm:p-10 px-5 w-full h-full">
+      <div className="prose max-w-none max-w-7xl mx-auto sm:p-10 px-5 w-full h-full mt-5">
         <div className="flex flex-col sm:flex-row gap-5 justify-between items-center content-center mb-10">
           <Typography variant="h1" className="mb-0 font-semibold">
             Project Directory
