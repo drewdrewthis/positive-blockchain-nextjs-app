@@ -11,12 +11,14 @@ function Footer() {
     <div className="w-full flex-col justify-center">
       <div className="flex flex-col md:flex-row justify-center items-center gap-3 mb-6">
         <span className="text-xs">with the support of</span>
-        <Image
-          src="/database/images/BFG-black.png"
-          alt="bfg_logo"
-          width={1061 / 8}
-          height={269 / 8}
-        />
+        <Link href="https://blockchainforgood.fr/" target="_blank">
+          <Image
+            src="/database/images/BFG-black.png"
+            alt="bfg_logo"
+            width={1061 / 8}
+            height={269 / 8}
+          />
+        </Link>
       </div>
       <div
         className={
