@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "cypress": "cypress open",
-    "open:vercel": "open https://vercel.com/drewdrewthispositiveblockchain-gmailcom/positive-blockchain-nextjs-app"
+    "open:vercel": "open https://vercel.com/positive-blockchain/positive-blockchain-nextjs-app"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
