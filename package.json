@@ -1,7 +1,7 @@
 {
   "name": "positive-blockchain-nextjs-app",
+  "packageManager": "yarn@3.6.2",
   "version": "0.1.0",
-  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
