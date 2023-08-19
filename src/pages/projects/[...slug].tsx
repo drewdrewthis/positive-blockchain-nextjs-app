@@ -1,3 +1,4 @@
+import type { Project } from "@/types";
 import type {
   GetServerSideProps,
   GetServerSidePropsContext,
@@ -5,24 +6,19 @@ import type {
 } from "next";
 
 import { ParsedUrlQuery } from "querystring";
-<<<<<<< HEAD
 
-=======
-import { config as configuration } from "@/configuration/config";
-import { Project } from "@/types";
->>>>>>> 0caf539 (Finalize custom submission form for submitting)
 import upperFirst from "lodash/fp/upperFirst";
 import dynamic from "next/dynamic";
 import { DatasetJsonLd, NextSeo } from "next-seo";
 
 import { config as configuration } from "@/configuration";
-import Routes from "@/lib/Routes";
-import { Project } from "@/types";
 
-import defaultConfig from "../next-seo.config";
+import Routes from "../../lib/Routes";
+import defaultConfig from "../../next-seo.config";
+
 function ProjectPage(props: { projectData: Project }) {
   const IndividualProjectPage = dynamic(
-    () => import("../templates/IndividualProjectPageTemplate")
+    () => import("../../templates/IndividualProjectPageTemplate")
   );
 
   const { projectData } = props;

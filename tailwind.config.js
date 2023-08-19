@@ -17,9 +17,9 @@ const muiInterOperability = {
    * Preflight is a set of base styles provided by MUI that reset and normalize CSS across different browsers.
    * Uncomment the line below to enable MUI's Preflight.
    */
-  // corePlugins: {
-  //   preflight: false,
-  // },
+  corePlugins: {
+    // preflight: false,
+  },
   // important: "#__next",
 };
 

@@ -1,11 +1,13 @@
 import {
   Button,
+  CircularProgress,
   Divider,
   FormControl,
   TextField,
   TextareaAutosize,
   Typography,
 } from "@mui/material";
+import LoadingButton from "@mui/lab/LoadingButton";
 import { useForm, FormProvider, UseFormReturn } from "react-hook-form";
 import * as submissionFormConfig from "@/configuration/submission-form-config";
 import FormInputItem from "./FormInputItem";
@@ -16,6 +18,7 @@ import Prompt from "./Prompt";
 import { count } from "console";
 import SectionTitle from "./SectionTitle";
 import { DatabaseColumnKey } from "../../configuration/submission-form-config";
+import { SyntheticEvent, useCallback } from "react";
 
 export interface FormInput {
   key: DatabaseColumnKey;
@@ -26,18 +29,23 @@ export interface FormInput {
   options?: string[] | number[] | Record<string, string[] | undefined> | null;
 }
 
+export interface ProjectSubmissionFormProps {
+  inputs: FormInput[];
+  initialValues?: Record<string, any>;
+  categoryData: any;
+  onSubmit: (values: Record<string, any>) => Promise<void>;
+  onSubmitSuccess: () => void;
+}
+
 /**
  * ProjectSubmissionForm template.
  * This component will dynamically render a form based on the inputs provided.
  * @param props
  * @returns
  */
-export default function ProjectSubmissionForm(props: {
-  inputs: FormInput[];
-  initialValues?: Record<string, any>;
-  categoryData: any;
-  onSubmit?: (values: Record<string, any>) => void;
-}) {
+export default function ProjectSubmissionForm(
+  props: ProjectSubmissionFormProps
+) {
   const { inputs, initialValues, onSubmit = () => {} } = props;
   const defaultValues = initialValues || {
     // All multi-selects need to be initialized as empty arrays
@@ -46,7 +54,7 @@ export default function ProjectSubmissionForm(props: {
     PUBLIC_organization_type: [],
   };
   const methods = useForm({ defaultValues, shouldUnregister: false });
-  const { handleSubmit, setValue } = methods;
+  const { setValue } = methods;
 
   const groupedInputs = inputs.reduce((acc, input) => {
     const { key } = input;
@@ -72,11 +80,36 @@ export default function ProjectSubmissionForm(props: {
     {} as Record<string, any>
   );
 
+  console.log({
+    isSubmitting: methods.formState.isSubmitting,
+    isValid: methods.formState.isValid,
+    isSubmitted: methods.formState.isSubmitted,
+  });
+
+  // Handle the form submission
+  // TODO: Handle error
+  const handleSubmit = useCallback(
+    (e: SyntheticEvent) => {
+      e.preventDefault();
+
+      methods.handleSubmit(async (values) => {
+        try {
+          await onSubmit(values);
+          props.onSubmitSuccess();
+        } catch (error) {
+          console.error(error);
+          throw error;
+        }
+      })();
+    },
+    [methods, onSubmit, props]
+  );
+
   return (
     <FormProvider {...methods}>
       <form
         className="w-full p-5"
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit}
         data-testid="project-submission-form"
       >
         <FormControl className="w-full flex flex-col gap-4">
@@ -186,8 +219,13 @@ export default function ProjectSubmissionForm(props: {
             type="submit"
             variant="contained"
             color="primary"
+            disabled={
+              methods.formState.isSubmitting ||
+              !methods.formState.isValid ||
+              methods.formState.isSubmitted
+            }
           >
-            SUBMIT
+            {methods.formState.isSubmitting ? <CircularProgress /> : "SUBMIT"}
           </Button>
           <p className="text-sm italics mt-5">
             Need help? Get in touch{" "}

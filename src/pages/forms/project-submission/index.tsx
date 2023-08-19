@@ -17,8 +17,10 @@ import { fetchAllProjectData } from "@/lib/google";
 import { convertProjectDataIntoInitialValues } from "../../../lib/utils/convertProjectDataIntoInitialValues";
 import { fetchKeyColumnMapForProjectSubmission } from "../../../lib/api/fetchKeyColumnMapForProjectSubmission";
 import Routes from "../../../lib/Routes";
+import { withController } from "../../../lib/withContoller";
+import { useRouter } from "next/navigation";
 
-interface Props {
+interface ProjectSubmissionPageProps {
   projectData: any;
   countriesData: any;
   categoryData: any;
@@ -27,19 +29,12 @@ interface Props {
   slug?: string;
 }
 
-function ProjectSubmissionPage(props: Props) {
-  const {
-    countriesData = [],
-    categoryData,
-    inputs,
-    keyColumnMapForSubmission,
-    slug,
-  } = props;
-
-  const handleSubmit = async (values: Record<string, any>) => {
-    const enhancedValues = addMissingValues(values, countriesData);
-    await submitProjectData(enhancedValues, keyColumnMapForSubmission);
-  };
+/**
+ * The project submission page. This uses the ProjectSubmissionForm template.
+ * To edit the actual form, go to src/templates/ProjectSubmissionForm.tsx
+ */
+function ProjectSubmissionPage(props: ReturnType<typeof useController>) {
+  const { categoryData, inputs, slug } = props;
 
   return (
     <div
@@ -61,7 +56,8 @@ function ProjectSubmissionPage(props: Props) {
           )}
           categoryData={categoryData}
           initialValues={props.projectData}
-          onSubmit={(values) => handleSubmit(values)}
+          onSubmit={props.handleSubmit}
+          onSubmitSuccess={props.handleSuccess}
         />
       </div>
       <Footer />
@@ -69,9 +65,39 @@ function ProjectSubmissionPage(props: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
-) => {
+function useController(props: ProjectSubmissionPageProps) {
+  const router = useRouter();
+  const { countriesData = [], keyColumnMapForSubmission } = props;
+
+  // Handle submit for the form
+  const handleSubmit = async (values: Record<string, any>) => {
+    const enhancedValues = addMissingValues(values, countriesData);
+    await submitProjectData(enhancedValues, keyColumnMapForSubmission);
+  };
+
+  // Handle successful submission of the form
+  const handleSuccess = () => {
+    console.log(
+      "Success: Redirecting to success page",
+      Routes.PROJECT_SUBMISSION_SUCCESS
+    );
+    
+    // On success, redirect to the success page
+    router.replace(Routes.PROJECT_SUBMISSION_SUCCESS);
+  };
+
+  return {
+    ...props,
+    handleSubmit,
+    handleSuccess,
+  };
+}
+
+export default withController(ProjectSubmissionPage, useController);
+
+export const getServerSideProps: GetServerSideProps<
+  ProjectSubmissionPageProps
+> = async (context) => {
   const { query } = context;
   const slug = query["prefill_slug"];
 
@@ -100,12 +126,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
         inputs,
         slug,
         keyColumnMapForSubmission,
-      } as Props,
+      } as ProjectSubmissionPageProps,
     })
   );
 };
-
-export default ProjectSubmissionPage;
 
 function IntroBlock(props: { isEditingProject: boolean }) {
   return props.isEditingProject ? (

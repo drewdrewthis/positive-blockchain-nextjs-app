@@ -7,6 +7,7 @@ export default class Routes {
   // PAGES
   static PROJECTS = Routes.BASE_PATH;
   static PROJECTS_API_PAGE = Routes.BASE_PATH + "/projects-api";
+  static PROJECT_SUBMISSION_SUCCESS = "/project-submission-success";
 
   // API
   static API_PATH = "/api";
@@ -54,8 +55,15 @@ export default class Routes {
    * @param path - The path to return.
    * @returns The given path.
    */
-  static getPath(path: string): string {
-    return path;
+  static getRelativeHref(path: string): string {
+    return `${Routes.BASE_PATH}/${path}`;
+  }
+
+  /**
+   * Get project path
+   */
+  static getProjectPath(projectId: string): string {
+    return `/projects/${projectId}`;
   }
 
   /**

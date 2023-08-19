@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 import Header from "@/templates/partials/Header";
 import Footer from "@/templates/partials/Footer";
@@ -9,7 +9,7 @@ function ProjectSubmissionSuccess() {
   const router = useRouter();
 
   const handleContinue = () => {
-    router.replace(Routes.PROJECTS);
+    router.replace("/");
   };
 
   return (
