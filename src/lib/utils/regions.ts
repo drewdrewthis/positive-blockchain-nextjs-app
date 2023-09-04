@@ -23,10 +23,10 @@ export function getSubregionsFromCountries(
   countries: string[],
   countryData: CountryData[]
 ) {
-  const subregioons = countries.map((country: string) => {
+  const subregions = countries.map((country: string) => {
     const data = countryData.find((data) => country === data.country);
     return data?.subregion;
   });
 
-  return uniq(subregioons);
+  return uniq(subregions);
 }

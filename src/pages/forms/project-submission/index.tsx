@@ -81,7 +81,7 @@ function useController(props: ProjectSubmissionPageProps) {
       "Success: Redirecting to success page",
       Routes.PROJECT_SUBMISSION_SUCCESS
     );
-    
+
     // On success, redirect to the success page
     router.replace(Routes.PROJECT_SUBMISSION_SUCCESS);
   };
@@ -318,8 +318,14 @@ function setServicingSubRegionsFromCountries(
   // Get the countries from the values
   const countries = values.PUBLIC_servicing_area;
 
+  if (!countries || !countries.length) {
+    values.PUBLIC_subregions_list = [];
+    return values;
+  }
+
   // Set the regions for the subregions
-  const subregions = getSubregionsFromCountries(countries, countryData);
+  const subregions = getSubregionsFromCountries(countries || [], countryData);
+
   values.PUBLIC_subregions_list = subregions;
 
   return values;

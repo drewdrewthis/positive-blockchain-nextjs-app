@@ -21,7 +21,7 @@ export default class Routes {
   // Forms
   static PARTNER_FORM = "https://bit.ly/PBpartner-form";
   static BECOME_A_CONTRIBUTOR = "https://bit.ly/applyPB";
-  static ADD_NEW_PROJECT = "https://forms.gle/jZKsv7sbxJjRu7jFA";
+  static ADD_NEW_PROJECT = Routes.BASE_PATH + "/forms/project-submission";
   static BULK_UPLOAD = Routes.BASE_PATH + "/bulk-upload";
 
   // WordPress pages
