@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useFormContext } from "react-hook-form";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
@@ -16,25 +16,23 @@ const SingleCategoryBlock = (props: Props) => {
   const { id } = props;
   const { register, watch, setValue, getValues, formState } = useFormContext();
   const categories = Object.keys(props.categories);
-
   const selectedCategory = watch(id);
   const subcategoryId = "sub_" + id;
+  const subcategories = props.categories[selectedCategory];
+  const subcategoryValues = getValues(subcategoryId);
+
+  if (subcategoryValues.length > 3) subcategoryValues.length = 3;
 
   // Handle updating subcategories when a category is selected
-  React.useEffect(() => {
+  useEffect(() => {
     setValue(subcategoryId, []);
   }, [selectedCategory, setValue, subcategoryId]);
 
-  const subcategories = props.categories[selectedCategory];
-
-  // This seems pretty hacky, but it works
-  const subcategoryValues = getValues(subcategoryId)?.length
-    ? getValues(subcategoryId)
-    : formState?.defaultValues?.[id]?.length
-    ? formState.defaultValues[subcategoryId]
-    : [];
-
-  if (subcategoryValues.length > 3) subcategoryValues.length = 3;
+  // Set the default value to the value on mount
+  useEffect(() => {
+    setValue(id, formState.defaultValues?.[id]);
+    setValue(subcategoryId, formState.defaultValues?.[subcategoryId]);
+  }, [formState.defaultValues, id, setValue, subcategoryId]);
 
   return (
     <div className="w-full gap-3 flex">
@@ -42,8 +40,7 @@ const SingleCategoryBlock = (props: Props) => {
         <Select
           {...register(id)}
           labelId="category-label"
-          // This seems pretty hacky, but it works
-          value={getValues(id) || formState?.defaultValues?.[id] || [""]}
+          value={getValues(id) || [""]}
         >
           <MenuItem value="" disabled>
             Select a category
@@ -61,14 +58,21 @@ const SingleCategoryBlock = (props: Props) => {
       </FormControl>
 
       {selectedCategory && (
-        <FormControl className="w-full">
-          <InputLabel id="subcategory-label">Subcategories</InputLabel>
+        <FormControl
+          className="w-full"
+          error={formState.isDirty && !subcategoryValues.length}
+        >
+          <InputLabel id="subcategory-label" required>
+            Subcategories
+          </InputLabel>
           <Select
-            {...register(subcategoryId)}
+            {...register(subcategoryId, { required: true })}
             label="Subcategories"
             labelId="subcategory-label"
             value={subcategoryValues || [""]}
+            required
             multiple
+            inputProps={{ required: true }}
           >
             {[...(subcategories || [])].sort().map((subcategory) => (
               <MenuItem key={subcategory} value={subcategory}>

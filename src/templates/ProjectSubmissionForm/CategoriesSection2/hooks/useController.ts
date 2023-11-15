@@ -25,6 +25,10 @@ interface CategoriesFormWrapperProps {
   onChange(categories: CategoryResponse[]): void;
 }
 
+/**
+ * This is the controller for the categories form.
+ * It handles the logic for adding and removing category fields
+ */
 export function useController(props: CategoriesFormWrapperProps) {
   const { onChange, initialValues, categories } = props;
 

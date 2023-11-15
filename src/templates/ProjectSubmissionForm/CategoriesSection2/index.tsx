@@ -20,7 +20,7 @@ const CategoriesSection = (props: ReturnType<typeof useController>) => {
     <FormProvider {...props.methods}>
       <div className="flex w-full flex-col gap-3">
         <div className="w-full" key={firstBlock.id}>
-          <Typography variant="overline">Primary Category *</Typography>
+          <Typography variant="overline">Primary Category</Typography>
           <div className="w-full flex">
             <SingleCategoryBlock
               {...firstBlock}

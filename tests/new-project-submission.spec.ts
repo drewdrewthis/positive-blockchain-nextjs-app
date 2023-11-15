@@ -44,7 +44,15 @@ test("test", async ({ page }) => {
     .getByRole("button", { name: "Subcategories ​", exact: true })
     .click();
   await page.getByRole("option", { name: "Sport & healthy behaviors" }).click();
-  await page.locator("#menu-sub_category_2 div").first().click();
+  await page.locator("#menu-sub_category_2 div").first().click({
+    force: true,
+    noWaitAfter: true,
+  });
+  // Stops here
+
+  // Click outside of the form
+  await page.locator("html").click();
+
   await page.getByRole("button", { name: "+ Add Category" }).click();
   await page.getByLabel("Select a category").click();
   await page.getByRole("option", { name: "Climate & Environment" }).click();
@@ -59,15 +67,30 @@ test("test", async ({ page }) => {
     .click();
   await page.getByRole("option", { name: "Patient data" }).click();
   await page.getByRole("option", { name: "Clinical & research" }).click();
-  await page.locator("#menu-sub_category_2 div").first().click();
+  await page.locator("#menu-sub_category_2 div").first().click({
+    force: true,
+    noWaitAfter: true,
+  });
+
   await page
     .getByRole("button", { name: "Subcategories ​", exact: true })
-    .click();
+    .click({
+      force: true,
+      noWaitAfter: true,
+    });
+  // Click outside of the form
+  await page.locator("html").click();
+
   await page.getByRole("option", { name: "Sanitation & Water" }).click();
   await page
     .getByRole("option", { name: "Climate & carbon reduction" })
     .click();
-  await page.locator("#menu-sub_category_3 div").first().click();
+  await page.locator("#menu-sub_category_3 div").first().click({
+    force: true,
+    noWaitAfter: true,
+  });
+  // Click outside of the form
+  await page.locator("html").click();
   await page.getByLabel("delete").nth(1).click();
   await page
     .getByPlaceholder(
