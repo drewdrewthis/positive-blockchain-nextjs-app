@@ -19,6 +19,7 @@ import { count } from "console";
 import SectionTitle from "./SectionTitle";
 import { DatabaseColumnKey } from "../../configuration/submission-form-config";
 import { SyntheticEvent, useCallback } from "react";
+import { DataPrivacyAgreement } from "./DataPrivacyAgreement";
 
 export interface FormInput {
   key: DatabaseColumnKey;
@@ -200,7 +201,11 @@ export default function ProjectSubmissionForm(
           <FormInputItem {...allInputProps["submitted_by_name"]} />
           <FormInputItem {...allInputProps["submitted_by_email"]} />
           <FormInputItem {...allInputProps["should_receive_newsletter"]} />
-          <FormInputItem
+
+          {/* Date privacy */}
+          <Divider className="my-5" />
+          <DataPrivacyAgreement
+            className="mb-10"
             {...allInputProps["agrees_to_data_privacy_agreement"]}
           />
           <Label text="Anything else to add?" />
