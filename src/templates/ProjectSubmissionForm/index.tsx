@@ -147,6 +147,10 @@ export default function ProjectSubmissionForm(
           />
           <FormInputItem
             {...allInputProps["PUBLIC_primary_headquarter_country"]}
+            options={allInputProps["PUBLIC_primary_headquarter_country"].options
+              // Remove All [Region] options
+              ?.filter((item: string) => !item.startsWith("All "))
+              .sort()}
           />
           {/* <FormInputItem
             {...allInputProps["PUBLIC_secondary_headquarter_city"]}
