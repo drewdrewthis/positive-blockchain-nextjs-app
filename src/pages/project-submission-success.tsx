@@ -14,12 +14,21 @@ function ProjectSubmissionSuccess() {
   return (
     <div className="h-screen flex flex-col">
       <Header />
-      <div className="flex flex-col items-center justify-center mt-10">
+      <div className="flex flex-col items-center justify-center mt-10 max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold mb-5">
-          Project Submission Successful!
+          Thank you for your submission
         </h1>
-        <p className="text-lg mb-10">
-          Thank you for submitting your project information.
+        <p className="text-lg mb-10 text-center">
+          We have recorded your information for review and will update the
+          database promptly. If you have any questions, please don&apos;t
+          hesitate to reach out to us at&nbsp;
+          <a
+            href="mailto:hello@positiveblockchain.io"
+            className="text-brand-link"
+          >
+            hello@positiveblockchain.io
+          </a>
+          .
         </p>
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"

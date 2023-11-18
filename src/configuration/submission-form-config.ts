@@ -223,6 +223,8 @@ export const overrides: Record<string, InputFieldProps> = {
     required: false,
     type: "multi-select",
     placeholder: "e.g. PBPT1",
+    prompt:
+      "We are helping our partners create sub-directories within our DB. If you are submitting a project as part of a PB Partner list, write the “PB Partner tag” here. If you are not aware or not sure, simply keep empty.",
   },
 
   PUBLIC_year_creation: {

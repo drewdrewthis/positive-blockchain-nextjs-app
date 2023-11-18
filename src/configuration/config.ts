@@ -51,7 +51,7 @@ class Configuration {
                 regions: "J2:M",
                 organizationTypes: "B3:B",
                 blockchainTechnoloy: "D3:D",
-                partnerTags: "AI3:AI",
+                partnerTags: "V3:V",
               },
             },
           },
