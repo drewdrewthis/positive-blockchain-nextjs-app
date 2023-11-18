@@ -1,4 +1,4 @@
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 import { fetchSheetData } from "@/lib/google";
 
 const { dataTables } = config.constants.google.sheets.databaseSheet.sheets;

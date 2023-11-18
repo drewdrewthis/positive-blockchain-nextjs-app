@@ -1,7 +1,7 @@
 import * as google from "@googleapis/sheets";
 import MemCache from "memory-cache";
 
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 import { Project } from "@/types";
 
 import { getAuth } from "./auth";

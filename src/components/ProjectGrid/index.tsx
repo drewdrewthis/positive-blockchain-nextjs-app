@@ -7,7 +7,7 @@ import compact from "lodash/fp/compact";
 import uniq from "lodash/fp/uniq";
 import { useState } from "react";
 
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 
 import ProjectGridItem from "./ProjectGridItem";
 

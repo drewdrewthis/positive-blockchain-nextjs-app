@@ -3,7 +3,7 @@ import type { GetStaticProps } from "next";
 
 import dynamic from "next/dynamic";
 
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 import { fetchPublicProjectData } from "@/lib/google";
 import { extractFiltersFromProjectData } from "@/lib/utils";
 

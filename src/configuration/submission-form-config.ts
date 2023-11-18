@@ -1,4 +1,4 @@
-import { snakeCaseToSentenceCase } from "../lib/utils";
+import { snakeCaseToSentenceCase } from "../lib/utils/strings";
 import { FormInput } from "../templates/ProjectSubmissionForm";
 
 // List of columns that will be displayed in the form

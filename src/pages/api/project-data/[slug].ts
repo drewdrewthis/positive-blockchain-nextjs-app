@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 import { fetchSingleProjectData } from "@/lib/google";
 
 const {

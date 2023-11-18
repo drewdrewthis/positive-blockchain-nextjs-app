@@ -8,7 +8,7 @@ import React from "react";
 
 import ProjectFilter from "@/components/ProjectFilter";
 import ProjectGrid from "@/components/ProjectGrid";
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 import { withController } from "@/lib/withContoller";
 
 import Footer from "../partials/Footer/index";
