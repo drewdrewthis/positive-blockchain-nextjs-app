@@ -16,7 +16,7 @@ interface ExtendedRequest {
 }
 
 interface ExtendedResponse {
-  cookie(name: string, value: string): void;
+  cookie(_name: string, _value: string): void;
 }
 
 export const config = {

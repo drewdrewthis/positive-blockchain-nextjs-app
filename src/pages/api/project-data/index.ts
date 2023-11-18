@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import { config as configuration } from "@/configuration";
-import { fetchProjectData } from "@/lib/google";
+import { fetchPublicProjectData } from "@/lib/google";
 
 const {
   projects: { CACHE_TTL },
@@ -10,7 +10,7 @@ const {
 
 async function handler(_req: NextApiRequest, res: NextApiResponse<any>) {
   try {
-    const projectData = await fetchProjectData();
+    const projectData = await fetchPublicProjectData();
     res.setHeader(
       "Cache-Control",
       `s-maxage=${CACHE_TTL} , stale-while-revalidate`

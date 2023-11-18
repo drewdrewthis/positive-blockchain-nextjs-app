@@ -1,0 +1,3663 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectSubmissionForm /> it should render and match snapshot without errors for editProjectProps 1`] = `
+<div>
+  <form
+    class="w-full p-5"
+    data-testid="project-submission-form"
+  >
+    <div
+      class="MuiFormControl-root w-full flex flex-col gap-4 css-1nrlq1o-MuiFormControl-root"
+    >
+      <p
+        class="font-bold text-xl mt-10"
+      >
+        About the project
+      </p>
+      <div
+        class="font-bold"
+      >
+        Is the project a PositiveBlockchain project?
+      </div>
+      <div
+        class="text-sm"
+      >
+        This means you have a strong aim at creating a positive social or environmental impact and solve some of our world’s burning problems (SDGs) through the use of blockchain and DLTs. We don't intend to list the entire blockchain ecosystem, but rather have a focus on projects committed to the SDGs. Note: the project should be focusing on developing or implementing a concrete blockchain solution.
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-is_positive_blockchain_project"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-is_positive_blockchain_project"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="is_positive_blockchain_project"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Project name *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_project_name-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_project_name"
+              maxlength="50"
+              name="PUBLIC_project_name"
+              placeholder="e.g. "PositiveBlockchain""
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_project_name-helper-text"
+          >
+            50 characters max
+          </p>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Is the project Active? *
+      </div>
+      <div
+        class="text-sm"
+      >
+        The database also includes relevant projects which may be aborted or don’t use blockchain any longer.
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          required=""
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_active"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_active"
+            role="button"
+            tabindex="0"
+          >
+            Active
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_active"
+            placeholder="Please select one"
+            required=""
+            tabindex="-1"
+            value="Active"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Your website *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_website"
+              name="PUBLIC_website"
+              placeholder="e.g. https://positiveblockchain.io"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Categories
+      </div>
+      <div
+        class="flex w-full flex-col gap-3"
+      >
+        <div
+          class="w-full"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
+          >
+            Primary Category
+          </span>
+          <div
+            class="w-full flex"
+          >
+            <div
+              class="w-full gap-3 flex"
+            >
+              <div
+                class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+              >
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                >
+                  <div
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="category-label mui-component-select-category_1"
+                    class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                    id="mui-component-select-category_1"
+                    role="button"
+                    tabindex="0"
+                  >
+                    Aid & Philanthropy
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    aria-invalid="false"
+                    class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                    name="category_1"
+                    tabindex="-1"
+                    value="Aid & Philanthropy"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                    data-testid="ArrowDropDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                  <fieldset
+                    aria-hidden="true"
+                    class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                  >
+                    <legend
+                      class="css-ihdtdm"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+              <div
+                class="MuiFormControl-root w-full css-1nrlq1o-MuiFormControl-root"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="true"
+                  id="subcategory-label"
+                >
+                  Subcategories
+                  <span
+                    aria-hidden="true"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  >
+                     
+                    *
+                  </span>
+                </label>
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                  required=""
+                >
+                  <div
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="subcategory-label mui-component-select-sub_category_1"
+                    class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                    id="mui-component-select-sub_category_1"
+                    role="button"
+                    tabindex="0"
+                  >
+                    Development & Aid
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    aria-invalid="false"
+                    class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                    name="sub_category_1"
+                    required=""
+                    tabindex="-1"
+                    value="Development & Aid"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                    data-testid="ArrowDropDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                  <fieldset
+                    aria-hidden="true"
+                    class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                  >
+                    <legend
+                      class="css-14lo706"
+                    >
+                      <span>
+                        Subcategories
+                         
+                        *
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
+        >
+          Additional categories
+        </span>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium text-green-500 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          + Add Category
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Short description *
+      </div>
+      <div
+        class="text-sm"
+      >
+        Please write a short description in 1-2 sentences telling precisely what you do.
+      </div>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        maxlength="320"
+        name="PUBLIC_description_short_value_proposition_in_a_tweet"
+        placeholder="e.g. We utilize blockchain technology to create sustainable supply chains."
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <div
+        class="font-bold"
+      >
+        Long description
+      </div>
+      <div
+        class="text-sm"
+      >
+        Feel free to use this to detail your activity and mention figures, KPIs, partners, notable facts about the project and its impact.
+      </div>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        name="PUBLIC_long_description"
+        placeholder="e.g. Founded in 2021, our company specializes in using blockchain technology to..."
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <div
+        class="font-bold"
+      >
+        Business Tagline
+      </div>
+      <div
+        class="text-sm"
+      >
+        This will be displayed below the project title.
+      </div>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        name="PUBLIC_business_tagline"
+        placeholder="e.g. Creating a sustainable future with blockchain"
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <div
+        class="font-bold"
+      >
+        Year of creation of the project/company
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_year_creation"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_year_creation"
+            role="button"
+            tabindex="0"
+          >
+            2017
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_year_creation"
+            placeholder="Please select one"
+            tabindex="-1"
+            value="2017"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Name of Founders
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_founder_names_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_founder_names_list"
+              name="PUBLIC_founder_names_list"
+              placeholder="e.g. "John Doe", "CEO"; "Jane Doe", "CTO""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_founder_names_list-helper-text"
+          >
+            Founders only. Please respect this formatting -&gt; "Name", "Tittle"; "Name", Tittle"
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Headquarter city
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_primary_headquarter_city"
+              name="PUBLIC_primary_headquarter_city"
+              placeholder="e.g. San Francisco"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Headquarter country
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_primary_headquarter_country"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_primary_headquarter_country"
+            role="button"
+            tabindex="0"
+          >
+            Italy
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_primary_headquarter_country"
+            placeholder="Please select one"
+            tabindex="-1"
+            value="Italy"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="font-bold"
+      >
+        Servicing Areas
+      </div>
+      <div
+        class="text-sm"
+      >
+        
+            You may have a headquarter in a given City/Country but have active local projects or implementations in other countries. Select the countries where you have specific local activities. Select "All [Region]" (i.e. All Eastern Africa) if your work is region wide. Select Distributed/Global if you act purely digitally.
+          
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="PUBLIC_servicing_area-label PUBLIC_servicing_area"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="PUBLIC_servicing_area"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_servicing_area"
+            placeholder="Please select your servicing areas"
+            tabindex="-1"
+            value="Syrian,Lebanon,Pakistan,Jordan"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="font-bold"
+      >
+        Organization type
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_organization_type"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_organization_type"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mr-2 css-j2ob3e-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+              >
+                Private-Public-Partnership
+              </span>
+            </div>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_organization_type"
+            placeholder="Please select all that apply"
+            tabindex="-1"
+            value="Private-Public-Partnership"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Sponsor & partners
+        </div>
+        <div
+          class="text-sm"
+        >
+          Feel free to name notable sponsors and partners involved in the project/organization.
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_sponsors_partners_list"
+              name="PUBLIC_sponsors_partners_list"
+              placeholder="e.g. Microsoft, IBM"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Project Links
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_video_url"
+            id="PUBLIC_video_url-label"
+          >
+            Add the url of the most relevant project video
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_video_url"
+              name="PUBLIC_video_url"
+              placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Add the url of the most relevant project video
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_white_paper_url"
+            id="PUBLIC_white_paper_url-label"
+          >
+            White Paper Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_white_paper_url"
+              name="PUBLIC_white_paper_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  White Paper Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_twitter_url"
+            id="PUBLIC_twitter_url-label"
+          >
+            Twitter Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_twitter_url"
+              name="PUBLIC_twitter_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Twitter Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_facebook_url"
+            id="PUBLIC_facebook_url-label"
+          >
+            Facebook Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_facebook_url"
+              name="PUBLIC_facebook_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Facebook Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_linkedin_url"
+            id="PUBLIC_linkedin_url-label"
+          >
+            Linkedin Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_linkedin_url"
+              name="PUBLIC_linkedin_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Linkedin Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_discord_url"
+            id="PUBLIC_discord_url-label"
+          >
+            Discord Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_discord_url"
+              name="PUBLIC_discord_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Discord Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_github_url"
+            id="PUBLIC_github_url-label"
+          >
+            Github Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_github_url"
+              name="PUBLIC_github_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Github Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_coinmarketcap_url"
+            id="PUBLIC_coinmarketcap_url-label"
+          >
+            Coinmarketcap Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_coinmarketcap_url"
+              name="PUBLIC_coinmarketcap_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Coinmarketcap Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for="PUBLIC_other_links_list"
+            id="PUBLIC_other_links_list-label"
+          >
+            Other links
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_other_links_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_other_links_list"
+              name="PUBLIC_other_links_list"
+              placeholder="e.g. https://link1.com, https://link2.com"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-14lo706"
+              >
+                <span>
+                  Other links
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_other_links_list-helper-text"
+          >
+            Paste here other related articles talking about the project, if relevant. several articles possible. Comma separated.
+          </p>
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth mt-10 css-9mgopn-MuiDivider-root"
+      />
+      <p
+        class="font-bold text-xl mt-10"
+      >
+        Technology
+      </p>
+      <div
+        class="font-bold"
+      >
+        Blockchain Type
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_blockchain_type"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_blockchain_type"
+            role="button"
+            tabindex="0"
+          >
+            Private
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_blockchain_type"
+            placeholder="Please select one"
+            tabindex="-1"
+            value="Private"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="font-bold"
+      >
+        Blockchain platform(s)
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_blockchain_technology"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_blockchain_technology"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault mr-2 css-j2ob3e-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelSmall css-wjsjww-MuiChip-label"
+              >
+                Ethereum
+              </span>
+            </div>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_blockchain_technology"
+            placeholder="Please select all that apply"
+            tabindex="-1"
+            value="Ethereum"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Token Ticker
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_token_ticker-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_token_ticker"
+              name="PUBLIC_token_ticker"
+              placeholder="e.g. BTC"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_token_ticker-helper-text"
+          >
+            Only capital letters
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Project Logo URL
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_logo_url-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_logo_url"
+              name="PUBLIC_logo_url"
+              placeholder="e.g. https://yourwebsite.com/logo.png"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_logo_url-helper-text"
+          >
+            When inputting a URL for a logo, please use an image URL from an open platform or a publicly accessible Google Drive URL to ensure visibility. Ensure that the URL leads to the desired logo image.
+          </p>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        PB Partner Tag
+      </div>
+      <div
+        class="text-sm"
+      >
+        We are helping our partners create sub-directories within our DB. If you are submitting a project as part of a PB Partner list, write the “PB Partner tag” here. If you are not aware or not sure, simply keep empty.
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_pb_partner_tag"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_pb_partner_tag"
+            role="button"
+            tabindex="0"
+          />
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_pb_partner_tag"
+            placeholder="e.g. PBPT1"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth mt-10 css-9mgopn-MuiDivider-root"
+      />
+      <p
+        class="font-bold text-xl mt-10"
+      >
+        About you
+      </p>
+      <p
+        class="italic text-sm mb-5"
+      >
+        (this data will be used by PositiveBlockchain only, wont be visible nor shared)
+      </p>
+      <div
+        class="font-bold"
+      >
+        Are you the project owner or working for this project?
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-is_project_owner"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-is_project_owner"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="is_project_owner"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Your name *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_name"
+              name="submitted_by_name"
+              placeholder="e.g. John Doe"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Your email *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_email"
+              name="submitted_by_email"
+              placeholder="e.g. john.doe@example.com"
+              required=""
+              type="email"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Newsletter
+      </div>
+      <div
+        class="text-sm"
+      >
+        Do you want to receive our newsletter (project updates, new projects listed, interviews of blockchain for good entrepreneurs, etc..)?
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-should_receive_newsletter"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-should_receive_newsletter"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="should_receive_newsletter"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth my-5 css-9mgopn-MuiDivider-root"
+      />
+      <div
+        class="mb-10"
+      >
+        <div
+          class="font-bold mb-4"
+        >
+          Data privacy *
+        </div>
+        <div
+          class="flex items-start text-sm"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium mr-4 -mt-2 -ml-3 css-1oakzvg-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="agrees_to_data_privacy_agreement"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </span>
+          <div
+            class="text-sm"
+          >
+            I understand that the information above can be used by PositiveBlockchain and also published on http://positiveblockchain.io. You can request to correct, remove or block incorrect data by sending an email to hello@positiveblockchain.io
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Anything else to add?
+      </div>
+      <p>
+        Got any suggestions to improve this form? Questions or doubts? Let us know!
+      </p>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        name="additional_comments"
+        placeholder="Anything else to add?"
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium bg-blue-500 css-sghohy-MuiButtonBase-root-MuiButton-root"
+        disabled=""
+        tabindex="-1"
+        type="submit"
+      >
+        SUBMIT
+      </button>
+      <p
+        class="text-sm italics mt-5"
+      >
+        Need help? Get in touch
+         
+        <a
+          class="text-brand-link"
+          href="mailto:hello@positiveblockchain.io"
+          target="_blank"
+        >
+          hello@positiveblockchain.io
+        </a>
+      </p>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`<ProjectSubmissionForm /> it should render and match snapshot without errors for newProjectProps 1`] = `
+<div>
+  <form
+    class="w-full p-5"
+    data-testid="project-submission-form"
+  >
+    <div
+      class="MuiFormControl-root w-full flex flex-col gap-4 css-1nrlq1o-MuiFormControl-root"
+    >
+      <p
+        class="font-bold text-xl mt-10"
+      >
+        About the project
+      </p>
+      <div
+        class="font-bold"
+      >
+        Is the project a PositiveBlockchain project?
+      </div>
+      <div
+        class="text-sm"
+      >
+        This means you have a strong aim at creating a positive social or environmental impact and solve some of our world’s burning problems (SDGs) through the use of blockchain and DLTs. We don't intend to list the entire blockchain ecosystem, but rather have a focus on projects committed to the SDGs. Note: the project should be focusing on developing or implementing a concrete blockchain solution.
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-is_positive_blockchain_project"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-is_positive_blockchain_project"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="is_positive_blockchain_project"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Project name *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_project_name-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_project_name"
+              maxlength="50"
+              name="PUBLIC_project_name"
+              placeholder="e.g. "PositiveBlockchain""
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_project_name-helper-text"
+          >
+            50 characters max
+          </p>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Is the project Active? *
+      </div>
+      <div
+        class="text-sm"
+      >
+        The database also includes relevant projects which may be aborted or don’t use blockchain any longer.
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          required=""
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_active"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_active"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_active"
+            placeholder="Please select one"
+            required=""
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Your website *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_website"
+              name="PUBLIC_website"
+              placeholder="e.g. https://positiveblockchain.io"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Categories
+      </div>
+      <div
+        class="flex w-full flex-col gap-3"
+      >
+        <div
+          class="w-full"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
+          >
+            Primary Category
+          </span>
+          <div
+            class="w-full flex"
+          >
+            <div
+              class="w-full gap-3 flex"
+            >
+              <div
+                class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+              >
+                <div
+                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                >
+                  <div
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                    aria-labelledby="category-label mui-component-select-category_1"
+                    class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                    id="mui-component-select-category_1"
+                    role="button"
+                    tabindex="0"
+                  >
+                    Select a category
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    aria-invalid="false"
+                    class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+                    name="category_1"
+                    tabindex="-1"
+                    value=""
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+                    data-testid="ArrowDropDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                  <fieldset
+                    aria-hidden="true"
+                    class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                  >
+                    <legend
+                      class="css-ihdtdm"
+                    >
+                      <span
+                        class="notranslate"
+                      >
+                        ​
+                      </span>
+                    </legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
+        >
+          Additional categories
+        </span>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium text-green-500 css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          + Add Category
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Short description *
+      </div>
+      <div
+        class="text-sm"
+      >
+        Please write a short description in 1-2 sentences telling precisely what you do.
+      </div>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        maxlength="320"
+        name="PUBLIC_description_short_value_proposition_in_a_tweet"
+        placeholder="e.g. We utilize blockchain technology to create sustainable supply chains."
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <div
+        class="font-bold"
+      >
+        Long description
+      </div>
+      <div
+        class="text-sm"
+      >
+        Feel free to use this to detail your activity and mention figures, KPIs, partners, notable facts about the project and its impact.
+      </div>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        name="PUBLIC_long_description"
+        placeholder="e.g. Founded in 2021, our company specializes in using blockchain technology to..."
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <div
+        class="font-bold"
+      >
+        Business Tagline
+      </div>
+      <div
+        class="text-sm"
+      >
+        This will be displayed below the project title.
+      </div>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        name="PUBLIC_business_tagline"
+        placeholder="e.g. Creating a sustainable future with blockchain"
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <div
+        class="font-bold"
+      >
+        Year of creation of the project/company
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_year_creation"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_year_creation"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_year_creation"
+            placeholder="Please select one"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Name of Founders
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_founder_names_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_founder_names_list"
+              name="PUBLIC_founder_names_list"
+              placeholder="e.g. "John Doe", "CEO"; "Jane Doe", "CTO""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_founder_names_list-helper-text"
+          >
+            Founders only. Please respect this formatting -&gt; "Name", "Tittle"; "Name", Tittle"
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Headquarter city
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_primary_headquarter_city"
+              name="PUBLIC_primary_headquarter_city"
+              placeholder="e.g. San Francisco"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Headquarter country
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_primary_headquarter_country"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_primary_headquarter_country"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_primary_headquarter_country"
+            placeholder="Please select one"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="font-bold"
+      >
+        Servicing Areas
+      </div>
+      <div
+        class="text-sm"
+      >
+        
+            You may have a headquarter in a given City/Country but have active local projects or implementations in other countries. Select the countries where you have specific local activities. Select "All [Region]" (i.e. All Eastern Africa) if your work is region wide. Select Distributed/Global if you act purely digitally.
+          
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="PUBLIC_servicing_area-label PUBLIC_servicing_area"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="PUBLIC_servicing_area"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_servicing_area"
+            placeholder="Please select your servicing areas"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="font-bold"
+      >
+        Organization type
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_organization_type"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_organization_type"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_organization_type"
+            placeholder="Please select all that apply"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Sponsor & partners
+        </div>
+        <div
+          class="text-sm"
+        >
+          Feel free to name notable sponsors and partners involved in the project/organization.
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_sponsors_partners_list"
+              name="PUBLIC_sponsors_partners_list"
+              placeholder="e.g. Microsoft, IBM"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Project Links
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_video_url"
+            id="PUBLIC_video_url-label"
+          >
+            Add the url of the most relevant project video
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_video_url"
+              name="PUBLIC_video_url"
+              placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Add the url of the most relevant project video
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_white_paper_url"
+            id="PUBLIC_white_paper_url-label"
+          >
+            White Paper Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_white_paper_url"
+              name="PUBLIC_white_paper_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  White Paper Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_twitter_url"
+            id="PUBLIC_twitter_url-label"
+          >
+            Twitter Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_twitter_url"
+              name="PUBLIC_twitter_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Twitter Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_facebook_url"
+            id="PUBLIC_facebook_url-label"
+          >
+            Facebook Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_facebook_url"
+              name="PUBLIC_facebook_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Facebook Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_linkedin_url"
+            id="PUBLIC_linkedin_url-label"
+          >
+            Linkedin Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_linkedin_url"
+              name="PUBLIC_linkedin_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Linkedin Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_discord_url"
+            id="PUBLIC_discord_url-label"
+          >
+            Discord Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_discord_url"
+              name="PUBLIC_discord_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Discord Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_github_url"
+            id="PUBLIC_github_url-label"
+          >
+            Github Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_github_url"
+              name="PUBLIC_github_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Github Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_coinmarketcap_url"
+            id="PUBLIC_coinmarketcap_url-label"
+          >
+            Coinmarketcap Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_coinmarketcap_url"
+              name="PUBLIC_coinmarketcap_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Coinmarketcap Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_other_links_list"
+            id="PUBLIC_other_links_list-label"
+          >
+            Other links
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_other_links_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_other_links_list"
+              name="PUBLIC_other_links_list"
+              placeholder="e.g. https://link1.com, https://link2.com"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Other links
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_other_links_list-helper-text"
+          >
+            Paste here other related articles talking about the project, if relevant. several articles possible. Comma separated.
+          </p>
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth mt-10 css-9mgopn-MuiDivider-root"
+      />
+      <p
+        class="font-bold text-xl mt-10"
+      >
+        Technology
+      </p>
+      <div
+        class="font-bold"
+      >
+        Blockchain Type
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_blockchain_type"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_blockchain_type"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_blockchain_type"
+            placeholder="Please select one"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="font-bold"
+      >
+        Blockchain platform(s)
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_blockchain_technology"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_blockchain_technology"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_blockchain_technology"
+            placeholder="Please select all that apply"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Token Ticker
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_token_ticker-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_token_ticker"
+              name="PUBLIC_token_ticker"
+              placeholder="e.g. BTC"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_token_ticker-helper-text"
+          >
+            Only capital letters
+          </p>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Project Logo URL
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_logo_url-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_logo_url"
+              name="PUBLIC_logo_url"
+              placeholder="e.g. https://yourwebsite.com/logo.png"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_logo_url-helper-text"
+          >
+            When inputting a URL for a logo, please use an image URL from an open platform or a publicly accessible Google Drive URL to ensure visibility. Ensure that the URL leads to the desired logo image.
+          </p>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        PB Partner Tag
+      </div>
+      <div
+        class="text-sm"
+      >
+        We are helping our partners create sub-directories within our DB. If you are submitting a project as part of a PB Partner list, write the “PB Partner tag” here. If you are not aware or not sure, simply keep empty.
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-PUBLIC_pb_partner_tag"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-PUBLIC_pb_partner_tag"
+            role="button"
+            tabindex="0"
+          />
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="PUBLIC_pb_partner_tag"
+            placeholder="e.g. PBPT1"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth mt-10 css-9mgopn-MuiDivider-root"
+      />
+      <p
+        class="font-bold text-xl mt-10"
+      >
+        About you
+      </p>
+      <p
+        class="italic text-sm mb-5"
+      >
+        (this data will be used by PositiveBlockchain only, wont be visible nor shared)
+      </p>
+      <div
+        class="font-bold"
+      >
+        Are you the project owner or working for this project?
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-is_project_owner"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-is_project_owner"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="is_project_owner"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Your name *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_name"
+              name="submitted_by_name"
+              placeholder="e.g. John Doe"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="font-bold"
+        >
+          Your email *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_email"
+              name="submitted_by_email"
+              placeholder="e.g. john.doe@example.com"
+              required=""
+              type="email"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Newsletter
+      </div>
+      <div
+        class="text-sm"
+      >
+        Do you want to receive our newsletter (project updates, new projects listed, interviews of blockchain for good entrepreneurs, etc..)?
+      </div>
+      <div
+        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+      >
+        <div
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        >
+          <div
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-labelledby="mui-component-select-should_receive_newsletter"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-component-select-should_receive_newsletter"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="notranslate"
+            >
+              ​
+            </span>
+          </div>
+          <input
+            aria-hidden="true"
+            aria-invalid="false"
+            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            name="should_receive_newsletter"
+            tabindex="-1"
+            value=""
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
+            data-testid="ArrowDropDownIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-ihdtdm"
+            >
+              <span
+                class="notranslate"
+              >
+                ​
+              </span>
+            </legend>
+          </fieldset>
+        </div>
+        <p
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+        />
+      </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth my-5 css-9mgopn-MuiDivider-root"
+      />
+      <div
+        class="mb-10"
+      >
+        <div
+          class="font-bold mb-4"
+        >
+          Data privacy *
+        </div>
+        <div
+          class="flex items-start text-sm"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium mr-4 -mt-2 -ml-3 css-1oakzvg-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="agrees_to_data_privacy_agreement"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </span>
+          <div
+            class="text-sm"
+          >
+            I understand that the information above can be used by PositiveBlockchain and also published on http://positiveblockchain.io. You can request to correct, remove or block incorrect data by sending an email to hello@positiveblockchain.io
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-bold"
+      >
+        Anything else to add?
+      </div>
+      <p>
+        Got any suggestions to improve this form? Questions or doubts? Let us know!
+      </p>
+      <textarea
+        class="border border-gray-300 rounded-md p-4"
+        name="additional_comments"
+        placeholder="Anything else to add?"
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="border border-gray-300 rounded-md p-4"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px;"
+        tabindex="-1"
+      />
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium bg-blue-500 css-sghohy-MuiButtonBase-root-MuiButton-root"
+        disabled=""
+        tabindex="-1"
+        type="submit"
+      >
+        SUBMIT
+      </button>
+      <p
+        class="text-sm italics mt-5"
+      >
+        Need help? Get in touch
+         
+        <a
+          class="text-brand-link"
+          href="mailto:hello@positiveblockchain.io"
+          target="_blank"
+        >
+          hello@positiveblockchain.io
+        </a>
+      </p>
+    </div>
+  </form>
+</div>
+`;

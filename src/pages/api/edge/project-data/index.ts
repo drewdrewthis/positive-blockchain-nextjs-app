@@ -1,4 +1,4 @@
-import { NextRequest , NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { config as configuration } from "@/configuration";
 
@@ -18,7 +18,7 @@ if (!apiKey) {
   throw new Error("API_KEY is not defined");
 }
 
-export default async function handler(req: NextRequest, res: NextResponse) {
+export default async function handler(req: NextRequest, _res: NextResponse) {
   try {
     // Fetch projects
     const allProjects = await fetchProjects(req);

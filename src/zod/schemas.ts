@@ -69,3 +69,5 @@ export const filtersSchema = z.object({
   servicing_region: z.array(z.string()),
   blockchain_technology: z.array(z.string()),
 });
+
+export const uploadProjectScema = z.array(z.array(z.string()));

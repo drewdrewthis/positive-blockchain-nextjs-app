@@ -8,7 +8,6 @@ import Routes from "@/lib/Routes";
 
 import styles from "./styles.module.scss";
 
-
 function Footer() {
   return (
     <div className="w-full flex-col justify-center">

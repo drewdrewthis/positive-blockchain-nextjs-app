@@ -1,0 +1,1294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fetchRegionData should return the region data 1`] = `
+[
+  {
+    "country": "Antarctica",
+    "hqCountry": "Afghanistan",
+    "subregion": "Antarctica",
+  },
+  {
+    "country": "All Carribean",
+    "hqCountry": "Aland Islands",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Anguilla",
+    "hqCountry": "Albania",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Antigua and Barbuda",
+    "hqCountry": "Algeria",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Aruba",
+    "hqCountry": "Andorra",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Bahamas",
+    "hqCountry": "Angola",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Barbados",
+    "hqCountry": "Anguilla",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Cayman Islands",
+    "hqCountry": "Antarctica",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Cuba",
+    "hqCountry": "Antigua and Barbuda",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Curaçao",
+    "hqCountry": "Argentina",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Dominica",
+    "hqCountry": "Armenia",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Dominican Republic",
+    "hqCountry": "Aruba",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Grenada",
+    "hqCountry": "Australia",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Guadeloupe",
+    "hqCountry": "Austria",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Haiti",
+    "hqCountry": "Azerbaijan",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Jamaica",
+    "hqCountry": "Bahamas",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Martinique",
+    "hqCountry": "Bahrain",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Montserrat",
+    "hqCountry": "Barbados",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Puerto Rico",
+    "hqCountry": "Belarus",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Saint Barthelemy",
+    "hqCountry": "Belgium",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Saint Kitts and Nevis",
+    "hqCountry": "Belize",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Saint Lucia",
+    "hqCountry": "Bengladesh",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Saint Martin",
+    "hqCountry": "Benin",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Saint Vincent and the Grenadines",
+    "hqCountry": "Bermuda",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "hqCountry": "Bhutan",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Turks and Caicos Islands",
+    "hqCountry": "Bolivia",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "Virgin Islands",
+    "hqCountry": "Bosnia and Herzegovina",
+    "subregion": "Carribean",
+  },
+  {
+    "country": "All Central Africa",
+    "hqCountry": "Botswana",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "Angola",
+    "hqCountry": "Bouvet Island",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "Cameroon",
+    "hqCountry": "Brazil",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "Central African Republic",
+    "hqCountry": "Brunei Darussalam",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "Chad",
+    "hqCountry": "Bulgaria",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "Republic of Congo",
+    "hqCountry": "Burkina Faso",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "Equatorial Guinea",
+    "hqCountry": "Burundi",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "Gabon",
+    "hqCountry": "Cambodia",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "São Tomé and Príncipe",
+    "hqCountry": "Cameroon",
+    "subregion": "Central Africa",
+  },
+  {
+    "country": "All Central America",
+    "hqCountry": "Canada",
+    "subregion": "Central America",
+  },
+  {
+    "country": "Belize",
+    "hqCountry": "Canary Islands",
+    "subregion": "Central America",
+  },
+  {
+    "country": "Costa Rica",
+    "hqCountry": "Cape Verde",
+    "subregion": "Central America",
+  },
+  {
+    "country": "El Salvador",
+    "hqCountry": "Cayman Islands",
+    "subregion": "Central America",
+  },
+  {
+    "country": "Guatemala",
+    "hqCountry": "Central African Republic",
+    "subregion": "Central America",
+  },
+  {
+    "country": "Honduras",
+    "hqCountry": "Ceuta",
+    "subregion": "Central America",
+  },
+  {
+    "country": "Mexico",
+    "hqCountry": "Chad",
+    "subregion": "Central America",
+  },
+  {
+    "country": "Nicaragua",
+    "hqCountry": "Chile",
+    "subregion": "Central America",
+  },
+  {
+    "country": "All Central Asia",
+    "hqCountry": "China",
+    "subregion": "Central Asia",
+  },
+  {
+    "country": "Afghanistan",
+    "hqCountry": "Colombia",
+    "subregion": "Central Asia",
+  },
+  {
+    "country": "Kazakhstan",
+    "hqCountry": "Comoros",
+    "subregion": "Central Asia",
+  },
+  {
+    "country": "Kyrgyzstan",
+    "hqCountry": "Cook Islands",
+    "subregion": "Central Asia",
+  },
+  {
+    "country": "Tajikistan",
+    "hqCountry": "Costa Rica",
+    "subregion": "Central Asia",
+  },
+  {
+    "country": "Turkmenistan",
+    "hqCountry": "Croatia",
+    "subregion": "Central Asia",
+  },
+  {
+    "country": "Uzbekistan",
+    "hqCountry": "Cuba",
+    "subregion": "Central Asia",
+  },
+  {
+    "country": "All Central Europe",
+    "hqCountry": "Curaçao",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Austria",
+    "hqCountry": "Cyprus",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Czech Republic",
+    "hqCountry": "Czech Republic",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Germany",
+    "hqCountry": "Denmark",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Hungary",
+    "hqCountry": "Distributed/Global",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Liechtenstein",
+    "hqCountry": "Djibouti",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Poland",
+    "hqCountry": "Dominica",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Slovakia",
+    "hqCountry": "Dominican Republic",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Slovenia",
+    "hqCountry": "Ecuador",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Switzerland",
+    "hqCountry": "Egypt",
+    "subregion": "Central Europe",
+  },
+  {
+    "country": "Distributed/Global",
+    "hqCountry": "El Salvador",
+    "subregion": "Distributed/Global",
+  },
+  {
+    "country": "All Easter Africa",
+    "hqCountry": "Equatorial Guinea",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Burundi",
+    "hqCountry": "Eritrea",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Comoros",
+    "hqCountry": "Estonia",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Djibouti",
+    "hqCountry": "Eswatini (Swaziland)",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Eritrea",
+    "hqCountry": "Ethiopia",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Ethiopia",
+    "hqCountry": "Falkland Islands (Malvinas)",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "French Southern Territories",
+    "hqCountry": "Faroe Islands",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Kenya",
+    "hqCountry": "Fiji",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Madagascar",
+    "hqCountry": "Finland",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Malawi",
+    "hqCountry": "France",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Mauritius",
+    "hqCountry": "French Guiana",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Mayotte",
+    "hqCountry": "French Polynesia",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Mozambique",
+    "hqCountry": "French Southern Territories",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Reunion",
+    "hqCountry": "Gabon",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Rwanda",
+    "hqCountry": "Gambia",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Seychelles",
+    "hqCountry": "Georgia",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Somalia",
+    "hqCountry": "Germany",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "South Sudan",
+    "hqCountry": "Ghana",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Tanzania",
+    "hqCountry": "Gibraltar",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Uganda",
+    "hqCountry": "Greece",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Zambia",
+    "hqCountry": "Greenland",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "Zimbabwe",
+    "hqCountry": "Grenada",
+    "subregion": "Eastern Africa",
+  },
+  {
+    "country": "All Eastern Asia",
+    "hqCountry": "Guadeloupe",
+    "subregion": "Eastern Asia",
+  },
+  {
+    "country": "China",
+    "hqCountry": "Guatemala",
+    "subregion": "Eastern Asia",
+  },
+  {
+    "country": "Japan",
+    "hqCountry": "Guernsey",
+    "subregion": "Eastern Asia",
+  },
+  {
+    "country": "Mongolia",
+    "hqCountry": "Guinea",
+    "subregion": "Eastern Asia",
+  },
+  {
+    "country": "North Korea",
+    "hqCountry": "Guinea-Bissau",
+    "subregion": "Eastern Asia",
+  },
+  {
+    "country": "South Korea",
+    "hqCountry": "Guyana",
+    "subregion": "Eastern Asia",
+  },
+  {
+    "country": "Taiwan",
+    "hqCountry": "Haiti",
+    "subregion": "Eastern Asia",
+  },
+  {
+    "country": "All Eastern Europe",
+    "hqCountry": "Holy See (Vatican City State)",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Armenia",
+    "hqCountry": "Honduras",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Belarus",
+    "hqCountry": "Hong Kong",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Georgia",
+    "hqCountry": "Hungary",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Macedonia",
+    "hqCountry": "Iceland",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Moldova, Republic of",
+    "hqCountry": "India",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Montenegro",
+    "hqCountry": "Indonesia",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Romania",
+    "hqCountry": "Iran",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Russia",
+    "hqCountry": "Iraq",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Serbia",
+    "hqCountry": "Ireland",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "Ukraine",
+    "hqCountry": "Isle of Man",
+    "subregion": "Eastern Europe",
+  },
+  {
+    "country": "All Middle East",
+    "hqCountry": "Israel",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Bahrain",
+    "hqCountry": "Italy",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Iran",
+    "hqCountry": "Ivory Coast",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Iraq",
+    "hqCountry": "Jamaica",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Israel",
+    "hqCountry": "Japan",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Jordan",
+    "hqCountry": "Jersey",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Kuwait",
+    "hqCountry": "Jordan",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Lebanon",
+    "hqCountry": "Kazakhstan",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Oman",
+    "hqCountry": "Kenya",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Palestinian Territory",
+    "hqCountry": "Kiribati",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Qatar",
+    "hqCountry": "Kosovo",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Saudi Arabia",
+    "hqCountry": "Kuwait",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "United Arab Emirates",
+    "hqCountry": "Kyrgyzstan",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "Yemen",
+    "hqCountry": "Laos",
+    "subregion": "Middle East",
+  },
+  {
+    "country": "All North America",
+    "hqCountry": "Latvia",
+    "subregion": "North America",
+  },
+  {
+    "country": "Canada",
+    "hqCountry": "Lebanon",
+    "subregion": "North America",
+  },
+  {
+    "country": "Saint Pierre and Miquelon",
+    "hqCountry": "Lesotho",
+    "subregion": "North America",
+  },
+  {
+    "country": "United States",
+    "hqCountry": "Liberia",
+    "subregion": "North America",
+  },
+  {
+    "country": "All Northern Africa",
+    "hqCountry": "Libya",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Algeria",
+    "hqCountry": "Liechtenstein",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Canary Islands",
+    "hqCountry": "Lithuania",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Ceuta",
+    "hqCountry": "Luxembourg",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Egypt",
+    "hqCountry": "Macau",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Libya",
+    "hqCountry": "Macedonia",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Madeira",
+    "hqCountry": "Madagascar",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Melilla",
+    "hqCountry": "Madeira",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Morocco",
+    "hqCountry": "Malawi",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Sudan",
+    "hqCountry": "Malaysia",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Tunisia",
+    "hqCountry": "Maldives",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "Western Sahara",
+    "hqCountry": "Mali",
+    "subregion": "Northern Africa",
+  },
+  {
+    "country": "All Northern Europe",
+    "hqCountry": "Malta",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Aland Islands",
+    "hqCountry": "Marshall Islands",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Denmark",
+    "hqCountry": "Martinique",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Estonia",
+    "hqCountry": "Mauritania",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Faroe Islands",
+    "hqCountry": "Mauritius",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Finland",
+    "hqCountry": "Mayotte",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Greenland",
+    "hqCountry": "Melilla",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Guernsey",
+    "hqCountry": "Mexico",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Iceland",
+    "hqCountry": "Micronesia, Federated States of",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Isle of Man",
+    "hqCountry": "Moldova, Republic of",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Jersey",
+    "hqCountry": "Monaco",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Latvia",
+    "hqCountry": "Mongolia",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Lithuania",
+    "hqCountry": "Montenegro",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Norway",
+    "hqCountry": "Montserrat",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Svalbard and Jan Mayen",
+    "hqCountry": "Morocco",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "Sweden",
+    "hqCountry": "Mozambique",
+    "subregion": "Northern Europe",
+  },
+  {
+    "country": "All Oceania",
+    "hqCountry": "Myanmar (Burma)",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Australia",
+    "hqCountry": "Namibia",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Cook Islands",
+    "hqCountry": "Nauru",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Fiji",
+    "hqCountry": "Nepal",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "French Polynesia",
+    "hqCountry": "Netherlands",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Kiribati",
+    "hqCountry": "New Caledonia",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Marshall Islands",
+    "hqCountry": "New Zealand",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Micronesia, Federated States of",
+    "hqCountry": "Nicaragua",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Nauru",
+    "hqCountry": "Niger",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "New Caledonia",
+    "hqCountry": "Nigeria",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "New Zealand",
+    "hqCountry": "North Korea",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Papua New Guinea",
+    "hqCountry": "Norway",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Samoa",
+    "hqCountry": "Oman",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Solomon Islands",
+    "hqCountry": "Pakistan",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Tonga",
+    "hqCountry": "Palestinian Territory",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Tuvalu",
+    "hqCountry": "Panama",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Vanuatu",
+    "hqCountry": "Papua New Guinea",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "Wallis and Futuna",
+    "hqCountry": "Paraguay",
+    "subregion": "Oceania",
+  },
+  {
+    "country": "All South America",
+    "hqCountry": "Peru",
+    "subregion": "South America",
+  },
+  {
+    "country": "Argentina",
+    "hqCountry": "Philippines",
+    "subregion": "South America",
+  },
+  {
+    "country": "Bermuda",
+    "hqCountry": "Poland",
+    "subregion": "South America",
+  },
+  {
+    "country": "Bolivia",
+    "hqCountry": "Portugal",
+    "subregion": "South America",
+  },
+  {
+    "country": "Bouvet Island",
+    "hqCountry": "Puerto Rico",
+    "subregion": "South America",
+  },
+  {
+    "country": "Brazil",
+    "hqCountry": "Qatar",
+    "subregion": "South America",
+  },
+  {
+    "country": "Chile",
+    "hqCountry": "Republic of Congo",
+    "subregion": "South America",
+  },
+  {
+    "country": "Colombia",
+    "hqCountry": "Reunion",
+    "subregion": "South America",
+  },
+  {
+    "country": "Ecuador",
+    "hqCountry": "Romania",
+    "subregion": "South America",
+  },
+  {
+    "country": "Falkland Islands (Malvinas)",
+    "hqCountry": "Russia",
+    "subregion": "South America",
+  },
+  {
+    "country": "French Guiana",
+    "hqCountry": "Rwanda",
+    "subregion": "South America",
+  },
+  {
+    "country": "Guyana",
+    "hqCountry": "Saint Barthelemy",
+    "subregion": "South America",
+  },
+  {
+    "country": "Panama",
+    "hqCountry": "Saint Helena, Ascension and Tristan da Cunha",
+    "subregion": "South America",
+  },
+  {
+    "country": "Paraguay",
+    "hqCountry": "Saint Kitts and Nevis",
+    "subregion": "South America",
+  },
+  {
+    "country": "Peru",
+    "hqCountry": "Saint Lucia",
+    "subregion": "South America",
+  },
+  {
+    "country": "South Georgia and the South Sandwich Islands",
+    "hqCountry": "Saint Martin",
+    "subregion": "South America",
+  },
+  {
+    "country": "Suriname",
+    "hqCountry": "Saint Pierre and Miquelon",
+    "subregion": "South America",
+  },
+  {
+    "country": "Uruguay",
+    "hqCountry": "Saint Vincent and the Grenadines",
+    "subregion": "South America",
+  },
+  {
+    "country": "Venezuela",
+    "hqCountry": "Samoa",
+    "subregion": "South America",
+  },
+  {
+    "country": "All South-Eastern Europe",
+    "hqCountry": "San Marino",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "Albania",
+    "hqCountry": "São Tomé and Príncipe",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "hqCountry": "Saudi Arabia",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "Bulgaria",
+    "hqCountry": "Senegal",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "Croatia",
+    "hqCountry": "Serbia",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "Cyprus",
+    "hqCountry": "Seychelles",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "Greece",
+    "hqCountry": "Sierra Leone",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "Kosovo",
+    "hqCountry": "Singapore",
+    "subregion": "South-Eastern Europe",
+  },
+  {
+    "country": "All Southeast Asia",
+    "hqCountry": "Slovakia",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Brunei Darussalam",
+    "hqCountry": "Slovenia",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Cambodia",
+    "hqCountry": "Solomon Islands",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Hong Kong",
+    "hqCountry": "Somalia",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Indonesia",
+    "hqCountry": "South Africa",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Laos",
+    "hqCountry": "South Georgia and the South Sandwich Islands",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Macau",
+    "hqCountry": "South Korea",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Malaysia",
+    "hqCountry": "South Sudan",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Myanmar (Burma)",
+    "hqCountry": "Space",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Philippines",
+    "hqCountry": "Spain",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Singapore",
+    "hqCountry": "Sri Lanka",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Thailand",
+    "hqCountry": "Sudan",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Timor-Leste (East Timor)",
+    "hqCountry": "Suriname",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "Vietnam",
+    "hqCountry": "Svalbard and Jan Mayen",
+    "subregion": "Southeast Asia",
+  },
+  {
+    "country": "All Southern Africa",
+    "hqCountry": "Sweden",
+    "subregion": "Southern Africa",
+  },
+  {
+    "country": "Botswana",
+    "hqCountry": "Switzerland",
+    "subregion": "Southern Africa",
+  },
+  {
+    "country": "Eswatini (Swaziland)",
+    "hqCountry": "Syria",
+    "subregion": "Southern Africa",
+  },
+  {
+    "country": "Lesotho",
+    "hqCountry": "Taiwan",
+    "subregion": "Southern Africa",
+  },
+  {
+    "country": "Namibia",
+    "hqCountry": "Tajikistan",
+    "subregion": "Southern Africa",
+  },
+  {
+    "country": "South Africa",
+    "hqCountry": "Tanzania",
+    "subregion": "Southern Africa",
+  },
+  {
+    "country": "All Southern Asia",
+    "hqCountry": "Thailand",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "Bengladesh",
+    "hqCountry": "Timor-Leste (East Timor)",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "Bhutan",
+    "hqCountry": "Togo",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "India",
+    "hqCountry": "Tonga",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "Maldives",
+    "hqCountry": "Trinidad and Tobago",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "Nepal",
+    "hqCountry": "Tunisia",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "Pakistan",
+    "hqCountry": "Turkey",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "Sri Lanka",
+    "hqCountry": "Turkmenistan",
+    "subregion": "Southern Asia",
+  },
+  {
+    "country": "All Southern Europe",
+    "hqCountry": "Turks and Caicos Islands",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Andorra",
+    "hqCountry": "Tuvalu",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Gibraltar",
+    "hqCountry": "Uganda",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Holy See (Vatican City State)",
+    "hqCountry": "Ukraine",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Italy",
+    "hqCountry": "United Arab Emirates",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Malta",
+    "hqCountry": "United Kingdom",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Portugal",
+    "hqCountry": "United States",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "San Marino",
+    "hqCountry": "Uruguay",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Spain",
+    "hqCountry": "Uzbekistan",
+    "subregion": "Southern Europe",
+  },
+  {
+    "country": "Space",
+    "hqCountry": "Vanuatu",
+    "subregion": "Space",
+  },
+  {
+    "country": "All Western Africa",
+    "hqCountry": "Venezuela",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Benin",
+    "hqCountry": "Vietnam",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Burkina Faso",
+    "hqCountry": "Virgin Islands",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Cape Verde",
+    "hqCountry": "Wales",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Gambia",
+    "hqCountry": "Wallis and Futuna",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Ghana",
+    "hqCountry": "Western Sahara",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Guinea",
+    "hqCountry": "Yemen",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Guinea-Bissau",
+    "hqCountry": "Zambia",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Ivory Coast",
+    "hqCountry": "Zimbabwe",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Liberia",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Mali",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Mauritania",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Niger",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Nigeria",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Saint Helena, Ascension and Tristan da Cunha",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Senegal",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Sierra Leone",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "Togo",
+    "subregion": "Western Africa",
+  },
+  {
+    "country": "All Western Asia",
+    "subregion": "Western Asia",
+  },
+  {
+    "country": "Azerbaijan",
+    "subregion": "Western Asia",
+  },
+  {
+    "country": "Syria",
+    "subregion": "Western Asia",
+  },
+  {
+    "country": "Turkey",
+    "subregion": "Western Asia",
+  },
+  {
+    "country": "All Western Europe",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "Belgium",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "France",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "Ireland",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "Luxembourg",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "Monaco",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "Netherlands",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "United Kingdom",
+    "subregion": "Western Europe",
+  },
+  {
+    "country": "Wales",
+    "subregion": "Western Europe",
+  },
+]
+`;

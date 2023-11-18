@@ -1,5 +1,5 @@
+import { Search } from "@mui/icons-material";
 import SearchIcon from "@mui/icons-material/Search";
-import Search from "@mui/icons-material/Search";
 import { Button, Dialog, Typography, useMediaQuery } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import cx from "classnames";
@@ -8,7 +8,7 @@ import React from "react";
 
 import ProjectFilter from "@/components/ProjectFilter";
 import ProjectGrid from "@/components/ProjectGrid";
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 import { withController } from "@/lib/withContoller";
 
 import Footer from "../partials/Footer/index";

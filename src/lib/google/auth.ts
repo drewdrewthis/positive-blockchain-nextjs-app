@@ -1,6 +1,6 @@
 import { auth } from "google-auth-library";
 
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 
 /**
  * Retrieves the Google authentication client with the required scopes.

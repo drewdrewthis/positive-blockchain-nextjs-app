@@ -1,4 +1,4 @@
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 
 export default class Routes {
   // NextJS app routes
@@ -7,6 +7,7 @@ export default class Routes {
   // PAGES
   static PROJECTS = Routes.BASE_PATH;
   static PROJECTS_API_PAGE = Routes.BASE_PATH + "/projects-api";
+  static PROJECT_SUBMISSION_SUCCESS = "/project-submission-success";
 
   // API
   static API_PATH = "/api";
@@ -20,7 +21,8 @@ export default class Routes {
   // Forms
   static PARTNER_FORM = "https://bit.ly/PBpartner-form";
   static BECOME_A_CONTRIBUTOR = "https://bit.ly/applyPB";
-  static ADD_NEW_PROJECT = "https://forms.gle/jZKsv7sbxJjRu7jFA";
+  static ADD_NEW_PROJECT = Routes.BASE_PATH + "/forms/project-submission";
+  static BULK_UPLOAD = Routes.BASE_PATH + "/bulk-upload";
 
   // WordPress pages
   static HOME = Routes.getExternalRoute("/");
@@ -44,13 +46,24 @@ export default class Routes {
     return `${config.constants.positiveBlockchain.HOST}${path}`;
   }
 
+  static getApiRoute(path: string): string {
+    return `${Routes.API.BASE_PATH}${path}`;
+  }
+
   /**
    * Returns the given path as is.
    * @param path - The path to return.
    * @returns The given path.
    */
-  static getPath(path: string): string {
-    return path;
+  static getRelativeHref(path: string): string {
+    return `${Routes.BASE_PATH}/${path}`;
+  }
+
+  /**
+   * Get project path
+   */
+  static getProjectPath(projectId: string): string {
+    return `/projects/${projectId}`;
   }
 
   /**

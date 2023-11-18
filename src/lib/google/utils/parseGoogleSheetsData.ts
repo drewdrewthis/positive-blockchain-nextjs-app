@@ -1,8 +1,10 @@
 import compact from "lodash/fp/compact";
+import mapKeys from "lodash/fp/mapKeys";
+import omitBy from "lodash/fp/omitBy";
 import uniq from "lodash/fp/uniq";
 import kebabCase from "lodash/kebabCase";
 
-import { projectSchema } from "../../../zod/schemas";
+import { projectSchema } from "@/zod/schemas";
 
 // Define the type for a Project object
 type Project = {
@@ -27,14 +29,20 @@ export function parseGoogleSheetsData(
   const keys = data[keyRowIndex];
   const rows = data.slice(headerRow);
 
+  // Iterate through rows to create a project object (key/value map) for each row
   return rows.map((row) => {
     const projectObj = row.reduce(
       (acc, cell, i) => {
-        const rawKey = keys[i];
-        if (rawKey && isPublic(rawKey)) {
-          const key = stripPublicPrefix(rawKey);
-          acc[key] = formatValue(key, cell);
+        let key = keys[i];
+
+        // Skip if key is empty
+        if (!key) {
+          return acc;
         }
+
+        // Set the value for the key
+        acc[key] = formatValue(key, cell);
+
         return acc;
       },
       {
@@ -42,10 +50,12 @@ export function parseGoogleSheetsData(
       } as Project
     );
 
-    const projectName = projectObj["project_name"] as string;
+    const projectName = projectObj["PUBLIC_project_name"] as string;
 
     if (projectName) {
       projectObj.slug = kebabCase(projectName);
+    } else {
+      console.warn("Project doesn't have a name", projectObj);
     }
 
     // Emit warning if project doesn't match schema
@@ -55,6 +65,20 @@ export function parseGoogleSheetsData(
 
     return projectObj;
   });
+}
+
+/**
+ * Removes private fields from a project object.
+ * A field is considered private if it doesn't start with "PUBLIC_" or if it's the "slug" field.
+ * @param project
+ * @returns
+ */
+export function removePrivateFields(project: Record<string, any>) {
+  return omitBy((_value: any, key: string) => !isPublic(key), project);
+}
+
+export function stripPublicPrefixFromKeys(project: Record<string, any>) {
+  return mapKeys((key) => stripPublicPrefix(key), project);
 }
 
 /**
@@ -72,12 +96,12 @@ function formatValue(key: string, cell: string) {
 }
 
 /**
- * Checks if a string starts with "PUBLIC_".
+ * Checks if a string starts with "PUBLIC_" or if the string is 'slug'.
  * @param str - The string to check.
  * @returns A boolean indicating whether the string starts with "PUBLIC_".
  */
 function isPublic(str: string) {
-  return str.startsWith("PUBLIC_");
+  return str.startsWith("PUBLIC_") || str === "slug";
 }
 
 /**

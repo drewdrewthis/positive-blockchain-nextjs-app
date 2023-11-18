@@ -5,6 +5,8 @@ import upperFirst from "lodash/fp/upperFirst";
 import Image from "next/image";
 import Link from "next/link";
 
+import Routes from "../../lib/Routes";
+
 import styles from "./styles.module.scss";
 
 interface Props {
@@ -27,7 +29,7 @@ interface Props {
 function ProjectGridItem(props: Props) {
   const { description, slug, thumbnailSrc } = props;
   const formattedDescription = upperFirst(description || "");
-  const projectPath = `/${slug}`;
+  const projectPath = Routes.getProjectPath(slug);
 
   return (
     <Grid xs={12} sm={6} md={6} lg={3}>

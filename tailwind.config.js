@@ -8,7 +8,7 @@
  * For MUI (Material-UI) interoperability with Tailwind CSS, visit: https://mui.com/material-ui/guides/interoperability/#tailwind-css
  */
 
-const config = require("./src/configuration.ts");
+const config = require("./src/configuration/config.ts");
 
 // MUI (Material-UI) interoperability configuration
 const muiInterOperability = {
@@ -17,9 +17,9 @@ const muiInterOperability = {
    * Preflight is a set of base styles provided by MUI that reset and normalize CSS across different browsers.
    * Uncomment the line below to enable MUI's Preflight.
    */
-  // corePlugins: {
-  //   preflight: false,
-  // },
+  corePlugins: {
+    // preflight: false,
+  },
   // important: "#__next",
 };
 

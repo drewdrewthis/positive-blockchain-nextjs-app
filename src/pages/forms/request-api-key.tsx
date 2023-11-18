@@ -1,4 +1,4 @@
-import { config } from "../../configuration";
+import { config } from "../../configuration/config";
 import GoogleFormPageTemplate from "../../templates/GoogleFormPageTemplate";
 
 const { api_request_key } = config.constants.google.forms;

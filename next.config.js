@@ -35,11 +35,12 @@ const nextConfig = {
     "lodash",
     "lodash/fp",
     "react",
-    "@emotion/react",
-    "@emotion/styled",
-    "@mui/icons-material",
+    // "@emotion/react", // Breaking the build
+    // "@emotion/styled", // Breaking the build
+    "@mui/system",
     "@mui/material",
-    "@mui",
+    "@mui/icons-material",
+    "@material-ui/icons",
   ],
 
   /**

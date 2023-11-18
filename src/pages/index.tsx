@@ -3,8 +3,8 @@ import type { GetStaticProps } from "next";
 
 import dynamic from "next/dynamic";
 
-import { config } from "@/configuration";
-import { fetchProjectData } from "@/lib/google";
+import { config } from "@/configuration/config";
+import { fetchPublicProjectData } from "@/lib/google";
 import { extractFiltersFromProjectData } from "@/lib/utils";
 
 interface Props {
@@ -20,8 +20,8 @@ function AllProjectPage(props: Props) {
   return <ProjectPageTemplate {...props} />;
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const projectData = await fetchProjectData();
+export const getStaticProps: GetStaticProps = async (_context) => {
+  const projectData = await fetchPublicProjectData();
   const { projects } = config.constants;
   const filters = extractFiltersFromProjectData(projectData as any);
 

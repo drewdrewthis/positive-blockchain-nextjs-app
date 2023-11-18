@@ -118,7 +118,7 @@ function useFilters(props: {
 }): {
   setFilteredData: React.Dispatch<React.SetStateAction<Project[]>>;
   filteredData: Project[];
-  handleFilterUpdate: (filters: any) => void;
+  handleFilterUpdate: (_filters: any) => void;
   filters: FilterGroupProps[];
 } {
   const { projectData, filters } = props;

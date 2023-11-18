@@ -1,4 +1,4 @@
-import { config } from "@/configuration";
+import { config } from "@/configuration/config";
 
 // Extract necessary constants from the configuration
 const {
