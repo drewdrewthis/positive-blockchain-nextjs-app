@@ -4,6 +4,7 @@ import Fuse from "fuse.js";
 
 // Configuration options for Fuse.js
 const options: Fuse.IFuseOptions<Project> = {
+  threshold: 0.1,
   includeScore: true,
   ignoreLocation: true,
   keys: [
