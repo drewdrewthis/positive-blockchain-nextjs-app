@@ -1,6 +1,9 @@
 import type { NextRequest } from "next/server";
+
 import { NextResponse } from "next/server";
+
 import { config as configuration } from "@/configuration";
+
 import Routes from "../../../../lib/Routes";
 
 export const config = {

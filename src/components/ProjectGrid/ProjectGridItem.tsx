@@ -1,10 +1,11 @@
+import { Divider, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
+import cx from "classnames";
+import upperFirst from "lodash/fp/upperFirst";
 import Image from "next/image";
 import Link from "next/link";
-import cx from "classnames";
+
 import styles from "./styles.module.scss";
-import upperFirst from "lodash/fp/upperFirst";
-import { Divider, Typography } from "@mui/material";
 
 interface Props {
   status: string; // The status of the project

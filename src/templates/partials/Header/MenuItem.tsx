@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
-import styles from "./styles.module.scss";
 import cx from "classnames";
+
+import styles from "./styles.module.scss";
 
 export default function MenuItem(props: {
   href: string;

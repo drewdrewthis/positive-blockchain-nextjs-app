@@ -1,11 +1,12 @@
-import { FormProvider, useForm, useFormContext } from "react-hook-form";
-import { convertBooleanMapToArray } from "@/lib/utils";
-import { Checkbox, Collapse, FormControlLabel, FormGroup } from "@mui/material";
-import kebabCase from "lodash/fp/kebabCase";
-import cx from "classnames";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
+import { Checkbox, Collapse, FormControlLabel, FormGroup } from "@mui/material";
+import cx from "classnames";
+import kebabCase from "lodash/fp/kebabCase";
 import { useState } from "react";
+import { FormProvider, useForm, useFormContext } from "react-hook-form";
+
+import { convertBooleanMapToArray } from "@/lib/utils";
 
 export default function CheckboxFilterGroup(props: {
   title: string;

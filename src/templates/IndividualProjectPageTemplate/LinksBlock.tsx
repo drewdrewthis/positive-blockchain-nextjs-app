@@ -1,11 +1,12 @@
-import { Project } from "../../types";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import LanguageIcon from "@mui/icons-material/Language";
-// @ts-ignore - No types available
 import GithubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+// @ts-ignore - No types available
 import cx from "classnames";
+
+import { Project } from "../../types";
 
 export const VALID_FIELDS = [
   "website",

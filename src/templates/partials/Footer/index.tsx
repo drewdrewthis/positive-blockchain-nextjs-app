@@ -1,10 +1,13 @@
+import cx from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Routes from "@/lib/Routes";
-import cx from "classnames";
-import styles from "./styles.module.scss";
+
 import { PB_LOGO } from "@/constants/image-paths";
+import Routes from "@/lib/Routes";
+
+import styles from "./styles.module.scss";
+
 
 function Footer() {
   return (

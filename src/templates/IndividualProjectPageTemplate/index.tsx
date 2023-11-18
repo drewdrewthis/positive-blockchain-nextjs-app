@@ -1,21 +1,25 @@
-import Footer from "../partials/Footer/index";
-import Header from "../partials/Header";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import { Typography } from "@mui/material";
+import pick from "lodash/fp/pick";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import ReactPlayer from "react-player/lazy";
+
 import { withController } from "@/lib/withContoller";
 import { Project } from "@/types";
-import pick from "lodash/fp/pick";
-import ReactPlayer from "react-player/lazy";
+
 import NonSSRWrapper from "../../components/NonSSRWrapper";
-import { Typography } from "@mui/material";
-import Image from "next/image";
+import { extractSdgsFromProject } from "../../lib/utils";
+import Footer from "../partials/Footer/index";
+import Header from "../partials/Header";
+
 import AttributeToInfoBlock from "./AttributeInfoBlock";
+import HeadquartersBlock from "./HeadquartersBlock";
+import InfoBlock from "./InfoBlock";
 import LinksBlock, { VALID_FIELDS } from "./LinksBlock";
 import SDGBlock from "./SDGBlock";
-import { extractSdgsFromProject } from "../../lib/utils";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import InfoBlock from "./InfoBlock";
-import HeadquartersBlock from "./HeadquartersBlock";
-import Link from "next/link";
+
 
 function useController(props: { projectData: Project }) {
   const { projectData } = props;

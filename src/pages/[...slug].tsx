@@ -3,14 +3,18 @@ import type {
   GetServerSidePropsContext,
   PreviewData,
 } from "next";
-import dynamic from "next/dynamic";
+
 import { ParsedUrlQuery } from "querystring";
-import { config as configuration } from "@/configuration";
-import { Project } from "@/types";
+
 import upperFirst from "lodash/fp/upperFirst";
+import dynamic from "next/dynamic";
 import { DatasetJsonLd, NextSeo } from "next-seo";
-import defaultConfig from "../next-seo.config";
+
+import { config as configuration } from "@/configuration";
 import Routes from "@/lib/Routes";
+import { Project } from "@/types";
+
+import defaultConfig from "../next-seo.config";
 function ProjectPage(props: { projectData: Project }) {
   const IndividualProjectPage = dynamic(
     () => import("../templates/IndividualProjectPageTemplate")

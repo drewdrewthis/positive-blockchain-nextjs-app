@@ -1,12 +1,15 @@
+import Pagination from "@mui/material/Pagination";
 import Grid from "@mui/material/Unstable_Grid2";
-import { Project } from "@/types";
-import ProjectGridItem from "./ProjectGridItem";
+import cx from "classnames";
 import compact from "lodash/fp/compact";
 import uniq from "lodash/fp/uniq";
-import Pagination from "@mui/material/Pagination";
 import { useState } from "react";
-import cx from "classnames";
+
+import { Project } from "@/types";
+
 import { config } from "../../configuration";
+
+import ProjectGridItem from "./ProjectGridItem";
 
 interface Props {
   projectData: (Project & { searchRelevance?: number })[];

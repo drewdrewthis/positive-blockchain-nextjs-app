@@ -1,4 +1,5 @@
 import { snakeCaseToSentenceCase } from "../../lib/utils";
+
 import InfoBlock from "./InfoBlock";
 
 export default function AttributeToInfoBlock(props: {

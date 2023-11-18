@@ -1,8 +1,4 @@
-import React, { ComponentProps } from "react";
-import styles from "./styles.module.scss";
-import cx from "classnames";
-import { Button, Stack, useMediaQuery } from "@mui/material";
-import {
+import { Button, useMediaQuery ,
   ClickAwayListener,
   Grow,
   MenuItem,
@@ -10,6 +6,10 @@ import {
   Paper,
   Popper,
 } from "@mui/material";
+import cx from "classnames";
+import React, { ComponentProps } from "react";
+
+import styles from "./styles.module.scss";
 
 interface Props {
   title: string;

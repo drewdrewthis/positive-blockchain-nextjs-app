@@ -1,6 +1,7 @@
-import { Project } from "@/types";
 import isUndefined from "lodash/fp/isUndefined";
 import uniq from "lodash/fp/uniq";
+
+import { Project } from "@/types";
 
 /**
  * Extracts the SDGs (Sustainable Development Goals) from a project.

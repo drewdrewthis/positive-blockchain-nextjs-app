@@ -1,9 +1,11 @@
-import type { GetStaticProps } from "next";
 import type { Project } from "@/types";
+import type { GetStaticProps } from "next";
+
+import dynamic from "next/dynamic";
+
+import { config } from "@/configuration";
 import { fetchProjectData } from "@/lib/google";
 import { extractFiltersFromProjectData } from "@/lib/utils";
-import { config } from "@/configuration";
-import dynamic from "next/dynamic";
 
 interface Props {
   initialData: Project[];

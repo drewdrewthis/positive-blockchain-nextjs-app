@@ -1,10 +1,12 @@
 import * as google from "@googleapis/sheets";
-import { parseGoogleSheetsData } from "./utils/parseGoogleSheetsData";
 import MemCache from "memory-cache";
-import { getAuth } from "./auth";
-import { config } from "@/configuration";
+
+import { config , config as configuration } from "@/configuration";
+
 import { Project } from "../../types";
-import { config as configuration } from "@/configuration";
+
+import { getAuth } from "./auth";
+import { parseGoogleSheetsData } from "./utils/parseGoogleSheetsData";
 
 const {
   serverlessFunctions: { CACHE_TTL },

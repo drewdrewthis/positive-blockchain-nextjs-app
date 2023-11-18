@@ -1,18 +1,21 @@
-import Footer from "../partials/Footer/index";
-import Header from "../partials/Header";
-import InputBase from "@mui/material/InputBase";
-import ProjectFilter from "@/components/ProjectFilter";
-import ProjectGrid from "@/components/ProjectGrid";
-import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import Search from "@mui/icons-material/Search";
-import { useController } from "./useController";
-import { withController } from "@/lib/withContoller";
 import { Button, Dialog, Typography, useMediaQuery } from "@mui/material";
-import Link from "next/link";
+import InputBase from "@mui/material/InputBase";
 import cx from "classnames";
-import styles from "./styles.module.scss";
+import Link from "next/link";
+import React from "react";
+
+import ProjectFilter from "@/components/ProjectFilter";
+import ProjectGrid from "@/components/ProjectGrid";
 import { config } from "@/configuration";
+import { withController } from "@/lib/withContoller";
+
+import Footer from "../partials/Footer/index";
+import Header from "../partials/Header";
+
+import styles from "./styles.module.scss";
+import { useController } from "./useController";
 
 const { breakpoints } = config.constants;
 

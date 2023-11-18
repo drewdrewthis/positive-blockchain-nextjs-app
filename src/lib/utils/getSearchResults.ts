@@ -1,5 +1,6 @@
-import Fuse from "fuse.js";
 import type { Project } from "@/types";
+
+import Fuse from "fuse.js";
 
 // Configuration options for Fuse.js
 const options: Fuse.IFuseOptions<Project> = {

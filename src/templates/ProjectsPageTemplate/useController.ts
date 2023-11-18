@@ -1,11 +1,13 @@
-import React, { useEffect } from "react";
 import debounce from "lodash/debounce";
+import React, { useEffect } from "react";
+
 import { filterProjectDataByFilters } from "@/lib/utils";
 import { Project } from "@/types";
-import { getSearchResults } from "../../lib/utils/getSearchResults";
+
 import { FilterGroupProps } from "../../components/ProjectFilter/types";
-import { buildFiltersConfig } from "../../lib/utils/buildFiltersConfig";
 import Routes from "../../lib/Routes";
+import { buildFiltersConfig } from "../../lib/utils/buildFiltersConfig";
+import { getSearchResults } from "../../lib/utils/getSearchResults";
 
 interface Props {
   /**

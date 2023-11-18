@@ -1,4 +1,5 @@
 import Routes from "../../lib/Routes";
+
 import { projectProperties } from "./definitions";
 
 const isProd = process.env.NODE_ENV === "production";

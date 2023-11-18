@@ -1,12 +1,14 @@
-import Link from "next/link";
-import MenuItem from "./MenuItem";
-import React, { useState } from "react";
-import Routes from "@/lib/Routes";
-import { NestedMenuItem } from "./NestedMenuItem";
-import { Box, Dialog, IconButton, Stack } from "@mui/material";
-import AddProjectButton from "./AddProjectButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import Close from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Dialog, IconButton, Stack } from "@mui/material";
+import Link from "next/link";
+import React, { useState } from "react";
+
+import Routes from "@/lib/Routes";
+
+import AddProjectButton from "./AddProjectButton";
+import MenuItem from "./MenuItem";
+import { NestedMenuItem } from "./NestedMenuItem";
 
 export default function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);

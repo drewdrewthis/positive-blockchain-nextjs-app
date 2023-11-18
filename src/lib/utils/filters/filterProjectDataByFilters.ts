@@ -3,11 +3,12 @@
  * It utilizes various functions from the lodash library to perform operations on arrays and strings.
  */
 
+import type { Project } from "@/types";
+
 import intersection from "lodash/fp/intersection";
 import isEmpty from "lodash/fp/isEmpty";
 import kebabCase from "lodash/fp/kebabCase";
 import memoize from "lodash/fp/memoize";
-import type { Project } from "@/types";
 
 /**
  * Memoized version of the kebabCase function from lodash.

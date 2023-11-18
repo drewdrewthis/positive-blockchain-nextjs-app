@@ -1,7 +1,9 @@
-import React from "react";
-import MenuItem from "../MenuItem";
 import cx from "classnames";
+import React from "react";
+
 import Routes from "@/lib/Routes";
+
+import MenuItem from "../MenuItem";
 
 function AddProjectButton() {
   return (

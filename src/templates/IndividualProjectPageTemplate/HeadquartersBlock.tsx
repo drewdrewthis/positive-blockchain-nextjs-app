@@ -1,5 +1,7 @@
 import compact from "lodash/fp/compact";
+
 import { Project } from "../../types";
+
 import InfoBlock from "./InfoBlock";
 
 export default function HeadquartersBlock(props: { projectData: Project }) {

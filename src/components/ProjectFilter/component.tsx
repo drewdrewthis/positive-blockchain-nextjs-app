@@ -1,8 +1,9 @@
-import { useController } from "./useController";
-import { FilterGroupProps } from "./types";
+import { Divider } from "@mui/material";
+
 import { AutocompleteFilterGroup } from "./AutocompleteFilterGroup";
 import CheckboxFilterGroup from "./CheckboxFilterGroup";
-import { Divider } from "@mui/material";
+import { FilterGroupProps } from "./types";
+import { useController } from "./useController";
 
 function ProjectFilter(props: ReturnType<typeof useController>) {
   const { filters, className = "", handleFilterChange } = props;

@@ -1,14 +1,16 @@
 import type { AppProps } from "next/app";
+
 import "@/styles/globals.css";
-import createEmotionCache from "../lib/createEmotionCache";
 import { CacheProvider } from "@emotion/react";
-import { Open_Sans } from "next/font/google";
 import {
   StyledEngineProvider,
   ThemeProvider,
   createTheme,
 } from "@mui/material";
+import { Open_Sans } from "next/font/google";
 import { DefaultSeo } from "next-seo";
+
+import createEmotionCache from "../lib/createEmotionCache";
 import defaultConfig from "../next-seo.config";
 
 // If loading a variable font, you don't need to specify the font weight

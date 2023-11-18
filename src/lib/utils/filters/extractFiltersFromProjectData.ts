@@ -1,6 +1,7 @@
-import flow from "lodash/fp/flow";
 import compact from "lodash/fp/compact";
+import flow from "lodash/fp/flow";
 import uniqBy from "lodash/fp/uniqBy";
+
 import { Project } from "../../../types";
 
 /**

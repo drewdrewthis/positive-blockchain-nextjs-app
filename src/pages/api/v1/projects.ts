@@ -1,9 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { Project } from "@/types";
 import type { NextApiRequest, NextApiResponse } from "next";
+
+import isUndefined from "lodash/fp/isUndefined";
+
 import { isValidApiKeyAsync } from "@/lib/apiKeyChecker";
 import Routes from "@/lib/Routes";
-import type { Project } from "@/types";
-import isUndefined from "lodash/fp/isUndefined";
 
 /**
  * This is the API V1 endpoint for the project data.

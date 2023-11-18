@@ -1,6 +1,7 @@
-import kebabCase from "lodash/kebabCase";
 import compact from "lodash/fp/compact";
 import uniq from "lodash/fp/uniq";
+import kebabCase from "lodash/kebabCase";
+
 import { projectSchema } from "../../../zod/schemas";
 
 // Define the type for a Project object

@@ -1,10 +1,12 @@
+import { Button } from "@mui/material";
+import Link from "next/link";
+import SwaggerUI from "swagger-ui-react";
+
 import Footer from "@/templates/partials/Footer";
 import Header from "@/templates/partials/Header";
-import SwaggerUI from "swagger-ui-react";
+
 import "swagger-ui-react/swagger-ui.css";
 import spec from "./swagger";
-import Link from "next/link";
-import { Button } from "@mui/material";
 
 export default function ApiPageTemplate() {
   return (
