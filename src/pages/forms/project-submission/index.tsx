@@ -1,24 +1,28 @@
-import type { GetServerSideProps } from "next";
 import type { FormInput } from "@/templates/ProjectSubmissionForm";
-import ProjectSubmissionForm from "@/templates/ProjectSubmissionForm";
-import Header from "@/templates/partials/Header";
-import Footer from "@/templates/partials/Footer";
-import { Divider, Typography } from "@mui/material";
+import type { CountryData } from "@/types";
+import type { GetServerSideProps } from "next";
+
+import { Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
+
+import { fetchAllCategoriesData } from "@/lib/api/fetchAllCategoriesData";
 import { fetchProjectSubmissionFormInputs } from "@/lib/api/fetchProjectSubmissionFormInputs";
+import { fetchRegionData } from "@/lib/api/fetchRegionData";
+import { fetchAllProjectData } from "@/lib/google";
 import { convertSubmissionFormValuesToStringArray } from "@/lib/utils/convertSubmissionFormValuesToStringArray";
-import type { CountryData, Project } from "@/types";
 import {
   getRegionsFromSubregions,
   getSubregionsFromCountries,
 } from "@/lib/utils/regions";
-import { fetchRegionData } from "@/lib/api/fetchRegionData";
-import { fetchAllCategoriesData } from "@/lib/api/fetchAllCategoriesData";
-import { fetchAllProjectData } from "@/lib/google";
-import { convertProjectDataIntoInitialValues } from "../../../lib/utils/convertProjectDataIntoInitialValues";
+import Footer from "@/templates/partials/Footer";
+import Header from "@/templates/partials/Header";
+import ProjectSubmissionForm from "@/templates/ProjectSubmissionForm";
+
 import { fetchKeyColumnMapForProjectSubmission } from "../../../lib/api/fetchKeyColumnMapForProjectSubmission";
 import Routes from "../../../lib/Routes";
+import { convertProjectDataIntoInitialValues } from "../../../lib/utils/convertProjectDataIntoInitialValues";
 import { withController } from "../../../lib/withContoller";
-import { useRouter } from "next/navigation";
+
 
 interface ProjectSubmissionPageProps {
   projectData: any;

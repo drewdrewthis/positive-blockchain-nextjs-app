@@ -1,6 +1,6 @@
-import isUndefined from "lodash/fp/isUndefined";
-import isNull from "lodash/fp/isNull";
 import compact from "lodash/fp/compact";
+import isNull from "lodash/fp/isNull";
+import isUndefined from "lodash/fp/isUndefined";
 
 export function convertSubmissionFormValuesToStringArray(
   values: Record<string, any>,

@@ -1,13 +1,15 @@
+import { FormControl, TextField, TextareaAutosize } from "@mui/material";
 import upperFirst from "lodash/fp/upperFirst";
-import { FormInput } from ".";
-import GroupSelectInput from "./GroupSelectInput";
-import SelectInput from "./SelectInput";
-import { TextField, TextareaAutosize } from "@mui/material";
 import { useFormContext } from "react-hook-form";
+
 import withErrorBoundary from "../../lib/withErrorBoundary";
-import Prompt from "./Prompt";
+
+import GroupSelectInput from "./GroupSelectInput";
 import Label from "./Label";
-import { SelectInputProps } from "@mui/material/Select/SelectInput";
+import Prompt from "./Prompt";
+import SelectInput from "./SelectInput";
+
+import { FormInput } from ".";
 
 interface FormInputItemProps extends FormInput {
   prompt?: string;
@@ -27,7 +29,7 @@ interface FormInputItemProps extends FormInput {
 function FormInputItem(props: FormInputItemProps) {
   const { databaseKey, type } = props;
   const methods = useFormContext();
-  const { register } = methods;
+  const { register, formState } = methods;
 
   if (
     databaseKey === "PUBLIC_subregions_list" ||
@@ -62,7 +64,6 @@ function FormInputItem(props: FormInputItemProps) {
           placeholder={props.placeholder}
           helperText={props.helperText}
           multiple={isMultiSelect}
-          // headerTitle={props.headerTitle}
           required={props.required}
         />
       </>
@@ -70,8 +71,6 @@ function FormInputItem(props: FormInputItemProps) {
   }
 
   if (type === "textarea") {
-    const isTextArea = true;
-
     return (
       <>
         <Label text={props.label} required={props.required} />
@@ -88,16 +87,15 @@ function FormInputItem(props: FormInputItemProps) {
 
   // Types: text, number, email, url, tel, password
   if (["text", "number", "email", "url"].includes(type || "")) {
-    const value =
-      methods.getValues(databaseKey) ||
-      methods.formState?.defaultValues?.[databaseKey];
-
     return (
-      <>
+      <FormControl error={!!formState.errors[databaseKey]}>
         <Label text={props.label} required={props.required} />
         <Prompt text={props.prompt} />
         <TextField
-          {...register(databaseKey)}
+          {...register(databaseKey, {
+            required: props.required,
+          })}
+          error={!!formState.errors[databaseKey]}
           className="w-full"
           id={databaseKey}
           label={upperFirst(props.headerTitle)}
@@ -105,13 +103,12 @@ function FormInputItem(props: FormInputItemProps) {
           variant="outlined"
           helperText={props.helperText}
           placeholder={props.placeholder}
-          type={type}
-          // value={value}
+          type={type === "url" ? "text" : type}
           inputProps={{
             maxLength: props.characterLimit,
           }}
         />
-      </>
+      </FormControl>
     );
   }
 

@@ -5,9 +5,10 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
-import { useFormContext } from "react-hook-form";
-import withErrorBoundary from "../../lib/withErrorBoundary";
 import compact from "lodash/fp/compact";
+import { useFormContext } from "react-hook-form";
+
+import withErrorBoundary from "../../lib/withErrorBoundary";
 
 interface Props {
   id: string;

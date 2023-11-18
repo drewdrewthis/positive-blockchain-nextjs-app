@@ -1,24 +1,15 @@
 import * as google from "@googleapis/sheets";
-<<<<<<< HEAD
 import MemCache from "memory-cache";
 
-import { config , config as configuration } from "@/configuration";
-
-import { Project } from "../../types";
+import { config } from "@/configuration";
+import { Project } from "@/types";
 
 import { getAuth } from "./auth";
-import { parseGoogleSheetsData } from "./utils/parseGoogleSheetsData";
-=======
 import {
   parseGoogleSheetsData,
   removePrivateFields,
   stripPublicPrefixFromKeys,
 } from "./utils/parseGoogleSheetsData";
-import MemCache from "memory-cache";
-import { getAuth } from "./auth";
-import { config } from "@/configuration";
-import { Project } from "@/types";
->>>>>>> 0caf539 (Finalize custom submission form for submitting)
 
 const {
   serverlessFunctions: { CACHE_TTL },

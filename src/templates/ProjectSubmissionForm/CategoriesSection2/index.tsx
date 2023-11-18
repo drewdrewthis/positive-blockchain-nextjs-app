@@ -1,12 +1,15 @@
-import React from "react";
-import { Button, IconButton, Typography } from "@mui/material";
 import { Delete } from "@mui/icons-material";
-import SingleCategoryBlock from "./SingleCategoryBlock";
-import { useController } from "./hooks/useController";
-import { withController } from "../../../lib/withContoller";
+import { Button, IconButton, Typography } from "@mui/material";
+import React from "react";
 import { FormProvider } from "react-hook-form";
+
 import { submissionFormConfig } from "@/configuration";
+
+import { withController } from "../../../lib/withContoller";
 import withErrorBoundary from "../../../lib/withErrorBoundary";
+
+import { useController } from "./hooks/useController";
+import SingleCategoryBlock from "./SingleCategoryBlock";
 
 const { MAX_CATEGORIES } = submissionFormConfig.constants;
 

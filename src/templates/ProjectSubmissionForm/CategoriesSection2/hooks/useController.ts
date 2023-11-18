@@ -1,9 +1,8 @@
-import { UseFormReturn, useForm } from "react-hook-form";
+import { compact, times } from "lodash/fp";
 import { useCallback, useEffect, useState } from "react";
-import omit from "lodash/fp/omit";
+import { useForm } from "react-hook-form";
+
 import { submissionFormConfig } from "@/configuration";
-import { compact, concat, times, uniq } from "lodash/fp";
-import { remove, set } from "lodash";
 
 const { MAX_CATEGORIES } = submissionFormConfig.constants;
 

@@ -1,6 +1,6 @@
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
 import { useFormContext } from "react-hook-form";
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 interface Props {
   id: string;

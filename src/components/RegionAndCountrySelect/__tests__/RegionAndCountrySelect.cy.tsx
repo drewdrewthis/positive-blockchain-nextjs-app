@@ -1,8 +1,9 @@
 import React from "react";
 import { useForm, FormProvider } from "react-hook-form";
+
+import RegionAndCountrySelect from "..";
 import { CountryData } from "../../../types";
 import "@/styles/globals.css";
-import RegionAndCountrySelect from "..";
 
 const countries: CountryData[] = [
   {

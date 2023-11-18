@@ -1,5 +1,3 @@
-import React from "react";
-import { useFormContext } from "react-hook-form";
 import {
   FormControl,
   InputLabel,
@@ -7,6 +5,9 @@ import {
   OutlinedInput,
   Select,
 } from "@mui/material";
+import React from "react";
+import { useFormContext } from "react-hook-form";
+
 import { CountryData } from "../../types";
 
 interface Props {

@@ -1,11 +1,11 @@
 "use client";
 
-import * as React from "react";
-import { StyledEngineProvider } from "@mui/material/styles";
-import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { StyledEngineProvider , createTheme, ThemeProvider } from "@mui/material/styles";
+import * as React from "react";
+
 import { muiTheme } from "../../configuration/mui-theme";
 
 function GlobalCssPriority({ children }: { children: React.ReactNode }) {

@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { fetchSheetData } from "@/lib/google";
+
 import { config } from "@/configuration";
+import { fetchSheetData } from "@/lib/google";
 
 const { dataFrame } = config.constants.google.sheets.databaseSheet.sheets;
 const { SPREADSHEET_ID } = config.constants.google.sheets.databaseSheet;

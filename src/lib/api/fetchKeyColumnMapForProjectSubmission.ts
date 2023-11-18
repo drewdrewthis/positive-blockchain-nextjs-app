@@ -1,5 +1,6 @@
-import { fetchSheetData } from "../google/sheets";
 import { config } from "@/configuration/config";
+
+import { fetchSheetData } from "../google/sheets";
 
 const {
   SPREADSHEET_ID,

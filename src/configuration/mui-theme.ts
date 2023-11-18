@@ -1,7 +1,8 @@
 import resolveConfig from "tailwindcss/resolveConfig";
+import { SimplePaletteColorOptions, ThemeOptions } from "@mui/material/styles";
+
 import tailwindConfig from "../../tailwind.config.js";
 
-import { SimplePaletteColorOptions, ThemeOptions } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface Palette {

@@ -1,10 +1,6 @@
 import { auth } from "google-auth-library";
-<<<<<<< HEAD
 
 import { config } from "@/configuration";
-=======
-import { config } from "@/configuration/config";
->>>>>>> 0caf539 (Finalize custom submission form for submitting)
 
 /**
  * Retrieves the Google authentication client with the required scopes.

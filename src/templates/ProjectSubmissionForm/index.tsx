@@ -3,23 +3,22 @@ import {
   CircularProgress,
   Divider,
   FormControl,
-  TextField,
   TextareaAutosize,
-  Typography,
 } from "@mui/material";
-import LoadingButton from "@mui/lab/LoadingButton";
-import { useForm, FormProvider, UseFormReturn } from "react-hook-form";
-import * as submissionFormConfig from "@/configuration/submission-form-config";
-import FormInputItem from "./FormInputItem";
-import CategoriesSection2 from "./CategoriesSection2";
-import Label from "./Label";
-import GroupSelectInput from "./GroupSelectInput";
-import Prompt from "./Prompt";
-import { count } from "console";
-import SectionTitle from "./SectionTitle";
-import { DatabaseColumnKey } from "../../configuration/submission-form-config";
 import { SyntheticEvent, useCallback } from "react";
+import { useForm, FormProvider, UseFormReturn } from "react-hook-form";
+
+import * as submissionFormConfig from "@/configuration/submission-form-config";
+
+import { DatabaseColumnKey } from "../../configuration/submission-form-config";
+
+import CategoriesSection2 from "./CategoriesSection2";
 import { DataPrivacyAgreement } from "./DataPrivacyAgreement";
+import FormInputItem from "./FormInputItem";
+import GroupSelectInput from "./GroupSelectInput";
+import Label from "./Label";
+import Prompt from "./Prompt";
+import SectionTitle from "./SectionTitle";
 
 export interface FormInput {
   key: DatabaseColumnKey;
@@ -80,12 +79,6 @@ export default function ProjectSubmissionForm(
     },
     {} as Record<string, any>
   );
-
-  console.log({
-    isSubmitting: methods.formState.isSubmitting,
-    isValid: methods.formState.isValid,
-    isSubmitted: methods.formState.isSubmitted,
-  });
 
   // Handle the form submission
   // TODO: Handle error

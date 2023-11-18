@@ -1,12 +1,15 @@
+import { Delete } from "@mui/icons-material";
+import { Button, IconButton, Typography } from "@mui/material";
+import omit from "lodash/fp/omit";
 import React, { useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";
-import { Button, IconButton, Typography } from "@mui/material";
-import { Delete } from "@mui/icons-material";
-import omit from "lodash/fp/omit";
+
+import { CountryData } from "@/types";
+
+import { submissionFormConfig } from "../../../configuration";
+
 import SingleCategoryBlock from "./SingleCategoryBlock";
 import { useCategories } from "./useCategories";
-import { CountryData } from "@/types";
-import { submissionFormConfig } from "../../../configuration";
 
 const { MAX_CATEGORIES } = submissionFormConfig.constants;
 const countries: CountryData[] = [

@@ -1,17 +1,12 @@
-import React from "react";
-import { Controller, useFormContext } from "react-hook-form";
 import {
   Autocomplete,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
   TextField,
 } from "@mui/material";
-import { CountryData } from "../../types";
-import { omit } from "lodash";
 import cx from "classnames";
+import React from "react";
+import { Controller, useFormContext } from "react-hook-form";
+
+import { CountryData } from "../../types";
 
 interface Props {
   id: string;

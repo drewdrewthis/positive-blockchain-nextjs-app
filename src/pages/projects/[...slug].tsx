@@ -12,8 +12,8 @@ import dynamic from "next/dynamic";
 import { DatasetJsonLd, NextSeo } from "next-seo";
 
 import { config as configuration } from "@/configuration";
+import Routes from "@/lib/Routes";
 
-import Routes from "../../lib/Routes";
 import defaultConfig from "../../next-seo.config";
 
 function ProjectPage(props: { projectData: Project }) {

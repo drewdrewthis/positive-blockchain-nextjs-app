@@ -1,13 +1,9 @@
 import type { NextRequest } from "next/server";
 
 import { NextResponse } from "next/server";
-<<<<<<< HEAD
 
 import { config as configuration } from "@/configuration";
 
-=======
-import { config as configuration } from "@/configuration/config";
->>>>>>> 0caf539 (Finalize custom submission form for submitting)
 import Routes from "../../../../lib/Routes";
 
 export const config = {

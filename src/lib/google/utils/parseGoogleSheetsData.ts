@@ -1,14 +1,10 @@
 import compact from "lodash/fp/compact";
-import uniq from "lodash/fp/uniq";
-<<<<<<< HEAD
-import kebabCase from "lodash/kebabCase";
-
-import { projectSchema } from "../../../zod/schemas";
-=======
 import mapKeys from "lodash/fp/mapKeys";
 import omitBy from "lodash/fp/omitBy";
+import uniq from "lodash/fp/uniq";
+import kebabCase from "lodash/kebabCase";
+
 import { projectSchema } from "@/zod/schemas";
->>>>>>> 0caf539 (Finalize custom submission form for submitting)
 
 // Define the type for a Project object
 type Project = {

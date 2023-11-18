@@ -1,8 +1,9 @@
 import React from "react";
 import { useForm, FormProvider } from "react-hook-form";
+
+import RegionAndCountryAutocomplete from "..";
 import { CountryData } from "../../../types";
 import "@/styles/globals.css";
-import RegionAndCountryAutocomplete from "..";
 
 const countries: CountryData[] = [
   {

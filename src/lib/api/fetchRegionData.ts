@@ -1,7 +1,8 @@
-import { fetchSheetData } from "@/lib/google";
-import { config } from "@/configuration/config";
-import { CountryData } from "@/types";
 import { camelCase } from "lodash";
+
+import { config } from "@/configuration/config";
+import { fetchSheetData } from "@/lib/google";
+import { CountryData } from "@/types";
 
 const { dataTables } = config.constants.google.sheets.databaseSheet.sheets;
 const { SPREADSHEET_ID } = config.constants.google.sheets.databaseSheet;

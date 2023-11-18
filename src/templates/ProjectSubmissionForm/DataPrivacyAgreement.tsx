@@ -1,8 +1,10 @@
-import { FormInput } from ".";
-import Prompt from "./Prompt";
-import Label from "./Label";
-import { Controller, useFormContext } from "react-hook-form";
 import { Checkbox } from "@mui/material";
+import { Controller, useFormContext } from "react-hook-form";
+
+import Label from "./Label";
+import Prompt from "./Prompt";
+
+import { FormInput } from ".";
 
 interface FormInputItemProps extends FormInput {
   className?: string;

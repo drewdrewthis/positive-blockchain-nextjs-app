@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import { parseGoogleSheetsData } from "../parseGoogleSheetsData";
-
-=======
 import {
   parseGoogleSheetsData,
   removePrivateFields,
   stripPublicPrefixFromKeys,
 } from "../parseGoogleSheetsData";
->>>>>>> 0caf539 (Finalize custom submission form for submitting)
+
 import { SAMPLE_DATA } from "./sample-data";
 
 describe("parseGoogleSheets", () => {

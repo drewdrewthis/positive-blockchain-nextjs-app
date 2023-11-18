@@ -1,7 +1,9 @@
 import { render } from "@testing-library/react";
+
 import ProjectSubmissionForm, { ProjectSubmissionFormProps } from "..";
-import newProjectProps from "./new_project_props.json";
+
 import editProjectProps from "./edit_project_props.json";
+import newProjectProps from "./new_project_props.json";
 
 describe("<ProjectSubmissionForm />", () => {
   let onSubmitMock: jest.Mock;

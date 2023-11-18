@@ -1,16 +1,16 @@
 import {
   FormControl,
-  InputLabel,
   ListSubheader,
   MenuItem,
   Select,
   FormHelperText,
 } from "@mui/material";
 import { useFormContext } from "react-hook-form";
+
+import withErrorBoundary from "@/lib/withErrorBoundary";
+
 import Label from "./Label";
 import Prompt from "./Prompt";
-import withErrorBoundary from "@/lib/withErrorBoundary";
-import { orderBy, sortBy } from "lodash";
 
 interface Props {
   id: string;

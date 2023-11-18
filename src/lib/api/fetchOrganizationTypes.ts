@@ -1,5 +1,5 @@
-import { fetchSheetData } from "@/lib/google";
 import { config } from "@/configuration";
+import { fetchSheetData } from "@/lib/google";
 
 const { dataTables } = config.constants.google.sheets.databaseSheet.sheets;
 const { SPREADSHEET_ID } = config.constants.google.sheets.databaseSheet;

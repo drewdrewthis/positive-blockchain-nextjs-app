@@ -1,9 +1,8 @@
-import React from "react";
 import { useRouter } from "next/navigation";
+import React from "react";
 
-import Header from "@/templates/partials/Header";
 import Footer from "@/templates/partials/Footer";
-import Routes from "@/lib/Routes";
+import Header from "@/templates/partials/Header";
 
 function ProjectSubmissionSuccess() {
   const router = useRouter();

@@ -20,7 +20,6 @@ import InfoBlock from "./InfoBlock";
 import LinksBlock, { VALID_FIELDS } from "./LinksBlock";
 import SDGBlock from "./SDGBlock";
 
-
 function useController(props: { projectData: Project }) {
   const { projectData } = props;
   const sdgs = extractSdgsFromProject(projectData);

@@ -1,18 +1,23 @@
 import type { FormInput } from "@/templates/ProjectSubmissionForm";
-import { fetchSheetData } from "../google/sheets";
-import { config } from "@/configuration/config";
-import { fetchAllCategoriesData } from "./fetchAllCategoriesData";
-import { fetchRegionData } from "./fetchRegionData";
-import { CountryData } from "@/types";
+
 import uniq from "lodash/fp/uniq";
+
+import { config } from "@/configuration/config";
 import {
   DatabaseColumnKey,
   constants,
   overrides,
 } from "@/configuration/submission-form-config";
-import { fetchOrganizationTypes } from "./fetchOrganizationTypes";
-import { fetchBlockchainTechnologies } from "./fetchBlockchainTechnologies";
+import { CountryData } from "@/types";
+
+import { fetchSheetData } from "../google/sheets";
 import { DatabaseService } from "../services/database.service";
+
+import { fetchAllCategoriesData } from "./fetchAllCategoriesData";
+import { fetchBlockchainTechnologies } from "./fetchBlockchainTechnologies";
+import { fetchOrganizationTypes } from "./fetchOrganizationTypes";
+import { fetchRegionData } from "./fetchRegionData";
+
 
 const {
   SPREADSHEET_ID,

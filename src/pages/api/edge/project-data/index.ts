@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import { NextRequest , NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 import { config as configuration } from "@/configuration";
 
-=======
-import { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
-import { config as configuration } from "@/configuration/config";
->>>>>>> 0caf539 (Finalize custom submission form for submitting)
 import Routes from "../../../../lib/Routes";
 
 export const config = {
@@ -24,7 +18,7 @@ if (!apiKey) {
   throw new Error("API_KEY is not defined");
 }
 
-export default async function handler(req: NextRequest, res: NextResponse) {
+export default async function handler(req: NextRequest, _res: NextResponse) {
   try {
     // Fetch projects
     const allProjects = await fetchProjects(req);
