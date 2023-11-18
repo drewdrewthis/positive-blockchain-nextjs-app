@@ -84,49 +84,53 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Project name *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_project_name-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_project_name"
-            maxlength="50"
-            name="PUBLIC_project_name"
-            placeholder="e.g. "PositiveBlockchain""
-            required=""
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Project name *
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_project_name-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          50 characters max
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_project_name-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_project_name"
+              maxlength="50"
+              name="PUBLIC_project_name"
+              placeholder="e.g. "PositiveBlockchain""
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_project_name-helper-text"
+          >
+            50 characters max
+          </p>
+        </div>
       </div>
       <div
         class="font-bold"
@@ -197,40 +201,44 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Your website *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_website"
-            name="PUBLIC_website"
-            placeholder="e.g. https://positiveblockchain.io"
-            required=""
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Your website *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_website"
+              name="PUBLIC_website"
+              placeholder="e.g. https://positiveblockchain.io"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -247,7 +255,7 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
           <span
             class="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
           >
-            Primary Category *
+            Primary Category
           </span>
           <div
             class="w-full flex"
@@ -311,14 +319,22 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
                 class="MuiFormControl-root w-full css-1nrlq1o-MuiFormControl-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="true"
                   id="subcategory-label"
                 >
                   Subcategories
+                  <span
+                    aria-hidden="true"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                  >
+                     
+                    *
+                  </span>
                 </label>
                 <div
                   class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                  required=""
                 >
                   <div
                     aria-expanded="false"
@@ -336,6 +352,7 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
                     aria-invalid="false"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
                     name="sub_category_1"
+                    required=""
                     tabindex="-1"
                     value="Development & Aid"
                   />
@@ -359,6 +376,8 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
                     >
                       <span>
                         Subcategories
+                         
+                        *
                       </span>
                     </legend>
                   </fieldset>
@@ -518,82 +537,90 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Name of Founders
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_founder_names_list-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_founder_names_list"
-            name="PUBLIC_founder_names_list"
-            placeholder="e.g. "John Doe", "CEO"; "Jane Doe", "CTO""
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Name of Founders
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_founder_names_list-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          Founders only. Please respect this formatting -&gt; "Name", "Tittle"; "Name", Tittle"
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_founder_names_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_founder_names_list"
+              name="PUBLIC_founder_names_list"
+              placeholder="e.g. "John Doe", "CEO"; "Jane Doe", "CTO""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_founder_names_list-helper-text"
+          >
+            Founders only. Please respect this formatting -&gt; "Name", "Tittle"; "Name", Tittle"
+          </p>
+        </div>
       </div>
       <div
-        class="font-bold"
-      >
-        Headquarter city
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_primary_headquarter_city"
-            name="PUBLIC_primary_headquarter_city"
-            placeholder="e.g. San Francisco"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Headquarter city
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_primary_headquarter_city"
+              name="PUBLIC_primary_headquarter_city"
+              placeholder="e.g. San Francisco"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -799,44 +826,48 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Sponsor & partners
-      </div>
-      <div
-        class="text-sm"
-      >
-        Feel free to name notable sponsors and partners involved in the project/organization.
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_sponsors_partners_list"
-            name="PUBLIC_sponsors_partners_list"
-            placeholder="e.g. Microsoft, IBM"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Sponsor & partners
+        </div>
+        <div
+          class="text-sm"
+        >
+          Feel free to name notable sponsors and partners involved in the project/organization.
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_sponsors_partners_list"
+              name="PUBLIC_sponsors_partners_list"
+              placeholder="e.g. Microsoft, IBM"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -845,337 +876,373 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         Project Links
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_video_url"
-          id="PUBLIC_video_url-label"
-        >
-          Add the url of the most relevant project video
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_video_url"
-            name="PUBLIC_video_url"
-            placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_video_url"
+            id="PUBLIC_video_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Add the url of the most relevant project video
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_video_url"
+              name="PUBLIC_video_url"
+              placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Add the url of the most relevant project video
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Add the url of the most relevant project video
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_white_paper_url"
-          id="PUBLIC_white_paper_url-label"
-        >
-          White Paper Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_white_paper_url"
-            name="PUBLIC_white_paper_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_white_paper_url"
+            id="PUBLIC_white_paper_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            White Paper Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_white_paper_url"
+              name="PUBLIC_white_paper_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                White Paper Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  White Paper Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_twitter_url"
-          id="PUBLIC_twitter_url-label"
-        >
-          Twitter Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_twitter_url"
-            name="PUBLIC_twitter_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_twitter_url"
+            id="PUBLIC_twitter_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Twitter Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_twitter_url"
+              name="PUBLIC_twitter_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Twitter Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Twitter Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_facebook_url"
-          id="PUBLIC_facebook_url-label"
-        >
-          Facebook Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_facebook_url"
-            name="PUBLIC_facebook_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_facebook_url"
+            id="PUBLIC_facebook_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Facebook Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_facebook_url"
+              name="PUBLIC_facebook_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Facebook Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Facebook Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_linkedin_url"
-          id="PUBLIC_linkedin_url-label"
-        >
-          Linkedin Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_linkedin_url"
-            name="PUBLIC_linkedin_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_linkedin_url"
+            id="PUBLIC_linkedin_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Linkedin Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_linkedin_url"
+              name="PUBLIC_linkedin_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Linkedin Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Linkedin Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_discord_url"
-          id="PUBLIC_discord_url-label"
-        >
-          Discord Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_discord_url"
-            name="PUBLIC_discord_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_discord_url"
+            id="PUBLIC_discord_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Discord Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_discord_url"
+              name="PUBLIC_discord_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Discord Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Discord Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_github_url"
-          id="PUBLIC_github_url-label"
-        >
-          Github Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_github_url"
-            name="PUBLIC_github_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_github_url"
+            id="PUBLIC_github_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Github Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_github_url"
+              name="PUBLIC_github_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Github Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Github Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_coinmarketcap_url"
-          id="PUBLIC_coinmarketcap_url-label"
-        >
-          Coinmarketcap Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_coinmarketcap_url"
-            name="PUBLIC_coinmarketcap_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_coinmarketcap_url"
+            id="PUBLIC_coinmarketcap_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Coinmarketcap Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_coinmarketcap_url"
+              name="PUBLIC_coinmarketcap_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Coinmarketcap Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Coinmarketcap Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="true"
-          for="PUBLIC_other_links_list"
-          id="PUBLIC_other_links_list-label"
-        >
-          Other links
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-describedby="PUBLIC_other_links_list-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_other_links_list"
-            name="PUBLIC_other_links_list"
-            placeholder="e.g. https://link1.com, https://link2.com"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for="PUBLIC_other_links_list"
+            id="PUBLIC_other_links_list-label"
           >
-            <legend
-              class="css-14lo706"
+            Other links
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_other_links_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_other_links_list"
+              name="PUBLIC_other_links_list"
+              placeholder="e.g. https://link1.com, https://link2.com"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Other links
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-14lo706"
+              >
+                <span>
+                  Other links
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_other_links_list-helper-text"
+          >
+            Paste here other related articles talking about the project, if relevant. several articles possible. Comma separated.
+          </p>
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_other_links_list-helper-text"
-        >
-          Paste here other related articles talking about the project, if relevant. several articles possible. Comma separated.
-        </p>
       </div>
       <hr
         class="MuiDivider-root MuiDivider-fullWidth mt-10 css-9mgopn-MuiDivider-root"
@@ -1316,95 +1383,108 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Token Ticker
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_token_ticker-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_token_ticker"
-            name="PUBLIC_token_ticker"
-            placeholder="e.g. BTC"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Token Ticker
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_token_ticker-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          Only capital letters
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_token_ticker-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_token_ticker"
+              name="PUBLIC_token_ticker"
+              placeholder="e.g. BTC"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_token_ticker-helper-text"
+          >
+            Only capital letters
+          </p>
+        </div>
       </div>
       <div
-        class="font-bold"
-      >
-        Project Logo URL
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_logo_url-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_logo_url"
-            name="PUBLIC_logo_url"
-            placeholder="e.g. https://yourwebsite.com/logo.png"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Project Logo URL
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_logo_url-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          When inputting a URL for a logo, please use an image URL from an open platform or a publicly accessible Google Drive URL to ensure visibility. Ensure that the URL leads to the desired logo image.
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_logo_url-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_logo_url"
+              name="PUBLIC_logo_url"
+              placeholder="e.g. https://yourwebsite.com/logo.png"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_logo_url-helper-text"
+          >
+            When inputting a URL for a logo, please use an image URL from an open platform or a publicly accessible Google Drive URL to ensure visibility. Ensure that the URL leads to the desired logo image.
+          </p>
+        </div>
       </div>
       <div
         class="font-bold"
       >
         PB Partner Tag
+      </div>
+      <div
+        class="text-sm"
+      >
+        We are helping our partners create sub-directories within our DB. If you are submitting a project as part of a PB Partner list, write the “PB Partner tag” here. If you are not aware or not sure, simply keep empty.
       </div>
       <div
         class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
@@ -1538,77 +1618,85 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Your name *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="submitted_by_name"
-            name="submitted_by_name"
-            placeholder="e.g. John Doe"
-            required=""
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Your name *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_name"
+              name="submitted_by_name"
+              placeholder="e.g. John Doe"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="font-bold"
-      >
-        Your email *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="submitted_by_email"
-            name="submitted_by_email"
-            placeholder="e.g. john.doe@example.com"
-            required=""
-            type="email"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Your email *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_email"
+              name="submitted_by_email"
+              placeholder="e.g. john.doe@example.com"
+              required=""
+              type="email"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -1680,76 +1768,50 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
           class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
         />
       </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth my-5 css-9mgopn-MuiDivider-root"
+      />
       <div
-        class="font-bold"
-      >
-        Data privacy *
-      </div>
-      <div
-        class="text-sm"
-      >
-        I understand that the information above can be used by PositiveBlockchain and also published on http://positiveblockchain.io. You can request to correct, remove or block incorrect data by sending an email to hello@positiveblockchain.io
-      </div>
-      <div
-        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+        class="mb-10"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
-          required=""
+          class="font-bold mb-4"
         >
-          <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-labelledby="mui-component-select-agrees_to_data_privacy_agreement"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-            id="mui-component-select-agrees_to_data_privacy_agreement"
-            role="button"
-            tabindex="0"
-          >
-            <span
-              class="notranslate"
-            >
-              ​
-            </span>
-          </div>
-          <input
-            aria-hidden="true"
-            aria-invalid="false"
-            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-            name="agrees_to_data_privacy_agreement"
-            required=""
-            tabindex="-1"
-            value=""
-          />
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-            data-testid="ArrowDropDownIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M7 10l5 5 5-5z"
-            />
-          </svg>
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Data privacy *
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-        />
+        <div
+          class="flex items-start text-sm"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium mr-4 -mt-2 -ml-3 css-1oakzvg-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="agrees_to_data_privacy_agreement"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </span>
+          <div
+            class="text-sm"
+          >
+            I understand that the information above can be used by PositiveBlockchain and also published on http://positiveblockchain.io. You can request to correct, remove or block incorrect data by sending an email to hello@positiveblockchain.io
+          </div>
+        </div>
       </div>
       <div
         class="font-bold"
@@ -1883,49 +1945,53 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Project name *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_project_name-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_project_name"
-            maxlength="50"
-            name="PUBLIC_project_name"
-            placeholder="e.g. "PositiveBlockchain""
-            required=""
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Project name *
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_project_name-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          50 characters max
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_project_name-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_project_name"
+              maxlength="50"
+              name="PUBLIC_project_name"
+              placeholder="e.g. "PositiveBlockchain""
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_project_name-helper-text"
+          >
+            50 characters max
+          </p>
+        </div>
       </div>
       <div
         class="font-bold"
@@ -2000,40 +2066,44 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Your website *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_website"
-            name="PUBLIC_website"
-            placeholder="e.g. https://positiveblockchain.io"
-            required=""
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Your website *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_website"
+              name="PUBLIC_website"
+              placeholder="e.g. https://positiveblockchain.io"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -2050,7 +2120,7 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
           <span
             class="MuiTypography-root MuiTypography-overline css-b3fch5-MuiTypography-root"
           >
-            Primary Category *
+            Primary Category
           </span>
           <div
             class="w-full flex"
@@ -2268,82 +2338,90 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Name of Founders
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_founder_names_list-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_founder_names_list"
-            name="PUBLIC_founder_names_list"
-            placeholder="e.g. "John Doe", "CEO"; "Jane Doe", "CTO""
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Name of Founders
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_founder_names_list-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          Founders only. Please respect this formatting -&gt; "Name", "Tittle"; "Name", Tittle"
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_founder_names_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_founder_names_list"
+              name="PUBLIC_founder_names_list"
+              placeholder="e.g. "John Doe", "CEO"; "Jane Doe", "CTO""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_founder_names_list-helper-text"
+          >
+            Founders only. Please respect this formatting -&gt; "Name", "Tittle"; "Name", Tittle"
+          </p>
+        </div>
       </div>
       <div
-        class="font-bold"
-      >
-        Headquarter city
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_primary_headquarter_city"
-            name="PUBLIC_primary_headquarter_city"
-            placeholder="e.g. San Francisco"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Headquarter city
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_primary_headquarter_city"
+              name="PUBLIC_primary_headquarter_city"
+              placeholder="e.g. San Francisco"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -2549,44 +2627,48 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Sponsor & partners
-      </div>
-      <div
-        class="text-sm"
-      >
-        Feel free to name notable sponsors and partners involved in the project/organization.
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_sponsors_partners_list"
-            name="PUBLIC_sponsors_partners_list"
-            placeholder="e.g. Microsoft, IBM"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Sponsor & partners
+        </div>
+        <div
+          class="text-sm"
+        >
+          Feel free to name notable sponsors and partners involved in the project/organization.
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_sponsors_partners_list"
+              name="PUBLIC_sponsors_partners_list"
+              placeholder="e.g. Microsoft, IBM"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -2595,337 +2677,373 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         Project Links
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_video_url"
-          id="PUBLIC_video_url-label"
-        >
-          Add the url of the most relevant project video
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_video_url"
-            name="PUBLIC_video_url"
-            placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_video_url"
+            id="PUBLIC_video_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Add the url of the most relevant project video
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_video_url"
+              name="PUBLIC_video_url"
+              placeholder="e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Add the url of the most relevant project video
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Add the url of the most relevant project video
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_white_paper_url"
-          id="PUBLIC_white_paper_url-label"
-        >
-          White Paper Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_white_paper_url"
-            name="PUBLIC_white_paper_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_white_paper_url"
+            id="PUBLIC_white_paper_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            White Paper Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_white_paper_url"
+              name="PUBLIC_white_paper_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                White Paper Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  White Paper Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_twitter_url"
-          id="PUBLIC_twitter_url-label"
-        >
-          Twitter Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_twitter_url"
-            name="PUBLIC_twitter_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_twitter_url"
+            id="PUBLIC_twitter_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Twitter Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_twitter_url"
+              name="PUBLIC_twitter_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Twitter Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Twitter Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_facebook_url"
-          id="PUBLIC_facebook_url-label"
-        >
-          Facebook Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_facebook_url"
-            name="PUBLIC_facebook_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_facebook_url"
+            id="PUBLIC_facebook_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Facebook Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_facebook_url"
+              name="PUBLIC_facebook_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Facebook Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Facebook Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_linkedin_url"
-          id="PUBLIC_linkedin_url-label"
-        >
-          Linkedin Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_linkedin_url"
-            name="PUBLIC_linkedin_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_linkedin_url"
+            id="PUBLIC_linkedin_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Linkedin Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_linkedin_url"
+              name="PUBLIC_linkedin_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Linkedin Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Linkedin Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_discord_url"
-          id="PUBLIC_discord_url-label"
-        >
-          Discord Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_discord_url"
-            name="PUBLIC_discord_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_discord_url"
+            id="PUBLIC_discord_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Discord Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_discord_url"
+              name="PUBLIC_discord_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Discord Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Discord Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_github_url"
-          id="PUBLIC_github_url-label"
-        >
-          Github Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_github_url"
-            name="PUBLIC_github_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_github_url"
+            id="PUBLIC_github_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Github Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_github_url"
+              name="PUBLIC_github_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Github Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Github Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_coinmarketcap_url"
-          id="PUBLIC_coinmarketcap_url-label"
-        >
-          Coinmarketcap Url
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_coinmarketcap_url"
-            name="PUBLIC_coinmarketcap_url"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_coinmarketcap_url"
+            id="PUBLIC_coinmarketcap_url-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Coinmarketcap Url
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_coinmarketcap_url"
+              name="PUBLIC_coinmarketcap_url"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Coinmarketcap Url
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Coinmarketcap Url
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
-        <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for="PUBLIC_other_links_list"
-          id="PUBLIC_other_links_list-label"
-        >
-          Other links
-        </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          <input
-            aria-describedby="PUBLIC_other_links_list-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_other_links_list"
-            name="PUBLIC_other_links_list"
-            placeholder="e.g. https://link1.com, https://link2.com"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="false"
+            for="PUBLIC_other_links_list"
+            id="PUBLIC_other_links_list-label"
           >
-            <legend
-              class="css-yjsfm1"
+            Other links
+          </label>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_other_links_list-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_other_links_list"
+              name="PUBLIC_other_links_list"
+              placeholder="e.g. https://link1.com, https://link2.com"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span>
-                Other links
-              </span>
-            </legend>
-          </fieldset>
+              <legend
+                class="css-yjsfm1"
+              >
+                <span>
+                  Other links
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_other_links_list-helper-text"
+          >
+            Paste here other related articles talking about the project, if relevant. several articles possible. Comma separated.
+          </p>
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_other_links_list-helper-text"
-        >
-          Paste here other related articles talking about the project, if relevant. several articles possible. Comma separated.
-        </p>
       </div>
       <hr
         class="MuiDivider-root MuiDivider-fullWidth mt-10 css-9mgopn-MuiDivider-root"
@@ -3066,95 +3184,108 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Token Ticker
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_token_ticker-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_token_ticker"
-            name="PUBLIC_token_ticker"
-            placeholder="e.g. BTC"
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Token Ticker
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_token_ticker-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          Only capital letters
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_token_ticker-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_token_ticker"
+              name="PUBLIC_token_ticker"
+              placeholder="e.g. BTC"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_token_ticker-helper-text"
+          >
+            Only capital letters
+          </p>
+        </div>
       </div>
       <div
-        class="font-bold"
-      >
-        Project Logo URL
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-describedby="PUBLIC_logo_url-helper-text"
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="PUBLIC_logo_url"
-            name="PUBLIC_logo_url"
-            placeholder="e.g. https://yourwebsite.com/logo.png"
-            type="url"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Project Logo URL
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-          id="PUBLIC_logo_url-helper-text"
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
-          When inputting a URL for a logo, please use an image URL from an open platform or a publicly accessible Google Drive URL to ensure visibility. Ensure that the URL leads to the desired logo image.
-        </p>
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          >
+            <input
+              aria-describedby="PUBLIC_logo_url-helper-text"
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="PUBLIC_logo_url"
+              name="PUBLIC_logo_url"
+              placeholder="e.g. https://yourwebsite.com/logo.png"
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-ihdtdm"
+              >
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
+            id="PUBLIC_logo_url-helper-text"
+          >
+            When inputting a URL for a logo, please use an image URL from an open platform or a publicly accessible Google Drive URL to ensure visibility. Ensure that the URL leads to the desired logo image.
+          </p>
+        </div>
       </div>
       <div
         class="font-bold"
       >
         PB Partner Tag
+      </div>
+      <div
+        class="text-sm"
+      >
+        We are helping our partners create sub-directories within our DB. If you are submitting a project as part of a PB Partner list, write the “PB Partner tag” here. If you are not aware or not sure, simply keep empty.
       </div>
       <div
         class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
@@ -3288,77 +3419,85 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
         />
       </div>
       <div
-        class="font-bold"
-      >
-        Your name *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="submitted_by_name"
-            name="submitted_by_name"
-            placeholder="e.g. John Doe"
-            required=""
-            type="text"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Your name *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_name"
+              name="submitted_by_name"
+              placeholder="e.g. John Doe"
+              required=""
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
-        class="font-bold"
-      >
-        Your email *
-      </div>
-      <div
-        class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+          class="font-bold"
         >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id="submitted_by_email"
-            name="submitted_by_email"
-            placeholder="e.g. john.doe@example.com"
-            required=""
-            type="email"
-            value=""
-          />
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          Your email *
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root w-full css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
+        >
+          <div
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
           >
-            <legend
-              class="css-ihdtdm"
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="submitted_by_email"
+              name="submitted_by_email"
+              placeholder="e.g. john.doe@example.com"
+              required=""
+              type="email"
+              value=""
+            />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <span
-                class="notranslate"
+              <legend
+                class="css-ihdtdm"
               >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+                <span
+                  class="notranslate"
+                >
+                  ​
+                </span>
+              </legend>
+            </fieldset>
+          </div>
         </div>
       </div>
       <div
@@ -3430,76 +3569,50 @@ exports[`<ProjectSubmissionForm /> it should render and match snapshot without e
           class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
         />
       </div>
+      <hr
+        class="MuiDivider-root MuiDivider-fullWidth my-5 css-9mgopn-MuiDivider-root"
+      />
       <div
-        class="font-bold"
-      >
-        Data privacy *
-      </div>
-      <div
-        class="text-sm"
-      >
-        I understand that the information above can be used by PositiveBlockchain and also published on http://positiveblockchain.io. You can request to correct, remove or block incorrect data by sending an email to hello@positiveblockchain.io
-      </div>
-      <div
-        class="MuiFormControl-root w-full mb-3 css-1nrlq1o-MuiFormControl-root"
+        class="mb-10"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
-          required=""
+          class="font-bold mb-4"
         >
-          <div
-            aria-expanded="false"
-            aria-haspopup="listbox"
-            aria-labelledby="mui-component-select-agrees_to_data_privacy_agreement"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-            id="mui-component-select-agrees_to_data_privacy_agreement"
-            role="button"
-            tabindex="0"
-          >
-            <span
-              class="notranslate"
-            >
-              ​
-            </span>
-          </div>
-          <input
-            aria-hidden="true"
-            aria-invalid="false"
-            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-            name="agrees_to_data_privacy_agreement"
-            required=""
-            tabindex="-1"
-            value=""
-          />
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-hfutr2-MuiSvgIcon-root-MuiSelect-icon"
-            data-testid="ArrowDropDownIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M7 10l5 5 5-5z"
-            />
-          </svg>
-          <fieldset
-            aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-          >
-            <legend
-              class="css-ihdtdm"
-            >
-              <span
-                class="notranslate"
-              >
-                ​
-              </span>
-            </legend>
-          </fieldset>
+          Data privacy *
         </div>
-        <p
-          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained css-1wc848c-MuiFormHelperText-root"
-        />
+        <div
+          class="flex items-start text-sm"
+        >
+          <span
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium mr-4 -mt-2 -ml-3 css-1oakzvg-MuiButtonBase-root-MuiCheckbox-root"
+          >
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="agrees_to_data_privacy_agreement"
+              type="checkbox"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </span>
+          <div
+            class="text-sm"
+          >
+            I understand that the information above can be used by PositiveBlockchain and also published on http://positiveblockchain.io. You can request to correct, remove or block incorrect data by sending an email to hello@positiveblockchain.io
+          </div>
+        </div>
       </div>
       <div
         class="font-bold"

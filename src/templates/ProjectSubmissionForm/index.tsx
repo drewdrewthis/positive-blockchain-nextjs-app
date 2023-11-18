@@ -33,7 +33,7 @@ export interface ProjectSubmissionFormProps {
   inputs: FormInput[];
   initialValues?: Record<string, any>;
   categoryData: any;
-  onSubmit: (values: Record<string, any>) => Promise<void>;
+  onSubmit: (_values: Record<string, any>) => Promise<void>;
   onSubmitSuccess: () => void;
 }
 

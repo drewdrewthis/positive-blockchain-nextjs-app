@@ -1,8 +1,8 @@
-import resolveConfig from "tailwindcss/resolveConfig";
-import { SimplePaletteColorOptions, ThemeOptions } from "@mui/material/styles";
-
-import tailwindConfig from "../../tailwind.config.js";
-
+/* eslint-disable unused-imports/no-unused-vars */
+import type {
+  SimplePaletteColorOptions,
+  ThemeOptions,
+} from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface Palette {
@@ -19,8 +19,6 @@ declare module "@mui/material" {
     white: true;
   }
 }
-
-const tailwind = resolveConfig(tailwindConfig);
 
 export const muiTheme: ThemeOptions = {
   components: {
