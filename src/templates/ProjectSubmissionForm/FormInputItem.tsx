@@ -53,7 +53,7 @@ function FormInputItem(props: FormInputItemProps) {
     const isMultiSelect = type === "multi-select";
 
     return (
-      <>
+      <FormControl error={!!formState.errors[databaseKey]}>
         <Label text={props.label} required={props.required} />
         <Prompt text={props.prompt} />
         <SelectInput
@@ -66,13 +66,13 @@ function FormInputItem(props: FormInputItemProps) {
           multiple={isMultiSelect}
           required={props.required}
         />
-      </>
+      </FormControl>
     );
   }
 
   if (type === "textarea") {
     return (
-      <>
+      <FormControl error={!!formState.errors[databaseKey]} className="mb-3">
         <Label text={props.label} required={props.required} />
         <Prompt text={props.prompt} />
         <TextareaAutosize
@@ -81,7 +81,7 @@ function FormInputItem(props: FormInputItemProps) {
           placeholder={props.placeholder}
           maxLength={props.characterLimit}
         />
-      </>
+      </FormControl>
     );
   }
 
@@ -101,7 +101,9 @@ function FormInputItem(props: FormInputItemProps) {
           label={upperFirst(props.headerTitle)}
           required={props.required}
           variant="outlined"
-          helperText={props.helperText}
+          helperText={
+            props.helperText ?? <div className="invisible">helperTesxt</div>
+          }
           placeholder={props.placeholder}
           type={type === "url" ? "text" : type}
           inputProps={{
