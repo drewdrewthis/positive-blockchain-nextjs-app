@@ -10,5 +10,7 @@ export default function Label(props: {
   if (props.required) {
     text += " *";
   }
-  return <div className={twMerge("font-bold", props.className)}>{text}</div>;
+  return (
+    <div className={twMerge("font-bold mb-2", props.className)}>{text}</div>
+  );
 }

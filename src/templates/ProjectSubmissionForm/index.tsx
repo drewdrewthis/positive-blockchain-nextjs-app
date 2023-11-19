@@ -186,7 +186,10 @@ export default function ProjectSubmissionForm(
 
           <FormInputItem {...allInputProps["PUBLIC_token_ticker"]} />
           <FormInputItem {...allInputProps["PUBLIC_logo_url"]} />
-          <FormInputItem {...allInputProps["PUBLIC_pb_partner_tag"]} />
+          <FormInputItem
+            {...allInputProps["PUBLIC_pb_partner_tag"]}
+            options={allInputProps["PUBLIC_pb_partner_tag"]?.options?.sort()}
+          />
 
           <Divider className="mt-10" />
           <SectionTitle>About you</SectionTitle>
@@ -206,7 +209,7 @@ export default function ProjectSubmissionForm(
             {...allInputProps["agrees_to_data_privacy_agreement"]}
           />
           <Label text="Anything else to add?" />
-          <p>
+          <p className="text-sm">
             Got any suggestions to improve this form? Questions or doubts? Let
             us know!
           </p>

@@ -1,5 +1,5 @@
 import { Delete } from "@mui/icons-material";
-import { Button, IconButton, Typography } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import React from "react";
 import { FormProvider } from "react-hook-form";
 
@@ -7,6 +7,7 @@ import { submissionFormConfig } from "@/configuration";
 
 import { withController } from "../../../lib/withContoller";
 import withErrorBoundary from "../../../lib/withErrorBoundary";
+import Prompt from "../Prompt";
 
 import { useController } from "./hooks/useController";
 import SingleCategoryBlock from "./SingleCategoryBlock";
@@ -23,7 +24,7 @@ const CategoriesSection = (props: ReturnType<typeof useController>) => {
     <FormProvider {...props.methods}>
       <div className="flex w-full flex-col gap-3">
         <div className="w-full" key={firstBlock.id}>
-          <Typography variant="overline">Primary Category</Typography>
+          <Prompt text="Primary Category" />
           <div className="w-full flex">
             <SingleCategoryBlock
               {...firstBlock}
@@ -31,7 +32,7 @@ const CategoriesSection = (props: ReturnType<typeof useController>) => {
             />
           </div>
         </div>
-        <Typography variant="overline">Additional categories</Typography>
+        <Prompt text="Additional categories" />
         {categoryBlocks.slice(1).map((block, idx) => (
           <div className="w-full flex" key={block.id + idx}>
             <SingleCategoryBlock

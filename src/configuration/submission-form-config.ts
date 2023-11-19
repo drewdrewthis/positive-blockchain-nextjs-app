@@ -162,10 +162,10 @@ export const overrides: Record<string, InputFieldProps> = {
   },
 
   PUBLIC_video_url: {
-    // helperText: "Youtube or Vimeo URL (main video, only one)",
+    headerTitle: "Youtube or Vimeo URL (main video, only one)",
     type: "url",
     required: false,
-    headerTitle: "Add the url of the most relevant project video",
+    helperText: "Add the url of the most relevant project video",
     placeholder: "e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   PUBLIC_other_links_list: {
@@ -222,7 +222,7 @@ export const overrides: Record<string, InputFieldProps> = {
     label: "PB Partner Tag",
     required: false,
     type: "multi-select",
-    placeholder: "e.g. PBPT1",
+    placeholder: "Please select all that apply",
     prompt:
       "We are helping our partners create sub-directories within our DB. If you are submitting a project as part of a PB Partner list, write the “PB Partner tag” here. If you are not aware or not sure, simply keep empty.",
   },
