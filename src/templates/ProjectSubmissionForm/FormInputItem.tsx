@@ -102,7 +102,7 @@ function FormInputItem(props: FormInputItemProps) {
           required={props.required}
           variant="outlined"
           helperText={
-            props.helperText ?? <div className="invisible">helperTesxt</div>
+            props.helperText ?? <span className="invisible">helperTesxt</span>
           }
           placeholder={props.placeholder}
           type={type === "url" ? "text" : type}

@@ -9,6 +9,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log("Request received", {
+    req,
+    NEXT_PUBLIC_VERCEL_URL: process.env.NEXT_PUBLIC_VERCEL_URL,
+    VERCEL_URL: process.env.VERCEL_URL,
+    origin: req.headers.origin,
+  });
+
   const apiRoute = nextConnect<NextApiRequest, NextApiResponse>({
     onError(error, req, res) {
       res
@@ -18,6 +25,24 @@ export default async function handler(
     onNoMatch(req, res) {
       res.status(405).json({ error: `Method "${req.method}" Not Allowed` });
     },
+  });
+
+  apiRoute.use((req, res, next) => {
+    const allowedOrigins = [
+      "positiveblockchain.io",
+      `positive-blockchain.vercel.app`,
+    ];
+
+    const origin = req.headers.origin as string;
+
+    if (allowedOrigins.some((substring) => origin.includes(substring))) {
+      res.setHeader("Access-Control-Allow-Origin", "*");
+    }
+
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+    next();
   });
 
   apiRoute.post(async (req, res) => {
@@ -36,6 +61,10 @@ export default async function handler(
       // @ts-expect-error Error has a message
       res.status(500).json({ error: e.message });
     }
+  });
+
+  apiRoute.options((req, res) => {
+    res.status(200).end();
   });
 
   return apiRoute(req, res);

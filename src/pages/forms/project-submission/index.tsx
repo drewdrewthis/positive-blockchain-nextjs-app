@@ -23,7 +23,6 @@ import Routes from "../../../lib/Routes";
 import { convertProjectDataIntoInitialValues } from "../../../lib/utils/convertProjectDataIntoInitialValues";
 import { withController } from "../../../lib/withContoller";
 
-
 interface ProjectSubmissionPageProps {
   projectData: any;
   countriesData: any;
@@ -278,7 +277,12 @@ async function submitProjectData(
 
   console.log("submitting", body);
 
-  fetch("/database/api/submit-project-data", {
+  const baseUrl =
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
+      : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+
+  fetch(baseUrl + "/database/api/submit-project-data", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
