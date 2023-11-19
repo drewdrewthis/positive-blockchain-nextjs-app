@@ -37,7 +37,7 @@ class Configuration {
               keyRow: 2,
             },
             pendingProjects: {
-              name: "Copy of Projects Pending Review",
+              name: "Projects Pending Review",
               keyRow: 2,
             },
             dataFrame: {
