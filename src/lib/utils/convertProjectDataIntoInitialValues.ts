@@ -24,6 +24,10 @@ export function convertProjectDataIntoInitialValues(projectData: any) {
     projectData.PUBLIC_servicing_area
   );
 
+  initialValues.PUBLIC_blockchain_technology = stringListToArray(
+    projectData.PUBLIC_blockchain_technology
+  );
+
   return omitBy(isUndefined, initialValues);
 }
 
