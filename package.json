@@ -15,6 +15,7 @@
     "test:e2e": "yarn playwright test"
   },
   "dependencies": {
+    "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.6",
@@ -35,6 +36,7 @@
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "fuse.js": "^6.6.2",
+    "google-auth-library": "^9.2.0",
     "iltorb": "^2.4.5",
     "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
