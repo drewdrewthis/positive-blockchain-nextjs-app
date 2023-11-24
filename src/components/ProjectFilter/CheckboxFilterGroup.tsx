@@ -17,7 +17,7 @@ export default function CheckboxFilterGroup(props: {
   isOpenInitial?: boolean;
 }) {
   const { onChange, title, labels, isOpenInitial, defaultValues } = props;
-  const [isOpen, setIsOpen] = useState<boolean>(isOpenInitial);
+  const [isOpen, setIsOpen] = useState<boolean>(isOpenInitial || false);
   const methods = useForm({
     defaultValues
   });
