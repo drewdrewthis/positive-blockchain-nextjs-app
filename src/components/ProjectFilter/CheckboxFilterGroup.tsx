@@ -1,10 +1,11 @@
+import { useEffect } from 'react';
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { Checkbox, Collapse, FormControlLabel, FormGroup } from "@mui/material";
 import cx from "classnames";
 import kebabCase from "lodash/fp/kebabCase";
 import { useState } from "react";
-import { FormProvider, useForm, useFormContext } from "react-hook-form";
+import { FormProvider, useForm, useFormContext, Controller } from "react-hook-form";
 
 import { convertBooleanMapToArray } from "@/lib/utils";
 
@@ -12,10 +13,14 @@ export default function CheckboxFilterGroup(props: {
   title: string;
   labels: (string | number)[];
   onChange: (values: any) => void;
+  defaultValues?: any;
+  isOpenInitial?: boolean;
 }) {
-  const { onChange, title, labels } = props;
-  const [isOpen, setIsOpen] = useState(false);
-  const methods = useForm();
+  const { onChange, title, labels, isOpenInitial, defaultValues } = props;
+  const [isOpen, setIsOpen] = useState<boolean>(isOpenInitial);
+  const methods = useForm({
+    defaultValues
+  });
 
   methods.watch((values) => {
     const valuesArray = convertBooleanMapToArray(values);
@@ -31,18 +36,19 @@ export default function CheckboxFilterGroup(props: {
         <b className="mb-3 text-brand-primary text-left">{title}</b>
         {isOpen ? <ExpandLess /> : <ExpandMore />}
       </button>
-      <Checkboxes className="h-auto" labels={labels} expanded={isOpen} />
+      <Checkboxes title={props.title} className="h-auto" labels={labels} expanded={isOpen} />
     </FormProvider>
   );
 }
 
 function Checkboxes(props: {
+  title: string,
   labels: (string | number)[];
   className?: string;
   expanded: boolean;
 }) {
-  const { expanded, className = "" } = props;
-  const { register } = useFormContext();
+  const { expanded, className = "", title } = props;
+  const { control, getValues } = useFormContext();
 
   return (
     <FormGroup className={cx(className)}>
@@ -53,9 +59,17 @@ function Checkboxes(props: {
               <FormControlLabel
                 className="p-0"
                 control={
-                  <Checkbox
-                    className="py-0"
-                    {...register(kebabCase(label.toString()))}
+                  <Controller
+                    name={kebabCase(label.toString())}
+                    control={control}
+                    render={({ field: { value, ref, ...field } }) => (
+                        <Checkbox
+                          {...field}
+                          inputRef={ref}
+                          checked={!!value}
+                          className="py-0"
+                        />
+                    )}
                   />
                 }
                 label={<span className="text-xs">{label}</span>}

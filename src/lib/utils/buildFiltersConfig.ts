@@ -13,12 +13,20 @@ export function buildFiltersConfig(filters: Record<string, string[]>): {
   type?: "multi-select-search";
   // Helper text to be displayed for the filter
   helperText?: string;
+  // Default values for the filter
+  defaultValues?: any;
+  // Display the filter expanded by default
+  isOpenInitial?: boolean;
 }[] {
   return [
     {
       title: "Status",
       key: "active",
       labels: filters.active,
+      defaultValues: {
+        active: true,
+      },
+      isOpenInitial: true,
     },
     {
       title: "Categories",
