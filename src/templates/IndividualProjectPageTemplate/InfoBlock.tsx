@@ -3,8 +3,9 @@ import { snakeCaseToSentenceCase } from "../../lib/utils";
 export default function InfoBlock(props: {
   title: string;
   content: string | string[];
+  className?: string;
 }) {
-  const { title, content } = props;
+  const { title, content, className } = props;
 
   if (!content) {
     return null;
@@ -16,7 +17,7 @@ export default function InfoBlock(props: {
         <b>{title}: </b>
         {content.map((item, index) => {
           return (
-            <span key={index}>
+            <span className={className} key={index}>
               {item}
               {index !== content.length - 1 ? ", " : ""}
             </span>
@@ -29,7 +30,7 @@ export default function InfoBlock(props: {
   return (
     <div>
       <b>{title}: </b>
-      <span>{snakeCaseToSentenceCase(content)}</span>
+      <span className={className}>{snakeCaseToSentenceCase(content)}</span>
     </div>
   );
 }

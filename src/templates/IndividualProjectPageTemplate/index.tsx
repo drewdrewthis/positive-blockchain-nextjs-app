@@ -96,11 +96,6 @@ function IndividualProjectPageTemplate(
               <b>Subcategories: </b>
               <span>{projectData["sub_categories_list"]?.join(", ")}</span>
             </div>
-            {projectData["active"] && (
-              <div className="mb-2">
-                <InfoBlock title="Status" content={projectData["active"]} />
-              </div>
-            )}
           </div>
         </div>
         <div className="prose max-w-none max-w-7xl mx-auto mb-auto p-10 w-full h-full bg-white flex-1">
@@ -126,6 +121,11 @@ function IndividualProjectPageTemplate(
               )}
             </div>
             <div className="flex-1 flex flex-col gap-3">
+              {projectData["active"] && (
+                <div className="mb-2">
+                  <InfoBlock title="Status" content={projectData["active"]} className="text-green-600 font-bold"/>
+                </div>
+              )}
               <div className="border rounded p-3 bg-slate-200">
                 <div>Do you work here? </div>
                 <Link
