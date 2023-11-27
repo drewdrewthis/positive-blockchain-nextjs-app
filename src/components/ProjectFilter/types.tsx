@@ -4,6 +4,8 @@ export interface FilterGroupProps {
   labels: string[];
   type?: "checkbox" | "multi-select-search";
   helperText?: string;
+  defaultValues?: any;
+  isOpenInitial?: boolean;
 }
 export interface Props {
   filters: FilterGroupProps[];
