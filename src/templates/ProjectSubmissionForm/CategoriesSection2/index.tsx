@@ -22,6 +22,29 @@ const CategoriesSection = (props: ReturnType<typeof useController>) => {
 
   return (
     <FormProvider {...props.methods}>
+      <p className="text-sm">
+        The PB Category Schema is available on the {' '}
+        <a
+          className="underline"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.notion.so/PB-Database-wiki-4eea2421bca64fa48f49dbf4e0752b5c?pvs=4"
+        >
+          WIKI
+        </a>
+        . Choose up to three categories,
+        and one or multiple sub-categories inside. Please note that sub-categories are
+        used to attribute UN Sustainable Development Goals (UN SDG) to your
+        project in a harmonized way using an adaptation of the {' '}
+        <a
+          className="underline"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://toniic.com/sdg-framework/"
+        >TONIIC
+        </a>
+        {' '} model. 
+      </p>
       <div className="flex w-full flex-col gap-3">
         <div className="w-full" key={firstBlock.id}>
           <Prompt text="Primary Category" />
