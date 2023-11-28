@@ -148,14 +148,18 @@ function IntroBlock(props: { isEditingProject: boolean }) {
         collaboration for technology and social impact enthusiasts willing to
         leverage blockchain technologies for the UN SDGs.
       </p>
-
       <p>
         The database lists hundreds of projects and startups using blockchain
         technologies for good. Projects are either crowd-sourced or identified
         and qualified by PositiveBlockchain or its alliance partners comprising
         associations, universities and blockchain foundations.
       </p>
-
+      <p>
+        The database is actively curated, meaning that your submission will first
+        be verified and validated before getting in to the database. This helps us
+        maintain high quality and consistency throughout the database, thereby
+        allowing for academic and professional use.
+      </p>
       <p>
         PositiveBlockchain is a contributor-based non-profit association
         registered in Paris and active globally.
@@ -173,7 +177,7 @@ function IntroBlock(props: { isEditingProject: boolean }) {
       </p>
       <p>
         NB: for submitting a new project, go{" "}
-        <a href="/forms/project-submission" target="_blank">
+        <a href="/database/forms/project-submission" target="_blank">
           here.
         </a>
       </p>

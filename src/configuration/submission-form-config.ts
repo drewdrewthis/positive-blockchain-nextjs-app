@@ -233,6 +233,7 @@ export const overrides: Record<string, InputFieldProps> = {
     type: "select",
     placeholder: "Please select one",
     headerTitle: "Choose a year",
+    prompt: "If the company existed before, select the year of launch of the blockchain project"
   },
 
   PUBLIC_primary_headquarter_city: {
@@ -247,6 +248,7 @@ export const overrides: Record<string, InputFieldProps> = {
     placeholder: "Please select one",
     required: false,
     type: "select",
+    prompt: "Select a specific country or “Distributed/Global”"
   },
   PUBLIC_secondary_headquarter_city: {
     label: "Secondary headquarter city",
