@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ReactPlayer from "react-player/lazy";
+import cx from "classnames";
 
 import { withController } from "@/lib/withContoller";
 import { Project } from "@/types";
@@ -19,6 +20,7 @@ import HeadquartersBlock from "./HeadquartersBlock";
 import InfoBlock from "./InfoBlock";
 import LinksBlock, { VALID_FIELDS } from "./LinksBlock";
 import SDGBlock from "./SDGBlock";
+import { getStatusColor } from "@/styles/helpers";
 
 function useController(props: { projectData: Project }) {
   const { projectData } = props;
@@ -123,7 +125,7 @@ function IndividualProjectPageTemplate(
             <div className="flex-1 flex flex-col gap-3">
               {projectData["active"] && (
                 <div className="mb-2">
-                  <InfoBlock title="Status" content={projectData["active"]} className="text-green-600 font-bold"/>
+                  <InfoBlock title="Status" content={projectData["active"]} className={cx('text-green-600 font-bold', getStatusColor(projectData["active"]))}/>
                 </div>
               )}
               <div className="border rounded p-3 bg-slate-200">

@@ -8,6 +8,7 @@ import Link from "next/link";
 import Routes from "../../lib/Routes";
 
 import styles from "./styles.module.scss";
+import { getStatusColor } from "@/styles/helpers";
 
 interface Props {
   status: string; // The status of the project
@@ -72,7 +73,7 @@ function ProjectGridItem(props: Props) {
         <div className="p-3 text-xs mb-auto">{formattedDescription}</div>
         <Divider className="m-0" />
         <div className="p-3 bg-slate-100">
-          <div className="text-xs text-green-600 font-bold">{props.status}</div>
+          <div className={cx('text-xs text-green-600 font-bold', getStatusColor(props.status))}>{props.status}</div>
           {props.headquarters && (
             <div className="text-xs">
               <b>HQ:</b> {props.headquarters}
