@@ -41,10 +41,10 @@ function ProjectGridItem(props: Props) {
         )}
       >
         <Link href={projectPath}>
-          <div className="flex items-center gap-5 p-3 bg-brand-primary">
+          <div className={cx(styles["card-header"], "bg-brand-primary")}>
             {thumbnailSrc && (
               <Image
-                className="m-0"
+                className={styles["image"]}
                 src={thumbnailSrc}
                 alt={props.name}
                 width={100}
