@@ -1,5 +1,21 @@
 .grid-item {
+  border-radius: 10px;
   a {
     text-decoration: none;
   }
+}
+
+.card-header {
+  display: flex;
+  height: 120px;
+  padding: 12px;
+  gap: 12px;
+}
+
+.image {
+  height: 96px;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #dbdbdb;
 }
