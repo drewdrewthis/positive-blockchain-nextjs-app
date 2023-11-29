@@ -65,6 +65,8 @@ export default function ProjectSubmissionForm(
     return acc;
   }, {} as Record<string, any>);
 
+  const hasOtherBlockchainPlatform = methods.getValues('PUBLIC_blockchain_technology').includes('Other')
+
   const allInputProps = Object.keys(submissionFormConfig.overrides).reduce(
     (acc, key) => {
       acc[key] = {
@@ -183,6 +185,9 @@ export default function ProjectSubmissionForm(
           <SectionTitle>Technology</SectionTitle>
           <FormInputItem {...allInputProps["PUBLIC_blockchain_type"]} />
           <FormInputItem {...allInputProps["PUBLIC_blockchain_technology"]} />
+          {hasOtherBlockchainPlatform && (
+            <FormInputItem {...allInputProps["PUBLIC_blockchain_technology_other"]} />
+          )}
 
           <FormInputItem {...allInputProps["PUBLIC_token_ticker"]} />
           <FormInputItem {...allInputProps["PUBLIC_logo_url"]} />
