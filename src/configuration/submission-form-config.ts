@@ -299,6 +299,11 @@ export const overrides: Record<string, InputFieldProps> = {
     required: false,
     type: "multi-select",
   },
+  PUBLIC_blockchain_technology_other: {
+    placeholder: "Please specify the technology",
+    required: false,
+    type: "text",
+  },
   is_project_owner: {
     label: "Are you the project owner or working for this project?",
     required: false,

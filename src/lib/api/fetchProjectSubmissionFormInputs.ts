@@ -123,7 +123,7 @@ async function fetchOptionsFor(key: string) {
   if (key === "PUBLIC_blockchain_technology") {
     return (await fetchBlockchainTechnologies())
       .sort()
-      .filter((value) => value !== "Other")
+      .filter((value) => value !== "- Other")
       .concat(["Other"]);
   }
 
