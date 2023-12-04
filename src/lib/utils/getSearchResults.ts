@@ -6,7 +6,8 @@ import Fuse from "fuse.js";
 const options: Fuse.IFuseOptions<Project> = {
   threshold: 0.1,
   includeScore: true,
-  ignoreLocation: true,
+  ignoreLocation: false,
+  location: 0,
   keys: [
     {
       name: "project_name",
