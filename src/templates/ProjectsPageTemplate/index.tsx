@@ -66,6 +66,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               ["hidden"]: !showFilters,
             })}
           >
+            <p className="mb-3 mt-0"><strong>{projectData?.length}</strong> results</p>
             <div className="border rounded p-2 mb-4">
               <Search>
                 <SearchIcon />
