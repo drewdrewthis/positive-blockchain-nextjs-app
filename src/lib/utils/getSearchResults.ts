@@ -11,13 +11,29 @@ const options: Fuse.IFuseOptions<Project> = {
   keys: [
     {
       name: "project_name",
+      weight: 3,
+    },
+    {
+      name: "description_short_value_proposition_in_a_tweet",
+      weight: 3,
+    },
+    {
+      name: "long_description",
+      weight: 2,
+    },
+    {
+      name: "tags_keywords",
+      weight: 2,
+    },
+    {
+      name: "tags_keywords",
+      weight: 3,
+    },
+    {
+      name: "business_tagline",
       weight: 2,
     },
     "categories",
-    "description_short_value_proposition_in_a_tweet",
-    "long_description",
-    "tags_keywords",
-    "business_tagline",
     "primary_headquarter_city",
     "primary_headquarter_country",
     "secondary_headquarter_city",
