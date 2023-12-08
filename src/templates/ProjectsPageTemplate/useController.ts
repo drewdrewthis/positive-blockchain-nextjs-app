@@ -17,6 +17,7 @@ interface Props {
    */
   initialData: Project[];
   filters: Record<string, string[]>;
+  allProjectData: any;
 }
 
 export function useController(props: Props) {

@@ -1,0 +1,68 @@
+.KpiBadge {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 12px;
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+
+    @media (min-width: 900px) {
+      max-width: 570px;
+    }
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  &__single-badge {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    padding: 4px 12px;
+    border-radius: 8px;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+}
+
+.NumberBadge {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    flex-direction: column;
+
+    @media (min-width: 900px) {
+      flex-direction: row;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    gap: 10px;
+
+    @media (min-width: 900px) {
+      max-width: 348px;
+    }
+
+    h1, h3 {
+      margin: 0;
+    }
+  }
+}
