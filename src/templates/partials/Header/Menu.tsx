@@ -60,7 +60,7 @@ export default function Menu() {
 function Items() {
   return (
     <>
-      <MenuItem href={Routes.PROJECTS}>Projects</MenuItem>
+      <MenuItem href={Routes.PROJECTS}>Database</MenuItem>
       <MenuItem href={Routes.PROJECTS_API_PAGE}>API</MenuItem>
       <NestedMenuItem title="Join us">
         <Link href={Routes.BECOME_A_CONTRIBUTOR}>Become a contributor</Link>
