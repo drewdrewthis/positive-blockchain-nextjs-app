@@ -5,7 +5,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 interface KpiBadgeProps {
   title: string;
-  number: number;
+  number?: number;
   children?: React.ReactNode;
   tooltip?: string;
 }

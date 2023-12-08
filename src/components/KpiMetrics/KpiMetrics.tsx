@@ -34,12 +34,12 @@ const getTopKeys = (data: any, key: string, isArray: boolean) => {
       if (!isArray) {
         itemsArray = itemsArray.split(',');
       }
-      itemsArray.forEach(i => insertToCount(i))
+      itemsArray.forEach((i: string) => insertToCount(i))
     }
   })
 
-  const sortedArray = countObject.sort((a,b) => b.count - a.count);
-  const filteredArray = sortedArray.filter(i => i.key !== 'Not Known');
+  const sortedArray = countObject.sort((a: any,b: any) => b.count - a.count);
+  const filteredArray = sortedArray.filter((i: any) => i.key !== 'Not Known');
 
   return filteredArray;
 }
@@ -71,16 +71,16 @@ const KpiMetrics = ({ allProjectData }: KpiMetricsProps) => {
         </div>
       </div>
       <KpiBadge title="Leading Platforms" tooltip={LEADING_PLATFORMS_TOOLTIP}>
-        {topTechnologies.slice(0, 3).map(item => (
-          <div className={styles['KpiBadge__single-badge']}>
+        {topTechnologies.slice(0, 3).map((item: any) => (
+          <div key={item.key} className={styles['KpiBadge__single-badge']}>
             {item.key}
             <h3 className="text-green-600">{item.count}</h3>
           </div>
         ))}
       </KpiBadge>
       <KpiBadge title="Leading Categories" tooltip={LEADING_CATEGORIES_TOOLTIP}>
-        {topCategories.slice(0, 3).map(item => (
-          <div className={styles['KpiBadge__single-badge']}>
+        {topCategories.slice(0, 3).map((item: any) => (
+          <div key={item.key} className={styles['KpiBadge__single-badge']}>
             {item.key}
             <h3 className="text-green-600">{item.count}</h3>
           </div>
