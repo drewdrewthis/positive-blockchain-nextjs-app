@@ -10,6 +10,7 @@ import { extractFiltersFromProjectData } from "@/lib/utils";
 interface Props {
   initialData: Project[];
   filters: Record<string, string[]>;
+  allProjectData: any;
 }
 
 function AllProjectPage(props: Props) {
@@ -30,6 +31,7 @@ export const getStaticProps: GetStaticProps = async (_context) => {
       initialData:
         projectData?.slice(0, projects.INITIAL_DATA_LOAD_COUNT) || [],
       filters,
+      allProjectData: projectData,
     } as Props,
     revalidate: projects.CACHE_TTL,
   };

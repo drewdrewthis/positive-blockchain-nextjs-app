@@ -13,6 +13,7 @@ import Link from "next/link";
 import cx from "classnames";
 import styles from "./styles.module.scss";
 import { config } from "@/configuration";
+import KpiMetrics from "@/components/KpiMetrics";
 
 const { breakpoints } = config.constants;
 
@@ -26,14 +27,15 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     handleFilterUpdate,
     toggleFilters,
     showFilters,
+    allProjectData,
   } = props;
 
   return (
     <div className="flex flex-col gap-5 h-full min-h-screen">
       <Header />
       <div className="prose max-w-none max-w-7xl mx-auto sm:p-10 px-5 w-full h-full mt-5">
-        <div className="flex flex-col sm:flex-row gap-5 justify-between items-center content-center mb-10">
-          <Typography variant="h1" className="mb-0 font-semibold">
+        <div className="flex w-full justify-between">
+          <Typography variant="h1" className="mb-10 font-semibold">
             Web3 Impact Database
           </Typography>
           <Link href="/forms/request-data-snapshot" className="no-underline">
@@ -49,6 +51,9 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               Get Database
             </Button>
           </Link>
+        </div>
+        <div className="flex flex-col sm:flex-row gap-5 justify-between items-center content-center mb-10">
+          <KpiMetrics allProjectData={allProjectData} />
         </div>
         <Divider className="hidden md:flex my-8" />
         <div className="sm:hidden flex justify-center flex-col w-255">
@@ -72,7 +77,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
                 <SearchIcon />
               </Search>
               <InputBase
-                className="text-sm"
+                className="text-sm w-3/4"
                 placeholder="Search for projects"
                 onChange={handleSearch}
               />
