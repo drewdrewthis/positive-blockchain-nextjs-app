@@ -57,7 +57,7 @@ const KpiMetrics = ({ allProjectData }: KpiMetricsProps) => {
   const activePercentage = getActiveProjectsNumber(allProjectData);
 
   return (
-    <div className="flex gap-4">
+    <div className={styles['NumberBadge__wrapper']}>
       <div className={styles['NumberBadge__container']}>
         <div className="flex items-center">
           <h3 className="mr-2">Active Projects</h3>
