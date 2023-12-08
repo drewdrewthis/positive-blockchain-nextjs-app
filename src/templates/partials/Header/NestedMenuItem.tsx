@@ -24,18 +24,11 @@ export function NestedMenuItem(props: Props) {
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef<HTMLButtonElement>(null);
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+  const handleOpen = () => {
+    setOpen(true);
   };
 
   const handleClose = (event: Event | React.SyntheticEvent) => {
-    if (
-      anchorRef.current &&
-      anchorRef.current.contains(event.target as HTMLElement)
-    ) {
-      return;
-    }
-
     setOpen(false);
   };
 
@@ -64,7 +57,6 @@ export function NestedMenuItem(props: Props) {
     "aria-controls": open ? "composition-menu" : undefined,
     "aria-expanded": open ? "true" : undefined,
     "aria-haspopup": true,
-    onClick: handleToggle,
     className: cx(styles.button),
   } as ComponentProps<typeof Button>;
 
@@ -95,7 +87,7 @@ export function NestedMenuItem(props: Props) {
       {list}
     </div>
   ) : (
-    <div>
+    <div onMouseEnter={handleOpen} onMouseLeave={handleClose}>
       <Button {...buttonProps}>{title}</Button>
       <Popper
         open={open}
