@@ -226,7 +226,7 @@ export default function ProjectSubmissionForm(
             color="primary"
             disabled={
               methods.formState.isSubmitting ||
-              !methods.formState.isValid ||
+              // !methods.formState.isValid ||
               methods.formState.isSubmitted
             }
           >
