@@ -176,6 +176,11 @@ function IntroBlock(props: { isEditingProject: boolean }) {
         for support.
       </p>
       <p>
+        As PositiveBlockchain is steering member the the BC 100+ Initiative, we are
+        glad to invite you to join this community in support of the UN Charter of values by signing the online
+        <a href="https://bc100plus.org/" target="_blank"> Manifesto</a>.
+      </p>
+      <p>
         NB: for submitting a new project, go{" "}
         <a href="/database/forms/project-submission" target="_blank">
           here.
@@ -236,6 +241,11 @@ function IntroBlock(props: { isEditingProject: boolean }) {
           for support.
         </li>
       </ul>
+      <p>
+        As PositiveBlockchain is steering member the the BC 100+ Initiative, we are
+        glad to invite you to join this community in support of the UN Charter of values by signing the online
+        <a href="https://bc100plus.org/" target="_blank"> Manifesto</a>.
+      </p>
     </div>
   );
 }
