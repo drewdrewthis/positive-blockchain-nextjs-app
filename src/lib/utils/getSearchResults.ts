@@ -14,6 +14,14 @@ const options: Fuse.IFuseOptions<Project> = {
       weight: 3,
     },
     {
+      name: "main_category",
+      weight: 3,
+    },
+    {
+      name: "sub_categories",
+      weight: 2,
+    },
+    {
       name: "description_short_value_proposition_in_a_tweet",
       weight: 3,
     },

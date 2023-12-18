@@ -154,7 +154,7 @@ export default function ProjectSubmissionForm(
             {...allInputProps["PUBLIC_secondary_headquarter_country"]}
           /> */}
 
-          <Label text="Servicing Areas" />
+          <Label text="Servicing Countries" />
           <Prompt
             text={`
             You may have a headquarter in a given City/Country but have active local projects or implementations in other countries. Select the countries where you have specific local activities. Select "All [Region]" (i.e. All Eastern Africa) if your work is region wide. Select Distributed/Global if you act purely digitally.
