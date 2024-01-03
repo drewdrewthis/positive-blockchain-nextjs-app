@@ -34,6 +34,11 @@ function ProjectGrid(props: Props) {
     setPage(newPage);
   };
 
+  console.log(projectData, 'projectData');
+  if (projectData.length === 0) {
+    return <p className="p-3">No projects were found. Try changing the filters or the search term.</p>
+  }
+
   return (
     <div className={cx("flex flex-col w-full", className)}>
       <Grid container spacing={2}>

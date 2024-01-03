@@ -181,7 +181,7 @@ function useSortBySearch(props: { projectData: Project[] }) {
         searchRelevance: (1 - result.score) * 100,
       }));
 
-      if (search && dataSortedBySearchRelevance.length > 0) {
+      if (search) {
         setSearchResults(dataSortedBySearchRelevance);
       }
     });
