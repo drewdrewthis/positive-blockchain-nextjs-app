@@ -10,14 +10,16 @@ import { useState } from "react";
 import { config } from "@/configuration/config";
 
 import ProjectGridItem from "./ProjectGridItem";
+import Skeleton from "@/components/Skeleton";
 
 interface Props {
   projectData: (Project & { searchRelevance?: number })[];
   className?: string;
+  isLoading?: boolean;
 }
 
 function ProjectGrid(props: Props) {
-  const { projectData, className = "" } = props;
+  const { projectData, className = "", isLoading } = props;
   const itemsPerPage = config.constants.projects.INITIAL_DATA_LOAD_COUNT; // Number of items to display per page
   const [page, setPage] = useState(1);
 
@@ -34,7 +36,6 @@ function ProjectGrid(props: Props) {
     setPage(newPage);
   };
 
-  console.log(projectData, 'projectData');
   if (projectData.length === 0) {
     return <p className="p-3">No projects were found. Try changing the filters or the search term.</p>
   }
@@ -42,24 +43,32 @@ function ProjectGrid(props: Props) {
   return (
     <div className={cx("flex flex-col w-full", className)}>
       <Grid container spacing={2}>
-        {projectData.slice(startIndex, endIndex).map((project, idx: number) => (
-          <ProjectGridItem
-            key={project.slug + idx}
-            status={project.active}
-            slug={project.slug}
-            name={project["project_name"]}
-            description={
-              project["description_short_value_proposition_in_a_tweet"]
-            }
-            categories={project["categories_list"]}
-            thumbnailSrc={project["logo_url"]}
-            blockchainTechnology={project["blockchain_technology"]}
-            blockchainType={project["blockchain_type"]}
-            headquarters={formatHq(project)}
-            searchRelevance={project.searchRelevance}
-            sdgOccurences={parseSdgOccurences(project["sdg_occurrences_list"])}
-          />
-        ))}
+        {isLoading ? (
+          [...Array(16)].map((_, index) => (
+            <div key={`${index}`} className="mr-4 mb-5 ml-2">
+              <Skeleton width={220} height={350} />
+            </div>
+          ))
+        ) : (
+          projectData.slice(startIndex, endIndex).map((project, idx: number) => (
+            <ProjectGridItem
+              key={project.slug + idx}
+              status={project.active}
+              slug={project.slug}
+              name={project["project_name"]}
+              description={
+                project["description_short_value_proposition_in_a_tweet"]
+              }
+              categories={project["categories_list"]}
+              thumbnailSrc={project["logo_url"]}
+              blockchainTechnology={project["blockchain_technology"]}
+              blockchainType={project["blockchain_type"]}
+              headquarters={formatHq(project)}
+              searchRelevance={project.searchRelevance}
+              sdgOccurences={parseSdgOccurences(project["sdg_occurrences_list"])}
+            />
+          ))
+        )}
       </Grid>
       <Pagination
         sx={{
