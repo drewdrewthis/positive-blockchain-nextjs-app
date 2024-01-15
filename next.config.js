@@ -49,7 +49,12 @@ const nextConfig = {
    * Add or remove domains as needed for your project.
    */
   images: {
-    domains: ["positiveblockchain.io", "images.squarespace-cdn.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
 
   /**
