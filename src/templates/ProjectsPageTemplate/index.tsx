@@ -36,7 +36,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     isLoading
   } = props;
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (event: any) => {
     setSearchTerm(event.target.value.toLowerCase());
     handleSearch(event);
   };
