@@ -168,7 +168,7 @@ function useSortBySearch(props: { projectData: Project[] }) {
    * Handles the search input change event.
    * @param event - The change event object.
    */
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (event: any) => {
     setSearch(event.target.value.toLowerCase());
   };
 
