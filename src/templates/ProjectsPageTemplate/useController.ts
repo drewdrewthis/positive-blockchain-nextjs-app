@@ -22,7 +22,7 @@ interface Props {
 
 export function useController(props: Props) {
   const { initialData, filters } = props;
-  const { projectData } = useProjectData({ initialData });
+  const { projectData, isLoading } = useProjectData({ initialData });
   const [finalData, setFinalData] = React.useState<any>(initialData);
   const [showFilters, setShowFilters] = React.useState(false);
 
@@ -58,15 +58,20 @@ export function useController(props: Props) {
     handleFilterUpdate,
     toggleFilters: (show: boolean) => setShowFilters(show),
     showFilters,
+    isLoading
   };
 }
 
 function useProjectData(props: { initialData: Project[] }) {
   const { initialData } = props;
   const [projectData, setProjectData] = React.useState<any>(initialData);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
-  const handleLoad = () => {
-    fetchAllData().then(setProjectData);
+  const handleLoad = async () => {
+    setIsLoading(true);
+    const data = await fetchAllData();
+    setProjectData(data);
+    setIsLoading(false);
   };
 
   // Optimization:
@@ -90,6 +95,7 @@ function useProjectData(props: { initialData: Project[] }) {
 
   return {
     projectData,
+    isLoading
   };
 }
 
@@ -162,7 +168,7 @@ function useSortBySearch(props: { projectData: Project[] }) {
    * Handles the search input change event.
    * @param event - The change event object.
    */
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (event: any) => {
     setSearch(event.target.value.toLowerCase());
   };
 

@@ -1,9 +1,10 @@
 import Footer from "../partials/Footer/index";
 import Header from "../partials/Header";
+import { useSearchParams } from 'next/navigation'
 import InputBase from "@mui/material/InputBase";
 import ProjectFilter from "@/components/ProjectFilter";
 import ProjectGrid from "@/components/ProjectGrid";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import Search from "@mui/icons-material/Search";
 import { useController } from "./useController";
@@ -19,6 +20,9 @@ const { breakpoints } = config.constants;
 
 function ProjectPageTemplate(props: ReturnType<typeof useController>) {
   const isMobile = useMediaQuery(`(max-width: ${breakpoints.sm})`);
+  const searchParams = useSearchParams();
+  const search = searchParams.get('q');
+  const [searchTerm, setSearchTerm] = useState<string>(search || "");
 
   const {
     projectData,
@@ -28,7 +32,19 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     toggleFilters,
     showFilters,
     allProjectData,
+    isLoading
   } = props;
+
+  const handleSearchChange = (event: any) => {
+    setSearchTerm(event.target.value.toLowerCase());
+    handleSearch(event);
+  };
+
+  useEffect(() => {
+    if (search) {
+      handleSearch({ target: { value: search } })
+    }
+  }, [])
 
   return (
     <div className="flex flex-col gap-5 h-full min-h-screen">
@@ -79,7 +95,8 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               <InputBase
                 className="text-sm w-3/4"
                 placeholder="Search for projects"
-                onChange={handleSearch}
+                onChange={handleSearchChange}
+                value={searchTerm}
               />
             </div>
             {/*
@@ -112,7 +129,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
               <ProjectFilter filters={filters} onChange={handleFilterUpdate} />
             </Dialog>
           </div>
-          <ProjectGrid className="flex-1 w-9/12" projectData={projectData} />
+          <ProjectGrid className="flex-1 w-9/12" projectData={projectData} isLoading={isLoading} />
         </div>
       </div>
       <Footer />
