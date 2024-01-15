@@ -15,7 +15,6 @@ import cx from "classnames";
 import styles from "./styles.module.scss";
 import { config } from "@/configuration";
 import KpiMetrics from "@/components/KpiMetrics";
-import Skeleton from "@/components/Skeleton";
 
 const { breakpoints } = config.constants;
 
