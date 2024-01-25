@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./styles.module.scss";
 
 interface SkeletonProps {
-  width?: number;
+  width?: number | string;
   height?: number;
   key?: string;
 }
