@@ -3,9 +3,11 @@ import React from 'react';
 import styles from "./styles.module.scss";
 import { Tooltip } from "@mui/material";
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import Skeleton from '@/components/Skeleton';
 
 interface KpiMetricsProps {
   allProjectData: any;
+  isLoading: boolean;
 }
 
 const ACTIVE_PROJECTS_TOOLTIP = 'The Database contains active projects but also some that no longer use blockchain or are not longer active. Use the filters below to see all'
@@ -50,7 +52,7 @@ const getActiveProjectsNumber = (data: any) => {
   return activeProjects.length;
 }
 
-const KpiMetrics = ({ allProjectData }: KpiMetricsProps) => {
+const KpiMetrics = ({ allProjectData, isLoading }: KpiMetricsProps) => {
   const numberOfProjects = allProjectData.length;
   const topTechnologies = getTopKeys(allProjectData, 'blockchain_technology', false);
   const topCategories = getTopKeys(allProjectData, 'categories_list', true)
@@ -58,34 +60,44 @@ const KpiMetrics = ({ allProjectData }: KpiMetricsProps) => {
 
   return (
     <div className={styles['NumberBadge__wrapper']}>
-      <div className={styles['NumberBadge__container']}>
-        <div className="flex items-center">
-          <h3 className="mr-2">Active Projects</h3>
-          <Tooltip title={ACTIVE_PROJECTS_TOOLTIP}>
-            <HelpOutlineIcon sx={{ marginLeft: '8px', width: 16 }} />
-          </Tooltip>
-        </div>
-        <div className="flex gap-2 items-end">
-          <h1 className="text-green-600">{activePercentage}</h1>
-          <span>/{numberOfProjects} listed</span>
-        </div>
-      </div>
-      <KpiBadge title="Leading Platforms" tooltip={LEADING_PLATFORMS_TOOLTIP}>
-        {topTechnologies.slice(0, 3).map((item: any) => (
-          <div key={item.key} className={styles['KpiBadge__single-badge']}>
-            {item.key}
-            <h3 className="text-green-600">{item.count}</h3>
+      {isLoading ? (
+        <>
+          <Skeleton width="100%" height={154}/>
+          <Skeleton width="100%" height={154}/>
+          <Skeleton width="100%" height={154}/>
+        </>
+      ) : (
+        <>
+          <div className={styles['NumberBadge__container']}>
+            <div className="flex items-center">
+              <h3 className="mr-2">Active Projects</h3>
+              <Tooltip title={ACTIVE_PROJECTS_TOOLTIP}>
+                <HelpOutlineIcon sx={{ marginLeft: '8px', width: 16 }} />
+              </Tooltip>
+            </div>
+            <div className="flex gap-2 items-end">
+              <h1 className="text-green-600">{activePercentage}</h1>
+              <span>/{numberOfProjects} listed</span>
+            </div>
           </div>
-        ))}
-      </KpiBadge>
-      <KpiBadge title="Leading Categories" tooltip={LEADING_CATEGORIES_TOOLTIP}>
-        {topCategories.slice(0, 3).map((item: any) => (
-          <div key={item.key} className={styles['KpiBadge__single-badge']}>
-            {item.key}
-            <h3 className="text-green-600">{item.count}</h3>
-          </div>
-        ))}
-      </KpiBadge>
+          <KpiBadge title="Leading Platforms" tooltip={LEADING_PLATFORMS_TOOLTIP}>
+            {topTechnologies.slice(0, 3).map((item: any) => (
+              <div key={item.key} className={styles['KpiBadge__single-badge']}>
+                {item.key}
+                <h3 className="text-green-600">{item.count}</h3>
+              </div>
+            ))}
+          </KpiBadge>
+          <KpiBadge title="Leading Categories" tooltip={LEADING_CATEGORIES_TOOLTIP}>
+            {topCategories.slice(0, 3).map((item: any) => (
+              <div key={item.key} className={styles['KpiBadge__single-badge']}>
+                {item.key}
+                <h3 className="text-green-600">{item.count}</h3>
+              </div>
+            ))}
+          </KpiBadge>
+        </>
+      )}
     </div>
   )
 };
