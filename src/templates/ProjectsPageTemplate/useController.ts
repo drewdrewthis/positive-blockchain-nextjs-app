@@ -58,7 +58,8 @@ export function useController(props: Props) {
     handleFilterUpdate,
     toggleFilters: (show: boolean) => setShowFilters(show),
     showFilters,
-    isLoading
+    isLoading,
+    allProjectsRaw: projectData,
   };
 }
 

@@ -32,7 +32,8 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     toggleFilters,
     showFilters,
     allProjectData,
-    isLoading
+    isLoading,
+    allProjectsRaw,
   } = props;
 
   const handleSearchChange = (event: any) => {
@@ -69,7 +70,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
           </Link>
         </div>
         <div className="flex flex-col sm:flex-row gap-5 justify-between items-center content-center mb-10">
-          <KpiMetrics allProjectData={projectData} isLoading={isLoading} />
+          <KpiMetrics allProjectData={allProjectsRaw} isLoading={isLoading} />
         </div>
         <Divider className="hidden md:flex my-8" />
         <div className="sm:hidden flex justify-center flex-col w-255">
