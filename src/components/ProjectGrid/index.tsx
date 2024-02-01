@@ -5,7 +5,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import cx from "classnames";
 import compact from "lodash/fp/compact";
 import uniq from "lodash/fp/uniq";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { config } from "@/configuration/config";
 
@@ -28,6 +28,10 @@ function ProjectGrid(props: Props) {
   const endIndex = startIndex + itemsPerPage;
 
   const totalPages = Math.ceil(projectData.length / itemsPerPage);
+
+  useEffect(() => {
+    setPage(1);
+  }, [projectData.length])
 
   const handleChangePage = (
     event: React.ChangeEvent<unknown>,
