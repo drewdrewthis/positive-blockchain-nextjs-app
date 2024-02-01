@@ -80,6 +80,18 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
           >
             Show Filters
           </Button>
+          <p className="mt-0"><strong>{projectData?.length}</strong> results</p>
+          <div className="border rounded p-2 mb-4">
+            <Search>
+              <SearchIcon />
+            </Search>
+            <InputBase
+              className="text-sm w-3/4"
+              placeholder="Search for projects"
+              onChange={handleSearchChange}
+              value={searchTerm}
+            />
+          </div>
         </div>
         <p>{projectData["project_name"]}</p>
         <div className="flex gap-3 w-full items-start">
