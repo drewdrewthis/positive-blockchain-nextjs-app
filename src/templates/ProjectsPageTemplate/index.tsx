@@ -31,7 +31,6 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     handleFilterUpdate,
     toggleFilters,
     showFilters,
-    allProjectData,
     isLoading,
     allProjectsRaw,
   } = props;
