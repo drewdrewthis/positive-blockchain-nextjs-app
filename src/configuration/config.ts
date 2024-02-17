@@ -70,7 +70,7 @@ class Configuration {
       // How many projects to load initially
       INITIAL_DATA_LOAD_COUNT: 16,
       /** How long to cache in seconds */
-      CACHE_TTL: 60 * 1,
+      CACHE_TTL: 60 * 60 * 24,
     },
     /**
      * These are the functions that run out of the api folder

@@ -1,11 +1,11 @@
 import type { Project } from "@/types";
 import type {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  PreviewData,
+  GetStaticPaths,
+  GetStaticProps,
 } from "next";
 
-import { ParsedUrlQuery } from "querystring";
+
+
 
 import upperFirst from "lodash/fp/upperFirst";
 import dynamic from "next/dynamic";
@@ -14,6 +14,7 @@ import { DatasetJsonLd, NextSeo } from "next-seo";
 import { config as configuration } from "@/configuration";
 import Routes from "@/lib/Routes";
 
+import { fetchAllProjectData, fetchSingleProjectData } from "../../lib/google";
 import defaultConfig from "../../next-seo.config";
 
 function ProjectPage(props: { projectData: Project }) {
@@ -70,48 +71,58 @@ function ProjectPage(props: { projectData: Project }) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { res } = context;
-  const url = getProjectDataUrl(context);
-  const projectData = await fetch(url).then((res) => res.json());
-  const { projects } = configuration.constants;
+export const getStaticProps: GetStaticProps = async (context) => {
+  try {
+    const slug = context.params?.slug as string[];
+    const data = await fetchSingleProjectData(slug[0]);
 
-  res.setHeader(
-    "Cache-Control",
-    `public, s-maxage=${projects.CACHE_TTL}, stale-while-revalidate`
-  );
+    if (!data) {
+      return {
+        notFound: true,
+      };
+    }
 
-  res.setHeader("Accept-Encoding", "br, gzip, deflate, compress");
-
-  if (!projectData?.data?.slug) {
     return {
-      redirect: {
-        permanent: false,
-        destination: "/",
+      props: {
+        projectData: data
       },
+      revalidate: configuration.constants.projects.CACHE_TTL, // Optionally, use ISR to refresh the static page
+    };
+  } catch (error) {
+    console.error("Error fetching project data", error);
+    return {
+      notFound: true,
+    };
+  }
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  // Don't use ISR in development
+  if (process.env.NODE_ENV === "development") {
+    return {
+      paths: [],
+      fallback: true,
     };
   }
 
-  return {
-    props: {
-      projectData: projectData.data,
-    },
-  };
+  try {
+    const projects = await fetchAllProjectData() as Project[];
+
+    const paths = projects.map((project: { slug: string }) => ({
+      params: { slug: [project.slug] },
+    }));
+
+    return {
+      paths,
+      fallback: 'blocking', // or false if you want to show a 404 for missing pages
+    };
+  } catch (error) {
+    console.error("Error fetching project data", error);
+    return {
+      paths: [],
+      fallback: 'blocking',
+    };
+  }
 };
 
 export default ProjectPage;
-
-type Context = GetServerSidePropsContext<ParsedUrlQuery, PreviewData>;
-function getProjectDataUrl(context: Context) {
-  const { params, req } = context;
-  const { slug } = params as { slug: string[] };
-  const baseUrl = getBaseUrl(req);
-
-  // We hit this route because it returns only the individual project data
-  return `${baseUrl}/${Routes.BASE_PATH}/${Routes.API_PATH}/edge/project-data/${slug}`;
-}
-
-function getBaseUrl(req: any) {
-  const protocol = req.headers["x-forwarded-proto"] || "http";
-  return req ? `${protocol}://${req.headers.host}` : "";
-}

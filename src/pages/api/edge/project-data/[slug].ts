@@ -26,8 +26,12 @@ export default async function handler(req: NextRequest) {
     "/edge/project-data";
 
   try {
+    const startTime = Date.now();
     // Fetch projects
     const allProjects = await fetch(url).then((res) => res.json());
+    const endTime = Date.now();
+    console.log("Time to fetch all projects", endTime - startTime, "ms")
+
 
     // Handle error
     if (allProjects?.error) {
