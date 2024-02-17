@@ -13,7 +13,7 @@ async function handler(_req: NextApiRequest, res: NextApiResponse<any>) {
     const projectData = await fetchPublicProjectData();
     res.setHeader(
       "Cache-Control",
-      `s-maxage=${CACHE_TTL} , stale-while-revalidate`
+      `max-age=31536000, stale-while-revalidate=300`
     );
     res.status(200).json({ data: projectData });
   } catch (error) {

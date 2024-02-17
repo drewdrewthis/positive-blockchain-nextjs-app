@@ -1,11 +1,12 @@
 import type { Project } from "@/types";
 import type { GetStaticProps } from "next";
 
-import dynamic from "next/dynamic";
 
 import { config } from "@/configuration/config";
 import { fetchPublicProjectData } from "@/lib/google";
 import { extractFiltersFromProjectData } from "@/lib/utils";
+
+import ProjectsPageTemplate from "../templates/ProjectsPageTemplate";
 
 interface Props {
   initialData: Project[];
@@ -14,14 +15,11 @@ interface Props {
 }
 
 function AllProjectPage(props: Props) {
-  const ProjectPageTemplate = dynamic(
-    () => import("../templates/ProjectsPageTemplate")
-  );
-
-  return <ProjectPageTemplate {...props} />;
+  return <ProjectsPageTemplate {...props} />;
 }
 
 export const getStaticProps: GetStaticProps = async (_context) => {
+  try {
   const projectData = await fetchPublicProjectData();
   const { projects } = config.constants;
   const filters = extractFiltersFromProjectData(projectData as any);
@@ -35,6 +33,19 @@ export const getStaticProps: GetStaticProps = async (_context) => {
     } as Props,
     revalidate: projects.CACHE_TTL,
   };
+
+  } catch (error) {
+    console.error("Error fetching project data:", error);
+
+    return {
+      props: {
+        initialData: [],
+        filters: {},
+        allProjectData: null,
+      } as Props,
+    };
+  }
+
 };
 
 export default AllProjectPage;

@@ -70,8 +70,10 @@ function useProjectData(props: { initialData: Project[] }) {
 
   const handleLoad = async () => {
     setIsLoading(true);
-    const data = await fetchAllData();
-    setProjectData(data);
+    setTimeout(async () => {
+      const data = await fetchAllData();
+      setProjectData(data);
+    }, 0) // setTimeout to allow the page to load first (for performance optimization
     setIsLoading(false);
   };
 
@@ -105,6 +107,7 @@ async function fetchAllData() {
   const response = await fetch(url, {
     headers: {
       "Accept-Encoding": "br, gzip, compress",
+      "Cache-Control": "max-age=31536000, stale-while-revalidate=300",
     },
   });
   const data = await response.json();
