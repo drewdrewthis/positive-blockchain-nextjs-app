@@ -6,7 +6,7 @@ export function useController(props: Props) {
   const searchParams = useSearchParams();
   const partner = searchParams.get('partner');
 
-  const [filterGroups, setFilterGroups] = useState({
+  const [filterGroups, setFilterGroups] = useState<any>({
     active: ['active']
   });
   const { onChange = () => {} } = props;
