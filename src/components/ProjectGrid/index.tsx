@@ -40,7 +40,7 @@ function ProjectGrid(props: Props) {
     setPage(newPage);
   };
 
-  if (projectData.length === 0) {
+  if (projectData.length === 0 && !isLoading) {
     return <p className="p-3">No projects were found. Try changing the filters or the search term.</p>
   }
 

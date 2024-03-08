@@ -33,6 +33,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
     showFilters,
     isLoading,
     allProjectsRaw,
+    clean,
   } = props;
 
   const handleSearchChange = (event: any) => {
@@ -48,30 +49,36 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
 
   return (
     <div className="flex flex-col gap-5 h-full min-h-screen">
-      <Header />
+      {!clean && <Header />}
       <div className="prose max-w-none max-w-7xl mx-auto sm:p-10 px-5 w-full h-full mt-5">
-        <div className="flex w-full justify-between">
-          <Typography variant="h1" className="mb-10 font-semibold">
-            Web3 Impact Database
-          </Typography>
-          <Link href="/forms/request-data-snapshot" className="no-underline">
-            <Button
-              variant="contained"
-              size="medium"
-              className="bg-brand-secondary"
-              color="primary"
-              sx={{
-                boxShadow: "none",
-              }}
-            >
-              Get Database
-            </Button>
-          </Link>
-        </div>
-        <div className="flex flex-col sm:flex-row gap-5 justify-between items-center content-center mb-10">
-          <KpiMetrics allProjectData={allProjectsRaw} isLoading={isLoading} />
-        </div>
-        <Divider className="hidden md:flex my-8" />
+        {!clean && (
+          <div className="flex w-full justify-between">
+            <Typography variant="h1" className="mb-10 font-semibold">
+              Web3 Impact Database
+            </Typography>
+            <Link href="/forms/request-data-snapshot" className="no-underline">
+              <Button
+                variant="contained"
+                size="medium"
+                className="bg-brand-secondary"
+                color="primary"
+                sx={{
+                  boxShadow: "none",
+                }}
+              >
+                Get Database
+              </Button>
+            </Link>
+          </div>
+        )}
+        {!clean && (
+          <>
+            <div className="flex flex-col sm:flex-row gap-5 justify-between items-center content-center mb-10">
+              <KpiMetrics allProjectData={allProjectsRaw} isLoading={isLoading} />
+            </div>
+            <Divider className="hidden md:flex my-8" />
+          </>
+        )}
         <div className="sm:hidden flex justify-center flex-col w-255">
           <Button
             aria-label="Show Filters"
@@ -144,7 +151,7 @@ function ProjectPageTemplate(props: ReturnType<typeof useController>) {
           <ProjectGrid className="flex-1 w-9/12" projectData={projectData} isLoading={isLoading} />
         </div>
       </div>
-      <Footer />
+      {!clean && <Footer />}
     </div>
   );
 }
