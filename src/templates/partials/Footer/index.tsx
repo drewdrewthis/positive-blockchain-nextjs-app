@@ -62,7 +62,7 @@ function Footer() {
           </ul>
         </div>
         <div className="text-xs text-white text-center md:text-right">
-          &#169; PositiveBlockchain 2023
+          &#169; PositiveBlockchain
         </div>
       </div>
     </div>
