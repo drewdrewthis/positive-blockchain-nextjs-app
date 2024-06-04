@@ -138,7 +138,7 @@ function IntroBlock(props: { isEditingProject: boolean }) {
   return props.isEditingProject ? (
     <div className="prose w-full max-w-max">
       <Typography variant="h2" className="mb-10">
-        PositiveBlockchain database 2023 - Edit an existing project
+        PositiveBlockchain database - Edit an existing project
       </Typography>
       <p>
         PositiveBlockchain is the <b>open database</b>, knowledge platform and
@@ -190,7 +190,7 @@ function IntroBlock(props: { isEditingProject: boolean }) {
   ) : (
     <div className="prose w-full max-w-max">
       <Typography variant="h2" className="mb-10">
-        PositiveBlockchain database 2023 - Submit a new project
+        PositiveBlockchain database - Submit a new project
       </Typography>
 
       <p>

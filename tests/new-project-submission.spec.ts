@@ -10,7 +10,7 @@ test("test", async ({ page }) => {
   await page.goto("http://localhost:3000/database/forms/project-submission");
   await page
     .getByRole("heading", {
-      name: "PositiveBlockchain database 2023 - Submit a new project",
+      name: "PositiveBlockchain database - Submit a new project",
     })
     .click();
   await page
