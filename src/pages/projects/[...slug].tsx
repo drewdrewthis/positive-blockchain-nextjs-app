@@ -114,7 +114,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     return {
       paths,
-      fallback: 'blocking', // or false if you want to show a 404 for missing pages
+      fallback: true
     };
   } catch (error) {
     console.error("Error fetching project data", error);
